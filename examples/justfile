@@ -1,0 +1,20 @@
+run:
+  poetry run example
+
+reinstall-stubs:
+  rm -rf .venv/lib/python*/site-packages/paddle-stubs-*
+  rm -rf .venv/lib/python*/site-packages/paddlepaddle_stubs-*
+  poetry install
+
+lint:
+  poetry run pyright paddle-stubs tests
+
+build:
+  poetry build
+
+clean:
+  find . -name "*.pyc" -print0 | xargs -0 rm -f
+  rm -rf .pytest_cache/
+  rm -rf .mypy_cache/
+  find . -maxdepth 3 -type d -empty -print0 | xargs -0 -r rm -r
+

@@ -268,3 +268,5 @@ from .tensor.stat import var as var
 from .tensor.to_string import set_printoptions as set_printoptions
 
 Tensor: Any
+
+from . import sysconfig as sysconfig
