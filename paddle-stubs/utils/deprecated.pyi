@@ -1,0 +1,3 @@
+from __future__ import annotations
+
+def deprecated(update_to: str = ..., since: str = ..., reason: str = ..., level: int = ...): ...

@@ -1,21 +1,18 @@
 [tool.poetry]
-name = "moelib"
-version = "0.1.0"
+name = "paddlepaddle-stubs"
+version = "2.3.1-dev.0"
 description = ""
 authors = ["Nyakku Shigure <sigure.qaq@gmail.com>"]
+packages = [{ include = "paddle-stubs" }]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.7"
+paddlepaddle = "^2.3.1"
 
 [tool.poetry.group.dev.dependencies]
-pytest = "^7.0"
 black = "^22.1"
-pytest-parallel = "^0.1.1"
 isort = "^5.10.1"
-tomli = { version = "^2.0.1", python = "<3.11" }
-
-[tool.poetry.scripts]
-moelib = "moelib.__main__:main"
+pyright = "^1.1.263"
 
 [tool.black]
 line-length = 120

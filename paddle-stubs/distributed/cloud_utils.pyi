@@ -1,0 +1,6 @@
+from __future__ import annotations
+
+from typing import Any
+
+def get_cloud_cluster(args_node_ips: Any, args_node_ip: Any, args_port: Any, selected_devices: Any): ...
+def get_cluster_and_pod(args: Any): ...

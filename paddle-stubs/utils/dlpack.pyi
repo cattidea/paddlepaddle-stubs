@@ -1,0 +1,6 @@
+from __future__ import annotations
+
+from typing import Any
+
+def to_dlpack(x: Any): ...
+def from_dlpack(dlpack: Any): ...

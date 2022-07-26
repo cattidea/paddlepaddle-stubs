@@ -1,8 +1,4 @@
-VERSION := `poetry run python -c "import sys; from moelib import __version__ as version; sys.stdout.write(version)"`
-
-test:
-  poetry run pytest --workers auto
-  just clean
+VERSION := "2.3.1-dev.0"
 
 fmt:
   poetry run isort .
@@ -11,11 +7,14 @@ fmt:
 fmt-docs:
   prettier --write '**/*.md'
 
+lint:
+  poetry run pyright paddle-stubs tests
+
 build:
   poetry build
 
 publish:
-  touch moelib/py.typed
+  touch paddle-stubs/py.typed
   poetry publish --build
   git tag "v{{VERSION}}"
   git push --tags

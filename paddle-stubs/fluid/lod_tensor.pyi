@@ -1,0 +1,6 @@
+from __future__ import annotations
+
+from typing import Any
+
+def create_lod_tensor(data: Any, recursive_seq_lens: Any, place: Any): ...
+def create_random_int_lodtensor(recursive_seq_lens: Any, base_shape: Any, place: Any, low: Any, high: Any): ...

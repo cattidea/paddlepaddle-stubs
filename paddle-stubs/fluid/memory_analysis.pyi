@@ -1,0 +1,9 @@
+from __future__ import annotations
+
+from typing import Any, Optional
+
+from . import core as core
+
+def get_var_and_memory_size(block: Any, var_name: Any, batch_size: Optional[Any] = ...): ...
+def pre_allocate_memory(size: Any, place: Any) -> None: ...
+def get_max_memory_info(program: Any, batch_size: Optional[Any] = ...): ...

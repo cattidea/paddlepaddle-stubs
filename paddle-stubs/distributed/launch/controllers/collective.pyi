@@ -1,0 +1,16 @@
+from __future__ import annotations
+
+from typing import Any
+
+from .controller import Controller as Controller
+
+class CollectiveController(Controller):
+    @classmethod
+    def enable(cls, ctx: Any): ...
+    def build_pod(self): ...
+
+class CollectiveElasticController(CollectiveController):
+    @classmethod
+    def enable(cls, ctx: Any): ...
+    def register(self) -> None: ...
+    def run(self) -> None: ...

@@ -1,0 +1,6 @@
+from __future__ import annotations
+
+from typing import Any
+
+def parse_args(): ...
+def generate_dot_for_model(model_path: Any, save_graph_dir: Any, save_graph_name: Any) -> None: ...

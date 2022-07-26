@@ -1,0 +1,19 @@
+from __future__ import annotations
+
+from typing import Any, Optional
+
+class ProcessContext:
+    def __init__(
+        self,
+        cmd: Any,
+        env: Any = ...,
+        out: Any = ...,
+        err: Any = ...,
+        group: bool = ...,
+        preexec_fn: Optional[Any] = ...,
+    ) -> None: ...
+    def alive(self): ...
+    def exit_code(self): ...
+    def start(self) -> None: ...
+    def terminate(self, force: bool = ..., max_retry: int = ...): ...
+    def wait(self, timeout: Optional[Any] = ...) -> None: ...

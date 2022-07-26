@@ -1,0 +1,36 @@
+from __future__ import annotations
+
+from typing import Any, Optional
+
+from google.protobuf import text_format as text_format
+
+from . import core as core
+from . import io as io
+from . import unique_name as unique_name
+from .framework import Program as Program
+from .framework import Variable as Variable
+from .framework import default_main_program as default_main_program
+from .graphviz import GraphPreviewGenerator as GraphPreviewGenerator
+from .layer_helper import LayerHelper as LayerHelper
+from .proto import framework_pb2 as framework_pb2
+
+def repr_data_type(type: Any): ...
+def repr_tensor(proto: Any): ...
+
+reprtpl: str
+
+def repr_lodtensor(proto: Any): ...
+def repr_selected_rows(proto: Any): ...
+def repr_tensor_array(proto: Any): ...
+
+type_handlers: Any
+
+def repr_var(vardesc: Any): ...
+def pprint_program_codes(program_desc: Any): ...
+def pprint_block_codes(block_desc: Any, show_backward: bool = ...): ...
+def repr_attr(desc: Any): ...
+
+op_repr_handlers: Any
+
+def repr_op(opdesc: Any): ...
+def draw_block_graphviz(block: Any, highlights: Optional[Any] = ..., path: str = ...): ...

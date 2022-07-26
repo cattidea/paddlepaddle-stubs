@@ -1,0 +1,66 @@
+from __future__ import annotations
+
+from typing import Any, Optional
+
+class Initializer:
+    def __init__(self) -> None: ...
+    def __call__(self, param: Any, block: Optional[Any] = ...) -> None: ...
+
+class ConstantInitializer(Initializer):
+    def __init__(self, value: float = ..., force_cpu: bool = ...) -> None: ...
+    def __call__(self, var: Any, block: Optional[Any] = ...): ...
+
+class UniformInitializer(Initializer):
+    def __init__(
+        self,
+        low: Any = ...,
+        high: float = ...,
+        seed: int = ...,
+        diag_num: int = ...,
+        diag_step: int = ...,
+        diag_val: float = ...,
+    ) -> None: ...
+    def __call__(self, var: Any, block: Optional[Any] = ...): ...
+
+class NormalInitializer(Initializer):
+    def __init__(self, loc: float = ..., scale: float = ..., seed: int = ...) -> None: ...
+    def __call__(self, var: Any, block: Optional[Any] = ...): ...
+
+class TruncatedNormalInitializer(Initializer):
+    def __init__(self, loc: float = ..., scale: float = ..., seed: int = ...) -> None: ...
+    def __call__(self, var: Any, block: Optional[Any] = ...): ...
+
+class XavierInitializer(Initializer):
+    def __init__(
+        self, uniform: bool = ..., fan_in: Optional[Any] = ..., fan_out: Optional[Any] = ..., seed: int = ...
+    ) -> None: ...
+    def __call__(self, var: Any, block: Optional[Any] = ...): ...
+
+class MSRAInitializer(Initializer):
+    def __init__(
+        self,
+        uniform: bool = ...,
+        fan_in: Optional[Any] = ...,
+        seed: int = ...,
+        negative_slope: int = ...,
+        nonlinearity: str = ...,
+    ) -> None: ...
+    def __call__(self, var: Any, block: Optional[Any] = ...): ...
+
+class BilinearInitializer(Initializer):
+    def __init__(self) -> None: ...
+    def __call__(self, var: Any, block: Optional[Any] = ...): ...
+
+class NumpyArrayInitializer(Initializer):
+    def __init__(self, value: Any) -> None: ...
+    def __call__(self, var: Any, block: Optional[Any] = ...): ...
+
+def set_global_initializer(weight_init: Any, bias_init: Optional[Any] = ...) -> None: ...
+
+Constant = ConstantInitializer
+Uniform = UniformInitializer
+Normal = NormalInitializer
+TruncatedNormal = TruncatedNormalInitializer
+Xavier = XavierInitializer
+MSRA = MSRAInitializer
+Bilinear = BilinearInitializer

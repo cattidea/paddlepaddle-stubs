@@ -1,0 +1,23 @@
+from __future__ import annotations
+
+from typing import Any
+
+def create_graph(optimizer_list: Any): ...
+def topo_sort(edge: Any, indegree: Any): ...
+def floyd(edge: Any): ...
+def maximum_path_len_algo(optimizer_list: Any): ...
+
+class StrategyCompilerBase:
+    def __init__(self) -> None: ...
+
+class StrategyCompiler(StrategyCompilerBase):
+    def __init__(self) -> None: ...
+    def generate_optimizer(
+        self,
+        loss: Any,
+        role_maker: Any,
+        optimizer: Any,
+        user_defined_strategy: Any,
+        meta_optimizer_list: Any,
+        graph_optimizer_list: Any,
+    ): ...
