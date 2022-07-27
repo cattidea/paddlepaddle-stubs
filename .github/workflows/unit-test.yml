@@ -37,6 +37,7 @@ jobs:
         run: |
           poetry install
 
-      # - name: unit test
-      #   run: |
-      #     poetry run pytest --workers auto
+      - name: Check types
+        run: |
+          # TODO: also check `paddle-stubs`
+          poetry run pyright tests
