@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import paddle
 
 
@@ -7,7 +9,7 @@ def test_full_path_access():
 
 
 def test_full_path_import():
-    from paddle.sysconfig import get_lib, get_include
+    from paddle.sysconfig import get_include, get_lib
 
     get_lib()
     get_include()

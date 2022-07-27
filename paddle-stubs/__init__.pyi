@@ -1,9 +1,10 @@
 from __future__ import annotations
 
-from typing import Any
-
 from paddle.cuda_env import *
 
+from . import signal as signal
+from . import sysconfig as sysconfig
+from ._typing import Tensor as Tensor
 from .autograd import grad as grad
 from .autograd import is_grad_enabled as is_grad_enabled
 from .autograd import no_grad as no_grad
@@ -15,7 +16,6 @@ from .framework import CUDAPlace as CUDAPlace
 from .framework import DataParallel as DataParallel
 from .framework import NPUPlace as NPUPlace
 from .framework import ParamAttr as ParamAttr
-from .framework import VarBase as Tensor
 from .framework import create_parameter as create_parameter
 from .framework import disable_signal_handler as disable_signal_handler
 from .framework import disable_static as disable_static
@@ -266,7 +266,3 @@ from .tensor.stat import quantile as quantile
 from .tensor.stat import std as std
 from .tensor.stat import var as var
 from .tensor.to_string import set_printoptions as set_printoptions
-
-Tensor: Any
-
-from . import sysconfig as sysconfig
