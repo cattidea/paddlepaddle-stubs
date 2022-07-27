@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from paddle.cuda_env import *
 
+from . import linalg as linalg
 from . import regularizer as regularizer
 from . import signal as signal
 from . import sysconfig as sysconfig
