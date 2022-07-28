@@ -8,6 +8,7 @@ from . import nn as nn
 from . import regularizer as regularizer
 from . import signal as signal
 from . import sysconfig as sysconfig
+from . import vision as vision
 from ._typing import Tensor as Tensor
 from .autograd import grad as grad
 from .autograd import is_grad_enabled as is_grad_enabled
