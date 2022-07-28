@@ -7,12 +7,10 @@ from paddle import Tensor
 from typing_extensions import assert_type
 
 
-def test_full_path_access():
+def test_import():
     paddle.signal.stft
     paddle.signal.istft
 
-
-def test_full_path_import():
     from paddle.signal import istft, stft  # pyright: ignore [reportUnusedImport]
 
 

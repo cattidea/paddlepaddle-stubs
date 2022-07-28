@@ -5,7 +5,7 @@ from typing import Any, Optional
 import numpy as np
 
 from .. import Tensor
-from .._typing import Numberic
+from .._typing import Numberic, NumbericSequence
 from ..fluid.data_feeder import check_dtype as check_dtype
 from ..fluid.data_feeder import check_type as check_type
 from ..fluid.data_feeder import check_variable_and_dtype as check_variable_and_dtype
@@ -23,7 +23,7 @@ from ..static import Variable as Variable
 from ..static import device_guard as device_guard
 
 def to_tensor(
-    data: Numberic | np.ndarray[Any, Any] | Tensor,
+    data: Numberic | NumbericSequence | np.ndarray[Any, Any] | Tensor,
     dtype: Optional[str | np.dtype[Any]] = ...,  # TODO: paddle.dtype
     place: Optional[Any] = ...,  # TODO: CPUPlace | CUDAPinnedPlace | CUDAPlace
     stop_gradient: bool = ...,

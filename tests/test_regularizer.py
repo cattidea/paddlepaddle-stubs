@@ -6,16 +6,12 @@ import paddle
 from typing_extensions import assert_type
 
 
-def test_full_path_access():
+def test_import():
     paddle.regularizer.L1Decay
     paddle.regularizer.L2Decay
 
-
-def test_full_path_import():
-    from paddle.regularizer import (
-        L1Decay,  # pyright: ignore [reportUnusedImport]
-        L2Decay,  # pyright: ignore [reportUnusedImport]
-    )
+    from paddle.regularizer import L1Decay  # pyright: ignore [reportUnusedImport]
+    from paddle.regularizer import L2Decay  # pyright: ignore [reportUnusedImport]
 
 
 def test_types():

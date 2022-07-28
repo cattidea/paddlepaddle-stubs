@@ -23,3 +23,7 @@ from .tensor.linalg import slogdet as slogdet
 from .tensor.linalg import solve as solve
 from .tensor.linalg import svd as svd
 from .tensor.linalg import triangular_solve as triangular_solve
+
+__all__ = [
+    "inv",  # re-export
+]

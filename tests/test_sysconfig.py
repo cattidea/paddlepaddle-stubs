@@ -6,12 +6,10 @@ import paddle
 from typing_extensions import assert_type
 
 
-def test_full_path_access():
+def test_import():
     paddle.sysconfig.get_lib
     paddle.sysconfig.get_include
 
-
-def test_full_path_import():
     from paddle.sysconfig import get_include  # pyright: ignore [reportUnusedImport]
     from paddle.sysconfig import get_lib  # pyright: ignore [reportUnusedImport]
 
