@@ -1,19 +1,15 @@
 from __future__ import annotations
 
-from typing import Any
-
-from ..fluid.core import VarDesc as VarDesc
-
-dtype: Any
-uint8: Any
-int8: Any
-int16: Any
-int32: Any
-int64: Any
-float32: Any
-float64: Any
-float16: Any
-bfloat16: Any
-complex64: Any
-complex128: Any
-bool: Any
+from .._typing import bfloat16 as bfloat16
+from .._typing import bool as bool
+from .._typing import complex64 as complex64
+from .._typing import complex128 as complex128
+from .._typing import dtype as dtype
+from .._typing import float16 as float16
+from .._typing import float32 as float32
+from .._typing import float64 as float64
+from .._typing import int8 as int8
+from .._typing import int16 as int16
+from .._typing import int32 as int32
+from .._typing import int64 as int64
+from .._typing import uint8 as uint8

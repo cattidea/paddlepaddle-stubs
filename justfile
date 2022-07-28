@@ -7,8 +7,12 @@ fmt:
 fmt-docs:
   prettier --write '**/*.md'
 
-lint:
-  poetry run pyright paddle-stubs tests
+check:
+  poetry run pyright tests \
+    paddle-stubs/linalg.pyi \
+    paddle-stubs/regularizer.pyi \
+    paddle-stubs/signal.pyi \
+    paddle-stubs/sysconfig.pyi
 
 build:
   poetry build

@@ -22,6 +22,10 @@ profile = "black"
 add_imports = ["from __future__ import annotations"]
 skip = ["setup.py", ".venv"]
 
+[tool.pyright]
+include = ["paddle-stubs", "tests"]
+ignore = ["paddle-stubs/fluid"]
+
 [build-system]
 requires = ["poetry-core>=1.1.0b3"]
 build-backend = "poetry.core.masonry.api"
