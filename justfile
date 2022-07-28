@@ -10,6 +10,7 @@ fmt-docs:
 check:
   poetry run pyright tests \
     paddle-stubs/_typing.pyi \
+    paddle-stubs/hub.pyi \
     paddle-stubs/linalg.pyi \
     paddle-stubs/regularizer.pyi \
     paddle-stubs/signal.pyi \
