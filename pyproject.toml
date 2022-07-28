@@ -8,6 +8,7 @@ packages = [{ include = "paddle-stubs" }]
 [tool.poetry.dependencies]
 python = "^3.7"
 paddlepaddle = "^2.3.1"
+typing-extensions = "^4.3.0"
 
 [tool.poetry.group.dev.dependencies]
 black = "^22.1"
@@ -25,6 +26,7 @@ skip = ["setup.py", ".venv"]
 [tool.pyright]
 include = ["paddle-stubs", "tests"]
 ignore = ["paddle-stubs/fluid"]
+pythonVersion = "3.7"
 
 [build-system]
 requires = ["poetry-core>=1.1.0b3"]

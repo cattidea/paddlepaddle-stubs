@@ -1,9 +1,10 @@
 from __future__ import annotations
 
-from typing import Any, Literal, Optional
+from typing import Any, Optional
 
 import numpy as np
 from paddle.common_ops_import import core as core
+from typing_extensions import Literal
 
 from .. import Tensor
 from ..fluid import layers as layers

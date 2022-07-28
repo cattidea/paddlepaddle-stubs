@@ -1,9 +1,9 @@
 from __future__ import annotations
 
-from typing import Any, Literal, Optional, TypeVar
+from typing import Any, Optional, TypeVar
 
 import numpy as np
-from typing_extensions import Self
+from typing_extensions import Literal, Self
 
 # Scalar
 

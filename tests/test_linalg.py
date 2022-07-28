@@ -142,8 +142,11 @@ def test_eigvalsh():
 def test_lstsq():
     x = paddle.to_tensor([[1, 3], [3, 2], [5, 6.0]])
     y = paddle.to_tensor([[3, 4, 6], [5, 3, 4], [1, 2, 1.0]])
-    results = paddle.linalg.lstsq(x, y, driver="gelsd")
-    assert_type(results, tuple[Tensor, Tensor, Tensor, Tensor])
+    solution, residuals, rank, singular_values = paddle.linalg.lstsq(x, y, driver="gelsd")
+    assert_type(solution, Tensor)
+    assert_type(residuals, Tensor)
+    assert_type(rank, Tensor)
+    assert_type(singular_values, Tensor)
 
 
 def test_lu():
@@ -190,7 +193,7 @@ def test_multi_dot():
 
 def test_norm():
     np_input: np.ndarray[np.float32, Any] = np.arange(24).astype("float32") - 12  # type: ignore
-    np_input = np_input.reshape([2, 3, 4])
+    np_input = np_input.reshape([2, 3, 4])  # type: ignore
     x = paddle.to_tensor(np_input)
 
     out_fro = paddle.linalg.norm(x, p="fro", axis=[0, 1])
