@@ -1,14 +1,14 @@
 from __future__ import annotations
 
+from .._typing import CPUPlace as CPUPlace
+from .._typing import CUDAPinnedPlace as CUDAPinnedPlace
+from .._typing import CUDAPlace as CUDAPlace
+from .._typing import CustomPlace as CustomPlace
+from .._typing import IPUPlace as IPUPlace
+from .._typing import MLUPlace as MLUPlace
+from .._typing import NPUPlace as NPUPlace
 from ..fluid import core as core
 from ..fluid import monkey_patch_variable as monkey_patch_variable
-from ..fluid.core import CPUPlace as CPUPlace
-from ..fluid.core import CUDAPinnedPlace as CUDAPinnedPlace
-from ..fluid.core import CUDAPlace as CUDAPlace
-from ..fluid.core import CustomPlace as CustomPlace
-from ..fluid.core import IPUPlace as IPUPlace
-from ..fluid.core import MLUPlace as MLUPlace
-from ..fluid.core import NPUPlace as NPUPlace
 from ..fluid.core import VarBase as VarBase
 from ..fluid.dygraph import monkey_patch_math_varbase as monkey_patch_math_varbase
 from ..fluid.dygraph.base import grad as grad

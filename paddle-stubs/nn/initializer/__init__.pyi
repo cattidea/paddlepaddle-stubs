@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from ...fluid.initializer import Bilinear as Bilinear
+from ...fluid.initializer import Initializer as Initializer
 from ...fluid.initializer import calculate_gain as calculate_gain
 from ...fluid.initializer import set_global_initializer as set_global_initializer
 from .assign import Assign as Assign

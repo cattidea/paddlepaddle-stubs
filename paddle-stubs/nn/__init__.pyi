@@ -9,6 +9,7 @@ from .clip import ClipGradByNorm as ClipGradByNorm
 from .clip import ClipGradByValue as ClipGradByValue
 from .decode import BeamSearchDecoder as BeamSearchDecoder
 from .decode import dynamic_decode as dynamic_decode
+from .initializer import Initializer as Initializer
 from .layer.activation import CELU as CELU
 from .layer.activation import ELU as ELU
 from .layer.activation import GELU as GELU
