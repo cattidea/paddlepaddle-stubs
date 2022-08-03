@@ -226,7 +226,7 @@ python-versions = ">=3.7"
 
 [[package]]
 name = "pyright"
-version = "1.1.264"
+version = "1.1.265"
 description = "Command line wrapper for pyright"
 category = "dev"
 optional = false
@@ -260,15 +260,15 @@ use_chardet_on_py3 = ["chardet (>=3.0.2,<6)"]
 
 [[package]]
 name = "setuptools"
-version = "63.2.0"
+version = "63.4.1"
 description = "Easily download, build, install, upgrade, and uninstall Python packages"
 category = "dev"
 optional = false
 python-versions = ">=3.7"
 
 [package.extras]
-docs = ["sphinx", "jaraco.packaging (>=9)", "rst.linker (>=1.9)", "jaraco.tidelift (>=1.4)", "pygments-github-lexers (==0.0.5)", "sphinx-favicon", "sphinx-inline-tabs", "sphinx-reredirects", "sphinxcontrib-towncrier", "furo"]
-testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-enabler (>=1.3)", "pytest-perf", "mock", "flake8-2020", "virtualenv (>=13.0.0)", "wheel", "pip (>=19.1)", "jaraco.envs (>=2.2)", "pytest-xdist", "jaraco.path (>=3.2.0)", "build", "filelock (>=3.4.0)", "pip-run (>=8.8)", "ini2toml[lite] (>=0.9)", "tomli-w (>=1.0.0)", "pytest-black (>=0.3.7)", "pytest-cov", "pytest-mypy (>=0.9.1)"]
+docs = ["sphinx", "jaraco.packaging (>=9)", "rst.linker (>=1.9)", "jaraco.tidelift (>=1.4)", "sphinx-notfound-page (==0.8.3)", "sphinx-hoverxref (<2)", "pygments-github-lexers (==0.0.5)", "sphinx-favicon", "sphinx-inline-tabs", "sphinx-reredirects", "sphinxcontrib-towncrier", "furo"]
+testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "flake8 (<5)", "pytest-enabler (>=1.3)", "pytest-perf", "mock", "flake8-2020", "virtualenv (>=13.0.0)", "wheel", "pip (>=19.1)", "jaraco.envs (>=2.2)", "pytest-xdist", "jaraco.path (>=3.2.0)", "build", "filelock (>=3.4.0)", "pip-run (>=8.8)", "ini2toml[lite] (>=0.9)", "tomli-w (>=1.0.0)", "pytest-black (>=0.3.7)", "pytest-cov", "pytest-mypy (>=0.9.1)"]
 testing-integration = ["pytest", "pytest-xdist", "pytest-enabler", "virtualenv (>=13.0.0)", "tomli", "wheel", "jaraco.path (>=3.2.0)", "jaraco.envs (>=2.2)", "build", "filelock (>=3.4.0)"]
 
 [[package]]
@@ -636,16 +636,16 @@ protobuf = [
     {file = "protobuf-3.20.0.tar.gz", hash = "sha256:71b2c3d1cd26ed1ec7c8196834143258b2ad7f444efff26fdc366c6f5e752702"},
 ]
 pyright = [
-    {file = "pyright-1.1.264-py3-none-any.whl", hash = "sha256:845c0bfa77695e81b19980fe4777a771016cbc6a18b821aa492a516a2df2fae1"},
-    {file = "pyright-1.1.264.tar.gz", hash = "sha256:93ffceb70c0f817d89122bf133583a41842c466d941aa4e92a4bb6a06bd3cd9a"},
+    {file = "pyright-1.1.265-py3-none-any.whl", hash = "sha256:a504d67d559dc90bf7209df090d79392fee47f308b36066a467b98d2a4aa471d"},
+    {file = "pyright-1.1.265.tar.gz", hash = "sha256:0a98fd55ba8b9c16145c16b79c524fdb1daf55ed6dc094c8a7a2dd540af00b67"},
 ]
 requests = [
     {file = "requests-2.28.1-py3-none-any.whl", hash = "sha256:8fefa2a1a1365bf5520aac41836fbee479da67864514bdb821f31ce07ce65349"},
     {file = "requests-2.28.1.tar.gz", hash = "sha256:7c5599b102feddaa661c826c56ab4fee28bfd17f5abca1ebbe3e7f19d7c97983"},
 ]
 setuptools = [
-    {file = "setuptools-63.2.0-py3-none-any.whl", hash = "sha256:0d33c374d41c7863419fc8f6c10bfe25b7b498aa34164d135c622e52580c6b16"},
-    {file = "setuptools-63.2.0.tar.gz", hash = "sha256:c04b44a57a6265fe34a4a444e965884716d34bae963119a76353434d6f18e450"},
+    {file = "setuptools-63.4.1-py3-none-any.whl", hash = "sha256:dc2662692f47d99cb8ae15a784529adeed535bcd7c277fee0beccf961522baf6"},
+    {file = "setuptools-63.4.1.tar.gz", hash = "sha256:7c7854ee1429a240090297628dc9f75b35318d193537968e2dc14010ee2f5bca"},
 ]
 six = [
     {file = "six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"},
