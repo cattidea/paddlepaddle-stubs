@@ -17,7 +17,8 @@ class MobileNetV1(nn.Layer):
         num_classes: int = ...,
         with_pool: bool = ...,
     ) -> None: ...
-    def forward(self, x: Any) -> Tensor: ...
+    def forward(self, x: Tensor) -> Tensor: ...
+    __call__ = forward
 
 def mobilenet_v1(
     pretrained: bool = ...,

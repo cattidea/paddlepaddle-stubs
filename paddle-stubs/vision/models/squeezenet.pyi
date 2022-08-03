@@ -21,7 +21,8 @@ class SqueezeNet(nn.Layer):
         num_classes: int = ...,
         with_pool: bool = ...,
     ) -> None: ...
-    def forward(self, inputs: Any) -> Tensor: ...
+    def forward(self, inputs: Tensor) -> Tensor: ...
+    __call__ = forward
 
 def squeezenet1_0(
     pretrained: bool = ...,

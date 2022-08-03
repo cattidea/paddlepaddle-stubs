@@ -67,7 +67,8 @@ class DenseNet(nn.Layer):
         num_classes: int = ...,
         with_pool: bool = ...,
     ) -> None: ...
-    def forward(self, input: Any) -> Tensor: ...
+    def forward(self, input: Tensor) -> Tensor: ...
+    __call__ = forward
 
 def densenet121(
     pretrained: bool = ...,

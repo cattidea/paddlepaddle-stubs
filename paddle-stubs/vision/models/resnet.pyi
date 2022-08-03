@@ -60,7 +60,8 @@ class ResNet(nn.Layer):
         with_pool: bool = ...,
         groups: int = ...,
     ) -> None: ...
-    def forward(self, x: Any) -> Tensor: ...
+    def forward(self, x: Tensor) -> Tensor: ...
+    __call__ = forward
 
 def resnet18(
     pretrained: bool = ...,

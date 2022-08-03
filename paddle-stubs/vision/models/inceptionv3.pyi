@@ -90,7 +90,8 @@ class InceptionV3(nn.Layer):
         num_classes: int = ...,
         with_pool: bool = ...,
     ) -> None: ...
-    def forward(self, x: Any) -> Tensor: ...
+    def forward(self, x: Tensor) -> Tensor: ...
+    __call__ = forward
 
 def inception_v3(
     pretrained: bool = ...,

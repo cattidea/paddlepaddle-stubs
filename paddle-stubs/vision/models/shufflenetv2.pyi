@@ -25,7 +25,8 @@ class ShuffleNetV2(nn.Layer):
         num_classes: int = ...,
         with_pool: bool = ...,
     ) -> None: ...
-    def forward(self, inputs: Any) -> Tensor: ...
+    def forward(self, inputs: Tensor) -> Tensor: ...
+    __call__ = forward
 
 def shufflenet_v2_x0_25(
     pretrained: bool = ...,
