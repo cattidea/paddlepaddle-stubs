@@ -29,7 +29,9 @@ _SeqLevel5 = tuple[_TL4, ...] | list[_TL4]
 _TL5 = TypeVar("_TL5", bound=_SeqLevel5[_SeqLevel4[_SeqLevel3[_SeqLevel2[_SeqLevel1[Numberic]]]]])
 _SeqLevel6 = tuple[_TL5, ...] | list[_TL5]
 
-NumbericSequence = (
+IntSequence = _SeqLevel1[int]
+NumbericSequence = _SeqLevel1[Numberic]
+NestedNumbericSequence = (
     Numberic
     | _SeqLevel1[Numberic]
     | _SeqLevel2[_SeqLevel1[Numberic]]
@@ -96,6 +98,8 @@ DTypeLike = Optional[dtype | _DTypeNumpy | _DTypeString]
 # Tensor
 
 class Tensor:
+    shape: list[int]
+    dtype: dtype
     def __add__(self, other: Self | np.ndarray[Any, Any] | Numberic) -> Tensor: ...
     def __radd__(self, other: Self | np.ndarray[Any, Any] | Numberic) -> Tensor: ...
     def __sub__(self, other: Self | np.ndarray[Any, Any] | Numberic) -> Tensor: ...
@@ -110,6 +114,7 @@ class Tensor:
     def __rpow__(self, other: Self | np.ndarray[Any, Any] | Numberic) -> Tensor: ...
     def astype(self, dtype: DTypeLike) -> Tensor: ...
     def reshape(self, shape: ShapeLike, name: Optional[str] = ...) -> Tensor: ...
+    def set_value(self, value: Tensor | np.ndarray[Any, Any]) -> None: ...
 
 # Device
 
