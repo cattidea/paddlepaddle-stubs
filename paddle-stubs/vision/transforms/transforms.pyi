@@ -5,9 +5,6 @@ from typing import Any, Optional
 
 from paddle.utils import try_import as try_import
 
-Sequence = collections.abc.Sequence
-Iterable = collections.abc.Iterable
-
 class Compose:
     transforms: Any = ...
     def __init__(self, transforms: Any) -> None: ...

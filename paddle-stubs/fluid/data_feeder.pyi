@@ -1,6 +1,38 @@
 from __future__ import annotations
 
 from typing import Any, Optional
+from .framework import Variable
+from .._typing import _DTypeString, ShapeLike, DTypeLike, Tensor
+
+def convert_dtype(dtype: DTypeLike) -> str: ...
+def check_variable_and_dtype(
+    input: Tensor,
+    input_name: str,
+    expected_dtype: DTypeLike,
+    op_name: str,
+    extra_message: str = ...,
+) -> None: ...
+def check_type(
+    input: Tensor,
+    input_name: str,
+    expected_type: type[Tensor],
+    op_name: str,
+    extra_message: str = ...,
+) -> None: ...
+def check_dtype(
+    input_dtype: DTypeLike,
+    input_name: str,
+    expected_dtype: DTypeLike,
+    op_name: str,
+    extra_message: str = ...,
+) -> None: ...
+def check_shape(
+    shape: ShapeLike,
+    op_name: str,
+    expected_shape_type: tuple[type[list] | type[tuple] | type[Variable], ...] = ...,
+    expected_element_type: tuple[type[list] | type[tuple] | type[Variable], ...] = ...,
+    expected_tensor_dtype: _DTypeString = ...,
+) -> None: ...
 
 class DataToLoDTensorConverter:
     place: Any = ...

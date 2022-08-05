@@ -7,9 +7,6 @@ from numpy import cos as cos
 from numpy import sin as sin
 from numpy import tan as tan
 
-Sequence = collections.abc.Sequence
-Iterable = collections.abc.Iterable
-
 def to_tensor(pic: Any, data_format: str = ...): ...
 def resize(img: Any, size: Any, interpolation: str = ...): ...
 def pad(img: Any, padding: Any, fill: int = ..., padding_mode: str = ...): ...
