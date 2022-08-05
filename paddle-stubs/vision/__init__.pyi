@@ -1,5 +1,8 @@
 from __future__ import annotations
 
+from . import datasets as datasets
+from . import models as models
+from . import transforms as transforms
 from .image import get_image_backend as get_image_backend
 from .image import image_load as image_load
 from .image import set_image_backend as set_image_backend

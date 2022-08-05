@@ -1,5 +1,12 @@
 from __future__ import annotations
 
+from typing import Callable
+
+from typing_extensions import ParamSpec, TypeVar
+
+InputArgs = ParamSpec("InputArgs")
+RetValue = TypeVar("RetValue")
+
 from .._typing import CPUPlace as CPUPlace
 from .._typing import CUDAPinnedPlace as CUDAPinnedPlace
 from .._typing import CUDAPlace as CUDAPlace
@@ -29,3 +36,6 @@ from .framework import set_grad_enabled as set_grad_enabled
 from .io import load as load
 from .io import save as save
 from .random import seed as seed
+
+def no_grad(func: Callable[InputArgs, RetValue]) -> Callable[InputArgs, RetValue]: ...
+def in_dynamic_mode() -> bool: ...

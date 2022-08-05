@@ -15,8 +15,6 @@ from ..fluid import unique_name as unique_name
 from ..fluid.backward import append_backward as append_backward
 from ..fluid.clip import GradientClipBase as GradientClipBase
 from ..fluid.clip import GradientClipByNorm as GradientClipByNorm
-from ..fluid.clip import append_gradient_clip_ops as append_gradient_clip_ops
-from ..fluid.clip import error_clip_callback as error_clip_callback
 from ..fluid.dygraph import no_grad as no_grad
 from ..fluid.framework import Parameter as Parameter
 from ..fluid.framework import program_guard as program_guard

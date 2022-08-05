@@ -25,8 +25,9 @@ skip = ["setup.py", ".venv"]
 
 [tool.pyright]
 include = ["paddle-stubs", "tests"]
-ignore = ["paddle-stubs/fluid"]
+# ignore = ["paddle-stubs/fluid"]
 pythonVersion = "3.7"
+typeCheckingMode = "basic"
 
 [build-system]
 requires = ["poetry-core>=1.1.0b3"]

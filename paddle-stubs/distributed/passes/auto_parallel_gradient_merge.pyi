@@ -4,7 +4,6 @@ from collections import OrderedDict as OrderedDict
 from typing import Any
 
 from paddle.fluid import unique_name as unique_name
-from paddle.fluid.clip import append_gradient_clip_ops as append_gradient_clip_ops
 from paddle.fluid.framework import program_guard as program_guard
 
 from .pass_base import PassBase as PassBase

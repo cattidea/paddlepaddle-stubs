@@ -7,8 +7,6 @@ import paddle
 from . import core as core
 from . import unique_name as unique_name
 from .framework import OpProtoHolder as OpProtoHolder
-from .proto import framework_pb2 as framework_pb2
-from .proto import pass_desc_pb2 as pass_desc_pb2
 
 def get_data_vars(program: Any): ...
 def apply_build_strategy(main_program: Any, startup_program: Any, build_strategy: Any, pass_attrs: Any): ...

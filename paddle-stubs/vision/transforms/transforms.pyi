@@ -1,9 +1,12 @@
 from __future__ import annotations
 
 import collections
+from collections.abc import Sequence
 from typing import Any, Optional
 
-from paddle.utils import try_import as try_import
+from typing_extensions import Literal
+
+from ..._typing import NumbericSequence
 
 class Compose:
     transforms: Any = ...
@@ -52,7 +55,12 @@ class Normalize(BaseTransform):
     data_format: Any = ...
     to_rgb: Any = ...
     def __init__(
-        self, mean: float = ..., std: float = ..., data_format: str = ..., to_rgb: bool = ..., keys: Optional[Any] = ...
+        self,
+        mean: NumbericSequence = ...,
+        std: NumbericSequence = ...,
+        data_format: Literal["HWC", "CHW"] = ...,
+        to_rgb: bool = ...,
+        keys: Optional[Sequence[str]] = ...,
     ) -> None: ...
 
 class Transpose(BaseTransform):

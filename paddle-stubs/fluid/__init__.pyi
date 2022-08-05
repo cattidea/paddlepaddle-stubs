@@ -32,17 +32,6 @@ from . import unique_name as unique_name
 from .backward import append_backward as append_backward
 from .backward import gradients as gradients
 from .compiler import *
-from .core import CPUPlace as CPUPlace
-from .core import CUDAPinnedPlace as CUDAPinnedPlace
-from .core import CUDAPlace as CUDAPlace
-from .core import CustomPlace as CustomPlace
-from .core import IPUPlace as IPUPlace
-from .core import LoDTensor as LoDTensor
-from .core import LoDTensorArray as LoDTensorArray
-from .core import MLUPlace as MLUPlace
-from .core import NPUPlace as NPUPlace
-from .core import Scope as Scope
-from .core import XPUPlace as XPUPlace
 from .data import *
 from .data_feed_desc import *
 from .data_feeder import DataFeeder as DataFeeder

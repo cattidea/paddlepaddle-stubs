@@ -4,7 +4,9 @@ from paddle.cuda_env import *
 
 from . import hub as hub
 from . import linalg as linalg
+from . import metric as metric
 from . import nn as nn
+from . import optimizer as optimizer
 from . import regularizer as regularizer
 from . import signal as signal
 from . import sysconfig as sysconfig
