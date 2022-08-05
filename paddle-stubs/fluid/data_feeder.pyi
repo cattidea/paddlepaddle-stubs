@@ -1,8 +1,9 @@
 from __future__ import annotations
 
 from typing import Any, Optional
+
+from .._typing import DTypeLike, ShapeLike, Tensor, _DTypeString
 from .framework import Variable
-from .._typing import _DTypeString, ShapeLike, DTypeLike, Tensor
 
 def convert_dtype(dtype: DTypeLike) -> str: ...
 def check_variable_and_dtype(
