@@ -2,8 +2,6 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from .dataloader.dataloader_iter import default_collate_fn as default_collate_fn
-
 class DataLoaderBase:
     def __init__(self) -> None: ...
     def __call__(self): ...

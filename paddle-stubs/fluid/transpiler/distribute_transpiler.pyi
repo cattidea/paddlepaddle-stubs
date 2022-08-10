@@ -14,7 +14,6 @@ from ..framework import Parameter as Parameter
 from ..framework import Program as Program
 from ..framework import default_main_program as default_main_program
 from ..framework import default_startup_program as default_startup_program
-from ..framework import grad_var_name as grad_var_name
 from . import collective as collective
 from .details import UnionFind as UnionFind
 from .details import VarsDistributed as VarsDistributed

@@ -15,9 +15,7 @@ from .._typing import IPUPlace as IPUPlace
 from .._typing import MLUPlace as MLUPlace
 from .._typing import NPUPlace as NPUPlace
 from ..fluid import core as core
-from ..fluid import monkey_patch_variable as monkey_patch_variable
 from ..fluid.core import VarBase as VarBase
-from ..fluid.dygraph import monkey_patch_math_varbase as monkey_patch_math_varbase
 from ..fluid.dygraph.base import grad as grad
 from ..fluid.dygraph.parallel import DataParallel as DataParallel
 from ..fluid.framework import OpProtoHolder as OpProtoHolder
@@ -25,7 +23,9 @@ from ..fluid.framework import convert_np_dtype_to_dtype_ as convert_np_dtype_to_
 from ..fluid.framework import disable_signal_handler as disable_signal_handler
 from ..fluid.framework import dygraph_only as dygraph_only
 from ..fluid.framework import get_flags as get_flags
+from ..fluid.framework import monkey_patch_math_varbase as monkey_patch_math_varbase
 from ..fluid.framework import set_flags as set_flags
+from ..fluid.layers import monkey_patch_variable as monkey_patch_variable
 from ..fluid.layers.tensor import create_parameter as create_parameter
 from ..fluid.param_attr import ParamAttr as ParamAttr
 from . import random as random
@@ -39,3 +39,5 @@ from .random import seed as seed
 
 def no_grad(func: Callable[InputArgs, RetValue]) -> Callable[InputArgs, RetValue]: ...
 def in_dynamic_mode() -> bool: ...
+def enable_static() -> None: ...
+def disable_static() -> None: ...

@@ -14,5 +14,3 @@ from .data_generator.data_generator import (
 from .data_generator.data_generator import (
     MultiSlotStringDataGenerator as MultiSlotStringDataGenerator,
 )
-
-rank_in_node = local_rank

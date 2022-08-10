@@ -12,7 +12,6 @@ from .framework import Variable as Variable
 from .framework import default_main_program as default_main_program
 from .graphviz import GraphPreviewGenerator as GraphPreviewGenerator
 from .layer_helper import LayerHelper as LayerHelper
-from .proto import framework_pb2 as framework_pb2
 
 def repr_data_type(type: Any): ...
 def repr_tensor(proto: Any): ...

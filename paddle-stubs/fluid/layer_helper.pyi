@@ -6,7 +6,6 @@ from . import core as core
 from . import unique_name as unique_name
 from .framework import OpProtoHolder as OpProtoHolder
 from .framework import Parameter as Parameter
-from .framework import dtype_is_floating as dtype_is_floating
 from .layer_helper_base import LayerHelperBase as LayerHelperBase
 from .param_attr import ParamAttr as ParamAttr
 

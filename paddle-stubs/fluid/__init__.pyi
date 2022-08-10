@@ -74,8 +74,8 @@ from .transpiler import release_memory as release_memory
 
 core_suffix: str
 legacy_core: Any
-Tensor = LoDTensor
 enable_imperative = enable_dygraph
 disable_imperative = disable_dygraph
+Tensor = Any
 
 def __bootstrap__() -> None: ...
