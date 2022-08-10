@@ -1,9 +1,25 @@
 [tool.poetry]
 name = "paddlepaddle-stubs"
-version = "2.3.1-dev.0"
+version = "2.3.1-dev.1"
 description = ""
 authors = ["Nyakku Shigure <sigure.qaq@gmail.com>"]
 packages = [{ include = "paddle-stubs" }]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/ShigureLab/paddlepaddle-stubs"
+repository = "https://github.com/ShigureLab/paddlepaddle-stubs"
+keywords = ["PEP 561", "PEP 484", "Type Hints", "PaddlePaddle"]
+classifiers = [
+  "Operating System :: OS Independent",
+  "License :: OSI Approved :: MIT LICENSE",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: Implementation :: CPython",
+]
 
 [tool.poetry.dependencies]
 python = "^3.7"
