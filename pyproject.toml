@@ -11,7 +11,7 @@ repository = "https://github.com/ShigureLab/paddlepaddle-stubs"
 keywords = ["PEP 561", "PEP 484", "Type Hints", "PaddlePaddle"]
 classifiers = [
   "Operating System :: OS Independent",
-  "License :: OSI Approved :: MIT LICENSE",
+  "License :: OSI Approved :: MIT License",
   "Programming Language :: Python",
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3.7",
