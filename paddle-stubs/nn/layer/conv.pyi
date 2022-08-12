@@ -12,10 +12,8 @@ from ..._typing import (
     ShapeLike,
     Tensor,
 )
-from ...fluid.layers import utils as utils
 from ...framework import ParamAttr
-from .. import Layer as Layer
-from ..initializer import Normal as Normal
+from .. import Layer
 
 PaddingSizeStr = Literal["valid", "same"]
 PaddingMode = Literal["zeros", "reflect", "replicate", "circular"]
