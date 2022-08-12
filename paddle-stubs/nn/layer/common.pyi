@@ -6,8 +6,19 @@ from paddle.framework import ParamAttr
 from paddle.nn import Layer
 from typing_extensions import Literal
 
-from ..._typing import IntSequence, Numberic, NumbericSequence, Tensor
+from ..._typing import (
+    DataLayout1D,
+    DataLayout1DVariant,
+    DataLayout2D,
+    DataLayout3D,
+    IntSequence,
+    Numberic,
+    NumbericSequence,
+    Tensor,
+)
 from ...fluid.dygraph import Flatten as Flatten
+
+InterpolationMode = Literal["linear", "bilinear", "trilinear", "nearest", "bicubic"]
 
 class Identity(Layer):
     def __init__(self, *args: Any, **kwargs: Any) -> None: ...
@@ -41,7 +52,7 @@ class Upsample(Layer):
         self,
         size: Optional[IntSequence | Tensor] = ...,
         scale_factor: Optional[Numberic | NumbericSequence | Tensor] = ...,
-        mode: Literal["linear", "bilinear", "trilinear", "nearest", "bicubic"] = ...,
+        mode: InterpolationMode = ...,
         align_corners: bool = ...,
         align_mode: int = ...,
         data_format: str = ...,
@@ -60,7 +71,7 @@ class UpsamplingNearest2D(Layer):
         self,
         size: Optional[IntSequence | Tensor] = ...,
         scale_factor: Optional[Numberic | NumbericSequence | Tensor] = ...,
-        data_format: Literal["NCW", "NWC", "NCHW", "NHWC", "NCDHW", "NDHWC"] = ...,
+        data_format: DataLayout1DVariant | DataLayout2D | DataLayout3D = ...,
         name: Optional[str] = ...,
     ) -> None: ...
     def forward(self, x: Tensor) -> Tensor: ...
@@ -76,7 +87,7 @@ class UpsamplingBilinear2D(Layer):
         self,
         size: Optional[IntSequence | Tensor] = ...,
         scale_factor: Optional[Numberic | NumbericSequence | Tensor] = ...,
-        data_format: Literal["NCW", "NWC", "NCHW", "NHWC", "NCDHW", "NDHWC"] = ...,
+        data_format: DataLayout1DVariant | DataLayout2D | DataLayout3D = ...,
         name: Optional[str] = ...,
     ) -> None: ...
     def forward(self, x: Tensor) -> Tensor: ...
@@ -122,7 +133,7 @@ class Dropout2D(Layer):
     def __init__(
         self,
         p: float = ...,
-        data_format: Literal["NCHW", "NHWC"] = ...,
+        data_format: DataLayout2D = ...,
         name: Optional[str] = ...,
     ) -> None: ...
     def forward(self, input: Tensor) -> Tensor: ...
@@ -136,7 +147,7 @@ class Dropout3D(Layer):
     def __init__(
         self,
         p: float = ...,
-        data_format: Literal["NCDHW", "NDHWC"] = ...,
+        data_format: DataLayout3D = ...,
         name: Optional[str] = ...,
     ) -> None: ...
     def forward(self, input: Tensor) -> Tensor: ...
@@ -157,7 +168,7 @@ class Pad1D(Layer):
         padding: int | IntSequence | Tensor,
         mode: Literal["constant", "reflect", "replicate", "circular"] = ...,
         value: float = ...,
-        data_format: Literal["NCL", "NLC"] = ...,
+        data_format: DataLayout1D = ...,
         name: Optional[str] = ...,
     ) -> None: ...
     def forward(self, x: Tensor) -> Tensor: ...
@@ -170,7 +181,7 @@ class Pad2D(Layer):
         padding: int | IntSequence | Tensor,
         mode: Literal["constant", "reflect", "replicate", "circular"] = ...,
         value: float = ...,
-        data_format: Literal["NCHW", "NHWC"] = ...,
+        data_format: DataLayout2D = ...,
         name: Optional[str] = ...,
     ) -> None: ...
     def forward(self, x: Tensor) -> Tensor: ...
@@ -181,7 +192,7 @@ class ZeroPad2D(Layer):
     def __init__(
         self,
         padding: int | IntSequence | Tensor,
-        data_format: Literal["NCHW", "NHWC"] = ...,
+        data_format: DataLayout2D = ...,
         name: Optional[str] = ...,
     ) -> None: ...
     def forward(self, x: Tensor) -> Tensor: ...
@@ -194,7 +205,7 @@ class Pad3D(Layer):
         padding: int | IntSequence | Tensor,
         mode: Literal["constant", "reflect", "replicate", "circular"] = ...,
         value: float = ...,
-        data_format: Literal["NCDHW", "NDHWC"] = ...,
+        data_format: DataLayout3D = ...,
         name: Optional[str] = ...,
     ) -> None: ...
     def forward(self, x: Tensor) -> Tensor: ...

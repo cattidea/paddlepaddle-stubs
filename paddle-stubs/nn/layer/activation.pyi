@@ -3,9 +3,8 @@ from __future__ import annotations
 from typing import Any, Optional
 
 from paddle.nn import Layer
-from typing_extensions import Literal
 
-from ..._typing import Tensor
+from ..._typing import DataLayoutND, Tensor
 from ...framework import ParamAttr
 
 class CELU(Layer):
@@ -56,7 +55,7 @@ class PReLU(Layer):
         num_parameters: int = ...,
         init: float = ...,
         weight_attr: Optional[ParamAttr] = ...,
-        data_format: Literal["NC", "NCL", "NCHW", "NCDHW", "NLC", "NHWC", "NDHWC"] = ...,
+        data_format: DataLayoutND = ...,
         name: Optional[str] = ...,
     ) -> None: ...
     def forward(self, x: Tensor) -> Tensor: ...

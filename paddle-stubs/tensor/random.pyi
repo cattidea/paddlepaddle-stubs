@@ -4,15 +4,6 @@ from typing import Any, Optional
 
 from .. import Tensor
 from .._typing import DTypeLike, ShapeLike
-from ..fluid.data_feeder import check_dtype as check_dtype
-from ..fluid.data_feeder import check_shape as check_shape
-from ..fluid.data_feeder import check_type as check_type
-from ..fluid.data_feeder import check_variable_and_dtype as check_variable_and_dtype
-from ..fluid.layer_helper import LayerHelper as LayerHelper
-from ..fluid.layers import utils as utils
-from ..framework import convert_np_dtype_to_dtype_ as convert_np_dtype_to_dtype_
-from ..framework import core as core
-from ..framework import dygraph_only as dygraph_only
 
 def bernoulli(x: Any, name: Optional[Any] = ...): ...
 def poisson(x: Any, name: Optional[Any] = ...): ...
@@ -32,11 +23,19 @@ def uniform(
 ): ...
 def uniform_(x: Any, min: Any = ..., max: float = ..., seed: int = ..., name: Optional[Any] = ...): ...
 def randint(
-    low: int = ..., high: Optional[Any] = ..., shape: Any = ..., dtype: Optional[Any] = ..., name: Optional[Any] = ...
-): ...
+    low: int = ...,
+    high: Optional[int] = ...,
+    shape: ShapeLike = ...,
+    dtype: Optional[DTypeLike] = ...,
+    name: Optional[str] = ...,
+) -> Tensor: ...
 def randint_like(
-    x: Any, low: int = ..., high: Optional[Any] = ..., dtype: Optional[Any] = ..., name: Optional[Any] = ...
-): ...
+    x: Tensor,
+    low: int = ...,
+    high: Optional[int] = ...,
+    dtype: Optional[DTypeLike] = ...,
+    name: Optional[str] = ...,
+) -> Tensor: ...
 def randperm(n: Any, dtype: str = ..., name: Optional[Any] = ...): ...
 def rand(
     shape: ShapeLike,

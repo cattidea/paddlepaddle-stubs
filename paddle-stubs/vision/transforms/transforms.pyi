@@ -1,12 +1,9 @@
 from __future__ import annotations
 
-import collections
 from collections.abc import Sequence
 from typing import Any, Optional
 
-from typing_extensions import Literal
-
-from ..._typing import NumbericSequence
+from ..._typing import DataLayoutImage, NumbericSequence
 
 class Compose:
     transforms: Any = ...
@@ -58,7 +55,7 @@ class Normalize(BaseTransform):
         self,
         mean: NumbericSequence = ...,
         std: NumbericSequence = ...,
-        data_format: Literal["HWC", "CHW"] = ...,
+        data_format: DataLayoutImage = ...,
         to_rgb: bool = ...,
         keys: Optional[Sequence[str]] = ...,
     ) -> None: ...

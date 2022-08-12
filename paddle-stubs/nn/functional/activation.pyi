@@ -2,9 +2,7 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from typing_extensions import Literal
-
-from ..._typing import Tensor
+from ..._typing import DataLayoutND, Tensor
 from ...tensor.math import tanh as tanh
 from ...tensor.math import tanh_ as tanh_
 
@@ -20,7 +18,7 @@ def leaky_relu(x: Tensor, negative_slope: float = ..., name: Optional[str] = ...
 def prelu(
     x: Tensor,
     weight: Tensor,
-    data_format: Literal["NC", "NCL", "NCHW", "NCDHW", "NLC", "NHWC", "NDHWC"] = ...,
+    data_format: DataLayoutND = ...,
     name: Optional[str] = ...,
 ) -> Tensor: ...
 def relu(x: Tensor, name: Optional[str] = ...) -> Tensor: ...
