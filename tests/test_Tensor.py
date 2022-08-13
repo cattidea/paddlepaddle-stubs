@@ -30,7 +30,8 @@ def test_methods():
     h = a // b
     i = a % b
     j = len(a)
-    k = iter(a)
+    for k in iter(a):
+        assert_type(k, Tensor)
     l = a[1]
     m = a[:1]
     n = a[b]

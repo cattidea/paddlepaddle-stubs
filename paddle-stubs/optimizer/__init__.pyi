@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from . import lr as lr
 from .adadelta import Adadelta as Adadelta
 from .adagrad import Adagrad as Adagrad
 from .adam import Adam as Adam
