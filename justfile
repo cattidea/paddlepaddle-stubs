@@ -1,4 +1,4 @@
-VERSION := "2.3.1-dev.0"
+VERSION := "2.3.1-dev.2"
 
 fmt:
   poetry run isort .
