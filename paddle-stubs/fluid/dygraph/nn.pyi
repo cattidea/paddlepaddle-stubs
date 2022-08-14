@@ -2,7 +2,8 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from ..._typing import Tensor
+from ..._typing import DataLayoutND, DTypeLike, ShapeLike, Tensor
+from ..param_attr import ParamAttr
 from . import layers
 
 class Conv2D(layers.Layer):
@@ -112,15 +113,15 @@ class BatchNorm(layers.Layer):
     bias: Any = ...
     def __init__(
         self,
-        num_channels: Any,
-        act: Optional[Any] = ...,
+        num_channels: int,
+        act: Optional[str] = ...,
         is_test: bool = ...,
         momentum: float = ...,
         epsilon: float = ...,
-        param_attr: Optional[Any] = ...,
-        bias_attr: Optional[Any] = ...,
-        dtype: str = ...,
-        data_layout: str = ...,
+        param_attr: Optional[ParamAttr] = ...,
+        bias_attr: Optional[ParamAttr | bool] = ...,
+        dtype: DTypeLike = ...,
+        data_layout: DataLayoutND = ...,
         in_place: bool = ...,
         moving_mean_name: Optional[str] = ...,
         moving_variance_name: Optional[str] = ...,
@@ -128,7 +129,8 @@ class BatchNorm(layers.Layer):
         use_global_stats: bool = ...,
         trainable_statistics: bool = ...,
     ) -> None: ...
-    def forward(self, input: Any): ...
+    def forward(self, input: Tensor) -> Tensor: ...
+    __call__ = forward
 
 class Dropout(layers.Layer):
     def __init__(
@@ -290,9 +292,15 @@ class SpectralNorm(layers.Layer):
     weight_u: Any = ...
     weight_v: Any = ...
     def __init__(
-        self, weight_shape: Any, dim: int = ..., power_iters: int = ..., eps: float = ..., dtype: str = ...
+        self,
+        weight_shape: ShapeLike,
+        dim: int = ...,
+        power_iters: int = ...,
+        eps: float = ...,
+        dtype: str = ...,
     ) -> None: ...
-    def forward(self, weight: Any): ...
+    def forward(self, weight: Tensor) -> Tensor: ...
+    __call__ = forward
 
 class TreeConv(layers.Layer):
     bias: Any = ...
