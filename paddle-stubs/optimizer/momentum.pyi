@@ -1,28 +1,25 @@
 from __future__ import annotations
 
-from typing import Any, Optional
+from typing import Optional
 
-from ..fluid import core as core
-from ..fluid import framework as framework
-from ..fluid import layers as layers
-from ..fluid import unique_name as unique_name
-from ..fluid.framework import Variable as Variable
-from ..fluid.framework import name_scope as name_scope
-from ..fluid.layer_helper import LayerHelper as LayerHelper
-from .optimizer import Optimizer as Optimizer
+from .._typing import Tensor
+from ..fluid.clip import GradientClipBase
+from ..fluid.regularizer import WeightDecayRegularizer
+from .lr import LRScheduler
+from .optimizer import Optimizer, ParameterConfig
 
 class Momentum(Optimizer):
     type: str = ...
     def __init__(
         self,
-        learning_rate: float = ...,
+        learning_rate: float | LRScheduler = ...,
         momentum: float = ...,
-        parameters: Optional[Any] = ...,
+        parameters: Optional[list[Tensor] | list[ParameterConfig]] = ...,
         use_nesterov: bool = ...,
-        weight_decay: Optional[Any] = ...,
-        grad_clip: Optional[Any] = ...,
+        weight_decay: Optional[float | WeightDecayRegularizer] = ...,
+        grad_clip: Optional[GradientClipBase] = ...,
         multi_precision: bool = ...,
         rescale_grad: float = ...,
         use_multi_tensor: bool = ...,
-        name: Optional[Any] = ...,
-    ): ...
+        name: Optional[str] = ...,
+    ) -> None: ...

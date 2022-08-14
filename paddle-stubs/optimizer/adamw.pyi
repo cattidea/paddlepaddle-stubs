@@ -1,27 +1,27 @@
 from __future__ import annotations
 
-from typing import Any, Optional
+from typing import Callable, Optional
 
-from ..fluid import core as core
-from ..fluid import framework as framework
-from ..fluid.framework import Variable as Variable
-from .adam import Adam as Adam
-from .optimizer import Optimizer as Optimizer
+from .._typing import Tensor
+from ..fluid.clip import GradientClipBase
+from ..fluid.regularizer import WeightDecayRegularizer
+from .adam import Adam, AdamParameterConfig
+from .lr import LRScheduler
 
 class AdamW(Adam):
     type: str = ...
     def __init__(
         self,
-        learning_rate: float = ...,
-        beta1: float = ...,
-        beta2: float = ...,
+        learning_rate: float | LRScheduler,
+        beta1: float | Tensor = ...,
+        beta2: float | Tensor = ...,
         epsilon: float = ...,
-        parameters: Optional[Any] = ...,
-        weight_decay: float = ...,
-        lr_ratio: Optional[Any] = ...,
-        apply_decay_param_fun: Optional[Any] = ...,
-        grad_clip: Optional[Any] = ...,
+        parameters: Optional[list[Tensor] | list[AdamParameterConfig]] = ...,
+        weight_decay: Optional[float | WeightDecayRegularizer] = ...,
+        lr_ratio: Optional[Callable[[Tensor], float]] = ...,
+        apply_decay_param_fun: Optional[Callable[[str], bool]] = ...,
+        grad_clip: Optional[GradientClipBase] = ...,
         lazy_mode: bool = ...,
         multi_precision: bool = ...,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
     ) -> None: ...

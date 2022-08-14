@@ -19,9 +19,20 @@ def randn(
 ) -> Tensor: ...
 def normal(mean: float = ..., std: float = ..., shape: Optional[Any] = ..., name: Optional[Any] = ...): ...
 def uniform(
-    shape: Any, dtype: Optional[Any] = ..., min: Any = ..., max: float = ..., seed: int = ..., name: Optional[Any] = ...
-): ...
-def uniform_(x: Any, min: Any = ..., max: float = ..., seed: int = ..., name: Optional[Any] = ...): ...
+    shape: ShapeLike,
+    dtype: Optional[DTypeLike] = ...,
+    min: float = ...,
+    max: float = ...,
+    seed: int = ...,
+    name: Optional[str] = ...,
+) -> Tensor: ...
+def uniform_(
+    x: Tensor,
+    min: float = ...,
+    max: float = ...,
+    seed: int = ...,
+    name: Optional[str] = ...,
+) -> Tensor: ...
 def randint(
     low: int = ...,
     high: Optional[int] = ...,

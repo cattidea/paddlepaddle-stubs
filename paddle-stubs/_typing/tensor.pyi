@@ -40,5 +40,5 @@ class Tensor(Sized, Iterable[Tensor]):
     def backward(
         self,
         grad_tensor: Optional[Tensor] = ...,
-        b: bool = ...,
+        retain_graph: bool = ...,
     ) -> None: ...

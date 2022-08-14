@@ -1,23 +1,24 @@
 from __future__ import annotations
 
-from typing import Any, Optional
+from typing import Optional
 
-from ..fluid import core as core
-from ..fluid import framework as framework
-from ..fluid.framework import Variable as Variable
-from .optimizer import Optimizer as Optimizer
+from .._typing import Tensor
+from ..fluid.clip import GradientClipBase
+from ..fluid.regularizer import WeightDecayRegularizer
+from .lr import LRScheduler
+from .optimizer import Optimizer, ParameterConfig
 
 class RMSProp(Optimizer):
     type: str = ...
     def __init__(
         self,
-        learning_rate: Any,
+        learning_rate: float | LRScheduler = ...,
         rho: float = ...,
         epsilon: float = ...,
         momentum: float = ...,
         centered: bool = ...,
-        parameters: Optional[Any] = ...,
-        weight_decay: Optional[Any] = ...,
-        grad_clip: Optional[Any] = ...,
-        name: Optional[Any] = ...,
+        parameters: Optional[list[Tensor] | list[ParameterConfig]] = ...,
+        weight_decay: Optional[float | WeightDecayRegularizer] = ...,
+        grad_clip: Optional[GradientClipBase] = ...,
+        name: Optional[str] = ...,
     ) -> None: ...

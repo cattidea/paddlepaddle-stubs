@@ -2,16 +2,14 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from ..fluid.data_feeder import check_dtype as check_dtype
-from ..fluid.data_feeder import check_type as check_type
-from ..fluid.data_feeder import check_variable_and_dtype as check_variable_and_dtype
-from ..fluid.data_feeder import convert_dtype as convert_dtype
-from ..fluid.layer_helper import LayerHelper as LayerHelper
-from ..framework import core as core
-from ..static import Variable as Variable
-from .search import where as where
+from .._typing import IntSequence, Tensor
 
-def mean(x: Any, axis: Optional[Any] = ..., keepdim: bool = ..., name: Optional[Any] = ...): ...
+def mean(
+    x: Tensor,
+    axis: Optional[int | IntSequence] = ...,
+    keepdim: bool = ...,
+    name: Optional[str] = ...,
+) -> Tensor: ...
 def var(x: Any, axis: Optional[Any] = ..., unbiased: bool = ..., keepdim: bool = ..., name: Optional[Any] = ...): ...
 def std(x: Any, axis: Optional[Any] = ..., unbiased: bool = ..., keepdim: bool = ..., name: Optional[Any] = ...): ...
 def numel(x: Any, name: Optional[Any] = ...): ...
