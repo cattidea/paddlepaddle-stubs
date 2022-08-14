@@ -14,6 +14,7 @@ check:
     paddle-stubs/hapi/model.pyi \
     paddle-stubs/hapi/model_summary.pyi \
     paddle-stubs/optimizer/* \
+    paddle-stubs/nn/layer/* \
     paddle-stubs/vision/models/* \
     paddle-stubs/vision/transforms/transforms.pyi \
     paddle-stubs/hub.pyi \

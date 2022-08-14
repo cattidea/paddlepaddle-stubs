@@ -1,27 +1,25 @@
 from __future__ import annotations
 
-from functools import partial as partial
 from typing import Any, Optional
 
-from paddle.device import get_cudnn_version as get_cudnn_version
-from paddle.device import get_device as get_device
-from paddle.fluid.data_feeder import convert_dtype as convert_dtype
-from paddle.fluid.layers.utils import pack_sequence_as as pack_sequence_as
 from paddle.nn import Layer, LayerList
+from typing_extensions import Literal
 
-def split_states(states: Any, bidirectional: bool = ..., state_components: int = ...): ...
-def concat_states(states: Any, bidirectional: bool = ..., state_components: int = ...): ...
+from ..._typing import DTypeLike, ShapeLike, Tensor
+from ...framework import ParamAttr
+
+RNNDirection = Literal["forward", "bidirect", "bidirectional"]
 
 class RNNCellBase(Layer):
     shape: Any = ...
     def get_initial_states(
         self,
-        batch_ref: Any,
-        shape: Optional[Any] = ...,
-        dtype: Optional[Any] = ...,
+        batch_ref: Tensor,
+        shape: Optional[ShapeLike] = ...,
+        dtype: Optional[DTypeLike] = ...,
         init_value: float = ...,
         batch_dim_idx: int = ...,
-    ): ...
+    ) -> Tensor | list[Tensor]: ...
     @property
     def state_shape(self) -> None: ...
     @property
@@ -37,19 +35,23 @@ class SimpleRNNCell(RNNCellBase):
     activation: Any = ...
     def __init__(
         self,
-        input_size: Any,
-        hidden_size: Any,
-        activation: str = ...,
-        weight_ih_attr: Optional[Any] = ...,
-        weight_hh_attr: Optional[Any] = ...,
-        bias_ih_attr: Optional[Any] = ...,
-        bias_hh_attr: Optional[Any] = ...,
+        input_size: int,
+        hidden_size: int,
+        activation: Literal["relu", "tanh"] = ...,
+        weight_ih_attr: Optional[ParamAttr] = ...,
+        weight_hh_attr: Optional[ParamAttr] = ...,
+        bias_ih_attr: Optional[ParamAttr] = ...,
+        bias_hh_attr: Optional[ParamAttr] = ...,
         name: Optional[str] = ...,
     ) -> None: ...
-    def forward(self, inputs: Any, states: Optional[Any] = ...): ...
+    def forward(
+        self,
+        inputs: Tensor,
+        states: Optional[Tensor] = ...,
+    ) -> tuple[Tensor, Tensor]: ...
+    __call__ = forward
     @property
-    def state_shape(self): ...
-    def extra_repr(self): ...
+    def state_shape(self) -> tuple[int]: ...
 
 class LSTMCell(RNNCellBase):
     weight_ih: Any = ...
@@ -60,18 +62,22 @@ class LSTMCell(RNNCellBase):
     input_size: Any = ...
     def __init__(
         self,
-        input_size: Any,
-        hidden_size: Any,
-        weight_ih_attr: Optional[Any] = ...,
-        weight_hh_attr: Optional[Any] = ...,
-        bias_ih_attr: Optional[Any] = ...,
-        bias_hh_attr: Optional[Any] = ...,
+        input_size: int,
+        hidden_size: int,
+        weight_ih_attr: Optional[ParamAttr] = ...,
+        weight_hh_attr: Optional[ParamAttr] = ...,
+        bias_ih_attr: Optional[ParamAttr] = ...,
+        bias_hh_attr: Optional[ParamAttr] = ...,
         name: Optional[str] = ...,
     ) -> None: ...
-    def forward(self, inputs: Any, states: Optional[Any] = ...): ...
+    def forward(
+        self,
+        inputs: Tensor,
+        states: Optional[Tensor] = ...,
+    ) -> tuple[Tensor, tuple[Tensor, Tensor]]: ...
+    __call__ = forward
     @property
-    def state_shape(self): ...
-    def extra_repr(self): ...
+    def state_shape(self) -> tuple[tuple[int], tuple[int]]: ...
 
 class GRUCell(RNNCellBase):
     weight_ih: Any = ...
@@ -82,36 +88,56 @@ class GRUCell(RNNCellBase):
     input_size: Any = ...
     def __init__(
         self,
-        input_size: Any,
-        hidden_size: Any,
-        weight_ih_attr: Optional[Any] = ...,
-        weight_hh_attr: Optional[Any] = ...,
-        bias_ih_attr: Optional[Any] = ...,
-        bias_hh_attr: Optional[Any] = ...,
+        input_size: int,
+        hidden_size: int,
+        weight_ih_attr: Optional[ParamAttr] = ...,
+        weight_hh_attr: Optional[ParamAttr] = ...,
+        bias_ih_attr: Optional[ParamAttr] = ...,
+        bias_hh_attr: Optional[ParamAttr] = ...,
         name: Optional[str] = ...,
     ) -> None: ...
-    def forward(self, inputs: Any, states: Optional[Any] = ...): ...
+    def forward(self, inputs: Tensor, states: Optional[Tensor] = ...) -> tuple[Tensor, Tensor]: ...
+    __call__ = forward
     @property
-    def state_shape(self): ...
-    def extra_repr(self): ...
+    def state_shape(self) -> tuple[int]: ...
 
 class RNN(Layer):
     cell: Any = ...
     is_reverse: Any = ...
     time_major: Any = ...
-    def __init__(self, cell: Any, is_reverse: bool = ..., time_major: bool = ...) -> None: ...
+    def __init__(
+        self,
+        cell: RNNCellBase,
+        is_reverse: bool = ...,
+        time_major: bool = ...,
+    ) -> None: ...
     def forward(
-        self, inputs: Any, initial_states: Optional[Any] = ..., sequence_length: Optional[Any] = ..., **kwargs: Any
-    ): ...
+        self,
+        inputs: Tensor,
+        initial_states: Optional[Tensor] = ...,
+        sequence_length: Optional[Tensor] = ...,
+        **kwargs: Any,
+    ) -> tuple[Tensor, Tensor]: ...
+    __call__ = forward
 
 class BiRNN(Layer):
     cell_fw: Any = ...
     cell_bw: Any = ...
     time_major: Any = ...
-    def __init__(self, cell_fw: Any, cell_bw: Any, time_major: bool = ...) -> None: ...
+    def __init__(
+        self,
+        cell_fw: RNNCellBase,
+        cell_bw: RNNCellBase,
+        time_major: bool = ...,
+    ) -> None: ...
     def forward(
-        self, inputs: Any, initial_states: Optional[Any] = ..., sequence_length: Optional[Any] = ..., **kwargs: Any
-    ): ...
+        self,
+        inputs: Tensor,
+        initial_states: Optional[Tensor] = ...,
+        sequence_length: Optional[Tensor] = ...,
+        **kwargs: Any,
+    ) -> tuple[Tensor, Tensor]: ...
+    __call__ = forward
 
 class RNNBase(LayerList):
     mode: Any = ...
@@ -125,68 +151,73 @@ class RNNBase(LayerList):
     could_use_cudnn: bool = ...
     def __init__(
         self,
-        mode: Any,
-        input_size: Any,
-        hidden_size: Any,
+        mode: Literal["RNN_TANH", "RNN_RELU", "LSTM", "GRU"],
+        input_size: int,
+        hidden_size: int,
         num_layers: int = ...,
-        direction: str = ...,
+        direction: RNNDirection = ...,
         time_major: bool = ...,
         dropout: float = ...,
-        weight_ih_attr: Optional[Any] = ...,
-        weight_hh_attr: Optional[Any] = ...,
-        bias_ih_attr: Optional[Any] = ...,
-        bias_hh_attr: Optional[Any] = ...,
+        weight_ih_attr: Optional[ParamAttr] = ...,
+        weight_hh_attr: Optional[ParamAttr] = ...,
+        bias_ih_attr: Optional[ParamAttr] = ...,
+        bias_hh_attr: Optional[ParamAttr] = ...,
     ) -> None: ...
     def flatten_parameters(self) -> None: ...
-    def forward(self, inputs: Any, initial_states: Optional[Any] = ..., sequence_length: Optional[Any] = ...): ...
-    def extra_repr(self): ...
+    def forward(
+        self,
+        inputs: Tensor,
+        initial_states: Optional[Tensor] = ...,
+        sequence_length: Optional[Tensor] = ...,
+    ) -> tuple[Tensor, Tensor]: ...
+    __call__ = forward
 
 class SimpleRNN(RNNBase):
     activation: Any = ...
     def __init__(
         self,
-        input_size: Any,
-        hidden_size: Any,
+        input_size: int,
+        hidden_size: int,
         num_layers: int = ...,
-        direction: str = ...,
+        direction: RNNDirection = ...,
         time_major: bool = ...,
         dropout: float = ...,
         activation: str = ...,
-        weight_ih_attr: Optional[Any] = ...,
-        weight_hh_attr: Optional[Any] = ...,
-        bias_ih_attr: Optional[Any] = ...,
-        bias_hh_attr: Optional[Any] = ...,
+        weight_ih_attr: Optional[ParamAttr] = ...,
+        weight_hh_attr: Optional[ParamAttr] = ...,
+        bias_ih_attr: Optional[ParamAttr] = ...,
+        bias_hh_attr: Optional[ParamAttr] = ...,
         name: Optional[str] = ...,
     ) -> None: ...
 
 class LSTM(RNNBase):
     def __init__(
         self,
-        input_size: Any,
-        hidden_size: Any,
+        input_size: int,
+        hidden_size: int,
         num_layers: int = ...,
-        direction: str = ...,
+        direction: RNNDirection = ...,
         time_major: bool = ...,
         dropout: float = ...,
-        weight_ih_attr: Optional[Any] = ...,
-        weight_hh_attr: Optional[Any] = ...,
-        bias_ih_attr: Optional[Any] = ...,
-        bias_hh_attr: Optional[Any] = ...,
+        weight_ih_attr: Optional[ParamAttr] = ...,
+        weight_hh_attr: Optional[ParamAttr] = ...,
+        bias_ih_attr: Optional[ParamAttr] = ...,
+        bias_hh_attr: Optional[ParamAttr] = ...,
         name: Optional[str] = ...,
     ) -> None: ...
 
 class GRU(RNNBase):
     def __init__(
         self,
-        input_size: Any,
-        hidden_size: Any,
+        input_size: int,
+        hidden_size: int,
         num_layers: int = ...,
-        direction: str = ...,
+        direction: RNNDirection = ...,
         time_major: bool = ...,
         dropout: float = ...,
-        weight_ih_attr: Optional[Any] = ...,
-        weight_hh_attr: Optional[Any] = ...,
-        bias_ih_attr: Optional[Any] = ...,
-        bias_hh_attr: Optional[Any] = ...,
+        weight_ih_attr: Optional[ParamAttr] = ...,
+        weight_hh_attr: Optional[ParamAttr] = ...,
+        bias_ih_attr: Optional[ParamAttr] = ...,
+        bias_hh_attr: Optional[ParamAttr] = ...,
         name: Optional[str] = ...,
     ) -> None: ...
