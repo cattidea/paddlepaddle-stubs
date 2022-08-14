@@ -52,7 +52,7 @@ See [paddlepaddle-stubs 2.3.1 Roadmap](https://github.com/orgs/cattidea/projects
 > 此时本 repo 可 public，并发布到 PyPI
 
 -  [x] 通过 basic mode 的类型检查
--  [ ] 完善全部 P1 级别的类型信息（strict 下工作良好）
+-  [x] 完善全部 P1 级别的类型信息（strict 下工作良好）
 
 ### 2.3.1 beta
 
