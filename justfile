@@ -9,7 +9,13 @@ fmt-docs:
 
 check:
   poetry run pyright tests \
-    paddle-stubs/_typing.pyi \
+    paddle-stubs/_typing/* \
+    paddle-stubs/hapi/hub.pyi \
+    paddle-stubs/hapi/model.pyi \
+    paddle-stubs/hapi/model_summary.pyi \
+    paddle-stubs/optimizer/* \
+    paddle-stubs/vision/models/* \
+    paddle-stubs/vision/transforms/transforms.pyi \
     paddle-stubs/hub.pyi \
     paddle-stubs/linalg.pyi \
     paddle-stubs/regularizer.pyi \
@@ -20,7 +26,6 @@ build:
   poetry build
 
 publish:
-  touch paddle-stubs/py.typed
   poetry publish --build
   git tag "v{{VERSION}}"
   git push --tags

@@ -61,8 +61,6 @@ See [paddlepaddle-stubs 2.3.1 Roadmap](https://github.com/orgs/ShigureLab/projec
 
 ### Future
 
-下一步工作首先保证全部类型 basic 下工作良好
-
 之后应该是一边升级到新版本（2.4.0），一边继续完善 P3、P4、P5 级别的类型信息（strict 下工作良好）
 
 要添加的还有很多，各个 API 类型信息需要仔细填写（修改自动生成的 `Any`，添加返回值类型），有兴趣的小伙伴可以一起来参与呀～

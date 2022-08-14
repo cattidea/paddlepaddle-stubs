@@ -25,6 +25,11 @@ jobs:
         with:
           version: 1.2.0b3
 
+      - name: Install just
+        uses: extractions/setup-just@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - uses: actions/cache@v3
         id: poetry-cache
         with:
@@ -39,5 +44,4 @@ jobs:
 
       - name: Check types
         run: |
-          # TODO: also check `paddle-stubs`
-          poetry run pyright tests
+          just check
