@@ -11,5 +11,5 @@ def graph_reindex(
     value_buffer: Optional[Any] = ...,
     index_buffer: Optional[Any] = ...,
     flag_buffer_hashtable: bool = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...

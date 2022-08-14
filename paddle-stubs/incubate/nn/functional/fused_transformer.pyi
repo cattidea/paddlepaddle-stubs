@@ -24,7 +24,7 @@ def fused_feedforward(
     mode: str = ...,
     ring_id: int = ...,
     add_residual: bool = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
 def fused_multi_head_attention(
     x: Any,
@@ -47,7 +47,7 @@ def fused_multi_head_attention(
     mode: str = ...,
     ring_id: int = ...,
     add_residual: bool = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
 def fused_multi_transformer(
     x: Any,
@@ -73,5 +73,5 @@ def fused_multi_transformer(
     training: bool = ...,
     mode: str = ...,
     ring_id: int = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...

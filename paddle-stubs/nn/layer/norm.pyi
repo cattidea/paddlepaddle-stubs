@@ -28,7 +28,7 @@ class _InstanceNormBase(Layer):
         weight_attr: Optional[Any] = ...,
         bias_attr: Optional[Any] = ...,
         data_format: str = ...,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
     ) -> None: ...
     def forward(self, input: Any): ...
     def extra_repr(self): ...
@@ -48,7 +48,7 @@ class GroupNorm(Layer):
         weight_attr: Optional[Any] = ...,
         bias_attr: Optional[Any] = ...,
         data_format: str = ...,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
     ) -> None: ...
     def forward(self, input: Any): ...
     def extra_repr(self): ...
@@ -62,7 +62,7 @@ class LayerNorm(Layer):
         epsilon: float = ...,
         weight_attr: Optional[Any] = ...,
         bias_attr: Optional[Any] = ...,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
     ) -> None: ...
     def forward(self, input: Any): ...
     def extra_repr(self): ...
@@ -79,7 +79,7 @@ class _BatchNormBase(Layer):
         bias_attr: Optional[Any] = ...,
         data_format: str = ...,
         use_global_stats: Optional[Any] = ...,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
     ) -> None: ...
     def forward(self, input: Any): ...
     def extra_repr(self): ...
@@ -94,7 +94,7 @@ class BatchNorm1D(_BatchNormBase):
         bias_attr: Optional[Any] = ...,
         data_format: str = ...,
         use_global_stats: Optional[Any] = ...,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
     ) -> None: ...
 
 class BatchNorm2D(_BatchNormBase): ...
@@ -109,7 +109,7 @@ class BatchNorm3D(_BatchNormBase):
         bias_attr: Optional[Any] = ...,
         data_format: str = ...,
         use_global_stats: Optional[Any] = ...,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
     ) -> None: ...
 
 class SyncBatchNorm(_BatchNormBase):
@@ -121,7 +121,7 @@ class SyncBatchNorm(_BatchNormBase):
         weight_attr: Optional[Any] = ...,
         bias_attr: Optional[Any] = ...,
         data_format: str = ...,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
     ) -> None: ...
     def forward(self, x: Any): ...
     @classmethod
@@ -141,7 +141,7 @@ class LocalResponseNorm(Layer):
         beta: float = ...,
         k: float = ...,
         data_format: str = ...,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
     ) -> None: ...
     def forward(self, input: Any): ...
     def extra_repr(self): ...

@@ -20,5 +20,5 @@ def minimize_lbfgs(
     max_line_search_iters: int = ...,
     initial_step_length: float = ...,
     dtype: str = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...

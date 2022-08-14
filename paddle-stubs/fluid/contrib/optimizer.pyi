@@ -16,5 +16,5 @@ class Momentum(Optimizer):
         grad_clip: Optional[Any] = ...,
         multi_precision: bool = ...,
         rescale_grad: float = ...,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
     ): ...

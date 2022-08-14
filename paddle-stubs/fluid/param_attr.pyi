@@ -12,7 +12,7 @@ class ParamAttr:
     need_clip: Any = ...
     def __init__(
         self,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
         initializer: Optional[Any] = ...,
         learning_rate: float = ...,
         regularizer: Optional[Any] = ...,
@@ -27,7 +27,7 @@ class WeightNormParamAttr(ParamAttr):
     def __init__(
         self,
         dim: Optional[Any] = ...,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
         initializer: Optional[Any] = ...,
         learning_rate: float = ...,
         regularizer: Optional[Any] = ...,

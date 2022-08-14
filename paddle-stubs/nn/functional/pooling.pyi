@@ -16,7 +16,7 @@ def avg_pool1d(
     padding: int = ...,
     exclusive: bool = ...,
     ceil_mode: bool = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
 def avg_pool2d(
     x: Any,
@@ -27,7 +27,7 @@ def avg_pool2d(
     exclusive: bool = ...,
     divisor_override: Optional[Any] = ...,
     data_format: str = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
 def avg_pool3d(
     x: Any,
@@ -38,7 +38,7 @@ def avg_pool3d(
     exclusive: bool = ...,
     divisor_override: Optional[Any] = ...,
     data_format: str = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
 def max_pool1d(
     x: Any,
@@ -47,7 +47,7 @@ def max_pool1d(
     padding: int = ...,
     return_mask: bool = ...,
     ceil_mode: bool = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
 def max_unpool1d(
     x: Any,
@@ -57,7 +57,7 @@ def max_unpool1d(
     padding: int = ...,
     data_format: str = ...,
     output_size: Optional[Any] = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
 def max_unpool2d(
     x: Any,
@@ -67,7 +67,7 @@ def max_unpool2d(
     padding: int = ...,
     data_format: str = ...,
     output_size: Optional[Any] = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
 def max_unpool3d(
     x: Any,
@@ -77,7 +77,7 @@ def max_unpool3d(
     padding: int = ...,
     data_format: str = ...,
     output_size: Optional[Any] = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
 def max_pool2d(
     x: Any,
@@ -87,7 +87,7 @@ def max_pool2d(
     return_mask: bool = ...,
     ceil_mode: bool = ...,
     data_format: str = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
 def max_pool3d(
     x: Any,
@@ -97,11 +97,11 @@ def max_pool3d(
     return_mask: bool = ...,
     ceil_mode: bool = ...,
     data_format: str = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
-def adaptive_avg_pool1d(x: Any, output_size: Any, name: Optional[Any] = ...): ...
-def adaptive_avg_pool2d(x: Any, output_size: Any, data_format: str = ..., name: Optional[Any] = ...): ...
-def adaptive_avg_pool3d(x: Any, output_size: Any, data_format: str = ..., name: Optional[Any] = ...): ...
-def adaptive_max_pool1d(x: Any, output_size: Any, return_mask: bool = ..., name: Optional[Any] = ...): ...
-def adaptive_max_pool2d(x: Any, output_size: Any, return_mask: bool = ..., name: Optional[Any] = ...): ...
-def adaptive_max_pool3d(x: Any, output_size: Any, return_mask: bool = ..., name: Optional[Any] = ...): ...
+def adaptive_avg_pool1d(x: Any, output_size: Any, name: Optional[str] = ...): ...
+def adaptive_avg_pool2d(x: Any, output_size: Any, data_format: str = ..., name: Optional[str] = ...): ...
+def adaptive_avg_pool3d(x: Any, output_size: Any, data_format: str = ..., name: Optional[str] = ...): ...
+def adaptive_max_pool1d(x: Any, output_size: Any, return_mask: bool = ..., name: Optional[str] = ...): ...
+def adaptive_max_pool2d(x: Any, output_size: Any, return_mask: bool = ..., name: Optional[str] = ...): ...
+def adaptive_max_pool3d(x: Any, output_size: Any, return_mask: bool = ..., name: Optional[str] = ...): ...

@@ -8,5 +8,5 @@ def graph_send_recv(
     dst_index: Any,
     pool_type: str = ...,
     out_size: Optional[Any] = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...

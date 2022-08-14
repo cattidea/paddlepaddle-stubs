@@ -70,14 +70,14 @@ class ResNetUnit(Layer):
         filter_x_attr: Optional[Any] = ...,
         scale_x_attr: Optional[Any] = ...,
         bias_x_attr: Optional[Any] = ...,
-        moving_mean_x_name: Optional[Any] = ...,
-        moving_var_x_name: Optional[Any] = ...,
+        moving_mean_x_name: Optional[str] = ...,
+        moving_var_x_name: Optional[str] = ...,
         num_channels_z: int = ...,
         stride_z: int = ...,
         filter_z_attr: Optional[Any] = ...,
         scale_z_attr: Optional[Any] = ...,
         bias_z_attr: Optional[Any] = ...,
-        moving_mean_z_name: Optional[Any] = ...,
-        moving_var_z_name: Optional[Any] = ...,
+        moving_mean_z_name: Optional[str] = ...,
+        moving_var_z_name: Optional[str] = ...,
     ): ...
     def forward(self, x: Any, z: Optional[Any] = ...): ...

@@ -38,7 +38,7 @@ class FleetUtil:
         hadoop_fs_ugi: Any,
         monitor_data: Any = ...,
         hadoop_home: str = ...,
-        donefile_name: Optional[Any] = ...,
+        donefile_name: Optional[str] = ...,
     ) -> None: ...
     def write_cache_donefile(
         self,

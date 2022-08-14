@@ -192,7 +192,7 @@ def dynamic_lstm(
     cell_activation: str = ...,
     candidate_activation: str = ...,
     dtype: str = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
 def lstm(
     input: Any,
@@ -204,7 +204,7 @@ def lstm(
     dropout_prob: float = ...,
     is_bidirec: bool = ...,
     is_test: bool = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
     default_initializer: Optional[Any] = ...,
     seed: int = ...,
 ): ...
@@ -221,7 +221,7 @@ def dynamic_lstmp(
     candidate_activation: str = ...,
     proj_activation: str = ...,
     dtype: str = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
     h_0: Optional[Any] = ...,
     c_0: Optional[Any] = ...,
     cell_clip: Optional[Any] = ...,
@@ -257,10 +257,10 @@ def beam_search(
     end_id: Any,
     level: int = ...,
     is_accumulated: bool = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
     return_parent_idx: bool = ...,
 ): ...
-def beam_search_decode(ids: Any, scores: Any, beam_size: Any, end_id: Any, name: Optional[Any] = ...): ...
+def beam_search_decode(ids: Any, scores: Any, beam_size: Any, end_id: Any, name: Optional[str] = ...): ...
 def lstm_unit(
     x_t: Any,
     hidden_t_prev: Any,
@@ -268,5 +268,5 @@ def lstm_unit(
     forget_bias: float = ...,
     param_attr: Optional[Any] = ...,
     bias_attr: Optional[Any] = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...

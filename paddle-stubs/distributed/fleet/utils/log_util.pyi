@@ -4,7 +4,7 @@ from typing import Any, Optional
 
 class LoggerFactory:
     @staticmethod
-    def build_logger(name: Optional[Any] = ..., level: Any = ...): ...
+    def build_logger(name: Optional[str] = ..., level: Any = ...): ...
 
 logger: Any
 

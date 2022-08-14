@@ -12,5 +12,5 @@ def sparse_attention(
     sparse_csr_columns: Any,
     key_padding_mask: Optional[Any] = ...,
     attn_mask: Optional[Any] = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...

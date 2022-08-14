@@ -122,8 +122,8 @@ class BatchNorm(layers.Layer):
         dtype: str = ...,
         data_layout: str = ...,
         in_place: bool = ...,
-        moving_mean_name: Optional[Any] = ...,
-        moving_variance_name: Optional[Any] = ...,
+        moving_mean_name: Optional[str] = ...,
+        moving_variance_name: Optional[str] = ...,
         do_model_average_for_mean_and_var: bool = ...,
         use_global_stats: bool = ...,
         trainable_statistics: bool = ...,
@@ -221,7 +221,7 @@ class BilinearTensorProduct(layers.Layer):
         input1_dim: Any,
         input2_dim: Any,
         output_dim: Any,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
         act: Optional[Any] = ...,
         param_attr: Optional[Any] = ...,
         bias_attr: Optional[Any] = ...,
@@ -306,7 +306,7 @@ class TreeConv(layers.Layer):
         act: str = ...,
         param_attr: Optional[Any] = ...,
         bias_attr: Optional[Any] = ...,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
         dtype: str = ...,
     ) -> None: ...
     def forward(self, nodes_vector: Any, edge_set: Any): ...

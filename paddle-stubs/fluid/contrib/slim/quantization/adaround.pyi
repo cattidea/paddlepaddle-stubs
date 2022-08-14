@@ -42,7 +42,7 @@ class AdaRound:
         scale: Any,
         weight_tensor: Any,
         scope: Optional[Any] = ...,
-        weight_var_name: Optional[Any] = ...,
+        weight_var_name: Optional[str] = ...,
         weight_op_type: Optional[Any] = ...,
         is_train: bool = ...,
         num_iterations: int = ...,

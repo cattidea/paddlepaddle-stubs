@@ -44,17 +44,17 @@ def detection_output(
     nms_eta: float = ...,
     return_index: bool = ...,
 ): ...
-def iou_similarity(x: Any, y: Any, box_normalized: bool = ..., name: Optional[Any] = ...): ...
+def iou_similarity(x: Any, y: Any, box_normalized: bool = ..., name: Optional[str] = ...): ...
 def box_coder(
     prior_box: Any,
     prior_box_var: Any,
     target_box: Any,
     code_type: str = ...,
     box_normalized: bool = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
     axis: int = ...,
 ): ...
-def polygon_box_transform(input: Any, name: Optional[Any] = ...): ...
+def polygon_box_transform(input: Any, name: Optional[str] = ...): ...
 def yolov3_loss(
     x: Any,
     gt_box: Any,
@@ -66,7 +66,7 @@ def yolov3_loss(
     downsample_ratio: Any,
     gt_score: Optional[Any] = ...,
     use_label_smooth: bool = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
     scale_x_y: float = ...,
 ): ...
 def yolo_box(
@@ -77,20 +77,20 @@ def yolo_box(
     conf_thresh: Any,
     downsample_ratio: Any,
     clip_bbox: bool = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
     scale_x_y: float = ...,
     iou_aware: bool = ...,
     iou_aware_factor: float = ...,
 ): ...
 def bipartite_match(
-    dist_matrix: Any, match_type: Optional[Any] = ..., dist_threshold: Optional[Any] = ..., name: Optional[Any] = ...
+    dist_matrix: Any, match_type: Optional[Any] = ..., dist_threshold: Optional[Any] = ..., name: Optional[str] = ...
 ): ...
 def target_assign(
     input: Any,
     matched_indices: Any,
     negative_indices: Optional[Any] = ...,
     mismatch_value: Optional[Any] = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
 def ssd_loss(
     location: Any,
@@ -121,7 +121,7 @@ def prior_box(
     clip: bool = ...,
     steps: Any = ...,
     offset: float = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
     min_max_aspect_ratios_order: bool = ...,
 ): ...
 def density_prior_box(
@@ -135,7 +135,7 @@ def density_prior_box(
     steps: Any = ...,
     offset: float = ...,
     flatten_to_2d: bool = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
 def multi_box_head(
     inputs: Any,
@@ -157,7 +157,7 @@ def multi_box_head(
     kernel_size: int = ...,
     pad: int = ...,
     stride: int = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
     min_max_aspect_ratios_order: bool = ...,
 ): ...
 def anchor_generator(
@@ -167,7 +167,7 @@ def anchor_generator(
     variance: Any = ...,
     stride: Optional[Any] = ...,
     offset: float = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
 def roi_perspective_transform(
     input: Any,
@@ -175,7 +175,7 @@ def roi_perspective_transform(
     transformed_height: Any,
     transformed_width: Any,
     spatial_scale: float = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
 def generate_proposal_labels(
     rpn_rois: Any,
@@ -218,9 +218,9 @@ def generate_proposals(
     min_size: float = ...,
     eta: float = ...,
     return_rois_num: bool = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
-def box_clip(input: Any, im_info: Any, name: Optional[Any] = ...): ...
+def box_clip(input: Any, im_info: Any, name: Optional[str] = ...): ...
 def retinanet_detection_output(
     bboxes: Any,
     scores: Any,
@@ -242,7 +242,7 @@ def multiclass_nms(
     normalized: bool = ...,
     nms_eta: float = ...,
     background_label: int = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
 def locality_aware_nms(
     bboxes: Any,
@@ -254,7 +254,7 @@ def locality_aware_nms(
     normalized: bool = ...,
     nms_eta: float = ...,
     background_label: int = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
 def matrix_nms(
     bboxes: Any,
@@ -268,7 +268,7 @@ def matrix_nms(
     background_label: int = ...,
     normalized: bool = ...,
     return_index: bool = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
 def distribute_fpn_proposals(
     fpn_rois: Any,
@@ -277,10 +277,10 @@ def distribute_fpn_proposals(
     refer_level: Any,
     refer_scale: Any,
     rois_num: Optional[Any] = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
 def box_decoder_and_assign(
-    prior_box: Any, prior_box_var: Any, target_box: Any, box_score: Any, box_clip: Any, name: Optional[Any] = ...
+    prior_box: Any, prior_box_var: Any, target_box: Any, box_score: Any, box_clip: Any, name: Optional[str] = ...
 ): ...
 def collect_fpn_proposals(
     multi_rois: Any,
@@ -289,5 +289,5 @@ def collect_fpn_proposals(
     max_level: Any,
     post_nms_top_n: Any,
     rois_num_per_level: Optional[Any] = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...

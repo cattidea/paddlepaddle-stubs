@@ -8,8 +8,8 @@ class PostTrainingQuantization:
         executor: Optional[Any] = ...,
         scope: Optional[Any] = ...,
         model_dir: Optional[Any] = ...,
-        model_filename: Optional[Any] = ...,
-        params_filename: Optional[Any] = ...,
+        model_filename: Optional[str] = ...,
+        params_filename: Optional[str] = ...,
         batch_generator: Optional[Any] = ...,
         sample_generator: Optional[Any] = ...,
         data_loader: Optional[Any] = ...,
@@ -34,18 +34,18 @@ class PostTrainingQuantization:
     ) -> None: ...
     def quantize(self): ...
     def save_quantized_model(
-        self, save_model_path: Any, model_filename: Optional[Any] = ..., params_filename: Optional[Any] = ...
+        self, save_model_path: Any, model_filename: Optional[str] = ..., params_filename: Optional[str] = ...
     ) -> None: ...
 
 class WeightQuantization:
     def __init__(
-        self, model_dir: Any, model_filename: Optional[Any] = ..., params_filename: Optional[Any] = ...
+        self, model_dir: Any, model_filename: Optional[str] = ..., params_filename: Optional[str] = ...
     ) -> None: ...
     def quantize_weight_to_int(
         self,
         save_model_dir: Any,
-        save_model_filename: Optional[Any] = ...,
-        save_params_filename: Optional[Any] = ...,
+        save_model_filename: Optional[str] = ...,
+        save_params_filename: Optional[str] = ...,
         quantizable_op_type: Any = ...,
         weight_bits: int = ...,
         weight_quantize_type: str = ...,

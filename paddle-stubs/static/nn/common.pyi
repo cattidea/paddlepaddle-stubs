@@ -9,7 +9,7 @@ def fc(
     weight_attr: Optional[Any] = ...,
     bias_attr: Optional[Any] = ...,
     activation: Optional[Any] = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
 def deform_conv2d(
     x: Any,
@@ -25,5 +25,5 @@ def deform_conv2d(
     im2col_step: int = ...,
     weight_attr: Optional[Any] = ...,
     bias_attr: Optional[Any] = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...

@@ -25,8 +25,8 @@ def dropout(
     x: Any,
     p: float = ...,
     axis: Optional[Any] = ...,
-    rng_name: Optional[Any] = ...,
+    rng_name: Optional[str] = ...,
     training: bool = ...,
     mode: str = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...

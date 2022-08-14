@@ -54,7 +54,7 @@ class Variable(metaclass=VariableMetaClass):
         self,
         block: Any,
         type: Any = ...,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
         shape: Optional[Any] = ...,
         dtype: Optional[Any] = ...,
         lod_level: Optional[Any] = ...,

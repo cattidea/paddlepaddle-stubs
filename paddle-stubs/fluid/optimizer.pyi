@@ -13,7 +13,7 @@ class Optimizer:
         grad_clip: Optional[Any] = ...,
         flatten_param_grads: bool = ...,
         align_size: int = ...,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
     ): ...
     def state_dict(self): ...
     def set_state_dict(self, state_dict: Any) -> None: ...
@@ -51,7 +51,7 @@ class SGDOptimizer(Optimizer):
         regularization: Optional[Any] = ...,
         grad_clip: Optional[Any] = ...,
         multi_precision: bool = ...,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
     ) -> None: ...
 
 class MomentumOptimizer(Optimizer):
@@ -64,7 +64,7 @@ class MomentumOptimizer(Optimizer):
         use_nesterov: bool = ...,
         regularization: Optional[Any] = ...,
         grad_clip: Optional[Any] = ...,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
     ) -> None: ...
 
 class DGCMomentumOptimizer(Optimizer):
@@ -81,7 +81,7 @@ class DGCMomentumOptimizer(Optimizer):
         num_trainers: Optional[Any] = ...,
         regularization: Optional[Any] = ...,
         grad_clip: Optional[Any] = ...,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
     ) -> None: ...
     def apply_gradients(self, params_grads: Any): ...
 
@@ -96,7 +96,7 @@ class LarsMomentumOptimizer(Optimizer):
         parameter_list: Optional[Any] = ...,
         regularization: Optional[Any] = ...,
         grad_clip: Optional[Any] = ...,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
         exclude_from_weight_decay: Optional[Any] = ...,
         epsilon: int = ...,
         multi_precision: bool = ...,
@@ -113,7 +113,7 @@ class AdagradOptimizer(Optimizer):
         parameter_list: Optional[Any] = ...,
         regularization: Optional[Any] = ...,
         grad_clip: Optional[Any] = ...,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
         initial_accumulator_value: float = ...,
     ) -> None: ...
 
@@ -128,7 +128,7 @@ class AdamOptimizer(Optimizer):
         parameter_list: Optional[Any] = ...,
         regularization: Optional[Any] = ...,
         grad_clip: Optional[Any] = ...,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
         lazy_mode: bool = ...,
         use_global_beta_pow: bool = ...,
         flatten_param_grads: bool = ...,
@@ -146,7 +146,7 @@ class AdamaxOptimizer(Optimizer):
         parameter_list: Optional[Any] = ...,
         regularization: Optional[Any] = ...,
         grad_clip: Optional[Any] = ...,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
     ) -> None: ...
 
 class DpsgdOptimizer(Optimizer):
@@ -170,7 +170,7 @@ class DecayedAdagradOptimizer(Optimizer):
         parameter_list: Optional[Any] = ...,
         regularization: Optional[Any] = ...,
         grad_clip: Optional[Any] = ...,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
     ) -> None: ...
 
 class AdadeltaOptimizer(Optimizer):
@@ -183,7 +183,7 @@ class AdadeltaOptimizer(Optimizer):
         parameter_list: Optional[Any] = ...,
         regularization: Optional[Any] = ...,
         grad_clip: Optional[Any] = ...,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
     ) -> None: ...
 
 class RMSPropOptimizer(Optimizer):
@@ -198,7 +198,7 @@ class RMSPropOptimizer(Optimizer):
         parameter_list: Optional[Any] = ...,
         regularization: Optional[Any] = ...,
         grad_clip: Optional[Any] = ...,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
     ) -> None: ...
 
 class FtrlOptimizer(Optimizer):
@@ -212,7 +212,7 @@ class FtrlOptimizer(Optimizer):
         parameter_list: Optional[Any] = ...,
         regularization: Optional[Any] = ...,
         grad_clip: Optional[Any] = ...,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
     ) -> None: ...
 
 class LambOptimizer(AdamOptimizer):
@@ -228,7 +228,7 @@ class LambOptimizer(AdamOptimizer):
         regularization: Optional[Any] = ...,
         grad_clip: Optional[Any] = ...,
         exclude_from_weight_decay_fn: Optional[Any] = ...,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
     ) -> None: ...
 
 SGD = SGDOptimizer
@@ -257,7 +257,7 @@ class ModelAverage(Optimizer):
         min_average_window: int = ...,
         max_average_window: int = ...,
         regularization: Optional[Any] = ...,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
     ) -> None: ...
     def apply(self, executor: Any, need_restore: bool = ...) -> None: ...
     def restore(self, executor: Any) -> None: ...
@@ -265,7 +265,7 @@ class ModelAverage(Optimizer):
 class ExponentialMovingAverage:
     apply_program: Any = ...
     restore_program: Any = ...
-    def __init__(self, decay: float = ..., thres_steps: Optional[Any] = ..., name: Optional[Any] = ...) -> None: ...
+    def __init__(self, decay: float = ..., thres_steps: Optional[Any] = ..., name: Optional[str] = ...) -> None: ...
     def update(self) -> None: ...
     def apply(self, executor: Any, need_restore: bool = ...) -> None: ...
     def restore(self, executor: Any) -> None: ...

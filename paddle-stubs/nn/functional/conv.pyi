@@ -23,7 +23,7 @@ def conv1d(
     dilation: int = ...,
     groups: int = ...,
     data_format: str = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
 def conv2d(
     x: Any,
@@ -34,7 +34,7 @@ def conv2d(
     dilation: int = ...,
     groups: int = ...,
     data_format: str = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
 def conv1d_transpose(
     x: Any,
@@ -47,7 +47,7 @@ def conv1d_transpose(
     dilation: int = ...,
     output_size: Optional[Any] = ...,
     data_format: str = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
 def conv2d_transpose(
     x: Any,
@@ -60,7 +60,7 @@ def conv2d_transpose(
     groups: int = ...,
     output_size: Optional[Any] = ...,
     data_format: str = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
 def conv3d(
     x: Any,
@@ -71,7 +71,7 @@ def conv3d(
     dilation: int = ...,
     groups: int = ...,
     data_format: str = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
 def conv3d_transpose(
     x: Any,
@@ -84,5 +84,5 @@ def conv3d_transpose(
     dilation: int = ...,
     output_size: Optional[Any] = ...,
     data_format: str = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...

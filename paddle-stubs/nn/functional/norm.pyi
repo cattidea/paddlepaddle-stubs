@@ -12,7 +12,7 @@ from ...framework import ParamAttr as ParamAttr
 from ...framework import create_parameter as create_parameter
 from ..initializer import Constant as Constant
 
-def normalize(x: Any, p: int = ..., axis: int = ..., epsilon: float = ..., name: Optional[Any] = ...): ...
+def normalize(x: Any, p: int = ..., axis: int = ..., epsilon: float = ..., name: Optional[str] = ...): ...
 def batch_norm(
     x: Any,
     running_mean: Any,
@@ -24,7 +24,7 @@ def batch_norm(
     epsilon: float = ...,
     data_format: str = ...,
     use_global_stats: Optional[Any] = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
 def layer_norm(
     x: Any,
@@ -32,7 +32,7 @@ def layer_norm(
     weight: Optional[Any] = ...,
     bias: Optional[Any] = ...,
     epsilon: float = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
 def instance_norm(
     x: Any,
@@ -44,7 +44,7 @@ def instance_norm(
     momentum: float = ...,
     eps: float = ...,
     data_format: str = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
 def local_response_norm(
     x: Any,
@@ -53,5 +53,5 @@ def local_response_norm(
     beta: float = ...,
     k: float = ...,
     data_format: str = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...

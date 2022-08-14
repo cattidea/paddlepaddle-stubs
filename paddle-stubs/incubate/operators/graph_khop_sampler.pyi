@@ -11,5 +11,5 @@ def graph_khop_sampler(
     sample_sizes: Any,
     sorted_eids: Optional[Any] = ...,
     return_eids: bool = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...

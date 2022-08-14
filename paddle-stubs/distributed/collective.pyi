@@ -38,7 +38,7 @@ class Group:
         id: int = ...,
         ranks: Any = ...,
         pg: Optional[Any] = ...,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
     ) -> None: ...
     def is_member(self): ...
     def get_group_rank(self, rank: Any): ...
@@ -71,7 +71,7 @@ class _Linear(layers.Layer):
         out_features: Any,
         weight_attr: Optional[Any] = ...,
         bias_attr: Optional[Any] = ...,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
     ) -> None: ...
     def forward(self, input: Any): ...
     def extra_repr(self): ...
@@ -85,7 +85,7 @@ def split(
     gather_out: bool = ...,
     weight_attr: Optional[Any] = ...,
     bias_attr: Optional[Any] = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
 def alltoall(
     in_tensor_list: Any, out_tensor_list: Any, group: Optional[Any] = ..., use_calc_stream: bool = ...

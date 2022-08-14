@@ -9,7 +9,7 @@ class CompiledProgram:
     def __init__(self, program_or_graph: Any, build_strategy: Optional[Any] = ...) -> None: ...
     def with_data_parallel(
         self,
-        loss_name: Optional[Any] = ...,
+        loss_name: Optional[str] = ...,
         build_strategy: Optional[Any] = ...,
         exec_strategy: Optional[Any] = ...,
         share_vars_from: Optional[Any] = ...,

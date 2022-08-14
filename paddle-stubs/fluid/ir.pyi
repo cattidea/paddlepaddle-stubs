@@ -29,7 +29,7 @@ class PassDesc:
             var: Optional[Any] = ...,
             op: Optional[Any] = ...,
             index: int = ...,
-            name: Optional[Any] = ...,
+            name: Optional[str] = ...,
             element_index: Optional[Any] = ...,
         ): ...
 

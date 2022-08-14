@@ -44,7 +44,7 @@ class SimpleRNNCell(RNNCellBase):
         weight_hh_attr: Optional[Any] = ...,
         bias_ih_attr: Optional[Any] = ...,
         bias_hh_attr: Optional[Any] = ...,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
     ) -> None: ...
     def forward(self, inputs: Any, states: Optional[Any] = ...): ...
     @property
@@ -66,7 +66,7 @@ class LSTMCell(RNNCellBase):
         weight_hh_attr: Optional[Any] = ...,
         bias_ih_attr: Optional[Any] = ...,
         bias_hh_attr: Optional[Any] = ...,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
     ) -> None: ...
     def forward(self, inputs: Any, states: Optional[Any] = ...): ...
     @property
@@ -88,7 +88,7 @@ class GRUCell(RNNCellBase):
         weight_hh_attr: Optional[Any] = ...,
         bias_ih_attr: Optional[Any] = ...,
         bias_hh_attr: Optional[Any] = ...,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
     ) -> None: ...
     def forward(self, inputs: Any, states: Optional[Any] = ...): ...
     @property
@@ -156,7 +156,7 @@ class SimpleRNN(RNNBase):
         weight_hh_attr: Optional[Any] = ...,
         bias_ih_attr: Optional[Any] = ...,
         bias_hh_attr: Optional[Any] = ...,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
     ) -> None: ...
 
 class LSTM(RNNBase):
@@ -172,7 +172,7 @@ class LSTM(RNNBase):
         weight_hh_attr: Optional[Any] = ...,
         bias_ih_attr: Optional[Any] = ...,
         bias_hh_attr: Optional[Any] = ...,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
     ) -> None: ...
 
 class GRU(RNNBase):
@@ -188,5 +188,5 @@ class GRU(RNNBase):
         weight_hh_attr: Optional[Any] = ...,
         bias_ih_attr: Optional[Any] = ...,
         bias_hh_attr: Optional[Any] = ...,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
     ) -> None: ...

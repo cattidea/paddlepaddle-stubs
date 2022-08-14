@@ -35,7 +35,7 @@ class DenseBlock(nn.Layer):
         bn_size: Any,
         growth_rate: Any,
         dropout: Any,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
     ) -> None: ...
     def forward(self, input: Any) -> Tensor: ...
 

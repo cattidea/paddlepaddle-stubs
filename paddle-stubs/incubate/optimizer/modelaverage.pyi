@@ -20,7 +20,7 @@ class ModelAverage(Optimizer):
         parameters: Optional[Any] = ...,
         min_average_window: int = ...,
         max_average_window: int = ...,
-        name: Optional[Any] = ...,
+        name: Optional[str] = ...,
     ) -> None: ...
     def minimize(
         self,

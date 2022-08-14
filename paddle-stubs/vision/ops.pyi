@@ -17,7 +17,7 @@ def yolo_loss(
     downsample_ratio: Any,
     gt_score: Optional[Any] = ...,
     use_label_smooth: bool = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
     scale_x_y: float = ...,
 ): ...
 def yolo_box(
@@ -28,7 +28,7 @@ def yolo_box(
     conf_thresh: Any,
     downsample_ratio: Any,
     clip_bbox: bool = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
     scale_x_y: float = ...,
     iou_aware: bool = ...,
     iou_aware_factor: float = ...,
@@ -44,7 +44,7 @@ def deform_conv2d(
     deformable_groups: int = ...,
     groups: int = ...,
     mask: Optional[Any] = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
 
 class DeformConv2D(Layer):
@@ -65,10 +65,10 @@ class DeformConv2D(Layer):
     ): ...
     def forward(self, x: Any, offset: Any, mask: Optional[Any] = ...): ...
 
-def read_file(filename: Any, name: Optional[Any] = ...): ...
-def decode_jpeg(x: Any, mode: str = ..., name: Optional[Any] = ...): ...
+def read_file(filename: Any, name: Optional[str] = ...): ...
+def decode_jpeg(x: Any, mode: str = ..., name: Optional[str] = ...): ...
 def psroi_pool(
-    x: Any, boxes: Any, boxes_num: Any, output_size: Any, spatial_scale: float = ..., name: Optional[Any] = ...
+    x: Any, boxes: Any, boxes_num: Any, output_size: Any, spatial_scale: float = ..., name: Optional[str] = ...
 ): ...
 
 class PSRoIPool(Layer):
@@ -78,7 +78,7 @@ class PSRoIPool(Layer):
     def forward(self, x: Any, boxes: Any, boxes_num: Any): ...
 
 def roi_pool(
-    x: Any, boxes: Any, boxes_num: Any, output_size: Any, spatial_scale: float = ..., name: Optional[Any] = ...
+    x: Any, boxes: Any, boxes_num: Any, output_size: Any, spatial_scale: float = ..., name: Optional[str] = ...
 ): ...
 
 class RoIPool(Layer):
@@ -94,7 +94,7 @@ def roi_align(
     spatial_scale: float = ...,
     sampling_ratio: int = ...,
     aligned: bool = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
 
 class RoIAlign(Layer):

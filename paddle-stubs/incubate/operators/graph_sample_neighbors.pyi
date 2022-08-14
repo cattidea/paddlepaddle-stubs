@@ -13,5 +13,5 @@ def graph_sample_neighbors(
     sample_size: int = ...,
     return_eids: bool = ...,
     flag_perm_buffer: bool = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...

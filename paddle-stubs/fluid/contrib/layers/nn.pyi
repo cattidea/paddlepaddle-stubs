@@ -16,7 +16,7 @@ def var_conv_2d(
     param_attr: Optional[Any] = ...,
     act: Optional[Any] = ...,
     dtype: str = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
 def match_matrix_tensor(
     x: Any,
@@ -25,7 +25,7 @@ def match_matrix_tensor(
     act: Optional[Any] = ...,
     param_attr: Optional[Any] = ...,
     dtype: str = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
 def sequence_topk_avg_pooling(input: Any, row: Any, col: Any, topks: Any, channel_num: Any): ...
 def tree_conv(
@@ -37,7 +37,7 @@ def tree_conv(
     act: str = ...,
     param_attr: Optional[Any] = ...,
     bias_attr: Optional[Any] = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
 def fused_embedding_seq_pool(
     input: Any,
@@ -62,7 +62,7 @@ def multiclass_nms2(
     nms_eta: float = ...,
     background_label: int = ...,
     return_index: bool = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
 def search_pyramid_hash(
     input: Any,
@@ -80,7 +80,7 @@ def search_pyramid_hash(
     param_attr: Optional[Any] = ...,
     param_attr_wl: Optional[Any] = ...,
     param_attr_bl: Optional[Any] = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
     distribute_update_vars: Optional[Any] = ...,
     dtype: str = ...,
 ): ...
@@ -117,7 +117,7 @@ def rank_attention(
 def batch_fc(
     input: Any, param_size: Any, param_attr: Any, bias_size: Any, bias_attr: Any, act: Optional[Any] = ...
 ): ...
-def bilateral_slice(x: Any, guide: Any, grid: Any, has_offset: Any, name: Optional[Any] = ...): ...
+def bilateral_slice(x: Any, guide: Any, grid: Any, has_offset: Any, name: Optional[str] = ...): ...
 def correlation(
     x: Any,
     y: Any,
@@ -135,10 +135,10 @@ def fused_bn_add_act(
     epsilon: float = ...,
     param_attr: Optional[Any] = ...,
     bias_attr: Optional[Any] = ...,
-    moving_mean_name: Optional[Any] = ...,
-    moving_variance_name: Optional[Any] = ...,
+    moving_mean_name: Optional[str] = ...,
+    moving_variance_name: Optional[str] = ...,
     act: Optional[Any] = ...,
-    name: Optional[Any] = ...,
+    name: Optional[str] = ...,
 ): ...
 
 # Names in __all__ with no definition:

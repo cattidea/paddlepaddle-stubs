@@ -6,7 +6,7 @@ class ParallelExecutor:
     def __init__(
         self,
         use_cuda: Any,
-        loss_name: Optional[Any] = ...,
+        loss_name: Optional[str] = ...,
         main_program: Optional[Any] = ...,
         share_vars_from: Optional[Any] = ...,
         exec_strategy: Optional[Any] = ...,
