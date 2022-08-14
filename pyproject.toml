@@ -6,8 +6,8 @@ authors = ["Nyakku Shigure <sigure.qaq@gmail.com>"]
 packages = [{ include = "paddle-stubs" }]
 license = "MIT"
 readme = "README.md"
-homepage = "https://github.com/ShigureLab/paddlepaddle-stubs"
-repository = "https://github.com/ShigureLab/paddlepaddle-stubs"
+homepage = "https://github.com/cattidea/paddlepaddle-stubs"
+repository = "https://github.com/cattidea/paddlepaddle-stubs"
 keywords = ["PEP 561", "PEP 484", "Type Hints", "PaddlePaddle"]
 classifiers = [
   "Operating System :: OS Independent",
