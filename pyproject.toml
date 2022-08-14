@@ -30,6 +30,7 @@ typing-extensions = "^4.3.0"
 black = "^22.1"
 isort = "^5.10.1"
 pyright = "^1.1.263"
+Pillow = "^9.2.0"
 
 [tool.black]
 line-length = 120
