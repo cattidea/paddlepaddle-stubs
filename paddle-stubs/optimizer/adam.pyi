@@ -18,7 +18,7 @@ class Adam(Optimizer):
     type: str = ...
     def __init__(
         self,
-        learning_rate: float | LRScheduler,
+        learning_rate: float | LRScheduler = ...,
         beta1: float | Tensor = ...,
         beta2: float | Tensor = ...,
         epsilon: float = ...,
