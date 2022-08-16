@@ -4,13 +4,14 @@ from collections.abc import Sequence
 from typing import Any, Optional, TypeVar
 
 import numpy as np
+import numpy.typing as npt
 from PIL.Image import Image as PILImage
 from typing_extensions import Literal
 
 from ..._typing import DataLayoutImage, NumbericSequence, Tensor
 from ..._typing.basic import IntSequence
 
-_DataT = TypeVar("_DataT", bound=Tensor | PILImage | np.ndarray[Any, Any])
+_DataT = TypeVar("_DataT", bound=Tensor | PILImage | npt.NDArray[Any])
 _InterpolationPil = Literal["nearest", "bilinear", "bicubic", "lanczos", "hamming"]
 _InterpolationCv2 = Literal["nearest", "bilinear", "area", "bicubic", "lanczos"]
 

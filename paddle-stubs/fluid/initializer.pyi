@@ -3,6 +3,7 @@ from __future__ import annotations
 from typing import Any, Optional
 
 import numpy as np
+import numpy.typing as npt
 
 from .._typing import Tensor
 
@@ -56,7 +57,7 @@ class BilinearInitializer(Initializer):
     def __call__(self, var: Tensor, block: Optional[Any] = ...) -> Tensor: ...
 
 class NumpyArrayInitializer(Initializer):
-    def __init__(self, value: np.ndarray[Any, Any]) -> None: ...
+    def __init__(self, value: npt.NDArray[Any]) -> None: ...
     def __call__(self, var: Tensor, block: Optional[Any] = ...) -> Tensor: ...
 
 def set_global_initializer(weight_init: Initializer, bias_init: Optional[Initializer] = ...) -> None: ...

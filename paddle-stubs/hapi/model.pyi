@@ -3,6 +3,7 @@ from __future__ import annotations
 from typing import Any, Iterable, Optional
 
 import numpy as np
+import numpy.typing as npt
 from paddle import nn
 from typing_extensions import Literal
 
@@ -26,19 +27,19 @@ class Model:
     ) -> None: ...
     def train_batch(
         self,
-        inputs: np.ndarray[Any, Any] | Tensor | list[Tensor],
-        labels: Optional[np.ndarray[Any, Any] | Tensor | list[Tensor]] = ...,
+        inputs: npt.NDArray[Any] | Tensor | list[Tensor],
+        labels: Optional[npt.NDArray[Any] | Tensor | list[Tensor]] = ...,
         update: bool = ...,
-    ) -> list[np.ndarray[Any, Any]] | tuple[list[np.ndarray[Any, Any]], list[np.ndarray[Any, Any]]]: ...
+    ) -> list[npt.NDArray[Any]] | tuple[list[npt.NDArray[Any]], list[npt.NDArray[Any]]]: ...
     def eval_batch(
         self,
-        inputs: np.ndarray[Any, Any] | Tensor | list[Tensor],
-        labels: Optional[np.ndarray[Any, Any] | Tensor | list[Tensor]] = ...,
-    ) -> list[np.ndarray[Any, Any]] | tuple[list[np.ndarray[Any, Any]], list[np.ndarray[Any, Any]]]: ...
+        inputs: npt.NDArray[Any] | Tensor | list[Tensor],
+        labels: Optional[npt.NDArray[Any] | Tensor | list[Tensor]] = ...,
+    ) -> list[npt.NDArray[Any]] | tuple[list[npt.NDArray[Any]], list[npt.NDArray[Any]]]: ...
     def predict_batch(
         self,
-        inputs: np.ndarray[Any, Any] | Tensor | list[Tensor],
-    ) -> list[np.ndarray[Any, Any]]: ...
+        inputs: npt.NDArray[Any] | Tensor | list[Tensor],
+    ) -> list[npt.NDArray[Any]]: ...
     def save(self, path: str, training: bool = ...) -> None: ...
     def load(self, path: str, skip_mismatch: bool = ..., reset_optimizer: bool = ...) -> None: ...
     def parameters(self, *args: Any, **kwargs: Any) -> list[Tensor]: ...
@@ -76,7 +77,7 @@ class Model:
         num_workers: int = ...,
         callbacks: Optional[Callback | list[Callback]] = ...,
         num_iters: Optional[int] = ...,
-    ) -> dict[str, np.ndarray[Any, Any]]: ...
+    ) -> dict[str, npt.NDArray[Any]]: ...
     def predict(
         self,
         test_data: Optional[Iterable[Tensor] | Dataset | DataLoader],

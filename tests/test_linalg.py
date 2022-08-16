@@ -2,9 +2,8 @@
 
 from __future__ import annotations
 
-from typing import Any
-
 import numpy as np
+import numpy.typing as npt
 import paddle
 from paddle import Tensor
 from typing_extensions import assert_type
@@ -68,8 +67,8 @@ def test_inv():
 
 def test_cholesky():
     a = np.random.rand(3, 3)
-    a_t: np.ndarray[Any, np.dtype[np.float64]] = np.transpose(a, [1, 0])  # type: ignore
-    x_data: np.ndarray[Any, np.dtype[np.float64]] = np.matmul(a, a_t) + 1e-03
+    a_t: npt.NDArray[np.float64] = np.transpose(a, [1, 0])  # type: ignore
+    x_data: npt.NDArray[np.float64] = np.matmul(a, a_t) + 1e-03
     x = paddle.to_tensor(x_data)
     out = paddle.linalg.cholesky(x, upper=False)
     assert_type(out, Tensor)
@@ -192,7 +191,7 @@ def test_multi_dot():
 
 
 def test_norm():
-    np_input: np.ndarray[np.float32, Any] = np.arange(24).astype("float32") - 12  # type: ignore
+    np_input: npt.NDArray[np.float32] = np.arange(24).astype("float32") - 12  # type: ignore
     np_input = np_input.reshape([2, 3, 4])  # type: ignore
     x = paddle.to_tensor(np_input)
 
@@ -207,7 +206,7 @@ def test_norm():
 
 
 def test_pinv():
-    x: np.ndarray[np.float64, Any] = paddle.arange(15).reshape((3, 5)).astype("float64")  # type: ignore
+    x: npt.NDArray[np.float64] = paddle.arange(15).reshape((3, 5)).astype("float64")  # type: ignore
     input = paddle.to_tensor(x)
     out = paddle.linalg.pinv(input)
     assert_type(out, Tensor)

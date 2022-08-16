@@ -3,6 +3,7 @@ from __future__ import annotations
 from typing import Any, Callable, Optional
 
 import numpy as np
+import numpy.typing as npt
 from typing_extensions import Literal, TypedDict
 
 from .._typing import Tensor
@@ -205,7 +206,7 @@ class ReduceOnPlateau(LRScheduler):
     def state_keys(self) -> None: ...
     def step(
         self,
-        metrics: Tensor | np.ndarray[Any, Any] | float,
+        metrics: Tensor | npt.NDArray[Any] | float,
         epoch: Optional[int] = ...,
     ) -> None: ...
 

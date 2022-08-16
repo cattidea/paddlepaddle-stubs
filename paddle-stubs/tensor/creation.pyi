@@ -3,6 +3,7 @@ from __future__ import annotations
 from typing import Any, Optional
 
 import numpy as np
+import numpy.typing as npt
 
 from .. import Tensor
 from .._typing import DTypeLike, NestedNumbericSequence, Numberic, ShapeLike
@@ -23,7 +24,7 @@ from ..static import Variable as Variable
 from ..static import device_guard as device_guard
 
 def to_tensor(
-    data: Numberic | NestedNumbericSequence | np.ndarray[Any, Any] | Tensor,
+    data: Numberic | NestedNumbericSequence | npt.NDArray[Any] | Tensor,
     dtype: Optional[str | np.dtype[Any]] = ...,  # TODO: paddle.dtype
     place: Optional[Any] = ...,  # TODO: CPUPlace | CUDAPinnedPlace | CUDAPlace
     stop_gradient: bool = ...,
