@@ -93,5 +93,7 @@ def test_methods():
     c = a.size()
     c = a.dim()
     c = a.ndimension()
+    c = a.imag()
+    c = a.real()
 
     # TODO: more methods
