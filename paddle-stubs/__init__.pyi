@@ -1,5 +1,8 @@
 from __future__ import annotations
 
+__version__: str
+
+from . import fluid as fluid
 from . import hub as hub
 from . import linalg as linalg
 from . import metric as metric
@@ -9,6 +12,7 @@ from . import regularizer as regularizer
 from . import signal as signal
 from . import static as static
 from . import sysconfig as sysconfig
+from . import version as version
 from . import vision as vision
 from ._typing import Tensor as Tensor
 from .autograd import grad as grad
