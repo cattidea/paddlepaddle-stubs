@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "paddlepaddle-stubs"
-version = "2.3.1-alpha.2"
+version = "2.3.1-alpha.3"
 description = ""
 authors = ["Nyakku Shigure <sigure.qaq@gmail.com>"]
 packages = [{ include = "paddle-stubs" }]
@@ -12,6 +12,7 @@ keywords = ["PEP 561", "PEP 484", "Type Hints", "PaddlePaddle"]
 classifiers = [
   "Operating System :: OS Independent",
   "License :: OSI Approved :: MIT License",
+  "Typing :: Typed",
   "Programming Language :: Python",
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3.7",

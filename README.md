@@ -11,7 +11,7 @@ A stubs package as described in [PEP 561](https://peps.python.org/pep-0561/) for
    <a href="https://gitmoji.dev"><img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67?style=flat-square" alt="Gitmoji"></a>
 </p>
 
-目前仅针对 [Pyright](https://github.com/microsoft/pyright) 进行了编写和测试，并没有针对 Mypy 进行编写和测试，因此目前可能仅仅与 VS Code 的 Pylance 扩展一起工作良好～
+目前仅针对 [Pyright](https://github.com/microsoft/pyright) 进行了编写和测试，尚未支持 [Mypy](https://github.com/python/mypy)（Mypy 相对于 Pyright 太难用了，缺失功能太多），因此目前可能仅仅与 VS Code 的 Pylance 扩展一起工作良好～
 
 > **Note**
 >

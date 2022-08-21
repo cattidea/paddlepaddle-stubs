@@ -28,7 +28,6 @@ class Tensor(Sized, Iterable[Tensor], Hashable, SupportsFloat, SupportsInt, Supp
     ndim: int
     persistable: bool
     place: Place
-    shape: list[int]
     stop_gradient: bool
     T: Tensor
     __array_ufunc__: None
