@@ -48,5 +48,5 @@ pythonVersion = "3.7"
 typeCheckingMode = "strict"
 
 [build-system]
-requires = ["poetry-core>=1.1.0b3"]
+requires = ["poetry-core>=1.1.0rc1"]
 build-backend = "poetry.core.masonry.api"
