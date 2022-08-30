@@ -226,7 +226,7 @@ python-versions = ">=3.7"
 
 [[package]]
 name = "pyright"
-version = "1.1.267"
+version = "1.1.268"
 description = "Command line wrapper for pyright"
 category = "dev"
 optional = false
@@ -260,7 +260,7 @@ use_chardet_on_py3 = ["chardet (>=3.0.2,<6)"]
 
 [[package]]
 name = "setuptools"
-version = "65.2.0"
+version = "65.3.0"
 description = "Easily download, build, install, upgrade, and uninstall Python packages"
 category = "dev"
 optional = false
@@ -331,7 +331,7 @@ testing = ["func-timeout", "jaraco-itertools", "pytest (>=6)", "pytest-black (>=
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "e645339a795e87fcbf54fb7957469bc4ff2e7513aadc586bd569556e9fa7cf9b"
+content-hash = "97b03a718ecb52ae2b6957276880b7896503abc8c73b80e9bd21e90e7de069c7"
 
 [metadata.files]
 astor = [
@@ -636,16 +636,16 @@ protobuf = [
     {file = "protobuf-3.20.0.tar.gz", hash = "sha256:71b2c3d1cd26ed1ec7c8196834143258b2ad7f444efff26fdc366c6f5e752702"},
 ]
 pyright = [
-    {file = "pyright-1.1.267-py3-none-any.whl", hash = "sha256:7dc7320f0230e90fe106b9b23d6da66207e076a6f0b8f342cdcdfcd237aee853"},
-    {file = "pyright-1.1.267.tar.gz", hash = "sha256:a2448f5ee589e9ff59351bd311c56bf70a4dc487c7cf6a3e4c3c07971b19189b"},
+    {file = "pyright-1.1.268-py3-none-any.whl", hash = "sha256:56b30b00f94ba20e2bdb701e01be23af371d3d51bad10945d8e5a660be28b888"},
+    {file = "pyright-1.1.268.tar.gz", hash = "sha256:f5ff622d94bb591fc334e845896577926afc4cb99f428922716c6d6f14e674d7"},
 ]
 requests = [
     {file = "requests-2.28.1-py3-none-any.whl", hash = "sha256:8fefa2a1a1365bf5520aac41836fbee479da67864514bdb821f31ce07ce65349"},
     {file = "requests-2.28.1.tar.gz", hash = "sha256:7c5599b102feddaa661c826c56ab4fee28bfd17f5abca1ebbe3e7f19d7c97983"},
 ]
 setuptools = [
-    {file = "setuptools-65.2.0-py3-none-any.whl", hash = "sha256:a3ca5857c89f82f5c9410e8508cb32f4872a3bafd4aa7ae122a24ca33bccc750"},
-    {file = "setuptools-65.2.0.tar.gz", hash = "sha256:7f4bc85450898a09f76ebf28b72fa25bc7111f6c7d665d514a60bba9c75ef2a9"},
+    {file = "setuptools-65.3.0-py3-none-any.whl", hash = "sha256:2e24e0bec025f035a2e72cdd1961119f557d78ad331bb00ff82efb2ab8da8e82"},
+    {file = "setuptools-65.3.0.tar.gz", hash = "sha256:7732871f4f7fa58fb6bdcaeadb0161b2bd046c85905dbaa066bdcbcc81953b57"},
 ]
 six = [
     {file = "six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"},

@@ -24,7 +24,7 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.7"
-paddlepaddle = "^2.3.0"
+paddlepaddle = "^2.3.0 || 0.0.0"
 typing-extensions = "^4.3.0"
 
 [tool.poetry.group.dev.dependencies]
