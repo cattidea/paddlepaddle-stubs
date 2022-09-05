@@ -3,7 +3,7 @@ name = "paddlepaddle-stubs"
 version = "2.3.1-alpha.3"
 description = ""
 authors = ["Nyakku Shigure <sigure.qaq@gmail.com>"]
-packages = [{ include = "paddle-stubs" }]
+packages = [{ include = "paddle-stubs/**" }]
 license = "MIT"
 readme = "README.md"
 homepage = "https://github.com/cattidea/paddlepaddle-stubs"
@@ -24,7 +24,7 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.7"
-paddlepaddle = "^2.3.0 || 0.0.0"
+paddlepaddle = "^2.3.0"
 typing-extensions = "^4.3.0"
 
 [tool.poetry.group.dev.dependencies]
