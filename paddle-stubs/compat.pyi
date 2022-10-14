@@ -2,6 +2,8 @@ from __future__ import annotations
 
 from typing import Any
 
+# This module will be removed in PaddlePaddle 2.5.0.
+
 int_type = int
 long_type = int
 

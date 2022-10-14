@@ -45,7 +45,7 @@ VS Code 推荐配置：
 
 See [paddlepaddle-stubs 2.3.1 Roadmap](https://github.com/orgs/cattidea/projects/3)
 
-### 2.3.1 alpha
+### 2.4.0 alpha
 
 > **Note**
 >
@@ -54,7 +54,7 @@ See [paddlepaddle-stubs 2.3.1 Roadmap](https://github.com/orgs/cattidea/projects
 -  [x] 通过 basic mode 的类型检查
 -  [x] 完善全部 P1 级别的类型信息（strict 下工作良好）
 
-### 2.3.1 beta
+### 2.4.0 beta
 
 -  [ ] 完善全部 P2 级别的类型信息（strict 下工作良好）
 -  [ ] [官网示例高层 API 搭建 MNIST 示例代码](./examples/mnist_example.py)在 strict 模式下工作良好
