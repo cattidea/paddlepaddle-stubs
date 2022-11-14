@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Callable, Optional
+from typing import Callable, Optional, Sequence
 
 from .._typing import Tensor
 from ..fluid.clip import GradientClipBase
@@ -16,7 +16,9 @@ class Lamb(Optimizer):
         beta1: float = ...,
         beta2: float = ...,
         epsilon: float = ...,
-        parameters: Optional[list[Tensor] | list[ParameterConfig]] = ...,
+        # TODO: Currently, pyright throws an error at below line.
+        # parameters: Optional[Sequence[Tensor] | Sequence[ParameterConfig]] = ...,
+        parameters: Optional[Sequence[Tensor | ParameterConfig]] = ...,
         grad_clip: Optional[GradientClipBase] = ...,
         exclude_from_weight_decay_fn: Optional[Callable[[Tensor], bool]] = ...,
         name: Optional[str] = ...,

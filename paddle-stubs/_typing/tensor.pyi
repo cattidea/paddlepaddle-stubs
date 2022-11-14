@@ -3,7 +3,6 @@ from __future__ import annotations
 from collections.abc import Hashable, Iterable, Iterator, Sized
 from typing import Any, Optional, SupportsFloat, SupportsInt
 
-import numpy as np
 import numpy.typing as npt
 from typing_extensions import SupportsIndex
 

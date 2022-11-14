@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from typing import Any, Callable, Optional
 
-import numpy as np
 import numpy.typing as npt
 from typing_extensions import Literal, TypedDict
 

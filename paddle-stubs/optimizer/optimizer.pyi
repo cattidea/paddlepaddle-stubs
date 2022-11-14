@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Any, Optional
+from typing import Any, Optional, Sequence
 
 from typing_extensions import NotRequired, TypedDict
 
@@ -14,7 +14,7 @@ from .lr import LRScheduler as LRScheduler
 OptimizerStateDict = dict[str, Tensor]
 
 class ParameterConfig(TypedDict):
-    params: list[Tensor]
+    params: Sequence[Tensor]
     weight_decay: NotRequired[Optional[float | WeightDecayRegularizer]]
     learning_rate: NotRequired[Optional[float | Tensor | LRScheduler]]
 

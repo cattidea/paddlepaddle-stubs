@@ -42,6 +42,7 @@ def test_types():
     loss = paddle.mean(out)
 
     # Adadelta
+
     adadelta = paddle.optimizer.Adadelta(
         learning_rate=0.1,
         parameters=[

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Optional
+from typing import Optional, Sequence
 
 from .._typing import Tensor
 from ..fluid.clip import GradientClipBase
@@ -17,7 +17,9 @@ class Adamax(Optimizer):
         beta1: float = ...,
         beta2: float = ...,
         epsilon: float = ...,
-        parameters: Optional[list[Tensor] | list[AdamParameterConfig]] = ...,
+        # TODO: Currently, pyright throws an error at below line.
+        # parameters: Optional[Sequence[Tensor] | Sequence[AdamParameterConfig]] = ...,
+        parameters: Optional[Sequence[Tensor | AdamParameterConfig]] = ...,
         weight_decay: Optional[float | WeightDecayRegularizer] = ...,
         grad_clip: Optional[GradientClipBase] = ...,
         name: Optional[str] = ...,

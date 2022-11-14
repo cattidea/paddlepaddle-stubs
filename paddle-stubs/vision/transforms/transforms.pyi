@@ -3,7 +3,6 @@ from __future__ import annotations
 from collections.abc import Sequence
 from typing import Any, Optional, TypeVar
 
-import numpy as np
 import numpy.typing as npt
 from PIL.Image import Image as PILImage
 from typing_extensions import Literal

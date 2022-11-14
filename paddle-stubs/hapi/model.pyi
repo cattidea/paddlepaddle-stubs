@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from typing import Any, Iterable, Optional
 
-import numpy as np
 import numpy.typing as npt
 from paddle import nn
 from typing_extensions import Literal
