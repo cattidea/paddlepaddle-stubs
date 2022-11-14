@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Any, Optional
+from typing import Any
 
 from paddle import in_dynamic_mode as in_dynamic_mode
 
@@ -20,7 +20,7 @@ class PairwiseDistance(Layer):
         p: float = ...,
         epsilon: float = ...,
         keepdim: bool = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, x: Tensor, y: Tensor) -> Tensor: ...
     __call__ = forward

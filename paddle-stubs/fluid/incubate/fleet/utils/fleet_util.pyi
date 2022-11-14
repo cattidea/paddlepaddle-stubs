@@ -38,7 +38,7 @@ class FleetUtil:
         hadoop_fs_ugi: Any,
         monitor_data: Any = ...,
         hadoop_home: str = ...,
-        donefile_name: Optional[str] = ...,
+        donefile_name: str | None = ...,
     ) -> None: ...
     def write_cache_donefile(
         self,
@@ -87,7 +87,7 @@ class FleetUtil:
         hadoop_fs_name: Any,
         hadoop_fs_ugi: Any,
         hadoop_home: str = ...,
-        var_names: Optional[Any] = ...,
+        var_names: Any | None = ...,
         save_combine: bool = ...,
     ) -> None: ...
     def get_last_save_xbox_base(

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Any, Optional
+from typing import Any
 
 from ... import Tensor, nn
 
@@ -18,11 +18,11 @@ class BasicBlock(nn.Layer):
         inplanes: Any,
         planes: Any,
         stride: int = ...,
-        downsample: Optional[Any] = ...,
+        downsample: Any | None = ...,
         groups: int = ...,
         base_width: int = ...,
         dilation: int = ...,
-        norm_layer: Optional[Any] = ...,
+        norm_layer: Any | None = ...,
     ) -> None: ...
     def forward(self, x: Any) -> Tensor: ...
 
@@ -42,11 +42,11 @@ class BottleneckBlock(nn.Layer):
         inplanes: Any,
         planes: Any,
         stride: int = ...,
-        downsample: Optional[Any] = ...,
+        downsample: Any | None = ...,
         groups: int = ...,
         base_width: int = ...,
         dilation: int = ...,
-        norm_layer: Optional[Any] = ...,
+        norm_layer: Any | None = ...,
     ) -> None: ...
     def forward(self, x: Any) -> Tensor: ...
 

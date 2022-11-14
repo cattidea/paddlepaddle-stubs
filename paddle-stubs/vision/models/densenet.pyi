@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Any, Optional
+from typing import Any
 
 from ... import Tensor, nn
 
@@ -35,7 +35,7 @@ class DenseBlock(nn.Layer):
         bn_size: Any,
         growth_rate: Any,
         dropout: Any,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, input: Any) -> Tensor: ...
 

@@ -17,11 +17,11 @@ class Conv2D(layers.Layer):
         stride: int = ...,
         padding: int = ...,
         dilation: int = ...,
-        groups: Optional[Any] = ...,
-        param_attr: Optional[Any] = ...,
-        bias_attr: Optional[Any] = ...,
+        groups: Any | None = ...,
+        param_attr: Any | None = ...,
+        bias_attr: Any | None = ...,
         use_cudnn: bool = ...,
-        act: Optional[Any] = ...,
+        act: Any | None = ...,
         dtype: str = ...,
     ): ...
     def forward(self, input: Any): ...
@@ -37,11 +37,11 @@ class Conv3D(layers.Layer):
         stride: int = ...,
         padding: int = ...,
         dilation: int = ...,
-        groups: Optional[Any] = ...,
-        param_attr: Optional[Any] = ...,
-        bias_attr: Optional[Any] = ...,
+        groups: Any | None = ...,
+        param_attr: Any | None = ...,
+        bias_attr: Any | None = ...,
         use_cudnn: bool = ...,
-        act: Optional[Any] = ...,
+        act: Any | None = ...,
         dtype: str = ...,
     ): ...
     def forward(self, input: Any): ...
@@ -57,11 +57,11 @@ class Conv3DTranspose(layers.Layer):
         padding: int = ...,
         stride: int = ...,
         dilation: int = ...,
-        groups: Optional[Any] = ...,
-        param_attr: Optional[Any] = ...,
-        bias_attr: Optional[Any] = ...,
+        groups: Any | None = ...,
+        param_attr: Any | None = ...,
+        bias_attr: Any | None = ...,
         use_cudnn: bool = ...,
-        act: Optional[Any] = ...,
+        act: Any | None = ...,
         dtype: str = ...,
     ) -> None: ...
     def forward(self, input: Any): ...
@@ -88,9 +88,9 @@ class Linear(layers.Layer):
         self,
         input_dim: Any,
         output_dim: Any,
-        param_attr: Optional[Any] = ...,
-        bias_attr: Optional[Any] = ...,
-        act: Optional[Any] = ...,
+        param_attr: Any | None = ...,
+        bias_attr: Any | None = ...,
+        act: Any | None = ...,
         dtype: str = ...,
     ) -> None: ...
     def forward(self, input: Any): ...
@@ -102,8 +102,8 @@ class InstanceNorm(layers.Layer):
         self,
         num_channels: Any,
         epsilon: float = ...,
-        param_attr: Optional[Any] = ...,
-        bias_attr: Optional[Any] = ...,
+        param_attr: Any | None = ...,
+        bias_attr: Any | None = ...,
         dtype: str = ...,
     ) -> None: ...
     def forward(self, input: Any): ...
@@ -114,17 +114,17 @@ class BatchNorm(layers.Layer):
     def __init__(
         self,
         num_channels: int,
-        act: Optional[str] = ...,
+        act: str | None = ...,
         is_test: bool = ...,
         momentum: float = ...,
         epsilon: float = ...,
-        param_attr: Optional[ParamAttr] = ...,
-        bias_attr: Optional[ParamAttr | bool] = ...,
+        param_attr: ParamAttr | None = ...,
+        bias_attr: ParamAttr | bool | None = ...,
         dtype: DTypeLike = ...,
         data_layout: DataLayoutND = ...,
         in_place: bool = ...,
-        moving_mean_name: Optional[str] = ...,
-        moving_variance_name: Optional[str] = ...,
+        moving_mean_name: str | None = ...,
+        moving_variance_name: str | None = ...,
         do_model_average_for_mean_and_var: bool = ...,
         use_global_stats: bool = ...,
         trainable_statistics: bool = ...,
@@ -134,7 +134,7 @@ class BatchNorm(layers.Layer):
 
 class Dropout(layers.Layer):
     def __init__(
-        self, p: float = ..., seed: Optional[Any] = ..., dropout_implementation: str = ..., is_test: bool = ...
+        self, p: float = ..., seed: Any | None = ..., dropout_implementation: str = ..., is_test: bool = ...
     ) -> None: ...
     def forward(self, input: Any): ...
 
@@ -145,8 +145,8 @@ class Embedding(layers.Layer):
         size: Any,
         is_sparse: bool = ...,
         is_distributed: bool = ...,
-        padding_idx: Optional[Any] = ...,
-        param_attr: Optional[Any] = ...,
+        padding_idx: Any | None = ...,
+        param_attr: Any | None = ...,
         dtype: str = ...,
     ) -> None: ...
     def forward(self, input: Any): ...
@@ -160,9 +160,9 @@ class LayerNorm(layers.Layer):
         scale: bool = ...,
         shift: bool = ...,
         epsilon: float = ...,
-        param_attr: Optional[Any] = ...,
-        bias_attr: Optional[Any] = ...,
-        act: Optional[Any] = ...,
+        param_attr: Any | None = ...,
+        bias_attr: Any | None = ...,
+        act: Any | None = ...,
         dtype: str = ...,
     ) -> None: ...
     def forward(self, input: Any): ...
@@ -175,8 +175,8 @@ class GRUUnit(layers.Layer):
     def __init__(
         self,
         size: Any,
-        param_attr: Optional[Any] = ...,
-        bias_attr: Optional[Any] = ...,
+        param_attr: Any | None = ...,
+        bias_attr: Any | None = ...,
         activation: str = ...,
         gate_activation: str = ...,
         origin_mode: bool = ...,
@@ -191,26 +191,26 @@ class NCE(layers.Layer):
         self,
         num_total_classes: Any,
         dim: Any,
-        sample_weight: Optional[Any] = ...,
-        param_attr: Optional[Any] = ...,
-        bias_attr: Optional[Any] = ...,
-        num_neg_samples: Optional[Any] = ...,
+        sample_weight: Any | None = ...,
+        param_attr: Any | None = ...,
+        bias_attr: Any | None = ...,
+        num_neg_samples: Any | None = ...,
         sampler: str = ...,
-        custom_dist: Optional[Any] = ...,
+        custom_dist: Any | None = ...,
         seed: int = ...,
         is_sparse: bool = ...,
         dtype: str = ...,
     ): ...
-    def forward(self, input: Any, label: Any, sample_weight: Optional[Any] = ...): ...
+    def forward(self, input: Any, label: Any, sample_weight: Any | None = ...): ...
 
 class PRelu(layers.Layer):
     weight: Any = ...
     def __init__(
         self,
         mode: Any,
-        channel: Optional[Any] = ...,
-        input_shape: Optional[Any] = ...,
-        param_attr: Optional[Any] = ...,
+        channel: Any | None = ...,
+        input_shape: Any | None = ...,
+        param_attr: Any | None = ...,
         dtype: str = ...,
     ) -> None: ...
     def forward(self, input: Any): ...
@@ -223,10 +223,10 @@ class BilinearTensorProduct(layers.Layer):
         input1_dim: Any,
         input2_dim: Any,
         output_dim: Any,
-        name: Optional[str] = ...,
-        act: Optional[Any] = ...,
-        param_attr: Optional[Any] = ...,
-        bias_attr: Optional[Any] = ...,
+        name: str | None = ...,
+        act: Any | None = ...,
+        param_attr: Any | None = ...,
+        bias_attr: Any | None = ...,
         dtype: str = ...,
     ) -> None: ...
     def forward(self, x: Any, y: Any): ...
@@ -239,15 +239,15 @@ class Conv2DTranspose(layers.Layer):
         num_channels: Any,
         num_filters: Any,
         filter_size: Any,
-        output_size: Optional[Any] = ...,
+        output_size: Any | None = ...,
         padding: int = ...,
         stride: int = ...,
         dilation: int = ...,
-        groups: Optional[Any] = ...,
-        param_attr: Optional[Any] = ...,
-        bias_attr: Optional[Any] = ...,
+        groups: Any | None = ...,
+        param_attr: Any | None = ...,
+        bias_attr: Any | None = ...,
         use_cudnn: bool = ...,
-        act: Optional[Any] = ...,
+        act: Any | None = ...,
         dtype: str = ...,
     ) -> None: ...
     def forward(self, input: Any): ...
@@ -259,16 +259,16 @@ class SequenceConv(layers.Layer):
         num_filters: Any,
         filter_size: int = ...,
         filter_stride: int = ...,
-        padding: Optional[Any] = ...,
-        bias_attr: Optional[Any] = ...,
-        param_attr: Optional[Any] = ...,
-        act: Optional[Any] = ...,
+        padding: Any | None = ...,
+        bias_attr: Any | None = ...,
+        param_attr: Any | None = ...,
+        act: Any | None = ...,
     ) -> None: ...
     def forward(self, input: Any): ...
 
 class RowConv(layers.Layer):
     def __init__(
-        self, name_scope: Any, future_context_size: Any, param_attr: Optional[Any] = ..., act: Optional[Any] = ...
+        self, name_scope: Any, future_context_size: Any, param_attr: Any | None = ..., act: Any | None = ...
     ) -> None: ...
     def forward(self, input: Any): ...
 
@@ -280,9 +280,9 @@ class GroupNorm(layers.Layer):
         channels: Any,
         groups: Any,
         epsilon: float = ...,
-        param_attr: Optional[Any] = ...,
-        bias_attr: Optional[Any] = ...,
-        act: Optional[Any] = ...,
+        param_attr: Any | None = ...,
+        bias_attr: Any | None = ...,
+        act: Any | None = ...,
         data_layout: str = ...,
         dtype: str = ...,
     ) -> None: ...
@@ -312,9 +312,9 @@ class TreeConv(layers.Layer):
         num_filters: int = ...,
         max_depth: int = ...,
         act: str = ...,
-        param_attr: Optional[Any] = ...,
-        bias_attr: Optional[Any] = ...,
-        name: Optional[str] = ...,
+        param_attr: Any | None = ...,
+        bias_attr: Any | None = ...,
+        name: str | None = ...,
         dtype: str = ...,
     ) -> None: ...
     def forward(self, nodes_vector: Any, edge_set: Any): ...

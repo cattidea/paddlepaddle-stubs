@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from collections.abc import Sequence
-from typing import Any, Optional, TypeVar
+from typing import Any, TypeVar
 
 import numpy.typing as npt
 from PIL.Image import Image as PILImage
@@ -25,12 +25,12 @@ class Compose:
 class BaseTransform:
     keys: Any = ...
     params: Any = ...
-    def __init__(self, keys: Optional[Sequence[str]] = ...) -> None: ...
+    def __init__(self, keys: Sequence[str] | None = ...) -> None: ...
     def __call__(self, inputs: _DataT) -> _DataT: ...
 
 class ToTensor(BaseTransform):
     data_format: Any = ...
-    def __init__(self, data_format: str = ..., keys: Optional[Any] = ...) -> None: ...
+    def __init__(self, data_format: str = ..., keys: Any | None = ...) -> None: ...
     def __call__(self, inputs: _DataT) -> Tensor: ...  # pyright: ignore [reportInvalidTypeVarUse]
 
 class Resize(BaseTransform):
@@ -40,7 +40,7 @@ class Resize(BaseTransform):
         self,
         size: int | list[int] | tuple[int, ...],
         interpolation: _InterpolationPil | _InterpolationCv2 = ...,
-        keys: Optional[Sequence[str]] = ...,
+        keys: Sequence[str] | None = ...,
     ) -> None: ...
     def __call__(self, inputs: _DataT) -> _DataT: ...
 
@@ -55,7 +55,7 @@ class RandomResizedCrop(BaseTransform):
         scale: list[float] | tuple[float, ...] = ...,
         ratio: list[float] | tuple[float, ...] = ...,
         interpolation: _InterpolationPil | _InterpolationCv2 = ...,
-        keys: Optional[Sequence[str]] = ...,
+        keys: Sequence[str] | None = ...,
     ) -> None: ...
 
 class CenterCrop(BaseTransform):
@@ -63,7 +63,7 @@ class CenterCrop(BaseTransform):
     def __init__(
         self,
         size: int | list[int] | tuple[int, ...],
-        keys: Optional[Sequence[str]] = ...,
+        keys: Sequence[str] | None = ...,
     ) -> None: ...
 
 class RandomHorizontalFlip(BaseTransform):
@@ -71,7 +71,7 @@ class RandomHorizontalFlip(BaseTransform):
     def __init__(
         self,
         prob: float = ...,
-        keys: Optional[Sequence[str]] = ...,
+        keys: Sequence[str] | None = ...,
     ) -> None: ...
 
 class RandomVerticalFlip(BaseTransform):
@@ -79,7 +79,7 @@ class RandomVerticalFlip(BaseTransform):
     def __init__(
         self,
         prob: float = ...,
-        keys: Optional[Sequence[str]] = ...,
+        keys: Sequence[str] | None = ...,
     ) -> None: ...
 
 class Normalize(BaseTransform):
@@ -93,7 +93,7 @@ class Normalize(BaseTransform):
         std: NumbericSequence = ...,
         data_format: DataLayoutImage = ...,
         to_rgb: bool = ...,
-        keys: Optional[Sequence[str]] = ...,
+        keys: Sequence[str] | None = ...,
     ) -> None: ...
 
 class Transpose(BaseTransform):
@@ -101,24 +101,24 @@ class Transpose(BaseTransform):
     def __init__(
         self,
         order: Sequence[int] = ...,
-        keys: Optional[Sequence[str]] = ...,
+        keys: Sequence[str] | None = ...,
     ) -> None: ...
 
 class BrightnessTransform(BaseTransform):
     value: Any = ...
-    def __init__(self, value: float, keys: Optional[Sequence[str]] = ...) -> None: ...
+    def __init__(self, value: float, keys: Sequence[str] | None = ...) -> None: ...
 
 class ContrastTransform(BaseTransform):
     value: Any = ...
-    def __init__(self, value: float, keys: Optional[Sequence[str]] = ...) -> None: ...
+    def __init__(self, value: float, keys: Sequence[str] | None = ...) -> None: ...
 
 class SaturationTransform(BaseTransform):
     value: Any = ...
-    def __init__(self, value: float, keys: Optional[Sequence[str]] = ...) -> None: ...
+    def __init__(self, value: float, keys: Sequence[str] | None = ...) -> None: ...
 
 class HueTransform(BaseTransform):
     value: Any = ...
-    def __init__(self, value: float, keys: Optional[Sequence[str]] = ...) -> None: ...
+    def __init__(self, value: float, keys: Sequence[str] | None = ...) -> None: ...
 
 class ColorJitter(BaseTransform):
     brightness: Any = ...
@@ -131,7 +131,7 @@ class ColorJitter(BaseTransform):
         contrast: float = ...,
         saturation: float = ...,
         hue: float = ...,
-        keys: Optional[Sequence[str]] = ...,
+        keys: Sequence[str] | None = ...,
     ) -> None: ...
 
 class RandomCrop(BaseTransform):
@@ -143,11 +143,11 @@ class RandomCrop(BaseTransform):
     def __init__(
         self,
         size: int | IntSequence,
-        padding: Optional[int | IntSequence] = ...,
+        padding: int | IntSequence | None = ...,
         pad_if_needed: bool = ...,
         fill: int = ...,
         padding_mode: str = ...,
-        keys: Optional[Sequence[str]] = ...,
+        keys: Sequence[str] | None = ...,
     ) -> None: ...
 
 class Pad(BaseTransform):
@@ -159,7 +159,7 @@ class Pad(BaseTransform):
         padding: int | IntSequence,
         fill: int | IntSequence = ...,
         padding_mode: str = ...,
-        keys: Optional[Sequence[str]] = ...,
+        keys: Sequence[str] | None = ...,
     ) -> None: ...
 
 class RandomRotation(BaseTransform):
@@ -173,9 +173,9 @@ class RandomRotation(BaseTransform):
         degrees: float | Sequence[float],
         interpolation: _InterpolationPil | _InterpolationCv2 = ...,
         expand: bool = ...,
-        center: Optional[tuple[int, int]] = ...,
+        center: tuple[int, int] | None = ...,
         fill: float = ...,
-        keys: Optional[Sequence[str]] = ...,
+        keys: Sequence[str] | None = ...,
     ) -> None: ...
 
 class Grayscale(BaseTransform):
@@ -183,5 +183,5 @@ class Grayscale(BaseTransform):
     def __init__(
         self,
         num_output_channels: Literal[1, 3] = ...,
-        keys: Optional[Sequence[str]] = ...,
+        keys: Sequence[str] | None = ...,
     ) -> None: ...

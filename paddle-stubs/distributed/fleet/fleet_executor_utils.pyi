@@ -11,11 +11,11 @@ class TaskNode:
         cur_rank: Any,
         max_run_times: Any,
         max_slot_times: Any,
-        role: Optional[Any] = ...,
+        role: Any | None = ...,
         node_type: str = ...,
-        task_id: Optional[Any] = ...,
-        ops: Optional[Any] = ...,
-        program: Optional[Any] = ...,
+        task_id: Any | None = ...,
+        ops: Any | None = ...,
+        program: Any | None = ...,
     ) -> None: ...
     def set_type(self, interceptor_type: Any) -> None: ...
     def task_node(self): ...

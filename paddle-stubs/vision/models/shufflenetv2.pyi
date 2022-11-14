@@ -1,12 +1,12 @@
 from __future__ import annotations
 
-from typing import Any, Optional
+from typing import Any
 
 from typing_extensions import Literal
 
 from ... import Tensor, nn
 
-def create_activation_layer(act: Any) -> Optional[type[nn.ReLU] | type[nn.Swish]]: ...
+def create_activation_layer(act: Any) -> type[nn.ReLU] | type[nn.Swish] | None: ...
 def channel_shuffle(x: Tensor, groups: int) -> Tensor: ...
 
 class InvertedResidual(nn.Layer):
@@ -21,7 +21,7 @@ class ShuffleNetV2(nn.Layer):
     def __init__(
         self,
         scale: float = ...,
-        act: Optional[Literal["relu", "swish"]] = ...,
+        act: Literal["relu", "swish"] | None = ...,
         num_classes: int = ...,
         with_pool: bool = ...,
     ) -> None: ...

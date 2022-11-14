@@ -17,10 +17,10 @@ def set_default_distributed_context(dist_context: Any) -> None: ...
 class DistributedContext:
     def __init__(
         self,
-        serial_main_prog: Optional[Any] = ...,
-        serial_startup_prog: Optional[Any] = ...,
-        dist_main_progs: Optional[Any] = ...,
-        dist_startup_progs: Optional[Any] = ...,
+        serial_main_prog: Any | None = ...,
+        serial_startup_prog: Any | None = ...,
+        dist_main_progs: Any | None = ...,
+        dist_startup_progs: Any | None = ...,
     ) -> None: ...
     @property
     def serial_program(self): ...

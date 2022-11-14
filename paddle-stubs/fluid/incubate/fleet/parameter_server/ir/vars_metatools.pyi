@@ -34,11 +34,11 @@ class VarDistributed:
         self,
         origin_var: Any,
         slice_var: Any,
-        is_slice: Optional[Any] = ...,
-        block_id: Optional[Any] = ...,
-        offset: Optional[Any] = ...,
-        vtype: Optional[Any] = ...,
-        endpoint: Optional[Any] = ...,
+        is_slice: Any | None = ...,
+        block_id: Any | None = ...,
+        offset: Any | None = ...,
+        vtype: Any | None = ...,
+        endpoint: Any | None = ...,
     ) -> None: ...
     @staticmethod
     def equal(var1: Any, var2: Any): ...
@@ -50,9 +50,9 @@ class VarsDistributed:
         self,
         origin_var: Any,
         slice_var: Any,
-        is_slice: Optional[Any] = ...,
-        block_id: Optional[Any] = ...,
-        offset: Optional[Any] = ...,
-        vtype: Optional[Any] = ...,
-        endpoint: Optional[Any] = ...,
+        is_slice: Any | None = ...,
+        block_id: Any | None = ...,
+        offset: Any | None = ...,
+        vtype: Any | None = ...,
+        endpoint: Any | None = ...,
     ) -> None: ...

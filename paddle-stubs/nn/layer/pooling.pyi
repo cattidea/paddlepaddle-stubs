@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Any, Optional
+from typing import Any
 
 from ..._typing import DataLayout1D, DataLayout2D, DataLayout3D, IntSequence, Tensor
 from .. import Layer
@@ -16,11 +16,11 @@ class AvgPool1D(Layer):
     def __init__(
         self,
         kernel_size: int | IntSequence,
-        stride: Optional[int | IntSequence] = ...,
+        stride: int | IntSequence | None = ...,
         padding: int | IntSequence | PaddingSizeStr = ...,
         exclusive: bool = ...,
         ceil_mode: bool = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, x: Tensor) -> Tensor: ...
     __call__ = forward
@@ -37,13 +37,13 @@ class AvgPool2D(Layer):
     def __init__(
         self,
         kernel_size: int | IntSequence,
-        stride: Optional[int | IntSequence] = ...,
+        stride: int | IntSequence | None = ...,
         padding: int | IntSequence | PaddingSizeStr = ...,
         ceil_mode: bool = ...,
         exclusive: bool = ...,
-        divisor_override: Optional[float] = ...,
+        divisor_override: float | None = ...,
         data_format: DataLayout2D = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, x: Tensor) -> Tensor: ...
     __call__ = forward
@@ -60,13 +60,13 @@ class AvgPool3D(Layer):
     def __init__(
         self,
         kernel_size: int | IntSequence,
-        stride: Optional[int | IntSequence] = ...,
+        stride: int | IntSequence | None = ...,
         padding: int | IntSequence | PaddingSizeStr = ...,
         ceil_mode: bool = ...,
         exclusive: bool = ...,
-        divisor_override: Optional[float] = ...,
+        divisor_override: float | None = ...,
         data_format: DataLayout3D = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, x: Tensor) -> Tensor: ...
     __call__ = forward
@@ -81,11 +81,11 @@ class MaxPool1D(Layer):
     def __init__(
         self,
         kernel_size: int | IntSequence,
-        stride: Optional[int | IntSequence] = ...,
+        stride: int | IntSequence | None = ...,
         padding: int | IntSequence | PaddingSizeStr = ...,
         return_mask: bool = ...,
         ceil_mode: bool = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, x: Tensor) -> Tensor: ...
     __call__ = forward
@@ -101,12 +101,12 @@ class MaxPool2D(Layer):
     def __init__(
         self,
         kernel_size: int | IntSequence,
-        stride: Optional[int | IntSequence] = ...,
+        stride: int | IntSequence | None = ...,
         padding: int | IntSequence | PaddingSizeStr = ...,
         return_mask: bool = ...,
         ceil_mode: bool = ...,
         data_format: DataLayout2D = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, x: Tensor) -> Tensor: ...
     __call__ = forward
@@ -122,12 +122,12 @@ class MaxPool3D(Layer):
     def __init__(
         self,
         kernel_size: int | IntSequence,
-        stride: Optional[int | IntSequence] = ...,
+        stride: int | IntSequence | None = ...,
         padding: int | IntSequence | PaddingSizeStr = ...,
         return_mask: bool = ...,
         ceil_mode: bool = ...,
         data_format: DataLayout3D = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, x: Tensor) -> Tensor: ...
     __call__ = forward
@@ -135,7 +135,7 @@ class MaxPool3D(Layer):
 class AdaptiveAvgPool1D(Layer):
     output_size: Any = ...
     name: Any = ...
-    def __init__(self, output_size: int | IntSequence, name: Optional[str] = ...) -> None: ...
+    def __init__(self, output_size: int | IntSequence, name: str | None = ...) -> None: ...
     def forward(self, input: Tensor) -> Tensor: ...
     __call__ = forward
 
@@ -144,7 +144,7 @@ class AdaptiveAvgPool2D(Layer):
         self,
         output_size: int | IntSequence,
         data_format: DataLayout2D = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, x: Tensor) -> Tensor: ...
     __call__ = forward
@@ -154,7 +154,7 @@ class AdaptiveAvgPool3D(Layer):
         self,
         output_size: int | IntSequence,
         data_format: DataLayout3D = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, x: Tensor) -> Tensor: ...
     __call__ = forward
@@ -167,7 +167,7 @@ class AdaptiveMaxPool1D(Layer):
         self,
         output_size: int | IntSequence,
         return_mask: bool = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, input: Tensor) -> Tensor: ...
     __call__ = forward
@@ -177,7 +177,7 @@ class AdaptiveMaxPool2D(Layer):
         self,
         output_size: int | IntSequence,
         return_mask: bool = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, x: Tensor) -> Tensor: ...
     __call__ = forward
@@ -187,7 +187,7 @@ class AdaptiveMaxPool3D(Layer):
         self,
         output_size: int | IntSequence,
         return_mask: bool = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, x: Tensor) -> Tensor: ...
     __call__ = forward
@@ -202,11 +202,11 @@ class MaxUnPool1D(Layer):
     def __init__(
         self,
         kernel_size: int | IntSequence,
-        stride: Optional[int | IntSequence] = ...,
+        stride: int | IntSequence | None = ...,
         padding: int | IntSequence = ...,
         data_format: DataLayout1D = ...,
-        output_size: Optional[IntSequence] = ...,
-        name: Optional[str] = ...,
+        output_size: IntSequence | None = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, x: Tensor, indices: Tensor) -> Tensor: ...
     __call__ = forward
@@ -221,11 +221,11 @@ class MaxUnPool2D(Layer):
     def __init__(
         self,
         kernel_size: int | IntSequence,
-        stride: Optional[int | IntSequence] = ...,
+        stride: int | IntSequence | None = ...,
         padding: int | IntSequence = ...,
         data_format: DataLayout2D = ...,
-        output_size: Optional[IntSequence] = ...,
-        name: Optional[str] = ...,
+        output_size: IntSequence | None = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, x: Tensor, indices: Tensor) -> Tensor: ...
     __call__ = forward
@@ -240,11 +240,11 @@ class MaxUnPool3D(Layer):
     def __init__(
         self,
         kernel_size: int | IntSequence,
-        stride: Optional[int | IntSequence] = ...,
+        stride: int | IntSequence | None = ...,
         padding: int | IntSequence = ...,
         data_format: DataLayout3D = ...,
-        output_size: Optional[IntSequence] = ...,
-        name: Optional[str] = ...,
+        output_size: IntSequence | None = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, x: Tensor, indices: Tensor) -> Tensor: ...
     __call__ = forward

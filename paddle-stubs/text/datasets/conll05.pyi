@@ -27,11 +27,11 @@ class Conll05st(Dataset):
     label_dict: Any = ...
     def __init__(
         self,
-        data_file: Optional[Any] = ...,
-        word_dict_file: Optional[Any] = ...,
-        verb_dict_file: Optional[Any] = ...,
-        target_dict_file: Optional[Any] = ...,
-        emb_file: Optional[Any] = ...,
+        data_file: Any | None = ...,
+        word_dict_file: Any | None = ...,
+        verb_dict_file: Any | None = ...,
+        target_dict_file: Any | None = ...,
+        emb_file: Any | None = ...,
         download: bool = ...,
     ) -> None: ...
     def __getitem__(self, idx: Any): ...

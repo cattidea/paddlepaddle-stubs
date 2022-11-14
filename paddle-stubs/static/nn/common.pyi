@@ -6,10 +6,10 @@ def fc(
     x: Any,
     size: Any,
     num_flatten_dims: int = ...,
-    weight_attr: Optional[Any] = ...,
-    bias_attr: Optional[Any] = ...,
-    activation: Optional[Any] = ...,
-    name: Optional[str] = ...,
+    weight_attr: Any | None = ...,
+    bias_attr: Any | None = ...,
+    activation: Any | None = ...,
+    name: str | None = ...,
 ): ...
 def deform_conv2d(
     x: Any,
@@ -23,7 +23,7 @@ def deform_conv2d(
     groups: int = ...,
     deformable_groups: int = ...,
     im2col_step: int = ...,
-    weight_attr: Optional[Any] = ...,
-    bias_attr: Optional[Any] = ...,
-    name: Optional[str] = ...,
+    weight_attr: Any | None = ...,
+    bias_attr: Any | None = ...,
+    name: str | None = ...,
 ): ...

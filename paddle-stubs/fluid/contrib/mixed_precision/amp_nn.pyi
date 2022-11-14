@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-def check_finite_and_unscale(x: Any, scale: Any, name: Optional[str] = ..., float_status: Optional[Any] = ...): ...
+def check_finite_and_unscale(x: Any, scale: Any, name: str | None = ..., float_status: Any | None = ...): ...
 def update_loss_scaling(
     x: Any,
     found_inf: Any,
@@ -14,5 +14,5 @@ def update_loss_scaling(
     incr_ratio: Any,
     decr_ratio: Any,
     stop_update: bool = ...,
-    name: Optional[str] = ...,
+    name: str | None = ...,
 ): ...

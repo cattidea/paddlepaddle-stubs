@@ -19,14 +19,14 @@ class RNGStatesTracker:
 RNG_STATE_TRACKER: Any
 
 def get_rng_state_tracker(): ...
-def model_parallel_random_seed(seed: Optional[Any] = ...) -> None: ...
+def model_parallel_random_seed(seed: Any | None = ...) -> None: ...
 def determinate_seed(rng_name: Any): ...
 def dropout(
     x: Any,
     p: float = ...,
-    axis: Optional[Any] = ...,
-    rng_name: Optional[str] = ...,
+    axis: Any | None = ...,
+    rng_name: str | None = ...,
     training: bool = ...,
     mode: str = ...,
-    name: Optional[str] = ...,
+    name: str | None = ...,
 ): ...

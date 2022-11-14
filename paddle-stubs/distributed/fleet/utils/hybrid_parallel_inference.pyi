@@ -32,11 +32,11 @@ class HybridParallelInferenceHelper:
         micro_batch_size: int = ...,
         beam_size: int = ...,
         init_comm: bool = ...,
-        role_maker: Optional[Any] = ...,
+        role_maker: Any | None = ...,
     ) -> None: ...
     def gen_infer_program(
         self,
-        sync_in_while_lastpp2firstpp_var_names: Optional[Any] = ...,
-        sync_in_while_var_names: Optional[Any] = ...,
+        sync_in_while_lastpp2firstpp_var_names: Any | None = ...,
+        sync_in_while_var_names: Any | None = ...,
         debug: bool = ...,
     ) -> None: ...

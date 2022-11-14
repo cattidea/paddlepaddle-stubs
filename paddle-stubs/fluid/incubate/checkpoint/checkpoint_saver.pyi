@@ -15,14 +15,14 @@ class PaddleModel(SerializableBase):
 
 class CheckpointSaver:
     def __init__(self, fs: Any) -> None: ...
-    def save_checkpoint(self, path: Any, slists: Any, trainer_id: Optional[Any] = ..., local_cache_path: str = ...): ...
+    def save_checkpoint(self, path: Any, slists: Any, trainer_id: Any | None = ..., local_cache_path: str = ...): ...
     def load_checkpoint(
         self,
         path: Any,
         slists: Any,
         trainer_id: Any,
         local_cache_path: str = ...,
-        checkpoint_no: Optional[Any] = ...,
+        checkpoint_no: Any | None = ...,
         ignore_empty: bool = ...,
     ): ...
     def get_checkpoint_no(self, root_path: Any): ...

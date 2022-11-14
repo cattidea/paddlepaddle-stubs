@@ -5,7 +5,7 @@ from typing import Any, Optional
 from paddle.io import Dataset
 
 def has_valid_extension(filename: Any, extensions: Any): ...
-def make_dataset(dir: Any, class_to_idx: Any, extensions: Any, is_valid_file: Optional[Any] = ...): ...
+def make_dataset(dir: Any, class_to_idx: Any, extensions: Any, is_valid_file: Any | None = ...): ...
 
 class DatasetFolder(Dataset):
     root: Any = ...
@@ -20,10 +20,10 @@ class DatasetFolder(Dataset):
     def __init__(
         self,
         root: Any,
-        loader: Optional[Any] = ...,
-        extensions: Optional[Any] = ...,
-        transform: Optional[Any] = ...,
-        is_valid_file: Optional[Any] = ...,
+        loader: Any | None = ...,
+        extensions: Any | None = ...,
+        transform: Any | None = ...,
+        is_valid_file: Any | None = ...,
     ) -> None: ...
     def __getitem__(self, index: Any): ...
     def __len__(self): ...
@@ -43,10 +43,10 @@ class ImageFolder(Dataset):
     def __init__(
         self,
         root: Any,
-        loader: Optional[Any] = ...,
-        extensions: Optional[Any] = ...,
-        transform: Optional[Any] = ...,
-        is_valid_file: Optional[Any] = ...,
+        loader: Any | None = ...,
+        extensions: Any | None = ...,
+        transform: Any | None = ...,
+        is_valid_file: Any | None = ...,
     ): ...
     def __getitem__(self, index: Any): ...
     def __len__(self): ...

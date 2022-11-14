@@ -4,8 +4,8 @@ from typing import Any, Optional
 
 def amp_guard(
     enable: bool = ...,
-    custom_white_list: Optional[Any] = ...,
-    custom_black_list: Optional[Any] = ...,
+    custom_white_list: Any | None = ...,
+    custom_black_list: Any | None = ...,
     level: str = ...,
     dtype: str = ...,
 ) -> None: ...
@@ -16,8 +16,8 @@ class StateDictHook:
 
 def amp_decorate(
     models: Any,
-    optimizers: Optional[Any] = ...,
+    optimizers: Any | None = ...,
     level: str = ...,
-    master_weight: Optional[Any] = ...,
-    save_dtype: Optional[Any] = ...,
+    master_weight: Any | None = ...,
+    save_dtype: Any | None = ...,
 ): ...

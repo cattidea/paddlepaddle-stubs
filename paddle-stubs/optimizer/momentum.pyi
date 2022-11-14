@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Optional, Sequence
+from typing import Sequence
 
 from .._typing import Tensor
 from ..fluid.clip import GradientClipBase
@@ -15,13 +15,13 @@ class Momentum(Optimizer):
         learning_rate: float | LRScheduler = ...,
         momentum: float = ...,
         # TODO: Currently, pyright throws an error at below line.
-        # parameters: Optional[Sequence[Tensor] | Sequence[ParameterConfig]] = ...,
-        parameters: Optional[Sequence[Tensor | ParameterConfig]] = ...,
+        # parameters: Sequence[Tensor] | Sequence[ParameterConfig] | None = ...,
+        parameters: Sequence[Tensor | ParameterConfig] | None = ...,
         use_nesterov: bool = ...,
-        weight_decay: Optional[float | WeightDecayRegularizer] = ...,
-        grad_clip: Optional[GradientClipBase] = ...,
+        weight_decay: float | WeightDecayRegularizer | None = ...,
+        grad_clip: GradientClipBase | None = ...,
         multi_precision: bool = ...,
         rescale_grad: float = ...,
         use_multi_tensor: bool = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...

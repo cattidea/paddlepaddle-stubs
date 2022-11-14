@@ -96,7 +96,7 @@ class Resharder:
         rank_id: Any,
         dist_context: Any,
         dist_params_grads: Any,
-        batch_size: Optional[Any] = ...,
+        batch_size: Any | None = ...,
     ) -> None: ...
     @property
     def auto_parallel_main_prog(self): ...

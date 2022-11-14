@@ -20,13 +20,13 @@ class Flowers(Dataset):
     indexes: Any = ...
     def __init__(
         self,
-        data_file: Optional[Any] = ...,
-        label_file: Optional[Any] = ...,
-        setid_file: Optional[Any] = ...,
+        data_file: Any | None = ...,
+        label_file: Any | None = ...,
+        setid_file: Any | None = ...,
         mode: str = ...,
-        transform: Optional[Any] = ...,
+        transform: Any | None = ...,
         download: bool = ...,
-        backend: Optional[Any] = ...,
+        backend: Any | None = ...,
     ) -> None: ...
     def __getitem__(self, idx: Any): ...
     def __len__(self): ...

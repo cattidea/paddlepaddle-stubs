@@ -8,8 +8,8 @@ class FileSystem:
         self,
         fs_type: str = ...,
         uri: str = ...,
-        user: Optional[Any] = ...,
-        passwd: Optional[Any] = ...,
+        user: Any | None = ...,
+        passwd: Any | None = ...,
         hadoop_bin: str = ...,
     ) -> None: ...
     def get_desc(self): ...

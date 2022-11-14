@@ -8,7 +8,7 @@ class ProgressBar:
     name: Any = ...
     def __init__(
         self,
-        num: Optional[Any] = ...,
+        num: Any | None = ...,
         width: int = ...,
         verbose: int = ...,
         start: bool = ...,

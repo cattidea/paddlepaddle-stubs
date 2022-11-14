@@ -41,9 +41,9 @@ class AdaRound:
         self,
         scale: Any,
         weight_tensor: Any,
-        scope: Optional[Any] = ...,
-        weight_var_name: Optional[str] = ...,
-        weight_op_type: Optional[Any] = ...,
+        scope: Any | None = ...,
+        weight_var_name: str | None = ...,
+        weight_op_type: Any | None = ...,
         is_train: bool = ...,
         num_iterations: int = ...,
     ) -> None: ...

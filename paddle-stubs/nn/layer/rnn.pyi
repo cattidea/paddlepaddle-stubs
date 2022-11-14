@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Any, Optional
+from typing import Any
 
 from paddle.nn import Layer, LayerList
 from typing_extensions import Literal
@@ -15,8 +15,8 @@ class RNNCellBase(Layer):
     def get_initial_states(
         self,
         batch_ref: Tensor,
-        shape: Optional[ShapeLike] = ...,
-        dtype: Optional[DTypeLike] = ...,
+        shape: ShapeLike | None = ...,
+        dtype: DTypeLike | None = ...,
         init_value: float = ...,
         batch_dim_idx: int = ...,
     ) -> Tensor | list[Tensor]: ...
@@ -38,16 +38,16 @@ class SimpleRNNCell(RNNCellBase):
         input_size: int,
         hidden_size: int,
         activation: Literal["relu", "tanh"] = ...,
-        weight_ih_attr: Optional[ParamAttr] = ...,
-        weight_hh_attr: Optional[ParamAttr] = ...,
-        bias_ih_attr: Optional[ParamAttr] = ...,
-        bias_hh_attr: Optional[ParamAttr] = ...,
-        name: Optional[str] = ...,
+        weight_ih_attr: ParamAttr | None = ...,
+        weight_hh_attr: ParamAttr | None = ...,
+        bias_ih_attr: ParamAttr | None = ...,
+        bias_hh_attr: ParamAttr | None = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(
         self,
         inputs: Tensor,
-        states: Optional[Tensor] = ...,
+        states: Tensor | None = ...,
     ) -> tuple[Tensor, Tensor]: ...
     __call__ = forward
     @property
@@ -64,16 +64,16 @@ class LSTMCell(RNNCellBase):
         self,
         input_size: int,
         hidden_size: int,
-        weight_ih_attr: Optional[ParamAttr] = ...,
-        weight_hh_attr: Optional[ParamAttr] = ...,
-        bias_ih_attr: Optional[ParamAttr] = ...,
-        bias_hh_attr: Optional[ParamAttr] = ...,
-        name: Optional[str] = ...,
+        weight_ih_attr: ParamAttr | None = ...,
+        weight_hh_attr: ParamAttr | None = ...,
+        bias_ih_attr: ParamAttr | None = ...,
+        bias_hh_attr: ParamAttr | None = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(
         self,
         inputs: Tensor,
-        states: Optional[Tensor] = ...,
+        states: Tensor | None = ...,
     ) -> tuple[Tensor, tuple[Tensor, Tensor]]: ...
     __call__ = forward
     @property
@@ -90,13 +90,13 @@ class GRUCell(RNNCellBase):
         self,
         input_size: int,
         hidden_size: int,
-        weight_ih_attr: Optional[ParamAttr] = ...,
-        weight_hh_attr: Optional[ParamAttr] = ...,
-        bias_ih_attr: Optional[ParamAttr] = ...,
-        bias_hh_attr: Optional[ParamAttr] = ...,
-        name: Optional[str] = ...,
+        weight_ih_attr: ParamAttr | None = ...,
+        weight_hh_attr: ParamAttr | None = ...,
+        bias_ih_attr: ParamAttr | None = ...,
+        bias_hh_attr: ParamAttr | None = ...,
+        name: str | None = ...,
     ) -> None: ...
-    def forward(self, inputs: Tensor, states: Optional[Tensor] = ...) -> tuple[Tensor, Tensor]: ...
+    def forward(self, inputs: Tensor, states: Tensor | None = ...) -> tuple[Tensor, Tensor]: ...
     __call__ = forward
     @property
     def state_shape(self) -> tuple[int]: ...
@@ -114,8 +114,8 @@ class RNN(Layer):
     def forward(
         self,
         inputs: Tensor,
-        initial_states: Optional[Tensor] = ...,
-        sequence_length: Optional[Tensor] = ...,
+        initial_states: Tensor | None = ...,
+        sequence_length: Tensor | None = ...,
         **kwargs: Any,
     ) -> tuple[Tensor, Tensor]: ...
     __call__ = forward
@@ -133,8 +133,8 @@ class BiRNN(Layer):
     def forward(
         self,
         inputs: Tensor,
-        initial_states: Optional[Tensor] = ...,
-        sequence_length: Optional[Tensor] = ...,
+        initial_states: Tensor | None = ...,
+        sequence_length: Tensor | None = ...,
         **kwargs: Any,
     ) -> tuple[Tensor, Tensor]: ...
     __call__ = forward
@@ -158,17 +158,17 @@ class RNNBase(LayerList):
         direction: RNNDirection = ...,
         time_major: bool = ...,
         dropout: float = ...,
-        weight_ih_attr: Optional[ParamAttr] = ...,
-        weight_hh_attr: Optional[ParamAttr] = ...,
-        bias_ih_attr: Optional[ParamAttr] = ...,
-        bias_hh_attr: Optional[ParamAttr] = ...,
+        weight_ih_attr: ParamAttr | None = ...,
+        weight_hh_attr: ParamAttr | None = ...,
+        bias_ih_attr: ParamAttr | None = ...,
+        bias_hh_attr: ParamAttr | None = ...,
     ) -> None: ...
     def flatten_parameters(self) -> None: ...
     def forward(
         self,
         inputs: Tensor,
-        initial_states: Optional[Tensor] = ...,
-        sequence_length: Optional[Tensor] = ...,
+        initial_states: Tensor | None = ...,
+        sequence_length: Tensor | None = ...,
     ) -> tuple[Tensor, Tensor]: ...
     __call__ = forward
 
@@ -183,11 +183,11 @@ class SimpleRNN(RNNBase):
         time_major: bool = ...,
         dropout: float = ...,
         activation: str = ...,
-        weight_ih_attr: Optional[ParamAttr] = ...,
-        weight_hh_attr: Optional[ParamAttr] = ...,
-        bias_ih_attr: Optional[ParamAttr] = ...,
-        bias_hh_attr: Optional[ParamAttr] = ...,
-        name: Optional[str] = ...,
+        weight_ih_attr: ParamAttr | None = ...,
+        weight_hh_attr: ParamAttr | None = ...,
+        bias_ih_attr: ParamAttr | None = ...,
+        bias_hh_attr: ParamAttr | None = ...,
+        name: str | None = ...,
     ) -> None: ...
 
 class LSTM(RNNBase):
@@ -199,11 +199,11 @@ class LSTM(RNNBase):
         direction: RNNDirection = ...,
         time_major: bool = ...,
         dropout: float = ...,
-        weight_ih_attr: Optional[ParamAttr] = ...,
-        weight_hh_attr: Optional[ParamAttr] = ...,
-        bias_ih_attr: Optional[ParamAttr] = ...,
-        bias_hh_attr: Optional[ParamAttr] = ...,
-        name: Optional[str] = ...,
+        weight_ih_attr: ParamAttr | None = ...,
+        weight_hh_attr: ParamAttr | None = ...,
+        bias_ih_attr: ParamAttr | None = ...,
+        bias_hh_attr: ParamAttr | None = ...,
+        name: str | None = ...,
     ) -> None: ...
 
 class GRU(RNNBase):
@@ -215,9 +215,9 @@ class GRU(RNNBase):
         direction: RNNDirection = ...,
         time_major: bool = ...,
         dropout: float = ...,
-        weight_ih_attr: Optional[ParamAttr] = ...,
-        weight_hh_attr: Optional[ParamAttr] = ...,
-        bias_ih_attr: Optional[ParamAttr] = ...,
-        bias_hh_attr: Optional[ParamAttr] = ...,
-        name: Optional[str] = ...,
+        weight_ih_attr: ParamAttr | None = ...,
+        weight_hh_attr: ParamAttr | None = ...,
+        bias_ih_attr: ParamAttr | None = ...,
+        bias_hh_attr: ParamAttr | None = ...,
+        name: str | None = ...,
     ) -> None: ...

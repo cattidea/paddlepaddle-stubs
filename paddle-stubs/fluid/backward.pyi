@@ -18,10 +18,10 @@ class ProgramStats:
 
 def append_backward(
     loss: Any,
-    parameter_list: Optional[Any] = ...,
-    no_grad_set: Optional[Any] = ...,
-    callbacks: Optional[Any] = ...,
-    checkpoints: Optional[Any] = ...,
-    distop_context: Optional[Any] = ...,
+    parameter_list: Any | None = ...,
+    no_grad_set: Any | None = ...,
+    callbacks: Any | None = ...,
+    checkpoints: Any | None = ...,
+    distop_context: Any | None = ...,
 ): ...
-def gradients(targets: Any, inputs: Any, target_gradients: Optional[Any] = ..., no_grad_set: Optional[Any] = ...): ...
+def gradients(targets: Any, inputs: Any, target_gradients: Any | None = ..., no_grad_set: Any | None = ...): ...

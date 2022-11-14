@@ -15,10 +15,10 @@ def minimize_lbfgs(
     max_iters: int = ...,
     tolerance_grad: float = ...,
     tolerance_change: float = ...,
-    initial_inverse_hessian_estimate: Optional[Any] = ...,
+    initial_inverse_hessian_estimate: Any | None = ...,
     line_search_fn: str = ...,
     max_line_search_iters: int = ...,
     initial_step_length: float = ...,
     dtype: str = ...,
-    name: Optional[str] = ...,
+    name: str | None = ...,
 ): ...

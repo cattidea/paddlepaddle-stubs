@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Any, Optional, Sequence
+from typing import Any, Sequence
 
 from .._typing import Tensor
 from ..fluid.clip import GradientClipBase
@@ -16,10 +16,10 @@ class Adagrad(Optimizer):
         learning_rate: float | LRScheduler,
         epsilon: float = ...,
         # TODO: Currently, pyright throws an error at below line.
-        # parameters: Optional[Sequence[Tensor] | Sequence[ParameterConfig]] = ...,
-        parameters: Optional[Sequence[Tensor | ParameterConfig]] = ...,
-        weight_decay: Optional[float | WeightDecayRegularizer] = ...,
-        grad_clip: Optional[GradientClipBase] = ...,
-        name: Optional[str] = ...,
+        # parameters: Sequence[Tensor] | Sequence[ParameterConfig] | None = ...,
+        parameters: Sequence[Tensor | ParameterConfig] | None = ...,
+        weight_decay: float | WeightDecayRegularizer | None = ...,
+        grad_clip: GradientClipBase | None = ...,
+        name: str | None = ...,
         initial_accumulator_value: float = ...,
     ) -> None: ...

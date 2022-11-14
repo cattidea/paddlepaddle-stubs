@@ -9,7 +9,7 @@ def graph_khop_sampler(
     colptr: Any,
     input_nodes: Any,
     sample_sizes: Any,
-    sorted_eids: Optional[Any] = ...,
+    sorted_eids: Any | None = ...,
     return_eids: bool = ...,
-    name: Optional[str] = ...,
+    name: str | None = ...,
 ): ...

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Any, Optional, Sequence
+from typing import Any, Sequence
 
 from typing_extensions import NotRequired, TypedDict
 
@@ -15,8 +15,8 @@ OptimizerStateDict = dict[str, Tensor]
 
 class ParameterConfig(TypedDict):
     params: Sequence[Tensor]
-    weight_decay: NotRequired[Optional[float | WeightDecayRegularizer]]
-    learning_rate: NotRequired[Optional[float | Tensor | LRScheduler]]
+    weight_decay: NotRequired[float | WeightDecayRegularizer | None]
+    learning_rate: NotRequired[float | Tensor | LRScheduler | None]
 
 class Optimizer:
     regularization: Any = ...
@@ -25,10 +25,10 @@ class Optimizer:
     def __init__(
         self,
         learning_rate: float | LRScheduler,
-        parameters: Optional[list[Tensor] | tuple[Tensor, ...]] = ...,
-        weight_decay: Optional[float | WeightDecayRegularizer] = ...,
-        grad_clip: Optional[GradientClipBase] = ...,
-        name: Optional[str] = ...,
+        parameters: list[Tensor] | tuple[Tensor, ...] | None = ...,
+        weight_decay: float | WeightDecayRegularizer | None = ...,
+        grad_clip: GradientClipBase | None = ...,
+        name: str | None = ...,
     ) -> None: ...
     def state_dict(self) -> OptimizerStateDict: ...
     def set_state_dict(self, state_dict: OptimizerStateDict) -> None: ...
@@ -38,23 +38,23 @@ class Optimizer:
     def backward(
         self,
         loss: Tensor,
-        startup_program: Optional[Program] = ...,
-        parameters: Optional[list[Tensor] | list[str]] = ...,
-        no_grad_set: Optional[set[Tensor] | set[str]] = ...,
-        callbacks: Optional[list[Callback]] = ...,
+        startup_program: Program | None = ...,
+        parameters: list[Tensor] | list[str] | None = ...,
+        no_grad_set: set[Tensor] | set[str] | None = ...,
+        callbacks: list[Callback] | None = ...,
     ) -> list[tuple[Tensor, Tensor]]: ...
     def apply_gradients(self, params_grads: list[tuple[Tensor, Tensor]]) -> list[Any]: ...  # TODO: list[op]
     def append_regularization_ops(
         self,
         parameters_and_grads: list[tuple[Tensor, Tensor]],
-        regularization: Optional[Any] = ...,  # TODO: WeightDecayRegularizer?
+        regularization: Any | None = ...,  # TODO: WeightDecayRegularizer?
     ) -> list[tuple[Tensor, Tensor]]: ...
     def clear_grad(self, set_to_zero: bool = ...) -> None: ...
     def minimize(
         self,
         loss: Tensor,
-        startup_program: Optional[Program] = ...,
-        parameters: Optional[list[Tensor] | list[str]] = ...,
-        no_grad_set: Optional[set[Tensor] | set[str]] = ...,
+        startup_program: Program | None = ...,
+        parameters: list[Tensor] | list[str] | None = ...,
+        no_grad_set: set[Tensor] | set[str] | None = ...,
     ) -> list[tuple[Tensor, Tensor]]: ...
     def step(self) -> None: ...

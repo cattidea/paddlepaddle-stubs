@@ -8,7 +8,7 @@ def embedding(
     size: Any,
     is_sparse: bool = ...,
     is_distributed: bool = ...,
-    padding_idx: Optional[Any] = ...,
-    param_attr: Optional[Any] = ...,
+    padding_idx: Any | None = ...,
+    param_attr: Any | None = ...,
     dtype: str = ...,
 ): ...

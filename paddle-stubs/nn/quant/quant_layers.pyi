@@ -6,21 +6,21 @@ from paddle.nn import Layer
 
 class FakeQuantAbsMax(Layer):
     def __init__(
-        self, name: Optional[str] = ..., quant_bits: int = ..., dtype: str = ..., quant_on_weight: bool = ...
+        self, name: str | None = ..., quant_bits: int = ..., dtype: str = ..., quant_on_weight: bool = ...
     ) -> None: ...
     def forward(self, input: Any): ...
 
 class FakeQuantMovingAverageAbsMax(Layer):
     def __init__(
-        self, name: Optional[str] = ..., moving_rate: float = ..., quant_bits: int = ..., dtype: str = ...
+        self, name: str | None = ..., moving_rate: float = ..., quant_bits: int = ..., dtype: str = ...
     ) -> None: ...
     def forward(self, input: Any): ...
 
 class FakeQuantChannelWiseAbsMax(Layer):
     def __init__(
         self,
-        name: Optional[str] = ...,
-        channel_num: Optional[Any] = ...,
+        name: str | None = ...,
+        channel_num: Any | None = ...,
         quant_bits: int = ...,
         quant_axis: int = ...,
         dtype: str = ...,
@@ -29,7 +29,7 @@ class FakeQuantChannelWiseAbsMax(Layer):
     def forward(self, input: Any): ...
 
 class MovingAverageAbsMaxScale(Layer):
-    def __init__(self, name: Optional[str] = ..., moving_rate: float = ..., dtype: str = ...) -> None: ...
+    def __init__(self, name: str | None = ..., moving_rate: float = ..., dtype: str = ...) -> None: ...
     def forward(self, input: Any): ...
 
 QuantStub = MovingAverageAbsMaxScale
@@ -45,10 +45,10 @@ class QuantizedConv2D(Layer):
         moving_rate: float = ...,
         weight_quantize_type: str = ...,
         activation_quantize_type: str = ...,
-        weight_pre_layer: Optional[Any] = ...,
-        act_pre_layer: Optional[Any] = ...,
-        weight_quant_layer: Optional[Any] = ...,
-        act_quant_layer: Optional[Any] = ...,
+        weight_pre_layer: Any | None = ...,
+        act_pre_layer: Any | None = ...,
+        weight_quant_layer: Any | None = ...,
+        act_quant_layer: Any | None = ...,
     ) -> None: ...
     def forward(self, input: Any): ...
 
@@ -63,12 +63,12 @@ class QuantizedConv2DTranspose(Layer):
         moving_rate: float = ...,
         weight_quantize_type: str = ...,
         activation_quantize_type: str = ...,
-        weight_pre_layer: Optional[Any] = ...,
-        act_pre_layer: Optional[Any] = ...,
-        weight_quant_layer: Optional[Any] = ...,
-        act_quant_layer: Optional[Any] = ...,
+        weight_pre_layer: Any | None = ...,
+        act_pre_layer: Any | None = ...,
+        weight_quant_layer: Any | None = ...,
+        act_quant_layer: Any | None = ...,
     ) -> None: ...
-    def forward(self, input: Any, output_size: Optional[Any] = ...): ...
+    def forward(self, input: Any, output_size: Any | None = ...): ...
 
 class QuantizedLinear(Layer):
     weight: Any = ...
@@ -82,16 +82,16 @@ class QuantizedLinear(Layer):
         moving_rate: float = ...,
         weight_quantize_type: str = ...,
         activation_quantize_type: str = ...,
-        weight_pre_layer: Optional[Any] = ...,
-        act_pre_layer: Optional[Any] = ...,
-        weight_quant_layer: Optional[Any] = ...,
-        act_quant_layer: Optional[Any] = ...,
+        weight_pre_layer: Any | None = ...,
+        act_pre_layer: Any | None = ...,
+        weight_quant_layer: Any | None = ...,
+        act_quant_layer: Any | None = ...,
     ) -> None: ...
     def forward(self, input: Any): ...
 
 class MAOutputScaleLayer(Layer):
     def __init__(
-        self, layer: Optional[Any] = ..., moving_rate: float = ..., name: Optional[str] = ..., dtype: str = ...
+        self, layer: Any | None = ..., moving_rate: float = ..., name: str | None = ..., dtype: str = ...
     ) -> None: ...
     def forward(self, *inputs: Any, **kwargs: Any): ...
 
@@ -102,7 +102,7 @@ class FakeQuantMAOutputScaleLayer(Layer):
         weight_bits: int = ...,
         activation_bits: int = ...,
         moving_rate: float = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
         *args: Any,
         **kwargs: Any,
     ) -> None: ...

@@ -7,8 +7,8 @@ class QuantizationTransformPass:
     create_op_map: Any = ...
     def __init__(
         self,
-        scope: Optional[Any] = ...,
-        place: Optional[Any] = ...,
+        scope: Any | None = ...,
+        place: Any | None = ...,
         weight_bits: int = ...,
         activation_bits: int = ...,
         activation_quantize_type: str = ...,
@@ -17,12 +17,12 @@ class QuantizationTransformPass:
         moving_rate: float = ...,
         skip_pattern: Any = ...,
         quantizable_op_type: Any = ...,
-        weight_quantize_func: Optional[Any] = ...,
-        act_quantize_func: Optional[Any] = ...,
-        weight_preprocess_func: Optional[Any] = ...,
-        act_preprocess_func: Optional[Any] = ...,
-        optimizer_func: Optional[Any] = ...,
-        executor: Optional[Any] = ...,
+        weight_quantize_func: Any | None = ...,
+        act_quantize_func: Any | None = ...,
+        weight_preprocess_func: Any | None = ...,
+        act_preprocess_func: Any | None = ...,
+        optimizer_func: Any | None = ...,
+        executor: Any | None = ...,
     ) -> None: ...
     def apply(self, graph: Any): ...
 
@@ -36,12 +36,12 @@ class QuantizationFreezePass:
         activation_bits: int = ...,
         round_type: str = ...,
         weight_quantize_type: str = ...,
-        quantizable_op_type: Optional[Any] = ...,
+        quantizable_op_type: Any | None = ...,
     ) -> None: ...
     def apply(self, graph: Any): ...
 
 class ConvertToInt8Pass:
-    def __init__(self, scope: Any, place: Any, quantizable_op_type: Optional[Any] = ...) -> None: ...
+    def __init__(self, scope: Any, place: Any, quantizable_op_type: Any | None = ...) -> None: ...
     def apply(self, graph: Any): ...
 
 class TransformForMobilePass:
@@ -49,18 +49,18 @@ class TransformForMobilePass:
     def apply(self, graph: Any): ...
 
 class OutScaleForTrainingPass:
-    def __init__(self, scope: Optional[Any] = ..., place: Optional[Any] = ..., moving_rate: float = ...) -> None: ...
+    def __init__(self, scope: Any | None = ..., place: Any | None = ..., moving_rate: float = ...) -> None: ...
     def apply(self, graph: Any): ...
 
 class OutScaleForInferencePass:
-    def __init__(self, scope: Optional[Any] = ...) -> None: ...
+    def __init__(self, scope: Any | None = ...) -> None: ...
     def apply(self, graph: Any): ...
 
 class AddQuantDequantPass:
     def __init__(
         self,
-        scope: Optional[Any] = ...,
-        place: Optional[Any] = ...,
+        scope: Any | None = ...,
+        place: Any | None = ...,
         moving_rate: float = ...,
         quant_bits: int = ...,
         skip_pattern: Any = ...,
@@ -93,8 +93,8 @@ class QuantizationTransformPassV2:
     processed_vars: Any = ...
     def __init__(
         self,
-        scope: Optional[Any] = ...,
-        place: Optional[Any] = ...,
+        scope: Any | None = ...,
+        place: Any | None = ...,
         weight_bits: int = ...,
         activation_bits: int = ...,
         activation_quantize_type: str = ...,
@@ -103,12 +103,12 @@ class QuantizationTransformPassV2:
         moving_rate: float = ...,
         skip_pattern: Any = ...,
         quantizable_op_type: Any = ...,
-        weight_quantize_func: Optional[Any] = ...,
-        act_quantize_func: Optional[Any] = ...,
-        weight_preprocess_func: Optional[Any] = ...,
-        act_preprocess_func: Optional[Any] = ...,
-        optimizer_func: Optional[Any] = ...,
-        executor: Optional[Any] = ...,
+        weight_quantize_func: Any | None = ...,
+        act_quantize_func: Any | None = ...,
+        weight_preprocess_func: Any | None = ...,
+        act_preprocess_func: Any | None = ...,
+        optimizer_func: Any | None = ...,
+        executor: Any | None = ...,
     ) -> None: ...
     def apply(self, graph: Any): ...
 
@@ -116,8 +116,8 @@ class AddQuantDequantPassV2:
     persistable_vars: Any = ...
     def __init__(
         self,
-        scope: Optional[Any] = ...,
-        place: Optional[Any] = ...,
+        scope: Any | None = ...,
+        place: Any | None = ...,
         moving_rate: float = ...,
         quant_bits: int = ...,
         skip_pattern: Any = ...,

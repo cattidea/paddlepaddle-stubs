@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Any, NamedTuple, Optional, Sequence
+from typing import Any, NamedTuple, Sequence
 
 from ... import tensor as tensor
 from ..._typing import Tensor
@@ -35,19 +35,19 @@ class MultiHeadAttention(Layer):
         embed_dim: int,
         num_heads: int,
         dropout: float = ...,
-        kdim: Optional[int] = ...,
-        vdim: Optional[int] = ...,
+        kdim: int | None = ...,
+        vdim: int | None = ...,
         need_weights: bool = ...,
-        weight_attr: Optional[ParamAttr] = ...,
-        bias_attr: Optional[ParamAttr] = ...,
+        weight_attr: ParamAttr | None = ...,
+        bias_attr: ParamAttr | None = ...,
     ) -> None: ...
     def forward(
         self,
         query: Tensor,
-        key: Optional[Tensor] = ...,
-        value: Optional[Tensor] = ...,
-        attn_mask: Optional[Tensor] = ...,
-        cache: Optional[MultiHeadAttention.Cache | MultiHeadAttention.StaticCache] = ...,
+        key: Tensor | None = ...,
+        value: Tensor | None = ...,
+        attn_mask: Tensor | None = ...,
+        cache: MultiHeadAttention.Cache | MultiHeadAttention.StaticCache | None = ...,
     ) -> Tensor | tuple[Tensor, Tensor] | tuple[Tensor, Tensor, Tensor]: ...
     __call__ = forward
 
@@ -69,17 +69,17 @@ class TransformerEncoderLayer(Layer):
         dim_feedforward: int,
         dropout: float = ...,
         activation: str = ...,
-        attn_dropout: Optional[float] = ...,
-        act_dropout: Optional[float] = ...,
+        attn_dropout: float | None = ...,
+        act_dropout: float | None = ...,
         normalize_before: bool = ...,
-        weight_attr: Optional[ParamAttr | Sequence[ParamAttr]] = ...,
-        bias_attr: Optional[ParamAttr | Sequence[ParamAttr] | bool] = ...,
+        weight_attr: ParamAttr | Sequence[ParamAttr] | None = ...,
+        bias_attr: ParamAttr | Sequence[ParamAttr] | bool | None = ...,
     ) -> None: ...
     def forward(
         self,
         src: Tensor,
-        src_mask: Optional[Tensor] = ...,
-        cache: Optional[Tensor] = ...,
+        src_mask: Tensor | None = ...,
+        cache: Tensor | None = ...,
     ) -> Tensor | tuple[Tensor, Tensor]: ...
     __call__ = forward
 
@@ -91,13 +91,13 @@ class TransformerEncoder(Layer):
         self,
         encoder_layer: Layer,
         num_layers: int,
-        norm: Optional[LayerNorm] = ...,
+        norm: LayerNorm | None = ...,
     ) -> None: ...
     def forward(
         self,
         src: Tensor,
-        src_mask: Optional[Tensor] = ...,
-        cache: Optional[list[MultiHeadAttention.Cache | MultiHeadAttention.StaticCache]] = ...,
+        src_mask: Tensor | None = ...,
+        cache: list[MultiHeadAttention.Cache | MultiHeadAttention.StaticCache] | None = ...,
     ) -> Tensor | tuple[Tensor, Tensor]: ...
     __call__ = forward
 
@@ -122,19 +122,19 @@ class TransformerDecoderLayer(Layer):
         dim_feedforward: int,
         dropout: float = ...,
         activation: str = ...,
-        attn_dropout: Optional[float] = ...,
-        act_dropout: Optional[float] = ...,
+        attn_dropout: float | None = ...,
+        act_dropout: float | None = ...,
         normalize_before: bool = ...,
-        weight_attr: Optional[ParamAttr | Sequence[ParamAttr]] = ...,
-        bias_attr: Optional[ParamAttr | Sequence[ParamAttr] | bool] = ...,
+        weight_attr: ParamAttr | Sequence[ParamAttr] | None = ...,
+        bias_attr: ParamAttr | Sequence[ParamAttr] | bool | None = ...,
     ) -> None: ...
     def forward(
         self,
         tgt: Tensor,
         memory: Tensor,
-        tgt_mask: Optional[Tensor] = ...,
-        memory_mask: Optional[Tensor] = ...,
-        cache: Optional[tuple[MultiHeadAttention.Cache, ...] | tuple[MultiHeadAttention.StaticCache, ...]] = ...,
+        tgt_mask: Tensor | None = ...,
+        memory_mask: Tensor | None = ...,
+        cache: tuple[MultiHeadAttention.Cache, ...] | tuple[MultiHeadAttention.StaticCache, ...] | None = ...,
     ) -> Tensor | tuple[Tensor, tuple[MultiHeadAttention.Cache, MultiHeadAttention.StaticCache]]: ...
     __call__ = forward
 
@@ -146,15 +146,15 @@ class TransformerDecoder(Layer):
         self,
         decoder_layer: Layer,
         num_layers: int,
-        norm: Optional[LayerNorm] = ...,
+        norm: LayerNorm | None = ...,
     ) -> None: ...
     def forward(
         self,
         tgt: Tensor,
         memory: Tensor,
-        tgt_mask: Optional[Tensor] = ...,
-        memory_mask: Optional[Tensor] = ...,
-        cache: Optional[list[MultiHeadAttention.Cache] | list[MultiHeadAttention.StaticCache]] = ...,
+        tgt_mask: Tensor | None = ...,
+        memory_mask: Tensor | None = ...,
+        cache: list[MultiHeadAttention.Cache] | list[MultiHeadAttention.StaticCache] | None = ...,
     ) -> Tensor | tuple[Tensor, Tensor]: ...
     __call__ = forward
 
@@ -172,20 +172,20 @@ class Transformer(Layer):
         dim_feedforward: int = ...,
         dropout: float = ...,
         activation: str = ...,
-        attn_dropout: Optional[float] = ...,
-        act_dropout: Optional[float] = ...,
+        attn_dropout: float | None = ...,
+        act_dropout: float | None = ...,
         normalize_before: bool = ...,
-        weight_attr: Optional[ParamAttr | Sequence[ParamAttr]] = ...,
-        bias_attr: Optional[ParamAttr | Sequence[ParamAttr] | bool] = ...,
-        custom_encoder: Optional[Layer] = ...,
-        custom_decoder: Optional[Layer] = ...,
+        weight_attr: ParamAttr | Sequence[ParamAttr] | None = ...,
+        bias_attr: ParamAttr | Sequence[ParamAttr] | bool | None = ...,
+        custom_encoder: Layer | None = ...,
+        custom_decoder: Layer | None = ...,
     ) -> None: ...
     def forward(
         self,
         src: Tensor,
         tgt: Tensor,
-        src_mask: Optional[Tensor] = ...,
-        tgt_mask: Optional[Tensor] = ...,
-        memory_mask: Optional[Tensor] = ...,
+        src_mask: Tensor | None = ...,
+        tgt_mask: Tensor | None = ...,
+        memory_mask: Tensor | None = ...,
     ) -> Tensor: ...
     __call__ = forward

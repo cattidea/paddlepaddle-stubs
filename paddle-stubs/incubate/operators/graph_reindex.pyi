@@ -8,8 +8,8 @@ def graph_reindex(
     x: Any,
     neighbors: Any,
     count: Any,
-    value_buffer: Optional[Any] = ...,
-    index_buffer: Optional[Any] = ...,
+    value_buffer: Any | None = ...,
+    index_buffer: Any | None = ...,
     flag_buffer_hashtable: bool = ...,
-    name: Optional[str] = ...,
+    name: str | None = ...,
 ): ...

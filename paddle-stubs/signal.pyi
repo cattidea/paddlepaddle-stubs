@@ -1,31 +1,29 @@
 from __future__ import annotations
 
-from typing import Optional
-
 from . import Tensor
 
 def stft(
     x: Tensor,
     n_fft: int,
-    hop_length: Optional[int] = ...,
-    win_length: Optional[int] = ...,
-    window: Optional[Tensor] = ...,
+    hop_length: int | None = ...,
+    win_length: int | None = ...,
+    window: Tensor | None = ...,
     center: bool = ...,
     pad_mode: str = ...,
     normalized: bool = ...,
     onesided: bool = ...,
-    name: Optional[str] = ...,
+    name: str | None = ...,
 ) -> Tensor: ...
 def istft(
     x: Tensor,
     n_fft: int,
-    hop_length: Optional[int] = ...,
-    win_length: Optional[int] = ...,
-    window: Optional[Tensor] = ...,
+    hop_length: int | None = ...,
+    win_length: int | None = ...,
+    window: Tensor | None = ...,
     center: bool = ...,
     normalized: bool = ...,
     onesided: bool = ...,
-    length: Optional[int] = ...,
+    length: int | None = ...,
     return_complex: bool = ...,
-    name: Optional[str] = ...,
+    name: str | None = ...,
 ) -> Tensor: ...

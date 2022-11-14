@@ -41,20 +41,20 @@ class DataLoader:
     def __init__(
         self,
         dataset: Any,
-        feed_list: Optional[Any] = ...,
-        places: Optional[Any] = ...,
+        feed_list: Any | None = ...,
+        places: Any | None = ...,
         return_list: bool = ...,
-        batch_sampler: Optional[Any] = ...,
+        batch_sampler: Any | None = ...,
         batch_size: int = ...,
         shuffle: bool = ...,
         drop_last: bool = ...,
-        collate_fn: Optional[Any] = ...,
+        collate_fn: Any | None = ...,
         num_workers: int = ...,
         use_buffer_reader: bool = ...,
         prefetch_factor: int = ...,
         use_shared_memory: bool = ...,
         timeout: int = ...,
-        worker_init_fn: Optional[Any] = ...,
+        worker_init_fn: Any | None = ...,
         persistent_workers: bool = ...,
     ) -> None: ...
     def __len__(self): ...
@@ -62,8 +62,8 @@ class DataLoader:
     def __call__(self): ...
     @staticmethod
     def from_generator(
-        feed_list: Optional[Any] = ...,
-        capacity: Optional[Any] = ...,
+        feed_list: Any | None = ...,
+        capacity: Any | None = ...,
         use_double_buffer: bool = ...,
         iterable: bool = ...,
         return_list: bool = ...,
@@ -76,8 +76,8 @@ class DataLoader:
 class DygraphGeneratorLoader(DataLoaderBase):
     def __init__(
         self,
-        feed_list: Optional[Any] = ...,
-        capacity: Optional[Any] = ...,
+        feed_list: Any | None = ...,
+        capacity: Any | None = ...,
         use_double_buffer: bool = ...,
         iterable: bool = ...,
         return_list: bool = ...,
@@ -90,16 +90,16 @@ class DygraphGeneratorLoader(DataLoaderBase):
     def __iter__(self) -> Any: ...
     def __next__(self): ...
     def set_sample_generator(
-        self, reader: Any, batch_size: Any, drop_last: bool = ..., places: Optional[Any] = ...
+        self, reader: Any, batch_size: Any, drop_last: bool = ..., places: Any | None = ...
     ): ...
-    def set_sample_list_generator(self, reader: Any, places: Optional[Any] = ...): ...
-    def set_batch_generator(self, reader: Any, places: Optional[Any] = ...): ...
+    def set_sample_list_generator(self, reader: Any, places: Any | None = ...): ...
+    def set_batch_generator(self, reader: Any, places: Any | None = ...): ...
 
 class GeneratorLoader(DataLoaderBase):
     def __init__(
         self,
-        feed_list: Optional[Any] = ...,
-        capacity: Optional[Any] = ...,
+        feed_list: Any | None = ...,
+        capacity: Any | None = ...,
         use_double_buffer: bool = ...,
         iterable: bool = ...,
         return_list: bool = ...,
@@ -114,16 +114,16 @@ class GeneratorLoader(DataLoaderBase):
     def start(self) -> None: ...
     def reset(self) -> None: ...
     def set_sample_generator(
-        self, reader: Any, batch_size: Any, drop_last: bool = ..., places: Optional[Any] = ...
+        self, reader: Any, batch_size: Any, drop_last: bool = ..., places: Any | None = ...
     ): ...
-    def set_sample_list_generator(self, reader: Any, places: Optional[Any] = ...): ...
-    def set_batch_generator(self, reader: Any, places: Optional[Any] = ...): ...
+    def set_sample_list_generator(self, reader: Any, places: Any | None = ...): ...
+    def set_batch_generator(self, reader: Any, places: Any | None = ...): ...
 
 class PyReader(DataLoaderBase):
     def __init__(
         self,
-        feed_list: Optional[Any] = ...,
-        capacity: Optional[Any] = ...,
+        feed_list: Any | None = ...,
+        capacity: Any | None = ...,
         use_double_buffer: bool = ...,
         iterable: bool = ...,
         return_list: bool = ...,
@@ -137,10 +137,10 @@ class PyReader(DataLoaderBase):
     def start(self) -> None: ...
     def reset(self) -> None: ...
     def decorate_sample_generator(
-        self, sample_generator: Any, batch_size: Any, drop_last: bool = ..., places: Optional[Any] = ...
+        self, sample_generator: Any, batch_size: Any, drop_last: bool = ..., places: Any | None = ...
     ) -> None: ...
-    def decorate_sample_list_generator(self, reader: Any, places: Optional[Any] = ...) -> None: ...
-    def decorate_batch_generator(self, reader: Any, places: Optional[Any] = ...) -> None: ...
+    def decorate_sample_list_generator(self, reader: Any, places: Any | None = ...) -> None: ...
+    def decorate_batch_generator(self, reader: Any, places: Any | None = ...) -> None: ...
 
 class DatasetLoader(DataLoaderBase):
     def __init__(self, dataset: Any, places: Any, drop_last: Any) -> None: ...

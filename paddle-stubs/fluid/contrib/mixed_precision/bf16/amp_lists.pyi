@@ -11,7 +11,7 @@ class AutoMixedPrecisionListsBF16:
     fp32_varnames: Any = ...
     def __init__(
         self,
-        custom_bf16_list: Optional[Any] = ...,
-        custom_fp32_list: Optional[Any] = ...,
-        custom_fp32_varnames: Optional[Any] = ...,
+        custom_bf16_list: Any | None = ...,
+        custom_fp32_list: Any | None = ...,
+        custom_fp32_varnames: Any | None = ...,
     ) -> None: ...

@@ -7,10 +7,10 @@ from .base_cost import Cost as Cost
 class TensorCost:
     def __init__(
         self,
-        tensor: Optional[Any] = ...,
-        dist_tensor: Optional[Any] = ...,
-        shape: Optional[Any] = ...,
-        dtype: Optional[Any] = ...,
+        tensor: Any | None = ...,
+        dist_tensor: Any | None = ...,
+        shape: Any | None = ...,
+        dtype: Any | None = ...,
     ) -> None: ...
     @property
     def tensor(self): ...

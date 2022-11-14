@@ -67,10 +67,10 @@ class BuildCommand(build):
 def load(
     name: Any,
     sources: Any,
-    extra_cxx_cflags: Optional[Any] = ...,
-    extra_cuda_cflags: Optional[Any] = ...,
-    extra_ldflags: Optional[Any] = ...,
-    extra_include_paths: Optional[Any] = ...,
-    build_directory: Optional[Any] = ...,
+    extra_cxx_cflags: Any | None = ...,
+    extra_cuda_cflags: Any | None = ...,
+    extra_ldflags: Any | None = ...,
+    extra_include_paths: Any | None = ...,
+    build_directory: Any | None = ...,
     verbose: bool = ...,
 ): ...

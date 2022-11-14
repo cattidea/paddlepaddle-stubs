@@ -10,9 +10,9 @@ class AutoMixedPrecisionLists:
     black_varnames: Any = ...
     def __init__(
         self,
-        custom_white_list: Optional[Any] = ...,
-        custom_black_list: Optional[Any] = ...,
-        custom_black_varnames: Optional[Any] = ...,
+        custom_white_list: Any | None = ...,
+        custom_black_list: Any | None = ...,
+        custom_black_varnames: Any | None = ...,
     ) -> None: ...
 
 CustomOpLists = AutoMixedPrecisionLists

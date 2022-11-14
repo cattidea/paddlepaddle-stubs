@@ -13,19 +13,19 @@ def var_conv_2d(
     output_channel: Any,
     filter_size: Any,
     stride: int = ...,
-    param_attr: Optional[Any] = ...,
-    act: Optional[Any] = ...,
+    param_attr: Any | None = ...,
+    act: Any | None = ...,
     dtype: str = ...,
-    name: Optional[str] = ...,
+    name: str | None = ...,
 ): ...
 def match_matrix_tensor(
     x: Any,
     y: Any,
     channel_num: Any,
-    act: Optional[Any] = ...,
-    param_attr: Optional[Any] = ...,
+    act: Any | None = ...,
+    param_attr: Any | None = ...,
     dtype: str = ...,
-    name: Optional[str] = ...,
+    name: str | None = ...,
 ): ...
 def sequence_topk_avg_pooling(input: Any, row: Any, col: Any, topks: Any, channel_num: Any): ...
 def tree_conv(
@@ -35,17 +35,17 @@ def tree_conv(
     num_filters: int = ...,
     max_depth: int = ...,
     act: str = ...,
-    param_attr: Optional[Any] = ...,
-    bias_attr: Optional[Any] = ...,
-    name: Optional[str] = ...,
+    param_attr: Any | None = ...,
+    bias_attr: Any | None = ...,
+    name: str | None = ...,
 ): ...
 def fused_embedding_seq_pool(
     input: Any,
     size: Any,
     is_sparse: bool = ...,
-    padding_idx: Optional[Any] = ...,
+    padding_idx: Any | None = ...,
     combiner: str = ...,
-    param_attr: Optional[Any] = ...,
+    param_attr: Any | None = ...,
     dtype: str = ...,
 ): ...
 def fused_seqpool_cvm(
@@ -62,7 +62,7 @@ def multiclass_nms2(
     nms_eta: float = ...,
     background_label: int = ...,
     return_index: bool = ...,
-    name: Optional[str] = ...,
+    name: str | None = ...,
 ): ...
 def search_pyramid_hash(
     input: Any,
@@ -77,34 +77,34 @@ def search_pyramid_hash(
     black_list_len: Any,
     seed: Any,
     lr: Any,
-    param_attr: Optional[Any] = ...,
-    param_attr_wl: Optional[Any] = ...,
-    param_attr_bl: Optional[Any] = ...,
-    name: Optional[str] = ...,
-    distribute_update_vars: Optional[Any] = ...,
+    param_attr: Any | None = ...,
+    param_attr_wl: Any | None = ...,
+    param_attr_bl: Any | None = ...,
+    name: str | None = ...,
+    distribute_update_vars: Any | None = ...,
     dtype: str = ...,
 ): ...
-def shuffle_batch(x: Any, seed: Optional[Any] = ...): ...
+def shuffle_batch(x: Any, seed: Any | None = ...): ...
 def partial_concat(input: Any, start_index: int = ..., length: int = ...): ...
 def partial_sum(input: Any, start_index: int = ..., length: int = ...): ...
 def sparse_embedding(
     input: Any,
     size: Any,
-    padding_idx: Optional[Any] = ...,
+    padding_idx: Any | None = ...,
     is_test: bool = ...,
-    entry: Optional[Any] = ...,
+    entry: Any | None = ...,
     table_class: str = ...,
-    param_attr: Optional[Any] = ...,
+    param_attr: Any | None = ...,
     dtype: str = ...,
 ): ...
-def tdm_child(x: Any, node_nums: Any, child_nums: Any, param_attr: Optional[Any] = ..., dtype: str = ...): ...
+def tdm_child(x: Any, node_nums: Any, child_nums: Any, param_attr: Any | None = ..., dtype: str = ...): ...
 def tdm_sampler(
     x: Any,
     neg_samples_num_list: Any,
     layer_node_num_list: Any,
     leaf_node_num: Any,
-    tree_travel_attr: Optional[Any] = ...,
-    tree_layer_attr: Optional[Any] = ...,
+    tree_travel_attr: Any | None = ...,
+    tree_layer_attr: Any | None = ...,
     output_positive: bool = ...,
     output_list: bool = ...,
     seed: int = ...,
@@ -115,9 +115,9 @@ def rank_attention(
     input: Any, rank_offset: Any, rank_param_shape: Any, rank_param_attr: Any, max_rank: int = ..., max_size: int = ...
 ): ...
 def batch_fc(
-    input: Any, param_size: Any, param_attr: Any, bias_size: Any, bias_attr: Any, act: Optional[Any] = ...
+    input: Any, param_size: Any, param_attr: Any, bias_size: Any, bias_attr: Any, act: Any | None = ...
 ): ...
-def bilateral_slice(x: Any, guide: Any, grid: Any, has_offset: Any, name: Optional[str] = ...): ...
+def bilateral_slice(x: Any, guide: Any, grid: Any, has_offset: Any, name: str | None = ...): ...
 def correlation(
     x: Any,
     y: Any,
@@ -133,12 +133,12 @@ def fused_bn_add_act(
     y: Any,
     momentum: float = ...,
     epsilon: float = ...,
-    param_attr: Optional[Any] = ...,
-    bias_attr: Optional[Any] = ...,
-    moving_mean_name: Optional[str] = ...,
-    moving_variance_name: Optional[str] = ...,
-    act: Optional[Any] = ...,
-    name: Optional[str] = ...,
+    param_attr: Any | None = ...,
+    bias_attr: Any | None = ...,
+    moving_mean_name: str | None = ...,
+    moving_variance_name: str | None = ...,
+    act: Any | None = ...,
+    name: str | None = ...,
 ): ...
 
 # Names in __all__ with no definition:

@@ -3,10 +3,10 @@ from __future__ import annotations
 from typing import Any, Optional
 
 def set_excluded_layers(main_program: Any, param_names: Any) -> None: ...
-def reset_excluded_layers(main_program: Optional[Any] = ...) -> None: ...
+def reset_excluded_layers(main_program: Any | None = ...) -> None: ...
 def decorate(optimizer: Any): ...
 def prune_model(
-    main_program: Optional[Any] = ..., n: int = ..., m: int = ..., mask_algo: str = ..., with_mask: bool = ...
+    main_program: Any | None = ..., n: int = ..., m: int = ..., mask_algo: str = ..., with_mask: bool = ...
 ): ...
 
 class ProgramASPInfo:
@@ -28,14 +28,14 @@ class ASPHelper:
     @classmethod
     def set_excluded_layers(cls, main_program: Any, param_names: Any) -> None: ...
     @classmethod
-    def reset_excluded_layers(cls, main_program: Optional[Any] = ...) -> None: ...
+    def reset_excluded_layers(cls, main_program: Any | None = ...) -> None: ...
     @staticmethod
     def decorate(optimizer: Any): ...
     @classmethod
     def prune_model(
         cls,
         place: Any,
-        main_program: Optional[Any] = ...,
+        main_program: Any | None = ...,
         n: int = ...,
         m: int = ...,
         mask_algo: Any = ...,
@@ -47,7 +47,7 @@ class OptimizerWithSparsityGuarantee:
     def minimize(
         self,
         loss: Any,
-        startup_program: Optional[Any] = ...,
-        parameter_list: Optional[Any] = ...,
-        no_grad_set: Optional[Any] = ...,
+        startup_program: Any | None = ...,
+        parameter_list: Any | None = ...,
+        no_grad_set: Any | None = ...,
     ): ...

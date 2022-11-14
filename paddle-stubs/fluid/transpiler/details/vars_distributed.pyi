@@ -23,11 +23,11 @@ class VarDistributed:
         self,
         origin_var: Any,
         slice_var: Any,
-        is_slice: Optional[Any] = ...,
-        block_id: Optional[Any] = ...,
-        offset: Optional[Any] = ...,
-        vtype: Optional[Any] = ...,
-        endpoint: Optional[Any] = ...,
+        is_slice: Any | None = ...,
+        block_id: Any | None = ...,
+        offset: Any | None = ...,
+        vtype: Any | None = ...,
+        endpoint: Any | None = ...,
     ) -> None: ...
     @staticmethod
     def equal(var1: Any, var2: Any): ...
@@ -39,16 +39,16 @@ class VarsDistributed:
         self,
         origin_var: Any,
         slice_var: Any,
-        is_slice: Optional[Any] = ...,
-        block_id: Optional[Any] = ...,
-        offset: Optional[Any] = ...,
-        vtype: Optional[Any] = ...,
-        endpoint: Optional[Any] = ...,
+        is_slice: Any | None = ...,
+        block_id: Any | None = ...,
+        offset: Any | None = ...,
+        vtype: Any | None = ...,
+        endpoint: Any | None = ...,
     ) -> None: ...
     def get_distributed_var_by_slice(self, var_name: Any): ...
     @staticmethod
     def equal(var1: Any, var2: Any): ...
     def get_distributed_var_by_origin_and_ep(self, origin_var_name: Any, endpoint: Any): ...
     def get_distributed_vars_by_vtypes(self, vtypes: Any, groupby: bool = ...): ...
-    def get_distributed_vars_by_ep(self, endpoint: Any, vtype: Optional[Any] = ...): ...
+    def get_distributed_vars_by_ep(self, endpoint: Any, vtype: Any | None = ...): ...
     def overview(self): ...

@@ -23,7 +23,7 @@ class WMT16(Dataset):
     data: Any = ...
     def __init__(
         self,
-        data_file: Optional[Any] = ...,
+        data_file: Any | None = ...,
         mode: str = ...,
         src_dict_size: int = ...,
         trg_dict_size: int = ...,

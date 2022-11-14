@@ -13,21 +13,21 @@ class AMPOptimizer(MetaOptimizerBase):
     def backward(
         self,
         loss: Any,
-        startup_program: Optional[Any] = ...,
-        parameter_list: Optional[Any] = ...,
-        no_grad_set: Optional[Any] = ...,
-        callbacks: Optional[Any] = ...,
+        startup_program: Any | None = ...,
+        parameter_list: Any | None = ...,
+        no_grad_set: Any | None = ...,
+        callbacks: Any | None = ...,
     ): ...
     def apply_gradients(self, params_grads: Any): ...
     def apply_optimize(self, loss: Any, startup_program: Any, params_grads: Any): ...
     def minimize_impl(
         self,
         loss: Any,
-        startup_program: Optional[Any] = ...,
-        parameter_list: Optional[Any] = ...,
-        no_grad_set: Optional[Any] = ...,
+        startup_program: Any | None = ...,
+        parameter_list: Any | None = ...,
+        no_grad_set: Any | None = ...,
     ): ...
     def amp_init(
-        self, place: Any, scope: Optional[Any] = ..., test_program: Optional[Any] = ..., use_fp16_test: bool = ...
+        self, place: Any, scope: Any | None = ..., test_program: Any | None = ..., use_fp16_test: bool = ...
     ): ...
     def get_loss_scaling(self): ...

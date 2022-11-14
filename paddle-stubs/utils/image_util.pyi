@@ -15,9 +15,9 @@ class ImageTransformer:
     is_color: Any = ...
     def __init__(
         self,
-        transpose: Optional[Any] = ...,
-        channel_swap: Optional[Any] = ...,
-        mean: Optional[Any] = ...,
+        transpose: Any | None = ...,
+        channel_swap: Any | None = ...,
+        mean: Any | None = ...,
         is_color: bool = ...,
     ) -> None: ...
     transpose: Any = ...

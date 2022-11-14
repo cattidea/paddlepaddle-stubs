@@ -10,7 +10,7 @@ def sparse_attention(
     value: Any,
     sparse_csr_offset: Any,
     sparse_csr_columns: Any,
-    key_padding_mask: Optional[Any] = ...,
-    attn_mask: Optional[Any] = ...,
-    name: Optional[str] = ...,
+    key_padding_mask: Any | None = ...,
+    attn_mask: Any | None = ...,
+    name: str | None = ...,
 ): ...

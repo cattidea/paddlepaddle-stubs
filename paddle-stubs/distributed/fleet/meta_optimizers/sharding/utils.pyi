@@ -21,7 +21,7 @@ def insert_allreduce_ops(
     allreduce_vars: Any,
     op_role: Any = ...,
     use_calc_stream: bool = ...,
-    user_defined_strategy: Optional[Any] = ...,
+    user_defined_strategy: Any | None = ...,
 ) -> None: ...
 
 class FuseHelper:
@@ -49,7 +49,7 @@ def insert_fused_reduce_ops(
     shard: Any,
     op_role: Any = ...,
     use_calc_stream: bool = ...,
-    rank: Optional[Any] = ...,
+    rank: Any | None = ...,
     fuse_grad_size: int = ...,
 ): ...
 def insert_reduce_ops(
@@ -60,8 +60,8 @@ def insert_reduce_ops(
     shard: Any,
     op_role: Any = ...,
     use_calc_stream: bool = ...,
-    rank: Optional[Any] = ...,
-    strategy: Optional[Any] = ...,
+    rank: Any | None = ...,
+    strategy: Any | None = ...,
 ): ...
 def insert_fused_broadcast_param_ops(
     block: Any,
@@ -71,7 +71,7 @@ def insert_fused_broadcast_param_ops(
     shard: Any,
     op_role: Any = ...,
     use_calc_stream: bool = ...,
-    rank: Optional[Any] = ...,
+    rank: Any | None = ...,
     fuse_size: int = ...,
 ): ...
 def insert_broadcast_param_ops(
@@ -82,11 +82,11 @@ def insert_broadcast_param_ops(
     shard: Any,
     op_role: Any = ...,
     use_calc_stream: bool = ...,
-    rank: Optional[Any] = ...,
-    strategy: Optional[Any] = ...,
+    rank: Any | None = ...,
+    strategy: Any | None = ...,
 ): ...
 def fuse_opt_broadcast_param_ops(
-    block: Any, ring_id: Any, shard: Any, op_role: Any = ..., strategy: Optional[Any] = ...
+    block: Any, ring_id: Any, shard: Any, op_role: Any = ..., strategy: Any | None = ...
 ) -> None: ...
 def get_grad_device(grad_name: Any, shard: Any): ...
 def get_first_check_finite_and_unscale_op_idx(block: Any, raise_error: bool = ...): ...
@@ -99,5 +99,5 @@ def get_var_size(param: Any): ...
 def insert_scale_loss_grad_ops(block: Any, scale: float = ...) -> None: ...
 def comm_analyse(main_program: Any): ...
 def add_sync_comm(program: Any, sharding_ring_id: Any) -> None: ...
-def save_persistables(exe: Any, dirname: Any, main_program: Any, filename: Optional[str] = ...): ...
+def save_persistables(exe: Any, dirname: Any, main_program: Any, filename: str | None = ...): ...
 def append_naive_sync(block: Any, sync_var: Any, ring_id: Any) -> None: ...

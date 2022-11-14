@@ -15,9 +15,9 @@ def simple_img_conv_pool(
     conv_padding: int = ...,
     conv_dilation: int = ...,
     conv_groups: int = ...,
-    param_attr: Optional[Any] = ...,
-    bias_attr: Optional[Any] = ...,
-    act: Optional[Any] = ...,
+    param_attr: Any | None = ...,
+    bias_attr: Any | None = ...,
+    act: Any | None = ...,
     use_cudnn: bool = ...,
 ): ...
 def img_conv_group(
@@ -26,8 +26,8 @@ def img_conv_group(
     pool_size: Any,
     conv_padding: int = ...,
     conv_filter_size: int = ...,
-    conv_act: Optional[Any] = ...,
-    param_attr: Optional[Any] = ...,
+    conv_act: Any | None = ...,
+    param_attr: Any | None = ...,
     conv_with_batchnorm: bool = ...,
     conv_batchnorm_drop_rate: float = ...,
     pool_stride: int = ...,
@@ -38,10 +38,10 @@ def sequence_conv_pool(
     input: Any,
     num_filters: Any,
     filter_size: Any,
-    param_attr: Optional[Any] = ...,
+    param_attr: Any | None = ...,
     act: str = ...,
     pool_type: str = ...,
-    bias_attr: Optional[Any] = ...,
+    bias_attr: Any | None = ...,
 ): ...
 def glu(input: Any, dim: int = ...): ...
 def scaled_dot_product_attention(

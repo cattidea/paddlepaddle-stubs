@@ -19,11 +19,11 @@ class PrintOptions:
 DEFAULT_PRINT_OPTIONS: Any
 
 def set_printoptions(
-    precision: Optional[Any] = ...,
-    threshold: Optional[Any] = ...,
-    edgeitems: Optional[Any] = ...,
-    sci_mode: Optional[Any] = ...,
-    linewidth: Optional[Any] = ...,
+    precision: Any | None = ...,
+    threshold: Any | None = ...,
+    edgeitems: Any | None = ...,
+    sci_mode: Any | None = ...,
+    linewidth: Any | None = ...,
 ) -> None: ...
 def to_string(var: Any, prefix: str = ...): ...
 def sparse_tensor_to_string(tensor: Any, prefix: str = ...): ...

@@ -11,5 +11,5 @@ class Assign(NumpyArrayInitializer):
     def __init__(
         self,
         value: npt.NDArray[Any],
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...

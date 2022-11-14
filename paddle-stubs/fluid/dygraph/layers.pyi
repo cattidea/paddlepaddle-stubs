@@ -27,7 +27,7 @@ class HookRemoveHelper:
 
 class Layer:
     training: bool = ...
-    def __init__(self, name_scope: Optional[str] = ..., dtype: DTypeLike = ...) -> None: ...
+    def __init__(self, name_scope: str | None = ..., dtype: DTypeLike = ...) -> None: ...
 
     # Children
     def children(self) -> Iterator[Self]: ...
@@ -39,16 +39,16 @@ class Layer:
         self,
         prefix: str = ...,
         include_self: bool = ...,
-        layers_set: Optional[set[Self]] = ...,
+        layers_set: set[Self] | None = ...,
     ) -> Iterator[tuple[str, Self]]: ...
     # Parameters
     def create_parameter(
         self,
         shape: ShapeLike,
-        attr: Optional[ParamAttr] = ...,
-        dtype: Optional[DTypeLike] = ...,
+        attr: ParamAttr | None = ...,
+        dtype: DTypeLike | None = ...,
         is_bias: bool = ...,
-        default_initializer: Optional[Initializer] = ...,
+        default_initializer: Initializer | None = ...,
     ) -> Tensor: ...
     def parameters(self, include_sublayers: bool = ...) -> list[Tensor]: ...
     def add_parameter(self, name: str, parameter: Tensor) -> Tensor: ...
@@ -60,9 +60,9 @@ class Layer:
     # Tensor
     def create_tensor(
         self,
-        name: Optional[str] = ...,
-        persistable: Optional[bool] = ...,
-        dtype: Optional[DTypeLike] = ...,
+        name: str | None = ...,
+        persistable: bool | None = ...,
+        dtype: DTypeLike | None = ...,
     ) -> Tensor: ...
     # Buffer
     def register_buffer(self, name: str, tensor: Tensor, persistable: bool = ...) -> None: ...
@@ -95,14 +95,14 @@ class Layer:
     # State dict
     def to_static_state_dict(
         self,
-        destination: Optional[StateDict] = ...,
+        destination: StateDict | None = ...,
         include_sublayers: bool = ...,
         structured_name_prefix: str = ...,
         use_hook: bool = ...,
     ) -> StateDict: ...
     def state_dict(
         self,
-        destination: Optional[StateDict] = ...,
+        destination: StateDict | None = ...,
         include_sublayers: bool = ...,
         structured_name_prefix: str = ...,
         use_hook: bool = ...,
@@ -120,9 +120,9 @@ class Layer:
     # Others
     def to(
         self,
-        device: Optional[PlaceLike] = ...,
-        dtype: Optional[DTypeLike] = ...,
-        blocking: Optional[bool] = ...,
+        device: PlaceLike | None = ...,
+        dtype: DTypeLike | None = ...,
+        blocking: bool | None = ...,
     ) -> Self: ...
     def apply(self, fn: Callable[[Self], None]) -> Self: ...
     def full_name(self) -> str: ...

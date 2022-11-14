@@ -20,11 +20,11 @@ class VOC2012(Dataset):
     dtype: Any = ...
     def __init__(
         self,
-        data_file: Optional[Any] = ...,
+        data_file: Any | None = ...,
         mode: str = ...,
-        transform: Optional[Any] = ...,
+        transform: Any | None = ...,
         download: bool = ...,
-        backend: Optional[Any] = ...,
+        backend: Any | None = ...,
     ) -> None: ...
     def __getitem__(self, idx: Any): ...
     def __len__(self): ...

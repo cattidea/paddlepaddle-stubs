@@ -15,10 +15,10 @@ class FusedBiasDropoutResidualLayerNorm(Layer):
         self,
         embed_dim: int,
         dropout_rate: float = ...,
-        weight_attr: Optional[ParamAttr] = ...,
-        bias_attr: Optional[ParamAttr] = ...,
+        weight_attr: ParamAttr | None = ...,
+        bias_attr: ParamAttr | None = ...,
         epsilon: float = 1e-5,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, x, residual) -> Tensor: ...
     def extra_repr(self) -> str: ...
@@ -114,16 +114,16 @@ class FusedTransformer(Layer):
         dim_feedforward: int = ...,
         dropout: float = ...,
         activation: str = ...,
-        attn_dropout: Optional[Any] = ...,
-        act_dropout: Optional[Any] = ...,
+        attn_dropout: Any | None = ...,
+        act_dropout: Any | None = ...,
         normalize_before: bool = ...,
-        weight_attr: Optional[Any] = ...,
-        bias_attr: Optional[Any] = ...,
-        custom_encoder: Optional[Any] = ...,
-        custom_decoder: Optional[Any] = ...,
+        weight_attr: Any | None = ...,
+        bias_attr: Any | None = ...,
+        custom_encoder: Any | None = ...,
+        custom_decoder: Any | None = ...,
     ): ...
     def forward(
-        self, src, tgt, src_mask: Optional[Any] = ..., tgt_mask: Optional[Any] = ..., memory_mask: Optional[Any] = ...
+        self, src, tgt, src_mask: Any | None = ..., tgt_mask: Any | None = ..., memory_mask: Any | None = ...
     ): ...
 
 class FusedMultiTransformer(Layer):
@@ -135,23 +135,23 @@ class FusedMultiTransformer(Layer):
         dropout_rate=0.0,
         activation="gelu",
         normalize_before=True,
-        ln_scale_attrs: Optional[ParamAttr] = None,
-        ln_bias_attrs: Optional[ParamAttr] = None,
-        qkv_weight_attrs: Optional[ParamAttr] = None,
-        qkv_bias_attrs: Optional[ParamAttr] = None,
-        linear_weight_attrs: Optional[ParamAttr] = None,
-        linear_bias_attrs: Optional[ParamAttr] = None,
-        ffn_ln_scale_attrs: Optional[ParamAttr] = None,
-        ffn_ln_bias_attrs: Optional[ParamAttr] = None,
-        ffn1_weight_attrs: Optional[ParamAttr] = None,
-        ffn1_bias_attrs: Optional[ParamAttr] = None,
-        ffn2_weight_attrs: Optional[ParamAttr] = None,
-        ffn2_bias_attrs: Optional[ParamAttr] = None,
+        ln_scale_attrs: ParamAttr | None = None,
+        ln_bias_attrs: ParamAttr | None = None,
+        qkv_weight_attrs: ParamAttr | None = None,
+        qkv_bias_attrs: ParamAttr | None = None,
+        linear_weight_attrs: ParamAttr | None = None,
+        linear_bias_attrs: ParamAttr | None = None,
+        ffn_ln_scale_attrs: ParamAttr | None = None,
+        ffn_ln_bias_attrs: ParamAttr | None = None,
+        ffn1_weight_attrs: ParamAttr | None = None,
+        ffn1_bias_attrs: ParamAttr | None = None,
+        ffn2_weight_attrs: ParamAttr | None = None,
+        ffn2_bias_attrs: ParamAttr | None = None,
         epsilon: float = ...,
         num_layers: int = ...,
         nranks: int = ...,
         trans_qkvw: bool = ...,
         ring_id: int = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, src, attn_mask=None, caches=None, time_step=None): ...

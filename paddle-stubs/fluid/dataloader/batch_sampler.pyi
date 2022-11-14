@@ -10,8 +10,8 @@ class BatchSampler(Sampler):
     drop_last: Any = ...
     def __init__(
         self,
-        dataset: Optional[Any] = ...,
-        sampler: Optional[Any] = ...,
+        dataset: Any | None = ...,
+        sampler: Any | None = ...,
         shuffle: bool = ...,
         batch_size: int = ...,
         drop_last: bool = ...,
@@ -39,8 +39,8 @@ class DistributedBatchSampler(BatchSampler):
         self,
         dataset: Any,
         batch_size: Any,
-        num_replicas: Optional[Any] = ...,
-        rank: Optional[Any] = ...,
+        num_replicas: Any | None = ...,
+        rank: Any | None = ...,
         shuffle: bool = ...,
         drop_last: bool = ...,
     ) -> None: ...

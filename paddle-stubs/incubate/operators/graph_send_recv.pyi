@@ -7,6 +7,6 @@ def graph_send_recv(
     src_index: Any,
     dst_index: Any,
     pool_type: str = ...,
-    out_size: Optional[Any] = ...,
-    name: Optional[str] = ...,
+    out_size: Any | None = ...,
+    name: str | None = ...,
 ): ...

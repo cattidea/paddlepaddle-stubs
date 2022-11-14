@@ -7,7 +7,7 @@ from ...fluid.initializer import MSRAInitializer
 class KaimingNormal(MSRAInitializer):
     def __init__(
         self,
-        fan_in: Optional[float] = ...,
+        fan_in: float | None = ...,
         negative_slope: float = ...,
         nonlinearity: str = ...,
     ) -> None: ...
@@ -15,7 +15,7 @@ class KaimingNormal(MSRAInitializer):
 class KaimingUniform(MSRAInitializer):
     def __init__(
         self,
-        fan_in: Optional[float] = ...,
+        fan_in: float | None = ...,
         negative_slope: float = ...,
         nonlinearity: str = ...,
     ) -> None: ...

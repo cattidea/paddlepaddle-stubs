@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Any, Optional
+from typing import Any
 
 from typing_extensions import Literal
 
@@ -35,8 +35,8 @@ class _ConvNd(Layer):
         output_padding: int = ...,
         dilation: int = ...,
         groups: int = ...,
-        weight_attr: Optional[Any] = ...,
-        bias_attr: Optional[Any] = ...,
+        weight_attr: Any | None = ...,
+        bias_attr: Any | None = ...,
         data_format: str = ...,
     ) -> None: ...
     def extra_repr(self) -> str: ...
@@ -52,8 +52,8 @@ class Conv1D(_ConvNd):
         dilation: int = ...,
         groups: int = ...,
         padding_mode: str = ...,
-        weight_attr: Optional[ParamAttr] = ...,
-        bias_attr: Optional[ParamAttr | bool] = ...,
+        weight_attr: ParamAttr | None = ...,
+        bias_attr: ParamAttr | bool | None = ...,
         data_format: DataLayout1D = ...,
     ) -> None: ...
     def forward(self, x: Tensor) -> Tensor: ...
@@ -70,11 +70,11 @@ class Conv1DTranspose(_ConvNd):
         output_padding: int | IntSequence = ...,
         groups: int = ...,
         dilation: int = ...,
-        weight_attr: Optional[ParamAttr] = ...,
-        bias_attr: Optional[ParamAttr | bool] = ...,
+        weight_attr: ParamAttr | None = ...,
+        bias_attr: ParamAttr | bool | None = ...,
         data_format: str = ...,
     ) -> None: ...
-    def forward(self, x: Tensor, output_size: Optional[ShapeLike] = ...) -> Tensor: ...
+    def forward(self, x: Tensor, output_size: ShapeLike | None = ...) -> Tensor: ...
     __call__ = forward
 
 class Conv2D(_ConvNd):
@@ -88,8 +88,8 @@ class Conv2D(_ConvNd):
         dilation: int | IntSequence = ...,
         groups: int = ...,
         padding_mode: PaddingMode = ...,
-        weight_attr: Optional[ParamAttr] = ...,
-        bias_attr: Optional[ParamAttr | bool] = ...,
+        weight_attr: ParamAttr | None = ...,
+        bias_attr: ParamAttr | bool | None = ...,
         data_format: DataLayout2D = ...,
     ) -> None: ...
     def forward(self, x: Tensor) -> Tensor: ...
@@ -106,11 +106,11 @@ class Conv2DTranspose(_ConvNd):
         output_padding: int | IntSequence = ...,
         dilation: int | IntSequence = ...,
         groups: int = ...,
-        weight_attr: Optional[ParamAttr] = ...,
-        bias_attr: Optional[ParamAttr | bool] = ...,
+        weight_attr: ParamAttr | None = ...,
+        bias_attr: ParamAttr | bool | None = ...,
         data_format: DataLayout2D = ...,
     ) -> None: ...
-    def forward(self, x: Tensor, output_size: Optional[ShapeLike] = ...) -> Tensor: ...
+    def forward(self, x: Tensor, output_size: ShapeLike | None = ...) -> Tensor: ...
     __call__ = forward
 
 class Conv3D(_ConvNd):
@@ -124,8 +124,8 @@ class Conv3D(_ConvNd):
         dilation: int | IntSequence = ...,
         groups: int = ...,
         padding_mode: PaddingMode = ...,
-        weight_attr: Optional[ParamAttr] = ...,
-        bias_attr: Optional[ParamAttr | bool] = ...,
+        weight_attr: ParamAttr | None = ...,
+        bias_attr: ParamAttr | bool | None = ...,
         data_format: DataLayout3D = ...,
     ) -> None: ...
     def forward(self, x: Tensor) -> Tensor: ...
@@ -142,9 +142,9 @@ class Conv3DTranspose(_ConvNd):
         output_padding: int | IntSequence = ...,
         dilation: int | IntSequence = ...,
         groups: int = ...,
-        weight_attr: Optional[ParamAttr] = ...,
-        bias_attr: Optional[ParamAttr | bool] = ...,
+        weight_attr: ParamAttr | None = ...,
+        bias_attr: ParamAttr | bool | None = ...,
         data_format: DataLayout3D = ...,
     ) -> None: ...
-    def forward(self, x: Tensor, output_size: Optional[ShapeLike] = ...) -> Tensor: ...
+    def forward(self, x: Tensor, output_size: ShapeLike | None = ...) -> Tensor: ...
     __call__ = forward

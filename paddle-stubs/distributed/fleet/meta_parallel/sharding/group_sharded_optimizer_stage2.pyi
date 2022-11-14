@@ -28,7 +28,7 @@ class GroupShardedOptimizerStage2(Optimizer):
         self,
         params: Any,
         optim: Any,
-        group: Optional[Any] = ...,
+        group: Any | None = ...,
         offload: bool = ...,
         device: str = ...,
         pertrain_sync_models: bool = ...,

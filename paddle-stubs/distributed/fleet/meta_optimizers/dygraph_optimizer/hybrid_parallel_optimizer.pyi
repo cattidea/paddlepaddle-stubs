@@ -25,8 +25,8 @@ class HybridParallelOptimizer:
     def minimize(
         self,
         loss: Any,
-        startup_program: Optional[Any] = ...,
-        parameters: Optional[Any] = ...,
-        no_grad_set: Optional[Any] = ...,
+        startup_program: Any | None = ...,
+        parameters: Any | None = ...,
+        no_grad_set: Any | None = ...,
     ): ...
     def __getattr__(self, item: Any): ...

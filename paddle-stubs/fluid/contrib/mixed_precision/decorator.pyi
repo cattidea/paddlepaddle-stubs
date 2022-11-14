@@ -21,27 +21,27 @@ class OptimizerWithMixedPrecision:
     def backward(
         self,
         loss: Any,
-        startup_program: Optional[Any] = ...,
-        parameter_list: Optional[Any] = ...,
-        no_grad_set: Optional[Any] = ...,
-        callbacks: Optional[Any] = ...,
+        startup_program: Any | None = ...,
+        parameter_list: Any | None = ...,
+        no_grad_set: Any | None = ...,
+        callbacks: Any | None = ...,
     ): ...
     def amp_init(
-        self, place: Any, scope: Optional[Any] = ..., test_program: Optional[Any] = ..., use_fp16_test: bool = ...
+        self, place: Any, scope: Any | None = ..., test_program: Any | None = ..., use_fp16_test: bool = ...
     ) -> None: ...
     def apply_gradients(self, params_grads: Any): ...
     def apply_optimize(self, loss: Any, startup_program: Any, params_grads: Any): ...
     def minimize(
         self,
         loss: Any,
-        startup_program: Optional[Any] = ...,
-        parameter_list: Optional[Any] = ...,
-        no_grad_set: Optional[Any] = ...,
+        startup_program: Any | None = ...,
+        parameter_list: Any | None = ...,
+        no_grad_set: Any | None = ...,
     ): ...
 
 def decorate(
     optimizer: Any,
-    amp_lists: Optional[Any] = ...,
+    amp_lists: Any | None = ...,
     init_loss_scaling: Any = ...,
     incr_every_n_steps: int = ...,
     decr_every_n_nan_or_inf: int = ...,
@@ -49,5 +49,5 @@ def decorate(
     decr_ratio: float = ...,
     use_dynamic_loss_scaling: bool = ...,
     use_pure_fp16: bool = ...,
-    use_fp16_guard: Optional[Any] = ...,
+    use_fp16_guard: Any | None = ...,
 ): ...

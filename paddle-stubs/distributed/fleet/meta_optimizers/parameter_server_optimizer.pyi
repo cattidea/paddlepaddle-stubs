@@ -13,7 +13,7 @@ class ParameterServerOptimizer(MetaOptimizerBase):
     def minimize_impl(
         self,
         loss: Any,
-        startup_program: Optional[Any] = ...,
-        parameter_list: Optional[Any] = ...,
-        no_grad_set: Optional[Any] = ...,
+        startup_program: Any | None = ...,
+        parameter_list: Any | None = ...,
+        no_grad_set: Any | None = ...,
     ): ...

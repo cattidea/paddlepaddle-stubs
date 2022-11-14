@@ -8,12 +8,12 @@ class Optimizer:
     def __init__(
         self,
         learning_rate: Any,
-        parameter_list: Optional[Any] = ...,
-        regularization: Optional[Any] = ...,
-        grad_clip: Optional[Any] = ...,
+        parameter_list: Any | None = ...,
+        regularization: Any | None = ...,
+        grad_clip: Any | None = ...,
         flatten_param_grads: bool = ...,
         align_size: int = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ): ...
     def state_dict(self): ...
     def set_state_dict(self, state_dict: Any) -> None: ...
@@ -24,12 +24,12 @@ class Optimizer:
     def backward(
         self,
         loss: Any,
-        startup_program: Optional[Any] = ...,
-        parameter_list: Optional[Any] = ...,
-        no_grad_set: Optional[Any] = ...,
-        callbacks: Optional[Any] = ...,
+        startup_program: Any | None = ...,
+        parameter_list: Any | None = ...,
+        no_grad_set: Any | None = ...,
+        callbacks: Any | None = ...,
     ): ...
-    def append_regularization_ops(self, parameters_and_grads: Any, regularization: Optional[Any] = ...): ...
+    def append_regularization_ops(self, parameters_and_grads: Any, regularization: Any | None = ...): ...
     def flatten_param_grads(self, params_grads: Any): ...
     def apply_gradients(self, params_grads: Any): ...
     def apply_optimize(self, loss: Any, startup_program: Any, params_grads: Any): ...
@@ -37,9 +37,9 @@ class Optimizer:
     def minimize(
         self,
         loss: Any,
-        startup_program: Optional[Any] = ...,
-        parameter_list: Optional[Any] = ...,
-        no_grad_set: Optional[Any] = ...,
+        startup_program: Any | None = ...,
+        parameter_list: Any | None = ...,
+        no_grad_set: Any | None = ...,
     ): ...
 
 class SGDOptimizer(Optimizer):
@@ -47,11 +47,11 @@ class SGDOptimizer(Optimizer):
     def __init__(
         self,
         learning_rate: Any,
-        parameter_list: Optional[Any] = ...,
-        regularization: Optional[Any] = ...,
-        grad_clip: Optional[Any] = ...,
+        parameter_list: Any | None = ...,
+        regularization: Any | None = ...,
+        grad_clip: Any | None = ...,
         multi_precision: bool = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
 
 class MomentumOptimizer(Optimizer):
@@ -60,11 +60,11 @@ class MomentumOptimizer(Optimizer):
         self,
         learning_rate: Any,
         momentum: Any,
-        parameter_list: Optional[Any] = ...,
+        parameter_list: Any | None = ...,
         use_nesterov: bool = ...,
-        regularization: Optional[Any] = ...,
-        grad_clip: Optional[Any] = ...,
-        name: Optional[str] = ...,
+        regularization: Any | None = ...,
+        grad_clip: Any | None = ...,
+        name: str | None = ...,
     ) -> None: ...
 
 class DGCMomentumOptimizer(Optimizer):
@@ -76,12 +76,12 @@ class DGCMomentumOptimizer(Optimizer):
         rampup_begin_step: Any,
         rampup_step: int = ...,
         sparsity: Any = ...,
-        parameter_list: Optional[Any] = ...,
+        parameter_list: Any | None = ...,
         use_nesterov: bool = ...,
-        num_trainers: Optional[Any] = ...,
-        regularization: Optional[Any] = ...,
-        grad_clip: Optional[Any] = ...,
-        name: Optional[str] = ...,
+        num_trainers: Any | None = ...,
+        regularization: Any | None = ...,
+        grad_clip: Any | None = ...,
+        name: str | None = ...,
     ) -> None: ...
     def apply_gradients(self, params_grads: Any): ...
 
@@ -93,11 +93,11 @@ class LarsMomentumOptimizer(Optimizer):
         momentum: Any,
         lars_coeff: float = ...,
         lars_weight_decay: float = ...,
-        parameter_list: Optional[Any] = ...,
-        regularization: Optional[Any] = ...,
-        grad_clip: Optional[Any] = ...,
-        name: Optional[str] = ...,
-        exclude_from_weight_decay: Optional[Any] = ...,
+        parameter_list: Any | None = ...,
+        regularization: Any | None = ...,
+        grad_clip: Any | None = ...,
+        name: str | None = ...,
+        exclude_from_weight_decay: Any | None = ...,
         epsilon: int = ...,
         multi_precision: bool = ...,
         rescale_grad: float = ...,
@@ -110,10 +110,10 @@ class AdagradOptimizer(Optimizer):
         self,
         learning_rate: Any,
         epsilon: float = ...,
-        parameter_list: Optional[Any] = ...,
-        regularization: Optional[Any] = ...,
-        grad_clip: Optional[Any] = ...,
-        name: Optional[str] = ...,
+        parameter_list: Any | None = ...,
+        regularization: Any | None = ...,
+        grad_clip: Any | None = ...,
+        name: str | None = ...,
         initial_accumulator_value: float = ...,
     ) -> None: ...
 
@@ -125,10 +125,10 @@ class AdamOptimizer(Optimizer):
         beta1: float = ...,
         beta2: float = ...,
         epsilon: float = ...,
-        parameter_list: Optional[Any] = ...,
-        regularization: Optional[Any] = ...,
-        grad_clip: Optional[Any] = ...,
-        name: Optional[str] = ...,
+        parameter_list: Any | None = ...,
+        regularization: Any | None = ...,
+        grad_clip: Any | None = ...,
+        name: str | None = ...,
         lazy_mode: bool = ...,
         use_global_beta_pow: bool = ...,
         flatten_param_grads: bool = ...,
@@ -143,10 +143,10 @@ class AdamaxOptimizer(Optimizer):
         beta1: float = ...,
         beta2: float = ...,
         epsilon: float = ...,
-        parameter_list: Optional[Any] = ...,
-        regularization: Optional[Any] = ...,
-        grad_clip: Optional[Any] = ...,
-        name: Optional[str] = ...,
+        parameter_list: Any | None = ...,
+        regularization: Any | None = ...,
+        grad_clip: Any | None = ...,
+        name: str | None = ...,
     ) -> None: ...
 
 class DpsgdOptimizer(Optimizer):
@@ -157,7 +157,7 @@ class DpsgdOptimizer(Optimizer):
         clip: float = ...,
         batch_size: float = ...,
         sigma: float = ...,
-        parameter_list: Optional[Any] = ...,
+        parameter_list: Any | None = ...,
     ) -> None: ...
 
 class DecayedAdagradOptimizer(Optimizer):
@@ -167,10 +167,10 @@ class DecayedAdagradOptimizer(Optimizer):
         learning_rate: Any,
         decay: float = ...,
         epsilon: float = ...,
-        parameter_list: Optional[Any] = ...,
-        regularization: Optional[Any] = ...,
-        grad_clip: Optional[Any] = ...,
-        name: Optional[str] = ...,
+        parameter_list: Any | None = ...,
+        regularization: Any | None = ...,
+        grad_clip: Any | None = ...,
+        name: str | None = ...,
     ) -> None: ...
 
 class AdadeltaOptimizer(Optimizer):
@@ -180,10 +180,10 @@ class AdadeltaOptimizer(Optimizer):
         learning_rate: Any,
         epsilon: float = ...,
         rho: float = ...,
-        parameter_list: Optional[Any] = ...,
-        regularization: Optional[Any] = ...,
-        grad_clip: Optional[Any] = ...,
-        name: Optional[str] = ...,
+        parameter_list: Any | None = ...,
+        regularization: Any | None = ...,
+        grad_clip: Any | None = ...,
+        name: str | None = ...,
     ) -> None: ...
 
 class RMSPropOptimizer(Optimizer):
@@ -195,10 +195,10 @@ class RMSPropOptimizer(Optimizer):
         epsilon: float = ...,
         momentum: float = ...,
         centered: bool = ...,
-        parameter_list: Optional[Any] = ...,
-        regularization: Optional[Any] = ...,
-        grad_clip: Optional[Any] = ...,
-        name: Optional[str] = ...,
+        parameter_list: Any | None = ...,
+        regularization: Any | None = ...,
+        grad_clip: Any | None = ...,
+        name: str | None = ...,
     ) -> None: ...
 
 class FtrlOptimizer(Optimizer):
@@ -209,10 +209,10 @@ class FtrlOptimizer(Optimizer):
         l1: float = ...,
         l2: float = ...,
         lr_power: Any = ...,
-        parameter_list: Optional[Any] = ...,
-        regularization: Optional[Any] = ...,
-        grad_clip: Optional[Any] = ...,
-        name: Optional[str] = ...,
+        parameter_list: Any | None = ...,
+        regularization: Any | None = ...,
+        grad_clip: Any | None = ...,
+        name: str | None = ...,
     ) -> None: ...
 
 class LambOptimizer(AdamOptimizer):
@@ -224,11 +224,11 @@ class LambOptimizer(AdamOptimizer):
         beta1: float = ...,
         beta2: float = ...,
         epsilon: float = ...,
-        parameter_list: Optional[Any] = ...,
-        regularization: Optional[Any] = ...,
-        grad_clip: Optional[Any] = ...,
-        exclude_from_weight_decay_fn: Optional[Any] = ...,
-        name: Optional[str] = ...,
+        parameter_list: Any | None = ...,
+        regularization: Any | None = ...,
+        grad_clip: Any | None = ...,
+        exclude_from_weight_decay_fn: Any | None = ...,
+        name: str | None = ...,
     ) -> None: ...
 
 SGD = SGDOptimizer
@@ -256,8 +256,8 @@ class ModelAverage(Optimizer):
         average_window_rate: Any,
         min_average_window: int = ...,
         max_average_window: int = ...,
-        regularization: Optional[Any] = ...,
-        name: Optional[str] = ...,
+        regularization: Any | None = ...,
+        name: str | None = ...,
     ) -> None: ...
     def apply(self, executor: Any, need_restore: bool = ...) -> None: ...
     def restore(self, executor: Any) -> None: ...
@@ -265,7 +265,7 @@ class ModelAverage(Optimizer):
 class ExponentialMovingAverage:
     apply_program: Any = ...
     restore_program: Any = ...
-    def __init__(self, decay: float = ..., thres_steps: Optional[Any] = ..., name: Optional[str] = ...) -> None: ...
+    def __init__(self, decay: float = ..., thres_steps: Any | None = ..., name: str | None = ...) -> None: ...
     def update(self) -> None: ...
     def apply(self, executor: Any, need_restore: bool = ...) -> None: ...
     def restore(self, executor: Any) -> None: ...
@@ -287,9 +287,9 @@ class PipelineOptimizer:
     def minimize(
         self,
         loss: Any,
-        startup_program: Optional[Any] = ...,
-        parameter_list: Optional[Any] = ...,
-        no_grad_set: Optional[Any] = ...,
+        startup_program: Any | None = ...,
+        parameter_list: Any | None = ...,
+        no_grad_set: Any | None = ...,
     ): ...
 
 class RecomputeOptimizer(Optimizer):
@@ -301,18 +301,18 @@ class RecomputeOptimizer(Optimizer):
     def backward(
         self,
         loss: Any,
-        startup_program: Optional[Any] = ...,
-        parameter_list: Optional[Any] = ...,
-        no_grad_set: Optional[Any] = ...,
-        callbacks: Optional[Any] = ...,
+        startup_program: Any | None = ...,
+        parameter_list: Any | None = ...,
+        no_grad_set: Any | None = ...,
+        callbacks: Any | None = ...,
     ): ...
     def apply_optimize(self, loss: Any, startup_program: Any, params_grads: Any): ...
     def minimize(
         self,
         loss: Any,
-        startup_program: Optional[Any] = ...,
-        parameter_list: Optional[Any] = ...,
-        no_grad_set: Optional[Any] = ...,
+        startup_program: Any | None = ...,
+        parameter_list: Any | None = ...,
+        no_grad_set: Any | None = ...,
     ): ...
 
 class LookaheadOptimizer:
@@ -321,7 +321,7 @@ class LookaheadOptimizer:
     k: Any = ...
     type: str = ...
     def __init__(self, inner_optimizer: Any, alpha: float = ..., k: int = ...) -> None: ...
-    def minimize(self, loss: Any, startup_program: Optional[Any] = ...): ...
+    def minimize(self, loss: Any, startup_program: Any | None = ...): ...
 
 class GradientMergeOptimizer:
     GRAD_MERGE_COND_NAME: str = ...
@@ -333,17 +333,17 @@ class GradientMergeOptimizer:
     def backward(
         self,
         loss: Any,
-        startup_program: Optional[Any] = ...,
-        parameter_list: Optional[Any] = ...,
-        no_grad_set: Optional[Any] = ...,
-        callbacks: Optional[Any] = ...,
+        startup_program: Any | None = ...,
+        parameter_list: Any | None = ...,
+        no_grad_set: Any | None = ...,
+        callbacks: Any | None = ...,
     ): ...
     def apply_optimize(self, loss: Any, startup_program: Any, params_grads: Any): ...
     def apply_gradients(self, params_grads: Any): ...
     def minimize(
         self,
         loss: Any,
-        startup_program: Optional[Any] = ...,
-        parameter_list: Optional[Any] = ...,
-        no_grad_set: Optional[Any] = ...,
+        startup_program: Any | None = ...,
+        parameter_list: Any | None = ...,
+        no_grad_set: Any | None = ...,
     ): ...

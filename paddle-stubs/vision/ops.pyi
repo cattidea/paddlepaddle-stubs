@@ -15,9 +15,9 @@ def yolo_loss(
     class_num: Any,
     ignore_thresh: Any,
     downsample_ratio: Any,
-    gt_score: Optional[Any] = ...,
+    gt_score: Any | None = ...,
     use_label_smooth: bool = ...,
-    name: Optional[str] = ...,
+    name: str | None = ...,
     scale_x_y: float = ...,
 ): ...
 def yolo_box(
@@ -28,7 +28,7 @@ def yolo_box(
     conf_thresh: Any,
     downsample_ratio: Any,
     clip_bbox: bool = ...,
-    name: Optional[str] = ...,
+    name: str | None = ...,
     scale_x_y: float = ...,
     iou_aware: bool = ...,
     iou_aware_factor: float = ...,
@@ -37,14 +37,14 @@ def deform_conv2d(
     x: Any,
     offset: Any,
     weight: Any,
-    bias: Optional[Any] = ...,
+    bias: Any | None = ...,
     stride: int = ...,
     padding: int = ...,
     dilation: int = ...,
     deformable_groups: int = ...,
     groups: int = ...,
-    mask: Optional[Any] = ...,
-    name: Optional[str] = ...,
+    mask: Any | None = ...,
+    name: str | None = ...,
 ): ...
 
 class DeformConv2D(Layer):
@@ -60,15 +60,15 @@ class DeformConv2D(Layer):
         dilation: int = ...,
         deformable_groups: int = ...,
         groups: int = ...,
-        weight_attr: Optional[Any] = ...,
-        bias_attr: Optional[Any] = ...,
+        weight_attr: Any | None = ...,
+        bias_attr: Any | None = ...,
     ): ...
-    def forward(self, x: Any, offset: Any, mask: Optional[Any] = ...): ...
+    def forward(self, x: Any, offset: Any, mask: Any | None = ...): ...
 
-def read_file(filename: Any, name: Optional[str] = ...): ...
-def decode_jpeg(x: Any, mode: str = ..., name: Optional[str] = ...): ...
+def read_file(filename: Any, name: str | None = ...): ...
+def decode_jpeg(x: Any, mode: str = ..., name: str | None = ...): ...
 def psroi_pool(
-    x: Any, boxes: Any, boxes_num: Any, output_size: Any, spatial_scale: float = ..., name: Optional[str] = ...
+    x: Any, boxes: Any, boxes_num: Any, output_size: Any, spatial_scale: float = ..., name: str | None = ...
 ): ...
 
 class PSRoIPool(Layer):
@@ -78,7 +78,7 @@ class PSRoIPool(Layer):
     def forward(self, x: Any, boxes: Any, boxes_num: Any): ...
 
 def roi_pool(
-    x: Any, boxes: Any, boxes_num: Any, output_size: Any, spatial_scale: float = ..., name: Optional[str] = ...
+    x: Any, boxes: Any, boxes_num: Any, output_size: Any, spatial_scale: float = ..., name: str | None = ...
 ): ...
 
 class RoIPool(Layer):
@@ -94,7 +94,7 @@ def roi_align(
     spatial_scale: float = ...,
     sampling_ratio: int = ...,
     aligned: bool = ...,
-    name: Optional[str] = ...,
+    name: str | None = ...,
 ): ...
 
 class RoIAlign(Layer):
@@ -108,19 +108,19 @@ class ConvNormActivation(Sequential):
         out_channels: Any,
         kernel_size: int = ...,
         stride: int = ...,
-        padding: Optional[Any] = ...,
+        padding: Any | None = ...,
         groups: int = ...,
         norm_layer: Any = ...,
         activation_layer: Any = ...,
         dilation: int = ...,
-        bias: Optional[Any] = ...,
+        bias: Any | None = ...,
     ) -> None: ...
 
 def nms(
     boxes: Any,
     iou_threshold: float = ...,
-    scores: Optional[Any] = ...,
-    category_idxs: Optional[Any] = ...,
-    categories: Optional[Any] = ...,
-    top_k: Optional[Any] = ...,
+    scores: Any | None = ...,
+    category_idxs: Any | None = ...,
+    categories: Any | None = ...,
+    top_k: Any | None = ...,
 ): ...

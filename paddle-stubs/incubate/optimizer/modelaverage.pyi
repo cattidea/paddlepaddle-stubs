@@ -17,18 +17,18 @@ class ModelAverage(Optimizer):
     def __init__(
         self,
         average_window_rate: Any,
-        parameters: Optional[Any] = ...,
+        parameters: Any | None = ...,
         min_average_window: int = ...,
         max_average_window: int = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def minimize(
         self,
         loss: Any,
-        startup_program: Optional[Any] = ...,
-        parameters: Optional[Any] = ...,
-        no_grad_set: Optional[Any] = ...,
+        startup_program: Any | None = ...,
+        parameters: Any | None = ...,
+        no_grad_set: Any | None = ...,
     ) -> None: ...
     def step(self) -> None: ...
-    def apply(self, executor: Optional[Any] = ..., need_restore: bool = ...) -> None: ...
-    def restore(self, executor: Optional[Any] = ...) -> None: ...
+    def apply(self, executor: Any | None = ..., need_restore: bool = ...) -> None: ...
+    def restore(self, executor: Any | None = ...) -> None: ...

@@ -11,7 +11,7 @@ class RNNCell:
     def get_initial_states(
         self,
         batch_ref: Any,
-        shape: Optional[Any] = ...,
+        shape: Any | None = ...,
         dtype: str = ...,
         init_value: int = ...,
         batch_dim_idx: int = ...,
@@ -27,10 +27,10 @@ class GRUCell(RNNCell):
     def __init__(
         self,
         hidden_size: Any,
-        param_attr: Optional[Any] = ...,
-        bias_attr: Optional[Any] = ...,
-        gate_activation: Optional[Any] = ...,
-        activation: Optional[Any] = ...,
+        param_attr: Any | None = ...,
+        bias_attr: Any | None = ...,
+        gate_activation: Any | None = ...,
+        activation: Any | None = ...,
         dtype: str = ...,
         name: str = ...,
     ) -> None: ...
@@ -44,10 +44,10 @@ class LSTMCell(RNNCell):
     def __init__(
         self,
         hidden_size: Any,
-        param_attr: Optional[Any] = ...,
-        bias_attr: Optional[Any] = ...,
-        gate_activation: Optional[Any] = ...,
-        activation: Optional[Any] = ...,
+        param_attr: Any | None = ...,
+        bias_attr: Any | None = ...,
+        gate_activation: Any | None = ...,
+        activation: Any | None = ...,
         forget_bias: float = ...,
         dtype: str = ...,
         name: str = ...,
@@ -59,8 +59,8 @@ class LSTMCell(RNNCell):
 def rnn(
     cell: Any,
     inputs: Any,
-    initial_states: Optional[Any] = ...,
-    sequence_length: Optional[Any] = ...,
+    initial_states: Any | None = ...,
+    sequence_length: Any | None = ...,
     time_major: bool = ...,
     is_reverse: bool = ...,
     **kwargs: Any,
@@ -76,8 +76,8 @@ def birnn(
     cell_fw: Any,
     cell_bw: Any,
     inputs: Any,
-    initial_states: Optional[Any] = ...,
-    sequence_length: Optional[Any] = ...,
+    initial_states: Any | None = ...,
+    sequence_length: Any | None = ...,
     time_major: bool = ...,
     **kwargs: Any,
 ): ...
@@ -102,8 +102,8 @@ class BeamSearchDecoder(Decoder):
         start_token: Any,
         end_token: Any,
         beam_size: Any,
-        embedding_fn: Optional[Any] = ...,
-        output_fn: Optional[Any] = ...,
+        embedding_fn: Any | None = ...,
+        output_fn: Any | None = ...,
     ) -> None: ...
     @staticmethod
     def tile_beam_merge_with_batch(x: Any, beam_size: Any): ...
@@ -122,8 +122,8 @@ class BeamSearchDecoder(Decoder):
 
 def dynamic_decode(
     decoder: Any,
-    inits: Optional[Any] = ...,
-    max_step_num: Optional[Any] = ...,
+    inits: Any | None = ...,
+    max_step_num: Any | None = ...,
     output_time_major: bool = ...,
     impute_finished: bool = ...,
     is_test: bool = ...,
@@ -163,8 +163,8 @@ class SampleEmbeddingHelper(GreedyEmbeddingHelper):
         embedding_fn: Any,
         start_tokens: Any,
         end_token: Any,
-        softmax_temperature: Optional[Any] = ...,
-        seed: Optional[Any] = ...,
+        softmax_temperature: Any | None = ...,
+        seed: Any | None = ...,
     ) -> None: ...
     def sample(self, time: Any, outputs: Any, states: Any): ...
 
@@ -172,7 +172,7 @@ class BasicDecoder(Decoder):
     cell: Any = ...
     helper: Any = ...
     output_fn: Any = ...
-    def __init__(self, cell: Any, helper: Any, output_fn: Optional[Any] = ...) -> None: ...
+    def __init__(self, cell: Any, helper: Any, output_fn: Any | None = ...) -> None: ...
     def initialize(self, initial_cell_states: Any): ...
 
     class OutputWrapper: ...
@@ -182,17 +182,17 @@ class BasicDecoder(Decoder):
 def dynamic_lstm(
     input: Any,
     size: Any,
-    h_0: Optional[Any] = ...,
-    c_0: Optional[Any] = ...,
-    param_attr: Optional[Any] = ...,
-    bias_attr: Optional[Any] = ...,
+    h_0: Any | None = ...,
+    c_0: Any | None = ...,
+    param_attr: Any | None = ...,
+    bias_attr: Any | None = ...,
     use_peepholes: bool = ...,
     is_reverse: bool = ...,
     gate_activation: str = ...,
     cell_activation: str = ...,
     candidate_activation: str = ...,
     dtype: str = ...,
-    name: Optional[str] = ...,
+    name: str | None = ...,
 ): ...
 def lstm(
     input: Any,
@@ -204,16 +204,16 @@ def lstm(
     dropout_prob: float = ...,
     is_bidirec: bool = ...,
     is_test: bool = ...,
-    name: Optional[str] = ...,
-    default_initializer: Optional[Any] = ...,
+    name: str | None = ...,
+    default_initializer: Any | None = ...,
     seed: int = ...,
 ): ...
 def dynamic_lstmp(
     input: Any,
     size: Any,
     proj_size: Any,
-    param_attr: Optional[Any] = ...,
-    bias_attr: Optional[Any] = ...,
+    param_attr: Any | None = ...,
+    bias_attr: Any | None = ...,
     use_peepholes: bool = ...,
     is_reverse: bool = ...,
     gate_activation: str = ...,
@@ -221,29 +221,29 @@ def dynamic_lstmp(
     candidate_activation: str = ...,
     proj_activation: str = ...,
     dtype: str = ...,
-    name: Optional[str] = ...,
-    h_0: Optional[Any] = ...,
-    c_0: Optional[Any] = ...,
-    cell_clip: Optional[Any] = ...,
-    proj_clip: Optional[Any] = ...,
+    name: str | None = ...,
+    h_0: Any | None = ...,
+    c_0: Any | None = ...,
+    cell_clip: Any | None = ...,
+    proj_clip: Any | None = ...,
 ): ...
 def dynamic_gru(
     input: Any,
     size: Any,
-    param_attr: Optional[Any] = ...,
-    bias_attr: Optional[Any] = ...,
+    param_attr: Any | None = ...,
+    bias_attr: Any | None = ...,
     is_reverse: bool = ...,
     gate_activation: str = ...,
     candidate_activation: str = ...,
-    h_0: Optional[Any] = ...,
+    h_0: Any | None = ...,
     origin_mode: bool = ...,
 ): ...
 def gru_unit(
     input: Any,
     hidden: Any,
     size: Any,
-    param_attr: Optional[Any] = ...,
-    bias_attr: Optional[Any] = ...,
+    param_attr: Any | None = ...,
+    bias_attr: Any | None = ...,
     activation: str = ...,
     gate_activation: str = ...,
     origin_mode: bool = ...,
@@ -257,16 +257,16 @@ def beam_search(
     end_id: Any,
     level: int = ...,
     is_accumulated: bool = ...,
-    name: Optional[str] = ...,
+    name: str | None = ...,
     return_parent_idx: bool = ...,
 ): ...
-def beam_search_decode(ids: Any, scores: Any, beam_size: Any, end_id: Any, name: Optional[str] = ...): ...
+def beam_search_decode(ids: Any, scores: Any, beam_size: Any, end_id: Any, name: str | None = ...): ...
 def lstm_unit(
     x_t: Any,
     hidden_t_prev: Any,
     cell_t_prev: Any,
     forget_bias: float = ...,
-    param_attr: Optional[Any] = ...,
-    bias_attr: Optional[Any] = ...,
-    name: Optional[str] = ...,
+    param_attr: Any | None = ...,
+    bias_attr: Any | None = ...,
+    name: str | None = ...,
 ): ...

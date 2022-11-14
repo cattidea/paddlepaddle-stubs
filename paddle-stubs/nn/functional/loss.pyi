@@ -15,42 +15,42 @@ from ...static import Variable as Variable
 from ...tensor.manipulation import reshape as reshape
 
 def binary_cross_entropy(
-    input: Any, label: Any, weight: Optional[Any] = ..., reduction: str = ..., name: Optional[str] = ...
+    input: Any, label: Any, weight: Any | None = ..., reduction: str = ..., name: str | None = ...
 ): ...
 def binary_cross_entropy_with_logits(
     logit: Any,
     label: Any,
-    weight: Optional[Any] = ...,
+    weight: Any | None = ...,
     reduction: str = ...,
-    pos_weight: Optional[Any] = ...,
-    name: Optional[str] = ...,
+    pos_weight: Any | None = ...,
+    name: str | None = ...,
 ): ...
 def hsigmoid_loss(
     input: Any,
     label: Any,
     num_classes: Any,
     weight: Any,
-    bias: Optional[Any] = ...,
-    path_table: Optional[Any] = ...,
-    path_code: Optional[Any] = ...,
+    bias: Any | None = ...,
+    path_table: Any | None = ...,
+    path_code: Any | None = ...,
     is_sparse: bool = ...,
-    name: Optional[str] = ...,
+    name: str | None = ...,
 ): ...
-def smooth_l1_loss(input: Any, label: Any, reduction: str = ..., delta: float = ..., name: Optional[str] = ...): ...
+def smooth_l1_loss(input: Any, label: Any, reduction: str = ..., delta: float = ..., name: str | None = ...): ...
 def margin_ranking_loss(
-    input: Any, other: Any, label: Any, margin: float = ..., reduction: str = ..., name: Optional[str] = ...
+    input: Any, other: Any, label: Any, margin: float = ..., reduction: str = ..., name: str | None = ...
 ): ...
-def l1_loss(input: Any, label: Any, reduction: str = ..., name: Optional[str] = ...): ...
+def l1_loss(input: Any, label: Any, reduction: str = ..., name: str | None = ...): ...
 def nll_loss(
     input: Any,
     label: Any,
-    weight: Optional[Any] = ...,
+    weight: Any | None = ...,
     ignore_index: int = ...,
     reduction: str = ...,
-    name: Optional[str] = ...,
+    name: str | None = ...,
 ): ...
-def kl_div(input: Any, label: Any, reduction: str = ..., name: Optional[str] = ...): ...
-def mse_loss(input: Any, label: Any, reduction: str = ..., name: Optional[str] = ...): ...
+def kl_div(input: Any, label: Any, reduction: str = ..., name: str | None = ...): ...
+def mse_loss(input: Any, label: Any, reduction: str = ..., name: str | None = ...): ...
 def ctc_loss(
     log_probs: Any,
     labels: Any,
@@ -67,7 +67,7 @@ def margin_cross_entropy(
     margin2: float = ...,
     margin3: float = ...,
     scale: float = ...,
-    group: Optional[Any] = ...,
+    group: Any | None = ...,
     return_softmax: bool = ...,
     reduction: str = ...,
 ): ...
@@ -83,23 +83,23 @@ def softmax_with_cross_entropy(
 def cross_entropy(
     input: Any,
     label: Any,
-    weight: Optional[Any] = ...,
+    weight: Any | None = ...,
     ignore_index: int = ...,
     reduction: str = ...,
     soft_label: bool = ...,
     axis: int = ...,
     use_softmax: bool = ...,
-    name: Optional[str] = ...,
+    name: str | None = ...,
 ): ...
 def sigmoid_focal_loss(
     logit: Any,
     label: Any,
-    normalizer: Optional[Any] = ...,
+    normalizer: Any | None = ...,
     alpha: float = ...,
     gamma: float = ...,
     reduction: str = ...,
-    name: Optional[str] = ...,
+    name: str | None = ...,
 ): ...
 def hinge_embedding_loss(
-    input: Any, label: Any, margin: float = ..., reduction: str = ..., name: Optional[str] = ...
+    input: Any, label: Any, margin: float = ..., reduction: str = ..., name: str | None = ...
 ): ...

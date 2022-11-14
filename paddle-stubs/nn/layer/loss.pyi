@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Any, Optional
+from typing import Any
 
 from typing_extensions import Literal
 
@@ -18,10 +18,10 @@ class BCEWithLogitsLoss(Layer):
     name: Any = ...
     def __init__(
         self,
-        weight: Optional[Tensor] = ...,
+        weight: Tensor | None = ...,
         reduction: Reduction = ...,
-        pos_weight: Optional[Any] = ...,
-        name: Optional[str] = ...,
+        pos_weight: Any | None = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, logit: Tensor, label: Tensor) -> Tensor: ...
     __call__ = forward
@@ -36,13 +36,13 @@ class CrossEntropyLoss(Layer):
     name: Any = ...
     def __init__(
         self,
-        weight: Optional[Tensor] = ...,
+        weight: Tensor | None = ...,
         ignore_index: int = ...,
         reduction: Reduction = ...,
         soft_label: bool = ...,
         axis: int = ...,
         use_softmax: bool = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, input: Tensor, label: Tensor) -> Tensor: ...
     __call__ = forward
@@ -54,18 +54,18 @@ class HSigmoidLoss(Layer):
         self,
         feature_size: int,
         num_classes: int,
-        weight_attr: Optional[ParamAttr] = ...,
-        bias_attr: Optional[ParamAttr | bool] = ...,
+        weight_attr: ParamAttr | None = ...,
+        bias_attr: ParamAttr | bool | None = ...,
         is_custom: bool = ...,
         is_sparse: bool = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(
         self,
         input: Tensor,
         label: Tensor,
-        path_table: Optional[Tensor] = ...,
-        path_code: Optional[Tensor] = ...,
+        path_table: Tensor | None = ...,
+        path_code: Tensor | None = ...,
     ) -> Tensor: ...
     __call__ = forward
 
@@ -78,7 +78,7 @@ class MSELoss(Layer):
 class L1Loss(Layer):
     reduction: Any = ...
     name: Any = ...
-    def __init__(self, reduction: Reduction = ..., name: Optional[str] = ...) -> None: ...
+    def __init__(self, reduction: Reduction = ..., name: str | None = ...) -> None: ...
     def forward(self, input: Tensor, label: Tensor) -> Tensor: ...
     __call__ = forward
 
@@ -88,9 +88,9 @@ class BCELoss(Layer):
     name: Any = ...
     def __init__(
         self,
-        weight: Optional[Tensor] = ...,
+        weight: Tensor | None = ...,
         reduction: Reduction = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, input: Tensor, label: Tensor) -> Tensor: ...
     __call__ = forward
@@ -98,10 +98,10 @@ class BCELoss(Layer):
 class NLLLoss(Layer):
     def __init__(
         self,
-        weight: Optional[Tensor] = ...,
+        weight: Tensor | None = ...,
         ignore_index: int = ...,
         reduction: Reduction = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, input: Tensor, label: Tensor) -> Tensor: ...
     __call__ = forward
@@ -120,7 +120,7 @@ class MarginRankingLoss(Layer):
         self,
         margin: float = ...,
         reduction: Reduction = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, input: Tensor, other: Tensor, label: Tensor) -> Tensor: ...
     __call__ = forward
@@ -147,7 +147,7 @@ class SmoothL1Loss(Layer):
         self,
         reduction: Reduction = ...,
         delta: float = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, input: Tensor, label: Tensor) -> Tensor: ...
     __call__ = forward
@@ -160,7 +160,7 @@ class HingeEmbeddingLoss(Layer):
         self,
         margin: float = ...,
         reduction: Reduction = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, input: Tensor, label: Tensor) -> Tensor: ...
     __call__ = forward

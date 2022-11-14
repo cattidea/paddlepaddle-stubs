@@ -14,14 +14,14 @@ class DistributedFusedLamb(Optimizer):
         beta1: float = ...,
         beta2: float = ...,
         epsilon: float = ...,
-        parameters: Optional[Any] = ...,
-        grad_clip: Optional[Any] = ...,
-        exclude_from_weight_decay_fn: Optional[Any] = ...,
+        parameters: Any | None = ...,
+        grad_clip: Any | None = ...,
+        exclude_from_weight_decay_fn: Any | None = ...,
         clip_after_allreduce: bool = ...,
         is_grad_scaled_by_nranks: bool = ...,
         alignment: int = ...,
         use_master_param_norm: bool = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def apply_optimize(self, params_grads: Any) -> None: ...
     def apply_gradients(self, params_grads: Any) -> None: ...

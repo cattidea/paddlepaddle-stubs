@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Callable, Optional, Sequence
+from typing import Callable, Sequence
 
 from .._typing import Tensor
 from ..fluid.clip import GradientClipBase
@@ -17,13 +17,13 @@ class AdamW(Adam):
         beta2: float | Tensor = ...,
         epsilon: float = ...,
         # TODO: Currently, pyright throws an error at below line.
-        # parameters: Optional[Sequence[Tensor] | Sequence[AdamParameterConfig]] = ...,
-        parameters: Optional[Sequence[Tensor | AdamParameterConfig]] = ...,
-        weight_decay: Optional[float | WeightDecayRegularizer] = ...,
-        lr_ratio: Optional[Callable[[Tensor], float]] = ...,
-        apply_decay_param_fun: Optional[Callable[[str], bool]] = ...,
-        grad_clip: Optional[GradientClipBase] = ...,
+        # parameters: Sequence[Tensor] | Sequence[AdamParameterConfig] | None = ...,
+        parameters: Sequence[Tensor | AdamParameterConfig] | None = ...,
+        weight_decay: float | WeightDecayRegularizer | None = ...,
+        lr_ratio: Callable[[Tensor], float] | None = ...,
+        apply_decay_param_fun: Callable[[str], bool] | None = ...,
+        grad_clip: GradientClipBase | None = ...,
         lazy_mode: bool = ...,
         multi_precision: bool = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...

@@ -12,9 +12,9 @@ class LayerOpsRecoder:
         self,
         start: int = ...,
         end: int = ...,
-        ops: Optional[Any] = ...,
+        ops: Any | None = ...,
         is_valid: bool = ...,
-        hooks: Optional[Any] = ...,
+        hooks: Any | None = ...,
     ) -> None: ...
 
 def record_program_ops_pre_hook(layer: Any, inputs: Any) -> None: ...

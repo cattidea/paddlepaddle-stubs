@@ -14,7 +14,7 @@ class FusedLinear(Layer):
         weight_attr: ParamAttr = ...,
         bias_attr: ParamAttr = ...,
         transpose_weight: bool = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ): ...
     def forward(self, input): ...
     __call__ = forward

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Any, Optional
+from typing import Any
 
 from paddle.framework import ParamAttr
 from paddle.nn import Layer
@@ -32,9 +32,9 @@ class Linear(Layer):
         self,
         in_features: int,
         out_features: int,
-        weight_attr: Optional[ParamAttr] = ...,
-        bias_attr: Optional[ParamAttr] = ...,
-        name: Optional[str] = ...,
+        weight_attr: ParamAttr | None = ...,
+        bias_attr: ParamAttr | None = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, input: Tensor) -> Tensor: ...
     def extra_repr(self) -> Tensor: ...
@@ -50,13 +50,13 @@ class Upsample(Layer):
     name: str = ...
     def __init__(
         self,
-        size: Optional[IntSequence | Tensor] = ...,
-        scale_factor: Optional[Numberic | NumbericSequence | Tensor] = ...,
+        size: IntSequence | Tensor | None = ...,
+        scale_factor: Numberic | NumbericSequence | Tensor | None = ...,
         mode: InterpolationMode = ...,
         align_corners: bool = ...,
         align_mode: int = ...,
         data_format: str = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, x: Tensor) -> Tensor: ...
     def extra_repr(self) -> Tensor: ...
@@ -69,10 +69,10 @@ class UpsamplingNearest2D(Layer):
     name: str = ...
     def __init__(
         self,
-        size: Optional[IntSequence | Tensor] = ...,
-        scale_factor: Optional[Numberic | NumbericSequence | Tensor] = ...,
+        size: IntSequence | Tensor | None = ...,
+        scale_factor: Numberic | NumbericSequence | Tensor | None = ...,
         data_format: DataLayout1DVariant | DataLayout2D | DataLayout3D = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, x: Tensor) -> Tensor: ...
     def extra_repr(self) -> Tensor: ...
@@ -85,10 +85,10 @@ class UpsamplingBilinear2D(Layer):
     name: str = ...
     def __init__(
         self,
-        size: Optional[IntSequence | Tensor] = ...,
-        scale_factor: Optional[Numberic | NumbericSequence | Tensor] = ...,
+        size: IntSequence | Tensor | None = ...,
+        scale_factor: Numberic | NumbericSequence | Tensor | None = ...,
         data_format: DataLayout1DVariant | DataLayout2D | DataLayout3D = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, x: Tensor) -> Tensor: ...
     def extra_repr(self) -> Tensor: ...
@@ -102,9 +102,9 @@ class Bilinear(Layer):
         in1_features: int,
         in2_features: int,
         out_features: int,
-        weight_attr: Optional[ParamAttr] = ...,
-        bias_attr: Optional[ParamAttr] = ...,
-        name: Optional[str] = ...,
+        weight_attr: ParamAttr | None = ...,
+        bias_attr: ParamAttr | None = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, x1: Tensor, x2: Tensor) -> Tensor: ...
     def extra_repr(self) -> Tensor: ...
@@ -118,9 +118,9 @@ class Dropout(Layer):
     def __init__(
         self,
         p: float = ...,
-        axis: Optional[int | IntSequence] = ...,
+        axis: int | IntSequence | None = ...,
         mode: Literal["upscale_in_train", "downscale_in_infer"] = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, input: Tensor) -> Tensor: ...
     def extra_repr(self) -> Tensor: ...
@@ -134,7 +134,7 @@ class Dropout2D(Layer):
         self,
         p: float = ...,
         data_format: DataLayout2D = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, input: Tensor) -> Tensor: ...
     def extra_repr(self) -> Tensor: ...
@@ -148,7 +148,7 @@ class Dropout3D(Layer):
         self,
         p: float = ...,
         data_format: DataLayout3D = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, input: Tensor) -> Tensor: ...
     def extra_repr(self) -> Tensor: ...
@@ -157,7 +157,7 @@ class Dropout3D(Layer):
 class AlphaDropout(Layer):
     p: Any = ...
     name: str = ...
-    def __init__(self, p: float = ..., name: Optional[str] = ...) -> None: ...
+    def __init__(self, p: float = ..., name: str | None = ...) -> None: ...
     def forward(self, input: Tensor) -> Tensor: ...
     def extra_repr(self) -> Tensor: ...
     __call__ = forward
@@ -169,7 +169,7 @@ class Pad1D(Layer):
         mode: Literal["constant", "reflect", "replicate", "circular"] = ...,
         value: float = ...,
         data_format: DataLayout1D = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, x: Tensor) -> Tensor: ...
     def extra_repr(self) -> Tensor: ...
@@ -182,7 +182,7 @@ class Pad2D(Layer):
         mode: Literal["constant", "reflect", "replicate", "circular"] = ...,
         value: float = ...,
         data_format: DataLayout2D = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, x: Tensor) -> Tensor: ...
     def extra_repr(self) -> Tensor: ...
@@ -193,7 +193,7 @@ class ZeroPad2D(Layer):
         self,
         padding: int | IntSequence | Tensor,
         data_format: DataLayout2D = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, x: Tensor) -> Tensor: ...
     def extra_repr(self) -> Tensor: ...
@@ -206,7 +206,7 @@ class Pad3D(Layer):
         mode: Literal["constant", "reflect", "replicate", "circular"] = ...,
         value: float = ...,
         data_format: DataLayout3D = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, x: Tensor) -> Tensor: ...
     def extra_repr(self) -> Tensor: ...
@@ -224,10 +224,10 @@ class Embedding(Layer):
         self,
         num_embeddings: int,
         embedding_dim: int,
-        padding_idx: Optional[int] = ...,
+        padding_idx: int | None = ...,
         sparse: bool = ...,
-        weight_attr: Optional[ParamAttr] = ...,
-        name: Optional[str] = ...,
+        weight_attr: ParamAttr | None = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, x: Tensor) -> Tensor: ...
     def extra_repr(self) -> Tensor: ...
@@ -245,7 +245,7 @@ class Unfold(Layer):
         dilations: int = ...,
         paddings: int = ...,
         strides: int = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, input: Tensor) -> Tensor: ...
     def extra_repr(self) -> Tensor: ...
@@ -265,7 +265,7 @@ class Fold(Layer):
         dilations: int | IntSequence = ...,
         paddings: int | IntSequence = ...,
         strides: int | IntSequence = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, input: Tensor) -> Tensor: ...
     def extra_repr(self) -> Tensor: ...

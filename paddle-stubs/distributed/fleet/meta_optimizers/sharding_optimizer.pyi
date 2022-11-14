@@ -33,9 +33,9 @@ class ShardingOptimizer(MetaOptimizerBase):
     def minimize_impl(
         self,
         loss: Any,
-        startup_program: Optional[Any] = ...,
-        parameter_list: Optional[Any] = ...,
-        no_grad_set: Optional[Any] = ...,
+        startup_program: Any | None = ...,
+        parameter_list: Any | None = ...,
+        no_grad_set: Any | None = ...,
     ): ...
     def collect_segment(self, segment: Any, op_idx: Any, block: Any): ...
     def create_persistable_gradients_and_insert_merge_ops(

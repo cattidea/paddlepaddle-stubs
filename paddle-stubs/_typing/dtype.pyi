@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Any, Optional
+from typing import Any
 
 import numpy as np
 from typing_extensions import Literal
@@ -51,4 +51,4 @@ _DTypeNumpy = (
     | np.dtype[Any]
 )
 
-DTypeLike = Optional[dtype | _DTypeNumpy | _DTypeString]
+DTypeLike = dtype | _DTypeNumpy | _DTypeString | None

@@ -14,6 +14,6 @@ def check_saved_vars_try_dump(
     feed_config: Any,
     fetch_config: Any,
     batch_size: int = ...,
-    save_filename: Optional[str] = ...,
+    save_filename: str | None = ...,
 ): ...
 def parse_program(program: Any, output_dir: Any) -> None: ...

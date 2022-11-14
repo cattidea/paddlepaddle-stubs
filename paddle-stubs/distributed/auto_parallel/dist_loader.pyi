@@ -20,8 +20,8 @@ class DistributedDataLoader(metaclass=abc.ABCMeta):
         dataset: Any,
         batch_size: int = ...,
         epochs: int = ...,
-        data_parallel_world_size: Optional[Any] = ...,
-        data_parallel_rank: Optional[Any] = ...,
+        data_parallel_world_size: Any | None = ...,
+        data_parallel_rank: Any | None = ...,
         drop_last: bool = ...,
     ) -> None: ...
     @abc.abstractmethod
@@ -40,9 +40,9 @@ class NonIterableGeneratorLoader(DistributedDataLoader):
         places: Any,
         batch_size: int = ...,
         epochs: int = ...,
-        steps_per_epoch: Optional[Any] = ...,
-        data_parallel_world_size: Optional[Any] = ...,
-        data_parallel_rank: Optional[Any] = ...,
+        steps_per_epoch: Any | None = ...,
+        data_parallel_world_size: Any | None = ...,
+        data_parallel_rank: Any | None = ...,
         drop_last: bool = ...,
         inputs: Any = ...,
     ) -> None: ...

@@ -9,9 +9,9 @@ class DistributedOptimizerImplBase:
     def minimize(
         self,
         losses: Any,
-        startup_program: Optional[Any] = ...,
-        parameter_list: Optional[Any] = ...,
-        no_grad_set: Optional[Any] = ...,
+        startup_program: Any | None = ...,
+        parameter_list: Any | None = ...,
+        no_grad_set: Any | None = ...,
     ) -> None: ...
 
 class DistributedAdam(DistributedOptimizerImplBase):

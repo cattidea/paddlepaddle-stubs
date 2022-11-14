@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Optional, Sequence
+from typing import Sequence
 
 from typing_extensions import NotRequired
 
@@ -23,12 +23,12 @@ class Adam(Optimizer):
         beta2: float | Tensor = ...,
         epsilon: float = ...,
         # TODO: Currently, pyright throws an error at below line.
-        # parameters: Optional[Sequence[Tensor] | Sequence[AdamParameterConfig]] = ...,
-        parameters: Optional[Sequence[Tensor | AdamParameterConfig]] = ...,
-        weight_decay: Optional[float | WeightDecayRegularizer] = ...,
-        grad_clip: Optional[GradientClipBase] = ...,
+        # parameters: Sequence[Tensor] | Sequence[AdamParameterConfig] | None = ...,
+        parameters: Sequence[Tensor | AdamParameterConfig] | None = ...,
+        weight_decay: float | WeightDecayRegularizer | None = ...,
+        grad_clip: GradientClipBase | None = ...,
         lazy_mode: bool = ...,
         multi_precision: bool = ...,
         use_multi_tensor: bool = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...

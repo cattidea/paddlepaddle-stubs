@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Any, Optional
+from typing import Any
 
 from ... import Tensor, nn
 
@@ -15,7 +15,7 @@ class ConvPoolLayer(nn.Layer):
         padding: Any,
         stdv: Any,
         groups: int = ...,
-        act: Optional[Any] = ...,
+        act: Any | None = ...,
     ) -> None: ...
     def forward(self, inputs: Any) -> Tensor: ...
 

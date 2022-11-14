@@ -34,8 +34,8 @@ class AutoParallelizer:
         self,
         loss: Any,
         startup_program: Any,
-        parameter_list: Optional[Any] = ...,
-        no_grad_set: Optional[Any] = ...,
-        callbacks: Optional[Any] = ...,
+        parameter_list: Any | None = ...,
+        no_grad_set: Any | None = ...,
+        callbacks: Any | None = ...,
     ): ...
     def __deepcopy__(self, memo: Any): ...

@@ -4,7 +4,7 @@ from typing import Any, Optional
 
 class Sampler:
     data_source: Any = ...
-    def __init__(self, data_source: Optional[Any] = ...) -> None: ...
+    def __init__(self, data_source: Any | None = ...) -> None: ...
     def __iter__(self) -> Any: ...
 
 class SequenceSampler(Sampler):
@@ -21,8 +21,8 @@ class RandomSampler(Sampler):
         self,
         data_source: Any,
         replacement: bool = ...,
-        num_samples: Optional[Any] = ...,
-        generator: Optional[Any] = ...,
+        num_samples: Any | None = ...,
+        generator: Any | None = ...,
     ) -> None: ...
     @property
     def num_samples(self): ...

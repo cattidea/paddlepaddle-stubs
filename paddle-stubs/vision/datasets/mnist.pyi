@@ -23,12 +23,12 @@ class MNIST(Dataset):
     dtype: Any = ...
     def __init__(
         self,
-        image_path: Optional[Any] = ...,
-        label_path: Optional[Any] = ...,
+        image_path: Any | None = ...,
+        label_path: Any | None = ...,
         mode: str = ...,
-        transform: Optional[Any] = ...,
+        transform: Any | None = ...,
         download: bool = ...,
-        backend: Optional[Any] = ...,
+        backend: Any | None = ...,
     ) -> None: ...
     def __getitem__(self, idx: Any): ...
     def __len__(self): ...

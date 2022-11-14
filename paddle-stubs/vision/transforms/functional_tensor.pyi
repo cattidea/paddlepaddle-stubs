@@ -9,8 +9,8 @@ def rotate(
     angle: Any,
     interpolation: str = ...,
     expand: bool = ...,
-    center: Optional[Any] = ...,
-    fill: Optional[Any] = ...,
+    center: Any | None = ...,
+    fill: Any | None = ...,
     data_format: str = ...,
 ): ...
 def vflip(img: Any, data_format: str = ...): ...

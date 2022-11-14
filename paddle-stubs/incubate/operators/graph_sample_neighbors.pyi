@@ -8,10 +8,10 @@ def graph_sample_neighbors(
     row: Any,
     colptr: Any,
     input_nodes: Any,
-    eids: Optional[Any] = ...,
-    perm_buffer: Optional[Any] = ...,
+    eids: Any | None = ...,
+    perm_buffer: Any | None = ...,
     sample_size: int = ...,
     return_eids: bool = ...,
     flag_perm_buffer: bool = ...,
-    name: Optional[str] = ...,
+    name: str | None = ...,
 ): ...

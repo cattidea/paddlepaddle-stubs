@@ -8,7 +8,7 @@ def scope_guard(scope: Any) -> None: ...
 class FetchHandler:
     var_dict: Any = ...
     period_secs: Any = ...
-    def __init__(self, var_dict: Optional[Any] = ..., period_secs: int = ...) -> None: ...
+    def __init__(self, var_dict: Any | None = ..., period_secs: int = ...) -> None: ...
     def handler(self, res_dict: Any) -> None: ...
     @staticmethod
     def help() -> None: ...
@@ -29,16 +29,16 @@ class Executor:
     var_caches: Any = ...
     pruned_program_caches: Any = ...
     pruned_program_scope_caches: Any = ...
-    def __init__(self, place: Optional[Any] = ...) -> None: ...
+    def __init__(self, place: Any | None = ...) -> None: ...
     def close(self) -> None: ...
     def run(
         self,
-        program: Optional[Any] = ...,
-        feed: Optional[Any] = ...,
-        fetch_list: Optional[Any] = ...,
+        program: Any | None = ...,
+        feed: Any | None = ...,
+        fetch_list: Any | None = ...,
         feed_var_name: str = ...,
         fetch_var_name: str = ...,
-        scope: Optional[Any] = ...,
+        scope: Any | None = ...,
         return_numpy: bool = ...,
         use_program_cache: bool = ...,
         return_merged: bool = ...,
@@ -46,35 +46,35 @@ class Executor:
     ): ...
     def infer_from_dataset(
         self,
-        program: Optional[Any] = ...,
-        dataset: Optional[Any] = ...,
-        scope: Optional[Any] = ...,
+        program: Any | None = ...,
+        dataset: Any | None = ...,
+        scope: Any | None = ...,
         thread: int = ...,
         debug: bool = ...,
-        fetch_list: Optional[Any] = ...,
-        fetch_info: Optional[Any] = ...,
+        fetch_list: Any | None = ...,
+        fetch_info: Any | None = ...,
         print_period: int = ...,
-        fetch_handler: Optional[Any] = ...,
+        fetch_handler: Any | None = ...,
     ): ...
     def start_heter_trainer(
         self,
-        program: Optional[Any] = ...,
-        scope: Optional[Any] = ...,
+        program: Any | None = ...,
+        scope: Any | None = ...,
         debug: bool = ...,
-        fetch_list: Optional[Any] = ...,
-        fetch_info: Optional[Any] = ...,
+        fetch_list: Any | None = ...,
+        fetch_info: Any | None = ...,
         print_period: int = ...,
-        fetch_handler: Optional[Any] = ...,
+        fetch_handler: Any | None = ...,
     ): ...
     def train_from_dataset(
         self,
-        program: Optional[Any] = ...,
-        dataset: Optional[Any] = ...,
-        scope: Optional[Any] = ...,
+        program: Any | None = ...,
+        dataset: Any | None = ...,
+        scope: Any | None = ...,
         thread: int = ...,
         debug: bool = ...,
-        fetch_list: Optional[Any] = ...,
-        fetch_info: Optional[Any] = ...,
+        fetch_list: Any | None = ...,
+        fetch_info: Any | None = ...,
         print_period: int = ...,
-        fetch_handler: Optional[Any] = ...,
+        fetch_handler: Any | None = ...,
     ): ...

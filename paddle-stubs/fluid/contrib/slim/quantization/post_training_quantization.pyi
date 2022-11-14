@@ -5,16 +5,16 @@ from typing import Any, Optional
 class PostTrainingQuantization:
     def __init__(
         self,
-        executor: Optional[Any] = ...,
-        scope: Optional[Any] = ...,
-        model_dir: Optional[Any] = ...,
-        model_filename: Optional[str] = ...,
-        params_filename: Optional[str] = ...,
-        batch_generator: Optional[Any] = ...,
-        sample_generator: Optional[Any] = ...,
-        data_loader: Optional[Any] = ...,
+        executor: Any | None = ...,
+        scope: Any | None = ...,
+        model_dir: Any | None = ...,
+        model_filename: str | None = ...,
+        params_filename: str | None = ...,
+        batch_generator: Any | None = ...,
+        sample_generator: Any | None = ...,
+        data_loader: Any | None = ...,
         batch_size: int = ...,
-        batch_nums: Optional[Any] = ...,
+        batch_nums: Any | None = ...,
         algo: str = ...,
         hist_percent: float = ...,
         quantizable_op_type: Any = ...,
@@ -29,23 +29,23 @@ class PostTrainingQuantization:
         onnx_format: bool = ...,
         optimize_model: bool = ...,
         is_use_cache_file: bool = ...,
-        skip_tensor_list: Optional[Any] = ...,
-        cache_dir: Optional[Any] = ...,
+        skip_tensor_list: Any | None = ...,
+        cache_dir: Any | None = ...,
     ) -> None: ...
     def quantize(self): ...
     def save_quantized_model(
-        self, save_model_path: Any, model_filename: Optional[str] = ..., params_filename: Optional[str] = ...
+        self, save_model_path: Any, model_filename: str | None = ..., params_filename: str | None = ...
     ) -> None: ...
 
 class WeightQuantization:
     def __init__(
-        self, model_dir: Any, model_filename: Optional[str] = ..., params_filename: Optional[str] = ...
+        self, model_dir: Any, model_filename: str | None = ..., params_filename: str | None = ...
     ) -> None: ...
     def quantize_weight_to_int(
         self,
         save_model_dir: Any,
-        save_model_filename: Optional[str] = ...,
-        save_params_filename: Optional[str] = ...,
+        save_model_filename: str | None = ...,
+        save_params_filename: str | None = ...,
         quantizable_op_type: Any = ...,
         weight_bits: int = ...,
         weight_quantize_type: str = ...,

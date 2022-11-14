@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Any, Optional
+from typing import Any
 
 from typing_extensions import Literal
 
@@ -19,10 +19,10 @@ class _InstanceNormBase(Layer):
         num_features: int,
         epsilon: float = ...,
         momentum: float = ...,
-        weight_attr: Optional[ParamAttr] = ...,
-        bias_attr: Optional[ParamAttr | bool] = ...,
+        weight_attr: ParamAttr | None = ...,
+        bias_attr: ParamAttr | bool | None = ...,
         data_format: DataLayoutND = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, input: Tensor) -> Tensor: ...
     __call__ = forward
@@ -33,10 +33,10 @@ class InstanceNorm1D(_InstanceNormBase):
         num_features: int,
         epsilon: float = ...,
         momentum: float = ...,
-        weight_attr: Optional[ParamAttr] = ...,
-        bias_attr: Optional[ParamAttr | bool] = ...,
+        weight_attr: ParamAttr | None = ...,
+        bias_attr: ParamAttr | bool | None = ...,
         data_format: DataLayout1D = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
 
 class InstanceNorm2D(_InstanceNormBase):
@@ -45,10 +45,10 @@ class InstanceNorm2D(_InstanceNormBase):
         num_features: int,
         epsilon: float = ...,
         momentum: float = ...,
-        weight_attr: Optional[ParamAttr] = ...,
-        bias_attr: Optional[ParamAttr | bool] = ...,
+        weight_attr: ParamAttr | None = ...,
+        bias_attr: ParamAttr | bool | None = ...,
         data_format: DataLayout2D = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
 
 class InstanceNorm3D(_InstanceNormBase):
@@ -57,10 +57,10 @@ class InstanceNorm3D(_InstanceNormBase):
         num_features: int,
         epsilon: float = ...,
         momentum: float = ...,
-        weight_attr: Optional[ParamAttr] = ...,
-        bias_attr: Optional[ParamAttr | bool] = ...,
+        weight_attr: ParamAttr | None = ...,
+        bias_attr: ParamAttr | bool | None = ...,
         data_format: DataLayout3D = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
 
 class GroupNorm(Layer):
@@ -71,10 +71,10 @@ class GroupNorm(Layer):
         num_groups: int,
         num_channels: int,
         epsilon: float = ...,
-        weight_attr: Optional[ParamAttr | bool] = ...,
-        bias_attr: Optional[ParamAttr | bool] = ...,
+        weight_attr: ParamAttr | bool | None = ...,
+        bias_attr: ParamAttr | bool | None = ...,
         data_format: Literal["NCHW"] = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, input: Tensor) -> Tensor: ...
     __call__ = forward
@@ -86,9 +86,9 @@ class LayerNorm(Layer):
         self,
         normalized_shape: int | IntSequence,
         epsilon: float = ...,
-        weight_attr: Optional[ParamAttr | bool] = ...,
-        bias_attr: Optional[ParamAttr | bool] = ...,
-        name: Optional[str] = ...,
+        weight_attr: ParamAttr | bool | None = ...,
+        bias_attr: ParamAttr | bool | None = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, input: Tensor) -> Tensor: ...
     __call__ = forward
@@ -101,11 +101,11 @@ class _BatchNormBase(Layer):
         num_features: int,
         momentum: float = ...,
         epsilon: float = ...,
-        weight_attr: Optional[ParamAttr | bool] = ...,
-        bias_attr: Optional[ParamAttr | bool] = ...,
+        weight_attr: ParamAttr | bool | None = ...,
+        bias_attr: ParamAttr | bool | None = ...,
         data_format: DataLayoutND = ...,
-        use_global_stats: Optional[bool] = ...,
-        name: Optional[str] = ...,
+        use_global_stats: bool | None = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, input: Tensor) -> Tensor: ...
     __call__ = forward
@@ -116,11 +116,11 @@ class BatchNorm1D(_BatchNormBase):
         num_features: int,
         momentum: float = ...,
         epsilon: float = ...,
-        weight_attr: Optional[ParamAttr | bool] = ...,
-        bias_attr: Optional[ParamAttr | bool] = ...,
+        weight_attr: ParamAttr | bool | None = ...,
+        bias_attr: ParamAttr | bool | None = ...,
         data_format: DataLayout1D = ...,
-        use_global_stats: Optional[bool] = ...,
-        name: Optional[str] = ...,
+        use_global_stats: bool | None = ...,
+        name: str | None = ...,
     ) -> None: ...
 
 class BatchNorm2D(_BatchNormBase):
@@ -129,11 +129,11 @@ class BatchNorm2D(_BatchNormBase):
         num_features: int,
         momentum: float = ...,
         epsilon: float = ...,
-        weight_attr: Optional[ParamAttr | bool] = ...,
-        bias_attr: Optional[ParamAttr | bool] = ...,
+        weight_attr: ParamAttr | bool | None = ...,
+        bias_attr: ParamAttr | bool | None = ...,
         data_format: DataLayout2D = ...,
-        use_global_stats: Optional[bool] = ...,
-        name: Optional[str] = ...,
+        use_global_stats: bool | None = ...,
+        name: str | None = ...,
     ) -> None: ...
 
 class BatchNorm3D(_BatchNormBase):
@@ -142,11 +142,11 @@ class BatchNorm3D(_BatchNormBase):
         num_features: int,
         momentum: float = ...,
         epsilon: float = ...,
-        weight_attr: Optional[ParamAttr | bool] = ...,
-        bias_attr: Optional[ParamAttr | bool] = ...,
+        weight_attr: ParamAttr | bool | None = ...,
+        bias_attr: ParamAttr | bool | None = ...,
         data_format: DataLayout3D = ...,
-        use_global_stats: Optional[bool] = ...,
-        name: Optional[str] = ...,
+        use_global_stats: bool | None = ...,
+        name: str | None = ...,
     ) -> None: ...
 
 class SyncBatchNorm(_BatchNormBase):
@@ -155,10 +155,10 @@ class SyncBatchNorm(_BatchNormBase):
         num_features: int,
         momentum: float = ...,
         epsilon: float = ...,
-        weight_attr: Optional[ParamAttr | bool] = ...,
-        bias_attr: Optional[ParamAttr | bool] = ...,
+        weight_attr: ParamAttr | bool | None = ...,
+        bias_attr: ParamAttr | bool | None = ...,
         data_format: DataLayoutND = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     @classmethod
     def convert_sync_batchnorm(cls, layer: _BatchNormBase) -> SyncBatchNorm: ...
@@ -177,7 +177,7 @@ class LocalResponseNorm(Layer):
         beta: float = ...,
         k: float = ...,
         data_format: DataLayoutND = ...,
-        name: Optional[str] = ...,
+        name: str | None = ...,
     ) -> None: ...
     def forward(self, input: Tensor) -> Tensor: ...
     __call__ = forward

@@ -5,9 +5,9 @@ from typing import Any, Optional
 def sparse_coo_tensor(
     indices: Any,
     values: Any,
-    shape: Optional[Any] = ...,
-    dtype: Optional[Any] = ...,
-    place: Optional[Any] = ...,
+    shape: Any | None = ...,
+    dtype: Any | None = ...,
+    place: Any | None = ...,
     stop_gradient: bool = ...,
 ): ...
 def sparse_csr_tensor(
@@ -15,7 +15,7 @@ def sparse_csr_tensor(
     cols: Any,
     values: Any,
     shape: Any,
-    dtype: Optional[Any] = ...,
-    place: Optional[Any] = ...,
+    dtype: Any | None = ...,
+    place: Any | None = ...,
     stop_gradient: bool = ...,
 ): ...

@@ -30,7 +30,7 @@ class Movielens(Dataset):
     rand_seed: Any = ...
     def __init__(
         self,
-        data_file: Optional[Any] = ...,
+        data_file: Any | None = ...,
         mode: str = ...,
         test_ratio: float = ...,
         rand_seed: int = ...,

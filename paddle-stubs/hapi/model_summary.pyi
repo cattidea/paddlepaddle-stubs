@@ -1,7 +1,5 @@
 from __future__ import annotations
 
-from typing import Optional
-
 from typing_extensions import TypedDict
 
 from .. import nn
@@ -13,7 +11,7 @@ class ModelSummary(TypedDict):
 
 def summary(
     net: nn.Layer,
-    input_size: Optional[list[DynamicShapeLike]] = ...,
-    dtypes: Optional[DTypeLike] = ...,
-    input: Optional[Tensor] = ...,
+    input_size: list[DynamicShapeLike] | None = ...,
+    dtypes: DTypeLike | None = ...,
+    input: Tensor | None = ...,
 ) -> ModelSummary: ...

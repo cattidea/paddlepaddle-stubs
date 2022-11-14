@@ -16,7 +16,7 @@ class Tracer(core.Tracer):
         outputs: Any,
         attrs: Any,
         stop_gradient: bool = ...,
-        inplace_map: Optional[Any] = ...,
+        inplace_map: Any | None = ...,
     ) -> None: ...
     def eager_final_state_trace_op(
         self,
@@ -25,7 +25,7 @@ class Tracer(core.Tracer):
         outputs: Any,
         attrs: Any,
         stop_gradient: bool = ...,
-        inplace_map: Optional[Any] = ...,
+        inplace_map: Any | None = ...,
     ) -> None: ...
     def trace_op(
         self,
@@ -34,7 +34,7 @@ class Tracer(core.Tracer):
         outputs: Any,
         attrs: Any,
         stop_gradient: bool = ...,
-        inplace_map: Optional[Any] = ...,
+        inplace_map: Any | None = ...,
     ) -> None: ...
     def train_mode(self) -> None: ...
     def eval_mode(self) -> None: ...

@@ -18,22 +18,22 @@ class Collective(Fleet):
     main_program: Any = ...
     def __init__(self) -> None: ...
     def init_worker(self) -> None: ...
-    def run_worker(self, main_programs: Optional[Any] = ..., scopes: Optional[Any] = ...) -> None: ...
-    def init_server(self, model_dir: Optional[Any] = ...) -> None: ...
+    def run_worker(self, main_programs: Any | None = ..., scopes: Any | None = ...) -> None: ...
+    def init_server(self, model_dir: Any | None = ...) -> None: ...
     def run_server(self) -> None: ...
     def stop_worker(self) -> None: ...
-    def distributed_optimizer(self, optimizer: Any, strategy: Optional[Any] = ...): ...
+    def distributed_optimizer(self, optimizer: Any, strategy: Any | None = ...): ...
     def save_inference_model(
         self,
         executor: Any,
         dirname: Any,
-        feeded_var_names: Optional[Any] = ...,
-        target_vars: Optional[Any] = ...,
-        main_program: Optional[Any] = ...,
+        feeded_var_names: Any | None = ...,
+        target_vars: Any | None = ...,
+        main_program: Any | None = ...,
         export_for_deployment: bool = ...,
     ) -> None: ...
     def save_persistables(
-        self, executor: Any, dirname: Any, main_program: Optional[Any] = ..., filename: Optional[str] = ...
+        self, executor: Any, dirname: Any, main_program: Any | None = ..., filename: str | None = ...
     ) -> None: ...
     def save_checkpoint(
         self,
@@ -42,7 +42,7 @@ class Collective(Fleet):
         trainer_id: Any,
         train_status: Any,
         fs: Any,
-        main_program: Optional[Any] = ...,
+        main_program: Any | None = ...,
         local_cache_path: str = ...,
         remain_all_checkpoint: bool = ...,
     ): ...
@@ -53,7 +53,7 @@ class Collective(Fleet):
         trainer_id: Any,
         train_status: Any,
         fs: Any,
-        main_program: Optional[Any] = ...,
+        main_program: Any | None = ...,
         local_cache_path: str = ...,
         ignore_empty: bool = ...,
     ): ...
@@ -75,14 +75,14 @@ class DistributedStrategy(fluid.BuildStrategy):
     def __init__(self) -> None: ...
 
 class CollectiveOpBasedOptimizer(DistributedOptimizer):
-    def __init__(self, optimizer: Any, strategy: Optional[Any] = ...) -> None: ...
+    def __init__(self, optimizer: Any, strategy: Any | None = ...) -> None: ...
     def backward(
         self,
         loss: Any,
-        startup_program: Optional[Any] = ...,
-        parameter_list: Optional[Any] = ...,
-        no_grad_set: Optional[Any] = ...,
-        callbacks: Optional[Any] = ...,
+        startup_program: Any | None = ...,
+        parameter_list: Any | None = ...,
+        no_grad_set: Any | None = ...,
+        callbacks: Any | None = ...,
     ): ...
     def apply_gradients(self, params_grads: Any): ...
 
@@ -92,17 +92,17 @@ class CollectiveOptimizer(DistributedOptimizer):
     def backward(
         self,
         loss: Any,
-        startup_program: Optional[Any] = ...,
-        parameter_list: Optional[Any] = ...,
-        no_grad_set: Optional[Any] = ...,
-        callbacks: Optional[Any] = ...,
+        startup_program: Any | None = ...,
+        parameter_list: Any | None = ...,
+        no_grad_set: Any | None = ...,
+        callbacks: Any | None = ...,
     ): ...
     def apply_gradients(self, params_grads: Any): ...
     def raiseOptimizeError(self, strategy_name: Any, optimize_name: Any) -> None: ...
     def minimize(
         self,
         loss: Any,
-        startup_program: Optional[Any] = ...,
-        parameter_list: Optional[Any] = ...,
-        no_grad_set: Optional[Any] = ...,
+        startup_program: Any | None = ...,
+        parameter_list: Any | None = ...,
+        no_grad_set: Any | None = ...,
     ): ...
