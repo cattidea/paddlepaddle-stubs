@@ -26,9 +26,7 @@ class FleetTranspiler(Fleet):
         main_program: Any | None = ...,
         export_for_deployment: bool = ...,
     ) -> None: ...
-    def save_persistables(
-        self, executor: Any, dirname: Any, main_program: Any | None = ..., **kwargs: Any
-    ) -> None: ...
+    def save_persistables(self, executor: Any, dirname: Any, main_program: Any | None = ..., **kwargs: Any) -> None: ...
 
 fleet: Any
 

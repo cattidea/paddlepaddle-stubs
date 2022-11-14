@@ -33,7 +33,7 @@ def cond(
     x: Tensor,
     # TODO: Only support "fro", "nuc", 1, -1, 2, -2, inf, -inf
     #       but now Literal does not support inf
-    p: Literal['fro', 'nuc'] | float | None = ...,
+    p: Literal["fro", "nuc"] | float | None = ...,
     name: str | None = ...,
 ) -> Tensor: ...
 def dot(x: Any, y: Any, name: str | None = ...): ...
@@ -109,6 +109,6 @@ def lstsq(
     x: Tensor,
     y: Tensor,
     rcond: float | None = ...,
-    driver: Literal['gels', 'gelsy', 'gelsd', 'gelss'] | None = ...,
+    driver: Literal["gels", "gelsy", "gelsd", "gelss"] | None = ...,
     name: str | None = ...,
 ) -> tuple[Tensor, Tensor, Tensor, Tensor]: ...
