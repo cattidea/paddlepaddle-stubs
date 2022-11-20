@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from typing_extensions import Literal
+from typing_extensions import Literal, TypeAlias
 
 from ..._typing import (
     DataLayout1D,
@@ -15,8 +15,8 @@ from ..._typing import (
 from ...framework import ParamAttr
 from .. import Layer
 
-PaddingSizeStr = Literal["valid", "same"]
-PaddingMode = Literal["zeros", "reflect", "replicate", "circular"]
+PaddingSizeStr: TypeAlias = Literal["valid", "same"]
+PaddingMode: TypeAlias = Literal["zeros", "reflect", "replicate", "circular"]
 
 class _ConvNd(Layer):
     output_padding: Any = ...

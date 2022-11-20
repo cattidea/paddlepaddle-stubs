@@ -5,14 +5,14 @@ from typing import Any, TypeVar
 
 import numpy.typing as npt
 from PIL.Image import Image as PILImage
-from typing_extensions import Literal
+from typing_extensions import Literal, TypeAlias
 
 from ..._typing import DataLayoutImage, NumbericSequence, Tensor
 from ..._typing.basic import IntSequence
 
 _DataT = TypeVar("_DataT", bound=Tensor | PILImage | npt.NDArray[Any])
-_InterpolationPil = Literal["nearest", "bilinear", "bicubic", "lanczos", "hamming"]
-_InterpolationCv2 = Literal["nearest", "bilinear", "area", "bicubic", "lanczos"]
+_InterpolationPil: TypeAlias = Literal["nearest", "bilinear", "bicubic", "lanczos", "hamming"]
+_InterpolationCv2: TypeAlias = Literal["nearest", "bilinear", "area", "bicubic", "lanczos"]
 
 class Compose:
     transforms: Any = ...

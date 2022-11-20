@@ -1,6 +1,7 @@
 from __future__ import annotations
 
-from typing import Any, Callable
+from collections.abc import Callable
+from typing import Any
 
 import numpy.typing as npt
 from typing_extensions import Literal, TypedDict
@@ -216,7 +217,7 @@ class CosineAnnealingDecay(LRScheduler):
         self,
         learning_rate: float,
         T_max: int,
-        eta_min: float | int = ...,
+        eta_min: float = ...,
         last_epoch: int = ...,
         verbose: bool = ...,
     ) -> None: ...

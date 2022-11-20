@@ -3,12 +3,12 @@ from __future__ import annotations
 from typing import Any
 
 from paddle.nn import Layer, LayerList
-from typing_extensions import Literal
+from typing_extensions import Literal, TypeAlias
 
 from ..._typing import DTypeLike, ShapeLike, Tensor
 from ...framework import ParamAttr
 
-RNNDirection = Literal["forward", "bidirect", "bidirectional"]
+RNNDirection: TypeAlias = Literal["forward", "bidirect", "bidirectional"]
 
 class RNNCellBase(Layer):
     shape: Any = ...

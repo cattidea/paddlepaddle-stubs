@@ -43,3 +43,7 @@ jobs:
       - name: Check types
         run: |
           just check
+
+      - name: Lint
+        run: |
+          just lint

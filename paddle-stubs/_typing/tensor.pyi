@@ -4,7 +4,7 @@ from collections.abc import Hashable, Iterable, Iterator, Sized
 from typing import Any, SupportsFloat, SupportsInt
 
 import numpy.typing as npt
-from typing_extensions import SupportsIndex
+from typing_extensions import SupportsIndex, TypeAlias
 
 from .basic import Numberic
 from .device import Place
@@ -14,9 +14,9 @@ from .shape import ShapeLike
 # `builtins.PyCapsule` unfortunately lacks annotations as of the moment;
 # use `Any` as a stopgap measure
 # @see also: https://github.com/numpy/numpy/blob/b6a3e837785eac58a2f68e126f4db7895ca047b3/numpy/__init__.pyi#L1465
-_PyCapsule = Any
+_PyCapsule: TypeAlias = Any  # noqa: Y047
 
-TensorLike = list["TensorLike"] | tuple["TensorLike", ...] | npt.NDArray[Any] | Tensor | Numberic
+TensorLike: TypeAlias = list[TensorLike] | tuple[TensorLike, ...] | npt.NDArray[Any] | Tensor | Numberic
 
 class Tensor(Sized, Iterable[Tensor], Hashable, SupportsFloat, SupportsInt, SupportsIndex):
     shape: list[int]

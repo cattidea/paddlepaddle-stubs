@@ -16,3 +16,6 @@ indent_size = 4
 
 [*{.md,rst}]
 indent_size = 3
+
+[.flake8]
+indent_size = 4

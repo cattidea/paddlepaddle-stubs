@@ -2,14 +2,14 @@ from __future__ import annotations
 
 from typing import Any
 
-from typing_extensions import Literal
+from typing_extensions import Literal, TypeAlias
 
 from ..._typing import Tensor
 from ...framework import ParamAttr
 from .. import Layer
 
-Reduction = Literal["none", "sum", "mean"]
-ReductionBatchMean = Literal[Reduction, "batchmean"]
+Reduction: TypeAlias = Literal["none", "sum", "mean"]
+ReductionBatchMean: TypeAlias = Literal[Reduction, "batchmean"]
 
 class BCEWithLogitsLoss(Layer):
     weight: Any = ...

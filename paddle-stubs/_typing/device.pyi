@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from typing_extensions import TypeAlias
+
 class Place: ...
 class CPUPlace(Place): ...
 
@@ -22,6 +24,6 @@ class MLUPlace(Place):
 class XPUPlace(Place):
     def __init__(self, id: int) -> None: ...
 
-PlaceLike = (
+PlaceLike: TypeAlias = (
     CPUPlace | CUDAPlace | CUDAPinnedPlace | NPUPlace | IPUPlace | CustomPlace | MLUPlace | XPUPlace | str
 )  # TODO: only support the literal like "dev:id"

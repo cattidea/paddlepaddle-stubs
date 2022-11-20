@@ -4,7 +4,7 @@ from typing import Any
 
 from paddle.framework import ParamAttr
 from paddle.nn import Layer
-from typing_extensions import Literal
+from typing_extensions import Literal, TypeAlias
 
 from ..._typing import (
     DataLayout1D,
@@ -18,7 +18,7 @@ from ..._typing import (
 )
 from ...fluid.dygraph import Flatten as Flatten
 
-InterpolationMode = Literal["linear", "bilinear", "trilinear", "nearest", "bicubic"]
+InterpolationMode: TypeAlias = Literal["linear", "bilinear", "trilinear", "nearest", "bicubic"]
 
 class Identity(Layer):
     def __init__(self, *args: Any, **kwargs: Any) -> None: ...

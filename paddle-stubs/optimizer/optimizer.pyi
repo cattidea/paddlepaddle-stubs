@@ -1,8 +1,9 @@
 from __future__ import annotations
 
-from typing import Any, Sequence
+from collections.abc import Sequence
+from typing import Any
 
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import NotRequired, TypeAlias, TypedDict
 
 from .._typing import Tensor
 from ..callbacks import Callback
@@ -11,7 +12,7 @@ from ..fluid.framework import Program
 from ..fluid.regularizer import WeightDecayRegularizer
 from .lr import LRScheduler as LRScheduler
 
-OptimizerStateDict = dict[str, Tensor]
+OptimizerStateDict: TypeAlias = dict[str, Tensor]
 
 class ParameterConfig(TypedDict):
     params: Sequence[Tensor]

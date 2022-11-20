@@ -3,7 +3,7 @@ from __future__ import annotations
 from typing import Any
 
 import numpy as np
-from typing_extensions import Literal
+from typing_extensions import Literal, TypeAlias
 
 class dtype:
     def __init__(self, arg0: int) -> None: ...
@@ -21,7 +21,7 @@ complex64: dtype
 complex128: dtype
 bool: dtype
 
-_DTypeString = Literal[
+_DTypeString: TypeAlias = Literal[
     "uint8",
     "int8",
     "int16",
@@ -36,7 +36,7 @@ _DTypeString = Literal[
     "bool",
 ]
 
-_DTypeNumpy = (
+_DTypeNumpy: TypeAlias = (
     type[np.uint8]
     | type[np.int8]
     | type[np.int16]
@@ -51,4 +51,4 @@ _DTypeNumpy = (
     | np.dtype[Any]
 )
 
-DTypeLike = dtype | _DTypeNumpy | _DTypeString | None
+DTypeLike: TypeAlias = dtype | _DTypeNumpy | _DTypeString | None

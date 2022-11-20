@@ -1,6 +1,8 @@
 from __future__ import annotations
 
-from typing import Any, Iterator, OrderedDict
+from collections import OrderedDict
+from collections.abc import Iterator
+from typing import Any
 
 from .. import Layer
 

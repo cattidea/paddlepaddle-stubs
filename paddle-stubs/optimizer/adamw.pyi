@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Callable, Sequence
+from collections.abc import Callable, Sequence
 
 from .._typing import Tensor
 from ..fluid.clip import GradientClipBase
