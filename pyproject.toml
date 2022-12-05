@@ -33,7 +33,7 @@ pyright = "^1.1.263"
 Pillow = "^9.2.0"
 numpy = "1.21.6"
 paddlepaddle = "^2.4.0"
-flake8 = "^5.0.4"
+flake8 = "^6.0.0"
 flake8-pyi = "^22.10.0"
 
 [tool.black]
