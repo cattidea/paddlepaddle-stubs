@@ -34,7 +34,7 @@ Pillow = "^9.2.0"
 numpy = "1.21.6"
 paddlepaddle = "^2.4.0"
 flake8 = "^5.0.4"
-flake8-pyi = "^22.10.0"
+flake8-pyi = "^23.0.0"
 
 [tool.black]
 line-length = 120
