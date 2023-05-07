@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "paddlepaddle-stubs"
-version = "2.5.0-alpha.1"
+version = "2.5.0-alpha.2"
 description = ""
 authors = ["Nyakku Shigure <sigure.qaq@gmail.com>"]
 packages = [{ include = "paddle-stubs/**/*.pyi" }]
@@ -15,7 +15,6 @@ classifiers = [
   "Typing :: Typed",
   "Programming Language :: Python",
   "Programming Language :: Python :: 3",
-  "Programming Language :: Python :: 3.7",
   "Programming Language :: Python :: 3.8",
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
@@ -35,6 +34,7 @@ numpy = "1.24.3"
 paddlepaddle = "^2.4.0"
 flake8 = "^5.0.4"
 flake8-pyi = "^23.0.0"
+ruff = "^0.0.265"
 
 [tool.black]
 line-length = 120
@@ -50,6 +50,10 @@ ignore = ["paddle-stubs/fluid"]
 pythonVersion = "3.8"
 typeCheckingMode = "strict"
 reportMissingModuleSource = false
+
+[tool.ruff]
+include = ["paddle-stubs", "tests"]
+select = ["PYI", "UP"]
 
 [build-system]
 requires = ["poetry-core>=1.1.0"]

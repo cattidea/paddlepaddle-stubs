@@ -3,7 +3,7 @@ from __future__ import annotations
 from typing import Any
 
 import numpy as np
-from typing_extensions import Literal, TypeAlias
+from typing import Literal, TypeAlias
 
 class dtype:
     def __init__(self, arg0: int) -> None: ...

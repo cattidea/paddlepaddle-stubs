@@ -5,7 +5,7 @@ from typing import Any, TypeVar
 
 import numpy.typing as npt
 from PIL.Image import Image as PILImage
-from typing_extensions import Literal, TypeAlias
+from typing import Literal, TypeAlias
 
 from ..._typing import DataLayoutImage, NumbericSequence, Tensor
 from ..._typing.basic import IntSequence

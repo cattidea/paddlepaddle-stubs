@@ -38,6 +38,20 @@ lint:
     paddle-stubs/regularizer.pyi \
     paddle-stubs/signal.pyi \
     paddle-stubs/sysconfig.pyi
+  poetry run ruff --fix \
+    paddle-stubs/_typing/* \
+    paddle-stubs/hapi/hub.pyi \
+    paddle-stubs/hapi/model.pyi \
+    paddle-stubs/hapi/model_summary.pyi \
+    paddle-stubs/optimizer/* \
+    paddle-stubs/nn/layer/* \
+    paddle-stubs/vision/models/* \
+    paddle-stubs/vision/transforms/transforms.pyi \
+    paddle-stubs/hub.pyi \
+    paddle-stubs/linalg.pyi \
+    paddle-stubs/regularizer.pyi \
+    paddle-stubs/signal.pyi \
+    paddle-stubs/sysconfig.pyi
 
 build:
   poetry build

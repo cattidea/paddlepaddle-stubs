@@ -5,7 +5,7 @@ from typing import Any
 
 import numpy.typing as npt
 from paddle import nn
-from typing_extensions import Literal
+from typing import Literal
 
 from .._typing import DTypeLike, DynamicShapeLike, Tensor
 from ..callbacks import Callback

@@ -1,8 +1,6 @@
 from __future__ import annotations
 
-from typing import Any, List  # noqa: Y022
-
-from typing_extensions import Literal
+from typing import Any, List, Literal  # noqa: Y022, UP035
 
 from ..nn import Layer
 
@@ -15,7 +13,7 @@ def list(
     repo_dir: str,
     source: Literal["github", "gitee", "local"] = ...,
     force_reload: bool = ...,
-) -> List[Any]: ...  # list[Any], but list has conflicts with function name
+) -> List[Any]: ...  # noqa: UP006 list[Any], but list has conflicts with function name
 def help(
     repo_dir: str,
     model: str,

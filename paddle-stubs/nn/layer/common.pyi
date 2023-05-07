@@ -4,7 +4,7 @@ from typing import Any
 
 from paddle.framework import ParamAttr
 from paddle.nn import Layer
-from typing_extensions import Literal, TypeAlias
+from typing import Literal, TypeAlias
 
 from ..._typing import (
     DataLayout1D,

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing_extensions import Literal, TypeAlias
+from typing import Literal, TypeAlias
 
 DataLayout0D: TypeAlias = Literal["NC"]
 DataLayout1D: TypeAlias = Literal["NCL", "NLC"]

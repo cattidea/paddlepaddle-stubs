@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing_extensions import TypeAlias
+from typing import TypeAlias
 
 class Place: ...
 class CPUPlace(Place): ...

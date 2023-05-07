@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from typing_extensions import Literal, TypeAlias
+from typing import Literal, TypeAlias
 
 from ..._typing import Tensor
 from ...framework import ParamAttr

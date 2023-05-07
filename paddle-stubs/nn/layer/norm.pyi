@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from typing_extensions import Literal
+from typing import Literal
 
 from ..._typing import DataLayout1D, DataLayout2D, DataLayout3D, DataLayoutND, Tensor
 from ..._typing.basic import IntSequence

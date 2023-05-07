@@ -4,7 +4,7 @@ from collections.abc import Hashable, Iterable, Iterator, Sized
 from typing import Any, SupportsFloat, SupportsInt
 
 import numpy.typing as npt
-from typing_extensions import SupportsIndex, TypeAlias
+from typing import SupportsIndex, TypeAlias
 
 from .basic import Numberic
 from .device import Place

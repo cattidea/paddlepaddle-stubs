@@ -4,7 +4,7 @@ from collections.abc import Sequence
 from typing import Any, TypeVar
 
 import numpy as np
-from typing_extensions import TypeAlias
+from typing import TypeAlias
 
 Numberic: TypeAlias = int | float | complex | np.number[Any]
 

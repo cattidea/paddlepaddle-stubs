@@ -3,7 +3,7 @@ from __future__ import annotations
 from typing import Any
 
 from paddle.nn import Layer, LayerList
-from typing_extensions import Literal, TypeAlias
+from typing import Literal, TypeAlias
 
 from ..._typing import DTypeLike, ShapeLike, Tensor
 from ...framework import ParamAttr

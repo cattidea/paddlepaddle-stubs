@@ -4,7 +4,8 @@ from collections.abc import Callable
 from typing import Any
 
 import numpy.typing as npt
-from typing_extensions import Literal, TypedDict
+from typing_extensions import TypedDict
+from typing import Literal
 
 from .._typing import Tensor
 
