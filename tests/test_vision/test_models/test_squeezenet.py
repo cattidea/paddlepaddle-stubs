@@ -15,17 +15,15 @@ def test_import():
     paddle.vision.squeezenet1_0
     paddle.vision.squeezenet1_1
 
-    from paddle.vision import SqueezeNet  # pyright: strict, reportUnusedImport=false
-    from paddle.vision import squeezenet1_0  # pyright: strict, reportUnusedImport=false
-    from paddle.vision import squeezenet1_1  # pyright: strict, reportUnusedImport=false
+    from paddle.vision import SqueezeNet  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import squeezenet1_0  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import squeezenet1_1  # pyright: ignore[reportUnusedImport]
+    from paddle.vision.models import SqueezeNet  # pyright: ignore[reportUnusedImport]
     from paddle.vision.models import (
-        SqueezeNet,  # pyright: strict, reportUnusedImport=false
+        squeezenet1_0,  # pyright: ignore[reportUnusedImport]
     )
     from paddle.vision.models import (
-        squeezenet1_0,  # pyright: strict, reportUnusedImport=false
-    )
-    from paddle.vision.models import (
-        squeezenet1_1,  # pyright: strict, reportUnusedImport=false
+        squeezenet1_1,  # pyright: ignore[reportUnusedImport]
     )
 
 

@@ -58,3 +58,14 @@ clean-builds:
   rm -rf build/
   rm -rf dist/
   rm -rf *.egg-info/
+
+ci-install:
+  poetry install --no-interaction --no-root
+
+ci-fmt-check:
+  poetry run isort --check-only .
+  poetry run black --check --diff .
+  prettier --check '**/*.md'
+
+ci-lint:
+  just lint

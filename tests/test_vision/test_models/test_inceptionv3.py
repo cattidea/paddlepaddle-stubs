@@ -13,14 +13,10 @@ def test_import():
     paddle.vision.InceptionV3
     paddle.vision.inception_v3
 
-    from paddle.vision import InceptionV3  # pyright: strict, reportUnusedImport=false
-    from paddle.vision import inception_v3  # pyright: strict, reportUnusedImport=false
-    from paddle.vision.models import (
-        InceptionV3,  # pyright: strict, reportUnusedImport=false
-    )
-    from paddle.vision.models import (
-        inception_v3,  # pyright: strict, reportUnusedImport=false
-    )
+    from paddle.vision import InceptionV3  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import inception_v3  # pyright: ignore[reportUnusedImport]
+    from paddle.vision.models import InceptionV3  # pyright: ignore[reportUnusedImport]
+    from paddle.vision.models import inception_v3  # pyright: ignore[reportUnusedImport]
 
 
 def test_creation():

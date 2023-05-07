@@ -192,8 +192,8 @@ def test_multi_dot():
 
 def test_norm():
     np_input: npt.NDArray[np.float32] = np.arange(24).astype("float32") - 12  # type: ignore
-    np_input = np_input.reshape([2, 3, 4])  # type: ignore
-    x = paddle.to_tensor(np_input)
+    np_input: npt.NDArray[np.float32] = np_input.reshape([2, 3, 4])  # type: ignore
+    x = paddle.to_tensor(np_input)  # type: ignore
 
     out_fro = paddle.linalg.norm(x, p="fro", axis=[0, 1])
     assert_type(out_fro, Tensor)
@@ -206,9 +206,8 @@ def test_norm():
 
 
 def test_pinv():
-    x: npt.NDArray[np.float64] = paddle.arange(15).reshape((3, 5)).astype("float64")  # type: ignore
-    input = paddle.to_tensor(x)
-    out = paddle.linalg.pinv(input)
+    x: paddle.Tensor = paddle.arange(15).reshape((3, 5)).astype("float64")  # type: ignore
+    out = paddle.linalg.pinv(x)  # type: ignore
     assert_type(out, Tensor)
 
 

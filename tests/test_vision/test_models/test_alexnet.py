@@ -13,14 +13,10 @@ def test_import():
     paddle.vision.AlexNet
     paddle.vision.alexnet
 
-    from paddle.vision import AlexNet  # pyright: strict, reportUnusedImport=false
-    from paddle.vision import alexnet  # pyright: strict, reportUnusedImport=false
-    from paddle.vision.models import (
-        AlexNet,  # pyright: strict, reportUnusedImport=false
-    )
-    from paddle.vision.models import (
-        alexnet,  # pyright: strict, reportUnusedImport=false
-    )
+    from paddle.vision import AlexNet  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import alexnet  # pyright: ignore[reportUnusedImport]
+    from paddle.vision.models import AlexNet  # pyright: ignore[reportUnusedImport]
+    from paddle.vision.models import alexnet  # pyright: ignore[reportUnusedImport]
 
 
 def test_creation():

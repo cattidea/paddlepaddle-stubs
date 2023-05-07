@@ -13,14 +13,10 @@ def test_import():
     paddle.vision.GoogLeNet
     paddle.vision.googlenet
 
-    from paddle.vision import GoogLeNet  # pyright: strict, reportUnusedImport=false
-    from paddle.vision import googlenet  # pyright: strict, reportUnusedImport=false
-    from paddle.vision.models import (
-        GoogLeNet,  # pyright: strict, reportUnusedImport=false
-    )
-    from paddle.vision.models import (
-        googlenet,  # pyright: strict, reportUnusedImport=false
-    )
+    from paddle.vision import GoogLeNet  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import googlenet  # pyright: ignore[reportUnusedImport]
+    from paddle.vision.models import GoogLeNet  # pyright: ignore[reportUnusedImport]
+    from paddle.vision.models import googlenet  # pyright: ignore[reportUnusedImport]
 
 
 def test_creation():

@@ -19,16 +19,16 @@ def test_import():
     paddle.vision.vgg16
     paddle.vision.vgg19
 
-    from paddle.vision import VGG  # pyright: strict, reportUnusedImport=false
-    from paddle.vision import vgg11  # pyright: strict, reportUnusedImport=false
-    from paddle.vision import vgg13  # pyright: strict, reportUnusedImport=false
-    from paddle.vision import vgg16  # pyright: strict, reportUnusedImport=false
-    from paddle.vision import vgg19  # pyright: strict, reportUnusedImport=false
-    from paddle.vision.models import VGG  # pyright: strict, reportUnusedImport=false
-    from paddle.vision.models import vgg11  # pyright: strict, reportUnusedImport=false
-    from paddle.vision.models import vgg13  # pyright: strict, reportUnusedImport=false
-    from paddle.vision.models import vgg16  # pyright: strict, reportUnusedImport=false
-    from paddle.vision.models import vgg19  # pyright: strict, reportUnusedImport=false
+    from paddle.vision import VGG  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import vgg11  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import vgg13  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import vgg16  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import vgg19  # pyright: ignore[reportUnusedImport]
+    from paddle.vision.models import VGG  # pyright: ignore[reportUnusedImport]
+    from paddle.vision.models import vgg11  # pyright: ignore[reportUnusedImport]
+    from paddle.vision.models import vgg13  # pyright: ignore[reportUnusedImport]
+    from paddle.vision.models import vgg16  # pyright: ignore[reportUnusedImport]
+    from paddle.vision.models import vgg19  # pyright: ignore[reportUnusedImport]
 
 
 def test_creation():

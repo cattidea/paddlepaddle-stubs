@@ -21,30 +21,18 @@ def test_import():
     paddle.vision.densenet201
     paddle.vision.densenet264
 
-    from paddle.vision import DenseNet  # pyright: strict, reportUnusedImport=false
-    from paddle.vision import densenet121  # pyright: strict, reportUnusedImport=false
-    from paddle.vision import densenet161  # pyright: strict, reportUnusedImport=false
-    from paddle.vision import densenet169  # pyright: strict, reportUnusedImport=false
-    from paddle.vision import densenet201  # pyright: strict, reportUnusedImport=false
-    from paddle.vision import densenet264  # pyright: strict, reportUnusedImport=false
-    from paddle.vision.models import (
-        DenseNet,  # pyright: strict, reportUnusedImport=false
-    )
-    from paddle.vision.models import (
-        densenet121,  # pyright: strict, reportUnusedImport=false
-    )
-    from paddle.vision.models import (
-        densenet161,  # pyright: strict, reportUnusedImport=false
-    )
-    from paddle.vision.models import (
-        densenet169,  # pyright: strict, reportUnusedImport=false
-    )
-    from paddle.vision.models import (
-        densenet201,  # pyright: strict, reportUnusedImport=false
-    )
-    from paddle.vision.models import (
-        densenet264,  # pyright: strict, reportUnusedImport=false
-    )
+    from paddle.vision import DenseNet  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import densenet121  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import densenet161  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import densenet169  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import densenet201  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import densenet264  # pyright: ignore[reportUnusedImport]
+    from paddle.vision.models import DenseNet  # pyright: ignore[reportUnusedImport]
+    from paddle.vision.models import densenet121  # pyright: ignore[reportUnusedImport]
+    from paddle.vision.models import densenet161  # pyright: ignore[reportUnusedImport]
+    from paddle.vision.models import densenet169  # pyright: ignore[reportUnusedImport]
+    from paddle.vision.models import densenet201  # pyright: ignore[reportUnusedImport]
+    from paddle.vision.models import densenet264  # pyright: ignore[reportUnusedImport]
 
 
 def test_creation():

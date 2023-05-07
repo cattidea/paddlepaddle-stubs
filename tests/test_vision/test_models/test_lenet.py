@@ -11,8 +11,8 @@ def test_import():
 
     paddle.vision.LeNet
 
-    from paddle.vision import LeNet  # pyright: strict, reportUnusedImport=false
-    from paddle.vision.models import LeNet  # pyright: strict, reportUnusedImport=false
+    from paddle.vision import LeNet  # pyright: ignore[reportUnusedImport]
+    from paddle.vision.models import LeNet  # pyright: ignore[reportUnusedImport]
 
 
 def test_creation():

@@ -13,14 +13,10 @@ def test_import():
     paddle.vision.MobileNetV1
     paddle.vision.mobilenet_v1
 
-    from paddle.vision import MobileNetV1  # pyright: strict, reportUnusedImport=false
-    from paddle.vision import mobilenet_v1  # pyright: strict, reportUnusedImport=false
-    from paddle.vision.models import (
-        MobileNetV1,  # pyright: strict, reportUnusedImport=false
-    )
-    from paddle.vision.models import (
-        mobilenet_v1,  # pyright: strict, reportUnusedImport=false
-    )
+    from paddle.vision import MobileNetV1  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import mobilenet_v1  # pyright: ignore[reportUnusedImport]
+    from paddle.vision.models import MobileNetV1  # pyright: ignore[reportUnusedImport]
+    from paddle.vision.models import mobilenet_v1  # pyright: ignore[reportUnusedImport]
 
 
 def test_creation():

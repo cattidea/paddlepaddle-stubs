@@ -17,29 +17,21 @@ def test_import():
     paddle.vision.mobilenet_v3_small
     paddle.vision.mobilenet_v3_large
 
-    from paddle.vision import (
-        MobileNetV3Large,  # pyright: strict, reportUnusedImport=false
-    )
-    from paddle.vision import (
-        MobileNetV3Small,  # pyright: strict, reportUnusedImport=false
-    )
-    from paddle.vision import (
-        mobilenet_v3_large,  # pyright: strict, reportUnusedImport=false
-    )
-    from paddle.vision import (
-        mobilenet_v3_small,  # pyright: strict, reportUnusedImport=false
+    from paddle.vision import MobileNetV3Large  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import MobileNetV3Small  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import mobilenet_v3_large  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import mobilenet_v3_small  # pyright: ignore[reportUnusedImport]
+    from paddle.vision.models import (
+        MobileNetV3Large,  # pyright: ignore[reportUnusedImport]
     )
     from paddle.vision.models import (
-        MobileNetV3Large,  # pyright: strict, reportUnusedImport=false
+        MobileNetV3Small,  # pyright: ignore[reportUnusedImport]
     )
     from paddle.vision.models import (
-        MobileNetV3Small,  # pyright: strict, reportUnusedImport=false
+        mobilenet_v3_large,  # pyright: ignore[reportUnusedImport]
     )
     from paddle.vision.models import (
-        mobilenet_v3_large,  # pyright: strict, reportUnusedImport=false
-    )
-    from paddle.vision.models import (
-        mobilenet_v3_small,  # pyright: strict, reportUnusedImport=false
+        mobilenet_v3_small,  # pyright: ignore[reportUnusedImport]
     )
 
 

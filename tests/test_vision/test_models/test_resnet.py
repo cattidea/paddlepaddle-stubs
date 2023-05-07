@@ -37,75 +37,49 @@ def test_import():
     paddle.vision.wide_resnet50_2
     paddle.vision.wide_resnet101_2
 
-    from paddle.vision import ResNet  # pyright: strict, reportUnusedImport=false
-    from paddle.vision import resnet18  # pyright: strict, reportUnusedImport=false
-    from paddle.vision import resnet34  # pyright: strict, reportUnusedImport=false
-    from paddle.vision import resnet50  # pyright: strict, reportUnusedImport=false
-    from paddle.vision import resnet101  # pyright: strict, reportUnusedImport=false
-    from paddle.vision import resnet152  # pyright: strict, reportUnusedImport=false
-    from paddle.vision import (
-        resnext50_32x4d,  # pyright: strict, reportUnusedImport=false
-    )
-    from paddle.vision import (
-        resnext50_64x4d,  # pyright: strict, reportUnusedImport=false
-    )
-    from paddle.vision import (
-        resnext101_32x4d,  # pyright: strict, reportUnusedImport=false
-    )
-    from paddle.vision import (
-        resnext101_64x4d,  # pyright: strict, reportUnusedImport=false
-    )
-    from paddle.vision import (
-        resnext152_32x4d,  # pyright: strict, reportUnusedImport=false
-    )
-    from paddle.vision import (
-        resnext152_64x4d,  # pyright: strict, reportUnusedImport=false
-    )
-    from paddle.vision import (
-        wide_resnet50_2,  # pyright: strict, reportUnusedImport=false
-    )
-    from paddle.vision import (
-        wide_resnet101_2,  # pyright: strict, reportUnusedImport=false
-    )
-    from paddle.vision.models import ResNet  # pyright: strict, reportUnusedImport=false
+    from paddle.vision import ResNet  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import resnet18  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import resnet34  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import resnet50  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import resnet101  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import resnet152  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import resnext50_32x4d  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import resnext50_64x4d  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import resnext101_32x4d  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import resnext101_64x4d  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import resnext152_32x4d  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import resnext152_64x4d  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import wide_resnet50_2  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import wide_resnet101_2  # pyright: ignore[reportUnusedImport]
+    from paddle.vision.models import ResNet  # pyright: ignore[reportUnusedImport]
+    from paddle.vision.models import resnet18  # pyright: ignore[reportUnusedImport]
+    from paddle.vision.models import resnet34  # pyright: ignore[reportUnusedImport]
+    from paddle.vision.models import resnet50  # pyright: ignore[reportUnusedImport]
+    from paddle.vision.models import resnet101  # pyright: ignore[reportUnusedImport]
+    from paddle.vision.models import resnet152  # pyright: ignore[reportUnusedImport]
     from paddle.vision.models import (
-        resnet18,  # pyright: strict, reportUnusedImport=false
+        resnext50_32x4d,  # pyright: ignore[reportUnusedImport]
     )
     from paddle.vision.models import (
-        resnet34,  # pyright: strict, reportUnusedImport=false
+        resnext50_64x4d,  # pyright: ignore[reportUnusedImport]
     )
     from paddle.vision.models import (
-        resnet50,  # pyright: strict, reportUnusedImport=false
+        resnext101_32x4d,  # pyright: ignore[reportUnusedImport]
     )
     from paddle.vision.models import (
-        resnet101,  # pyright: strict, reportUnusedImport=false
+        resnext101_64x4d,  # pyright: ignore[reportUnusedImport]
     )
     from paddle.vision.models import (
-        resnet152,  # pyright: strict, reportUnusedImport=false
+        resnext152_32x4d,  # pyright: ignore[reportUnusedImport]
     )
     from paddle.vision.models import (
-        resnext50_32x4d,  # pyright: strict, reportUnusedImport=false
+        resnext152_64x4d,  # pyright: ignore[reportUnusedImport]
     )
     from paddle.vision.models import (
-        resnext50_64x4d,  # pyright: strict, reportUnusedImport=false
+        wide_resnet50_2,  # pyright: ignore[reportUnusedImport]
     )
     from paddle.vision.models import (
-        resnext101_32x4d,  # pyright: strict, reportUnusedImport=false
-    )
-    from paddle.vision.models import (
-        resnext101_64x4d,  # pyright: strict, reportUnusedImport=false
-    )
-    from paddle.vision.models import (
-        resnext152_32x4d,  # pyright: strict, reportUnusedImport=false
-    )
-    from paddle.vision.models import (
-        resnext152_64x4d,  # pyright: strict, reportUnusedImport=false
-    )
-    from paddle.vision.models import (
-        wide_resnet50_2,  # pyright: strict, reportUnusedImport=false
-    )
-    from paddle.vision.models import (
-        wide_resnet101_2,  # pyright: strict, reportUnusedImport=false
+        wide_resnet101_2,  # pyright: ignore[reportUnusedImport]
     )
 
 

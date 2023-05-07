@@ -23,45 +23,31 @@ def test_import():
     paddle.vision.shufflenet_v2_x2_0
     paddle.vision.shufflenet_v2_swish
 
-    from paddle.vision import ShuffleNetV2  # pyright: strict, reportUnusedImport=false
-    from paddle.vision import (
-        shufflenet_v2_swish,  # pyright: strict, reportUnusedImport=false
-    )
-    from paddle.vision import (
-        shufflenet_v2_x0_5,  # pyright: strict, reportUnusedImport=false
-    )
-    from paddle.vision import (
-        shufflenet_v2_x0_25,  # pyright: strict, reportUnusedImport=false
-    )
-    from paddle.vision import (
-        shufflenet_v2_x1_0,  # pyright: strict, reportUnusedImport=false
-    )
-    from paddle.vision import (
-        shufflenet_v2_x1_5,  # pyright: strict, reportUnusedImport=false
-    )
-    from paddle.vision import (
-        shufflenet_v2_x2_0,  # pyright: strict, reportUnusedImport=false
+    from paddle.vision import ShuffleNetV2  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import shufflenet_v2_swish  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import shufflenet_v2_x0_5  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import shufflenet_v2_x0_25  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import shufflenet_v2_x1_0  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import shufflenet_v2_x1_5  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import shufflenet_v2_x2_0  # pyright: ignore[reportUnusedImport]
+    from paddle.vision.models import ShuffleNetV2  # pyright: ignore[reportUnusedImport]
+    from paddle.vision.models import (
+        shufflenet_v2_swish,  # pyright: ignore[reportUnusedImport]
     )
     from paddle.vision.models import (
-        ShuffleNetV2,  # pyright: strict, reportUnusedImport=false
+        shufflenet_v2_x0_5,  # pyright: ignore[reportUnusedImport]
     )
     from paddle.vision.models import (
-        shufflenet_v2_swish,  # pyright: strict, reportUnusedImport=false
+        shufflenet_v2_x0_25,  # pyright: ignore[reportUnusedImport]
     )
     from paddle.vision.models import (
-        shufflenet_v2_x0_5,  # pyright: strict, reportUnusedImport=false
+        shufflenet_v2_x1_0,  # pyright: ignore[reportUnusedImport]
     )
     from paddle.vision.models import (
-        shufflenet_v2_x0_25,  # pyright: strict, reportUnusedImport=false
+        shufflenet_v2_x1_5,  # pyright: ignore[reportUnusedImport]
     )
     from paddle.vision.models import (
-        shufflenet_v2_x1_0,  # pyright: strict, reportUnusedImport=false
-    )
-    from paddle.vision.models import (
-        shufflenet_v2_x1_5,  # pyright: strict, reportUnusedImport=false
-    )
-    from paddle.vision.models import (
-        shufflenet_v2_x2_0,  # pyright: strict, reportUnusedImport=false
+        shufflenet_v2_x2_0,  # pyright: ignore[reportUnusedImport]
     )
 
 

@@ -1,18 +1,23 @@
-name: Unit Test
+name: Lint and Format
 
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
-  unit-test:
+  lint-and-fmt:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.8", "3.9", "3.10"]
+        # Only run linter and formatter on minimum supported Python version
+        python-version: ["3.8"]
         architecture: ["x64"]
     name: Python ${{ matrix.python-version }} on ${{ matrix.architecture }} test
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
+      - name: Install prettier
+        run: |
+          npm install -g prettier
 
       - name: Install python
         uses: actions/setup-python@v4
@@ -32,14 +37,18 @@ jobs:
         id: poetry-cache
         with:
           path: |
-            **/.venv
+            .venv
           key: ${{ runner.os }}-${{ matrix.python-version }}-${{ matrix.architecture }}-poetry-${{ hashFiles('poetry.lock') }}
 
       - name: Install dependencies
         if: steps.poetry-cache.outputs.cache-hit != 'true'
         run: |
-          poetry install
+          just ci-install
 
-      - name: Check types
+      - name: lint
         run: |
-          just check
+          just ci-lint
+
+      - name: format check
+        run: |
+          just ci-fmt-check

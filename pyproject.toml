@@ -23,13 +23,13 @@ classifiers = [
 ]
 
 [tool.poetry.dependencies]
-python = ">=3.7,<3.11"
+python = ">=3.8,<3.11"
 typing-extensions = "^4.3.0"
 
 [tool.poetry.group.dev.dependencies]
-black = "^22.1"
-isort = "^5.10.1"
-pyright = "^1.1.263"
+black = "^23.3.0"
+isort = "^5.12.0"
+pyright = "^1.1.306"
 Pillow = "^9.2.0"
 numpy = "1.21.6"
 paddlepaddle = "^2.4.0"
@@ -47,7 +47,7 @@ skip = ["setup.py", ".venv"]
 [tool.pyright]
 include = ["paddle-stubs", "tests"]
 ignore = ["paddle-stubs/fluid"]
-pythonVersion = "3.7"
+pythonVersion = "3.8"
 typeCheckingMode = "strict"
 reportMissingModuleSource = false
 
