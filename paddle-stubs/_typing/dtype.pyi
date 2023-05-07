@@ -37,17 +37,19 @@ _DTypeString: TypeAlias = Literal[
 ]
 
 _DTypeNumpy: TypeAlias = (
-    type[np.uint8]
-    | type[np.int8]
-    | type[np.int16]
-    | type[np.int32]
-    | type[np.int64]
-    | type[np.float32]
-    | type[np.float64]
-    | type[np.float16]
-    | type[np.complex64]
-    | type[np.complex128]
-    | type[np.bool_]
+    type[
+        np.uint8
+        | np.int8
+        | np.int16
+        | np.int32
+        | np.int64
+        | np.float32
+        | np.float64
+        | np.float16
+        | np.complex64
+        | np.complex128
+        | np.bool_
+    ]
     | np.dtype[Any]
 )
 

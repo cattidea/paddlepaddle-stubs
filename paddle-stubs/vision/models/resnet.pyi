@@ -53,7 +53,7 @@ class BottleneckBlock(nn.Layer):
 class ResNet(nn.Layer):
     def __init__(
         self,
-        block: type[BasicBlock] | type[BottleneckBlock],
+        block: type[BasicBlock | BottleneckBlock],
         depth: int = ...,
         width: int = ...,
         num_classes: int = ...,
