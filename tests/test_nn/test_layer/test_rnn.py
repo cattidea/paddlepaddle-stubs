@@ -18,7 +18,6 @@ def test_import():
 
 
 def test_types():
-
     rnn = paddle.nn.SimpleRNN(16, 32, 2)
     x = paddle.randn((4, 23, 16))
     prev_h = paddle.randn((2, 4, 32))

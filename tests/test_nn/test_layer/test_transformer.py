@@ -14,7 +14,6 @@ def test_import():
 
 
 def test_types():
-
     enc_input = paddle.rand((2, 4, 128))
     dec_input = paddle.rand((2, 6, 128))
     enc_self_attn_mask = paddle.rand((2, 2, 4, 4))
