@@ -54,6 +54,7 @@ reportMissingModuleSource = false
 [tool.ruff]
 include = ["paddle-stubs", "tests"]
 select = ["PYI", "UP"]
+target-version = "py38"
 
 [build-system]
 requires = ["poetry-core>=1.1.0"]
