@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Any, List, Literal  # noqa: Y022, UP035
+from typing import Any, List, Literal  # noqa: Y022
 
 from ..nn import Layer
 

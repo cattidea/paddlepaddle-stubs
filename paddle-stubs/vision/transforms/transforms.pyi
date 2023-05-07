@@ -1,11 +1,11 @@
 from __future__ import annotations
 
 from collections.abc import Sequence
-from typing import Any, TypeVar
+from typing import Any, Literal, TypeVar
 
 import numpy.typing as npt
 from PIL.Image import Image as PILImage
-from typing import Literal, TypeAlias
+from typing_extensions import TypeAlias
 
 from ..._typing import DataLayoutImage, NumbericSequence, Tensor
 from ..._typing.basic import IntSequence

@@ -1,11 +1,10 @@
 from __future__ import annotations
 
 from collections.abc import Callable
-from typing import Any
+from typing import Any, Literal
 
 import numpy.typing as npt
 from typing_extensions import TypedDict
-from typing import Literal
 
 from .._typing import Tensor
 

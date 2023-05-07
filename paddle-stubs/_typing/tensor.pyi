@@ -1,10 +1,10 @@
 from __future__ import annotations
 
 from collections.abc import Hashable, Iterable, Iterator, Sized
-from typing import Any, SupportsFloat, SupportsInt
+from typing import Any, SupportsFloat, SupportsIndex, SupportsInt
 
 import numpy.typing as npt
-from typing import SupportsIndex, TypeAlias
+from typing_extensions import TypeAlias
 
 from .basic import Numberic
 from .device import Place

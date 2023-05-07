@@ -3,8 +3,7 @@ from __future__ import annotations
 from collections.abc import Sequence
 from typing import Any
 
-from typing_extensions import NotRequired, TypedDict
-from typing import TypeAlias
+from typing_extensions import NotRequired, TypeAlias, TypedDict
 
 from .._typing import Tensor
 from ..callbacks import Callback

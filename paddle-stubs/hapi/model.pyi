@@ -1,11 +1,10 @@
 from __future__ import annotations
 
 from collections.abc import Iterable
-from typing import Any
+from typing import Any, Literal
 
 import numpy.typing as npt
 from paddle import nn
-from typing import Literal
 
 from .._typing import DTypeLike, DynamicShapeLike, Tensor
 from ..callbacks import Callback

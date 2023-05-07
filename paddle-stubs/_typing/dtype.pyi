@@ -1,9 +1,9 @@
 from __future__ import annotations
 
-from typing import Any
+from typing import Any, Literal
 
 import numpy as np
-from typing import Literal, TypeAlias
+from typing_extensions import TypeAlias
 
 class dtype:
     def __init__(self, arg0: int) -> None: ...
