@@ -1,8 +1,13 @@
 from __future__ import annotations
 
+from typing import Any
+
+from typing_extensions import TypeAlias
+
+BuildStrategy: TypeAlias = Any
+
 from ..fluid.backward import append_backward as append_backward
 from ..fluid.backward import gradients as gradients
-from ..fluid.compiler import BuildStrategy as BuildStrategy
 from ..fluid.compiler import CompiledProgram as CompiledProgram
 from ..fluid.compiler import ExecutionStrategy as ExecutionStrategy
 from ..fluid.compiler import IpuCompiledProgram as IpuCompiledProgram
