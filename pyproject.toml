@@ -34,7 +34,7 @@ numpy = "1.24.3"
 paddlepaddle = "^2.4.0"
 flake8 = "^5.0.4"
 flake8-pyi = "^23.0.0"
-ruff = "^0.0.270"
+ruff = "^0.0.272"
 
 [tool.black]
 line-length = 120
