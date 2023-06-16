@@ -90,7 +90,7 @@ def test_methods():
     c = a.clone()
     c = a.broadcast_to([1, 2])
     c = a.cast(paddle.float32)
-    c = a.size()
+    c = a.size
     c = a.dim()
     c = a.ndimension()
     c = a.imag()
