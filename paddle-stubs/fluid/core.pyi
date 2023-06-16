@@ -1,6 +1,14 @@
 from __future__ import annotations
 
-from typing import Any
+from collections.abc import Callable
+from types import CodeType, FrameType
+from typing import Any, NamedTuple
+
+class CustomCode(NamedTuple):
+    code: CodeType
+    disable_eval_frame: bool
+
+CallbackFunc = Callable[[FrameType], CustomCode | None]
 
 core_suffix: str
 has_avx_core: bool
@@ -26,6 +34,7 @@ load_noavx: bool
 
 def set_paddle_custom_device_lib_path(lib_path: Any) -> None: ...
 def set_paddle_lib_path() -> None: ...
+def set_eval_frame(callback: CallbackFunc | None) -> CallbackFunc | None: ...
 
 class TracerEventType: ...
 class Tracer: ...

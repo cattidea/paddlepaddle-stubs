@@ -7,6 +7,7 @@ from . import backward as backward
 from . import clip as clip
 from . import compiler as compiler
 from . import contrib as contrib
+from . import core as core
 from . import data_feed_desc as data_feed_desc
 from . import dataset as dataset
 from . import distribute_lookup_table as distribute_lookup_table
