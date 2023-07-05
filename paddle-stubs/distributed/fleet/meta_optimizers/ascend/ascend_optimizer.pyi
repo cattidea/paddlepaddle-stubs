@@ -6,11 +6,11 @@ from paddle.fluid.optimizer import Optimizer
 
 from . import ascend_parser as ascend_parser
 
-
 class HcomGroupConfig(NamedTuple):
     name: str
     nranks: int
     rank_ids: Any
+
 class AscendIRParser:
     graph_idx: int = ...
     hcom_endpoints: Any = ...

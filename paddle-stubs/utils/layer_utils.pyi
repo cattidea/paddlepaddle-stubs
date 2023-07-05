@@ -2,9 +2,9 @@ from __future__ import annotations
 
 from collections.abc import Callable, Sequence
 from sys import version_info as version_info
-from typing import Any, TypeVar, NoReturn
+from typing import Any, NoReturn, TypeVar
 
-from typing_extensions import  TypeAlias
+from typing_extensions import TypeAlias
 
 from .._typing.shape import ShapeLike
 

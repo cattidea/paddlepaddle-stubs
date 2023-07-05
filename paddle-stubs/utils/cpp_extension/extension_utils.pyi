@@ -8,7 +8,6 @@ from ...fluid.framework import OpProtoHolder as OpProtoHolder
 from ...sysconfig import get_include as get_include
 from ...sysconfig import get_lib as get_lib
 
-
 logger: Any
 formatter: Any
 ch: Any
@@ -30,7 +29,6 @@ def bootstrap_context() -> None: ...
 def load_op_meta_info_and_register_op(lib_filename: Any): ...
 def custom_write_stub(resource: Any, pyfile: Any) -> None: ...
 
-
 class OpInfo(NamedTuple):
     so_name: str
     so_path: str
@@ -42,8 +40,6 @@ class CustomOpInfo:
     def __init__(self) -> None: ...
     def add(self, op_name: Any, so_name: Any, so_path: Any | None = ...) -> None: ...
     def last(self): ...
-
-
 
 class VersionField(NamedTuple):
     sources: Any
