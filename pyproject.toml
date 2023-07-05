@@ -32,9 +32,7 @@ pyright = "^1.1.315"
 Pillow = "^10.0.0"
 numpy = "1.24.3"
 paddlepaddle = "^2.5.0"
-flake8 = "^5.0.4"
-flake8-pyi = "^23.0.0"
-ruff = "^0.0.274"
+ruff = "0.0.275"
 
 [tool.black]
 line-length = 120
@@ -52,10 +50,10 @@ typeCheckingMode = "strict"
 reportMissingModuleSource = false
 
 [tool.ruff]
-include = ["paddle-stubs", "tests"]
+include = ["paddle-stubs/**.pyi", "tests/**.pyi"]
 select = ["PYI", "UP"]
 target-version = "py38"
-ignore = ["PYI044"]
+ignore = ["PYI029", "PYI044"]
 
 [build-system]
 requires = ["poetry-core>=1.1.0"]

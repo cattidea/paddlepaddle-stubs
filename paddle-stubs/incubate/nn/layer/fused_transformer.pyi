@@ -73,19 +73,7 @@ class FusedFeedForward(Layer):
         name=None,
     ): ...
     def forward(self, src, cache=None) -> Tensor: ...
-    def extra_repr(self) -> str:
-        name_str = ", name={}".format(self.name) if self.name else ""
-        return "d_model={}, dim_feedforward={}, dropout_rate={}, epsilon={}, activation={}, act_dropout_rate={}, normalize_before={}, dtype={}{}".format(
-            self._d_model,
-            self._dim_feedforward,
-            self._dropout_rate,
-            self._epsilon,
-            self._act_method,
-            self._act_dropout_rate,
-            self._normalize_before,
-            self._dtype,
-            name_str,
-        )
+    def extra_repr(self) -> str: ...
     def _amp_decorate(self, dtype): ...
 
 class FusedTransformerEncoderLayer(Layer):

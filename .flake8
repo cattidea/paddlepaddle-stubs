@@ -1,5 +1,0 @@
-[flake8]
-select = Y
-ignore =
-    Y029,
-    Y044,

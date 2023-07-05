@@ -4,8 +4,8 @@ from typing import Callable
 
 from typing_extensions import ParamSpec, TypeVar
 
-InputArgs = ParamSpec("InputArgs")
-RetValue = TypeVar("RetValue")
+_InputArgs = ParamSpec("_InputArgs")
+_RetValue = TypeVar("_RetValue")
 
 from .._typing import CPUPlace as CPUPlace
 from .._typing import CUDAPinnedPlace as CUDAPinnedPlace
@@ -37,7 +37,7 @@ from .io import load as load
 from .io import save as save
 from .random import seed as seed
 
-def no_grad(func: Callable[InputArgs, RetValue]) -> Callable[InputArgs, RetValue]: ...
+def no_grad(func: Callable[_InputArgs, _RetValue]) -> Callable[_InputArgs, _RetValue]: ...
 def in_dynamic_mode() -> bool: ...
 def enable_static() -> None: ...
 def disable_static() -> None: ...

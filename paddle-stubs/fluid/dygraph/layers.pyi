@@ -11,10 +11,10 @@ from ..._typing import DTypeLike, PlaceLike, ShapeLike
 from ...framework import ParamAttr
 from ...nn.initializer import Initializer
 
-HookParam = ParamSpec("HookParam")
-Ret = TypeVar("Ret")
+_HookParam = ParamSpec("_HookParam")
+_Ret = TypeVar("_Ret")
 
-Hook = Callable[HookParam, Ret]  # [Generic], wait for PEP 695
+Hook = Callable[_HookParam, _Ret]  # [Generic], wait for PEP 695
 PreHook = Hook[[Layer, Tensor], Tensor]  # (layer, input) -> transformed_input
 PostHook = Hook[[Layer, Tensor, Tensor], Tensor]  # (layer, input, output) -> transformed_output
 StateDict = dict[str, Tensor] | OrderedDict[str, Tensor]

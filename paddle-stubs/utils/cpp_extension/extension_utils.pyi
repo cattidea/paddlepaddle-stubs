@@ -1,12 +1,13 @@
 from __future__ import annotations
 
 from collections import namedtuple
-from typing import Any, Optional
+from typing import Any, NamedTuple
 
 from ...fluid import core as core
 from ...fluid.framework import OpProtoHolder as OpProtoHolder
 from ...sysconfig import get_include as get_include
 from ...sysconfig import get_lib as get_lib
+
 
 logger: Any
 formatter: Any
@@ -29,7 +30,10 @@ def bootstrap_context() -> None: ...
 def load_op_meta_info_and_register_op(lib_filename: Any): ...
 def custom_write_stub(resource: Any, pyfile: Any) -> None: ...
 
-OpInfo = namedtuple("OpInfo", ["so_name", "so_path"])
+
+class OpInfo(NamedTuple):
+    so_name: str
+    so_path: str
 
 class CustomOpInfo:
     @classmethod
@@ -39,19 +43,17 @@ class CustomOpInfo:
     def add(self, op_name: Any, so_name: Any, so_path: Any | None = ...) -> None: ...
     def last(self): ...
 
-VersionFields = namedtuple(
-    "VersionFields",
-    [
-        "sources",
-        "extra_compile_args",
-        "extra_link_args",
-        "library_dirs",
-        "runtime_library_dirs",
-        "include_dirs",
-        "define_macros",
-        "undef_macros",
-    ],
-)
+
+
+class VersionField(NamedTuple):
+    sources: Any
+    extra_compile_args: Any
+    extra_link_args: Any
+    library_dirs: Any
+    runtime_library_dirs: Any
+    include_dirs: Any
+    define_macros: Any
+    undef_macros: Any
 
 class VersionManager:
     version_field: Any = ...

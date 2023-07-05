@@ -9,8 +9,8 @@ from .backward_mode import backward as backward
 from .py_layer import PyLayer as PyLayer
 from .py_layer import PyLayerContext as PyLayerContext
 
-InputArgs = ParamSpec("InputArgs")
-RetValue = TypeVar("RetValue")
+_InputArgs = ParamSpec("_InputArgs")
+_RetValue = TypeVar("_RetValue")
 
 def grad(
     outputs: Tensor | list[Tensor] | tuple[Tensor],
@@ -22,7 +22,7 @@ def grad(
     allow_unused: bool = ...,
     no_grad_vars: Tensor | list[Tensor | None] | tuple[Tensor | None, ...] | None = None,
 ): ...
-def no_grad(func: Callable[InputArgs, RetValue]) -> Callable[InputArgs, RetValue]: ...
+def no_grad(func: Callable[_InputArgs, _RetValue]) -> Callable[_InputArgs, _RetValue]: ...
 
 class EagerPyLayer: ...
 
