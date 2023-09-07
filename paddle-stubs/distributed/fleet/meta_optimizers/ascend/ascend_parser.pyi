@@ -2,8 +2,8 @@ from __future__ import annotations
 
 from typing import Any
 
-from paddle.distributed import fleet as fleet
 from paddle.base.optimizer import Optimizer as Optimizer
+from paddle.distributed import fleet as fleet
 
 registerd_op: Any
 global_cnt: int

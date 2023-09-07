@@ -5,9 +5,7 @@ from typing import Any
 from paddle.base import core as core
 from paddle.base import unique_name as unique_name
 from paddle.base.data_feeder import check_dtype as check_dtype
-from paddle.base.data_feeder import (
-    check_variable_and_dtype as check_variable_and_dtype,
-)
+from paddle.base.data_feeder import check_variable_and_dtype as check_variable_and_dtype
 from paddle.base.framework import Parameter as Parameter
 from paddle.base.framework import Program as Program
 from paddle.base.framework import Variable as Variable

@@ -2,8 +2,8 @@ from __future__ import annotations
 
 from typing import Any
 
-from paddle.distributed.auto_parallel.process_mesh import ProcessMesh as ProcessMesh
 from paddle.base.backward import ProgramStats
+from paddle.distributed.auto_parallel.process_mesh import ProcessMesh as ProcessMesh
 
 from .pass_base import PassBase as PassBase
 from .pass_base import register_pass as register_pass

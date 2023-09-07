@@ -2,12 +2,12 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from ...device import get_cudnn_version as get_cudnn_version
 from ...base import dygraph_utils as dygraph_utils
 from ...base.data_feeder import check_variable_and_dtype as check_variable_and_dtype
 from ...base.layer_helper import LayerHelper as LayerHelper
 from ...base.layers import nn as nn
 from ...base.layers.utils import convert_to_list as convert_to_list
+from ...device import get_cudnn_version as get_cudnn_version
 from ...framework import ParamAttr as ParamAttr
 from ...static import Variable as Variable
 from ...tensor.manipulation import squeeze as squeeze

@@ -2,16 +2,14 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from paddle.distribution import distribution
 from paddle.base import core as core
 from paddle.base.data_feeder import check_dtype as check_dtype
-from paddle.base.data_feeder import (
-    check_variable_and_dtype as check_variable_and_dtype,
-)
+from paddle.base.data_feeder import check_variable_and_dtype as check_variable_and_dtype
 from paddle.base.framework import in_dygraph_mode as in_dygraph_mode
 from paddle.base.layers import control_flow as control_flow
 from paddle.base.layers import elementwise_mul as elementwise_mul
 from paddle.base.layers import ops as ops
+from paddle.distribution import distribution
 from paddle.tensor import arange as arange
 from paddle.tensor import concat as concat
 from paddle.tensor import gather_nd as gather_nd

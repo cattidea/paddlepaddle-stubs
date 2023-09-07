@@ -3,9 +3,7 @@ from __future__ import annotations
 from typing import Any, Optional
 
 from paddle.base.data_feeder import check_dtype as check_dtype
-from paddle.base.data_feeder import (
-    check_variable_and_dtype as check_variable_and_dtype,
-)
+from paddle.base.data_feeder import check_variable_and_dtype as check_variable_and_dtype
 
 from ..framework import core as core
 

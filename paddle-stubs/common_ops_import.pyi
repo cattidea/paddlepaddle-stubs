@@ -5,9 +5,7 @@ from paddle.base import dygraph_utils as dygraph_utils
 from paddle.base.core import VarDesc as VarDesc
 from paddle.base.data_feeder import check_dtype as check_dtype
 from paddle.base.data_feeder import check_type as check_type
-from paddle.base.data_feeder import (
-    check_variable_and_dtype as check_variable_and_dtype,
-)
+from paddle.base.data_feeder import check_variable_and_dtype as check_variable_and_dtype
 from paddle.base.data_feeder import convert_dtype as convert_dtype
 from paddle.base.framework import OpProtoHolder as OpProtoHolder
 from paddle.base.framework import Variable as Variable

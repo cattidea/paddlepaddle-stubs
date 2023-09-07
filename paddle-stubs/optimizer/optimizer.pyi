@@ -6,10 +6,10 @@ from typing import Any
 from typing_extensions import NotRequired, TypeAlias, TypedDict
 
 from .._typing import Tensor
-from ..callbacks import Callback
 from ..base.clip import GradientClipBase
 from ..base.framework import Program
 from ..base.regularizer import WeightDecayRegularizer
+from ..callbacks import Callback
 from .lr import LRScheduler as LRScheduler
 
 OptimizerStateDict: TypeAlias = dict[str, Tensor]
