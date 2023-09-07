@@ -2,10 +2,10 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from ...fluid.data_feeder import check_type as check_type
-from ...fluid.data_feeder import check_variable_and_dtype as check_variable_and_dtype
-from ...fluid.layers import LayerHelper as LayerHelper
-from ...fluid.layers import utils as utils
+from ...base.data_feeder import check_type as check_type
+from ...base.data_feeder import check_variable_and_dtype as check_variable_and_dtype
+from ...base.layers import LayerHelper as LayerHelper
+from ...base.layers import utils as utils
 from ...tensor.manipulation import squeeze as squeeze
 from ...tensor.manipulation import unsqueeze as unsqueeze
 

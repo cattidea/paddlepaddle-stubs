@@ -4,8 +4,8 @@ from typing import Any, Literal
 
 from ..._typing import DataLayout1D, DataLayout2D, DataLayout3D, DataLayoutND, Tensor
 from ..._typing.basic import IntSequence
-from ...fluid.dygraph import BatchNorm as BatchNorm
-from ...fluid.dygraph import SpectralNorm as SpectralNorm
+from ...base.dygraph import BatchNorm as BatchNorm
+from ...base.dygraph import SpectralNorm as SpectralNorm
 from ...framework import ParamAttr
 from .. import Layer
 

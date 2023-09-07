@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from paddle.fluid.framework import default_main_program as default_main_program
+from paddle.base.framework import default_main_program as default_main_program
 
 MODEL_PARALLEL_RNG: str
 

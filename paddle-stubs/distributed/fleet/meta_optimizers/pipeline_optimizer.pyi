@@ -2,8 +2,8 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from paddle.fluid import core as core
-from paddle.fluid import unique_name as unique_name
+from paddle.base import core as core
+from paddle.base import unique_name as unique_name
 
 from ..base.private_helper_function import wait_server_ready as wait_server_ready
 from .common import OP_ROLE_KEY as OP_ROLE_KEY

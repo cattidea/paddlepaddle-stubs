@@ -7,15 +7,15 @@ import numpy.typing as npt
 
 from .. import Tensor
 from .._typing import DTypeLike, NestedNumbericSequence, Numberic, ShapeLike
-from ..fluid.data_feeder import check_dtype as check_dtype
-from ..fluid.data_feeder import check_type as check_type
-from ..fluid.data_feeder import check_variable_and_dtype as check_variable_and_dtype
-from ..fluid.data_feeder import convert_dtype as convert_dtype
-from ..fluid.framework import in_dygraph_mode as in_dygraph_mode
-from ..fluid.layer_helper import LayerHelper as LayerHelper
-from ..fluid.layers import linspace as linspace
-from ..fluid.layers import tensor as tensor
-from ..fluid.layers import utils as utils
+from ..base.data_feeder import check_dtype as check_dtype
+from ..base.data_feeder import check_type as check_type
+from ..base.data_feeder import check_variable_and_dtype as check_variable_and_dtype
+from ..base.data_feeder import convert_dtype as convert_dtype
+from ..base.framework import in_dygraph_mode as in_dygraph_mode
+from ..base.layer_helper import LayerHelper as LayerHelper
+from ..base.layers import linspace as linspace
+from ..base.layers import tensor as tensor
+from ..base.layers import utils as utils
 from ..framework import OpProtoHolder as OpProtoHolder
 from ..framework import convert_np_dtype_to_dtype_ as convert_np_dtype_to_dtype_
 from ..framework import core as core

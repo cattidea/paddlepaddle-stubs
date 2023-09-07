@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from paddle.fluid.framework import Block as Block
+from paddle.base.framework import Block as Block
 
 LEARNING_RATE_DECAY_COUNTER: str
 OP_ROLE_VAR_ATTR_NAME: Any

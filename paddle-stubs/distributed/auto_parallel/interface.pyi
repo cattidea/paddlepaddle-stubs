@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from paddle.fluid.framework import Variable as Variable
+from paddle.base.framework import Variable as Variable
 
 from .dist_attribute import OperatorDistributedAttribute as OperatorDistributedAttribute
 from .dist_attribute import TensorDistributedAttribute as TensorDistributedAttribute

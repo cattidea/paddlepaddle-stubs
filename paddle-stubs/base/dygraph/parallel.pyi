@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from paddle.fluid.dygraph import layers
+from paddle.base.dygraph import layers
 
 def prepare_context(strategy: Any | None = ...): ...
 

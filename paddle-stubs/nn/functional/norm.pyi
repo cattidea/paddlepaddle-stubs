@@ -2,12 +2,12 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from paddle.fluid.framework import core as core
+from paddle.base.framework import core as core
 
-from ...fluid import dygraph_utils as dygraph_utils
-from ...fluid.data_feeder import check_type as check_type
-from ...fluid.data_feeder import check_variable_and_dtype as check_variable_and_dtype
-from ...fluid.layer_helper import LayerHelper as LayerHelper
+from ...base import dygraph_utils as dygraph_utils
+from ...base.data_feeder import check_type as check_type
+from ...base.data_feeder import check_variable_and_dtype as check_variable_and_dtype
+from ...base.layer_helper import LayerHelper as LayerHelper
 from ...framework import ParamAttr as ParamAttr
 from ...framework import create_parameter as create_parameter
 from ..initializer import Constant as Constant

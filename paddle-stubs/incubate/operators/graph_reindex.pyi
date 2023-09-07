@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from paddle.fluid import core as core
+from paddle.base import core as core
 
 def graph_reindex(
     x: Any,

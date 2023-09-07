@@ -7,14 +7,14 @@ from paddle.common_ops_import import core as core
 from typing_extensions import Literal
 
 from .. import Tensor
-from ..fluid import layers as layers
-from ..fluid.data_feeder import check_dtype as check_dtype
-from ..fluid.data_feeder import check_type as check_type
-from ..fluid.data_feeder import check_variable_and_dtype as check_variable_and_dtype
-from ..fluid.framework import in_dygraph_mode as in_dygraph_mode
-from ..fluid.layer_helper import LayerHelper as LayerHelper
-from ..fluid.layers import cast as cast
-from ..fluid.layers import transpose as transpose
+from ..base import layers as layers
+from ..base.data_feeder import check_dtype as check_dtype
+from ..base.data_feeder import check_type as check_type
+from ..base.data_feeder import check_variable_and_dtype as check_variable_and_dtype
+from ..base.framework import in_dygraph_mode as in_dygraph_mode
+from ..base.layer_helper import LayerHelper as LayerHelper
+from ..base.layers import cast as cast
+from ..base.layers import transpose as transpose
 from ..static import Variable as Variable
 
 K_DEFAULT_DIM: int

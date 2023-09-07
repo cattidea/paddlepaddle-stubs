@@ -3,8 +3,8 @@ from __future__ import annotations
 from collections import OrderedDict as OrderedDict
 from typing import Any
 
-from paddle.fluid import unique_name as unique_name
-from paddle.fluid.framework import program_guard as program_guard
+from paddle.base import unique_name as unique_name
+from paddle.base.framework import program_guard as program_guard
 
 from .pass_base import PassBase as PassBase
 from .pass_base import PassType as PassType

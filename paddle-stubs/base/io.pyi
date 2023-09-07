@@ -3,9 +3,9 @@ from __future__ import annotations
 from functools import reduce as reduce
 from typing import Any, Optional
 
-from paddle.fluid import layers as layers
-from paddle.fluid.evaluator import Evaluator as Evaluator
-from paddle.fluid.framework import default_startup_program as default_startup_program
+from paddle.base import layers as layers
+from paddle.base.evaluator import Evaluator as Evaluator
+from paddle.base.framework import default_startup_program as default_startup_program
 from paddle.reader import ComposeNotAligned as ComposeNotAligned
 from paddle.reader import buffered as buffered
 from paddle.reader import cache as cache

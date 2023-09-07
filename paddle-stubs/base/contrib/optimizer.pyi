@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from paddle.fluid.optimizer import Optimizer
+from paddle.base.optimizer import Optimizer
 
 class Momentum(Optimizer):
     type: str = ...

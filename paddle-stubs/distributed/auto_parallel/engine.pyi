@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from paddle.fluid import core as core
+from paddle.base import core as core
 from paddle.metric import Metric as Metric
 
 from .cluster import Cluster as Cluster

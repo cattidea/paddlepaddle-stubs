@@ -3,7 +3,7 @@ from __future__ import annotations
 from collections import defaultdict as defaultdict
 from typing import Any, Optional
 
-from paddle.fluid import core
+from paddle.base import core
 
 final_state_name_mapping: Any
 

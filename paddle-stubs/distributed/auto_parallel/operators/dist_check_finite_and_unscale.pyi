@@ -5,9 +5,9 @@ from typing import Any
 from paddle.distributed.fleet.meta_optimizers.common import (
     OP_ROLE_VAR_KEY as OP_ROLE_VAR_KEY,
 )
-from paddle.fluid import unique_name as unique_name
-from paddle.fluid.data_feeder import check_dtype as check_dtype
-from paddle.fluid.data_feeder import (
+from paddle.base import unique_name as unique_name
+from paddle.base.data_feeder import check_dtype as check_dtype
+from paddle.base.data_feeder import (
     check_variable_and_dtype as check_variable_and_dtype,
 )
 

@@ -2,15 +2,15 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from ...fluid.data_feeder import check_variable_and_dtype as check_variable_and_dtype
-from ...fluid.framework import in_dygraph_mode as in_dygraph_mode
-from ...fluid.layer_helper import LayerHelper as LayerHelper
-from ...fluid.layers import dice_loss as dice_loss
-from ...fluid.layers import edit_distance as edit_distance
-from ...fluid.layers import huber_loss as huber_loss
-from ...fluid.layers import log_loss as log_loss
-from ...fluid.layers import npair_loss as npair_loss
-from ...fluid.layers import square_error_cost as square_error_cost
+from ...base.data_feeder import check_variable_and_dtype as check_variable_and_dtype
+from ...base.framework import in_dygraph_mode as in_dygraph_mode
+from ...base.layer_helper import LayerHelper as LayerHelper
+from ...base.layers import dice_loss as dice_loss
+from ...base.layers import edit_distance as edit_distance
+from ...base.layers import huber_loss as huber_loss
+from ...base.layers import log_loss as log_loss
+from ...base.layers import npair_loss as npair_loss
+from ...base.layers import square_error_cost as square_error_cost
 from ...static import Variable as Variable
 from ...tensor.manipulation import reshape as reshape
 

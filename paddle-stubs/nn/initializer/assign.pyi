@@ -5,7 +5,7 @@ from typing import Any, Optional
 import numpy as np
 import numpy.typing as npt
 
-from ...fluid.initializer import NumpyArrayInitializer
+from ...base.initializer import NumpyArrayInitializer
 
 class Assign(NumpyArrayInitializer):
     def __init__(

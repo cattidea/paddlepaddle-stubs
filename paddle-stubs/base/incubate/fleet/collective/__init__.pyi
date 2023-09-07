@@ -2,10 +2,10 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-import paddle.fluid as fluid
-from paddle.fluid.compiler import CompiledProgram as CompiledProgram
-from paddle.fluid.incubate.fleet.base.fleet_base import DistributedOptimizer, Fleet
-from paddle.fluid.parallel_executor import ParallelExecutor as ParallelExecutor
+import paddle.base as base
+from paddle.base.compiler import CompiledProgram as CompiledProgram
+from paddle.base.incubate.fleet.base.fleet_base import DistributedOptimizer, Fleet
+from paddle.base.parallel_executor import ParallelExecutor as ParallelExecutor
 
 class LambConfig:
     def __init__(self) -> None: ...
@@ -60,7 +60,7 @@ class Collective(Fleet):
 
 fleet: Any
 
-class DistributedStrategy(fluid.BuildStrategy):
+class DistributedStrategy(base.BuildStrategy):
     use_local_sgd: bool = ...
     use_dist_fc: bool = ...
     dist_fc_config: Any = ...

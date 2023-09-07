@@ -2,8 +2,8 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from paddle.fluid.incubate.fleet.base.fleet_base import DistributedOptimizer, Fleet
-from paddle.fluid.incubate.fleet.parameter_server.distribute_transpiler.distributed_strategy import (
+from paddle.base.incubate.fleet.base.fleet_base import DistributedOptimizer, Fleet
+from paddle.base.incubate.fleet.parameter_server.distribute_transpiler.distributed_strategy import (
     TrainerRuntimeConfig as TrainerRuntimeConfig,
 )
 

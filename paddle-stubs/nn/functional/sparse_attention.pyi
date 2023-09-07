@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from ...fluid.framework import default_main_program as default_main_program
+from ...base.framework import default_main_program as default_main_program
 
 def sparse_attention(
     query: Any,

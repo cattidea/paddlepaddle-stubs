@@ -2,10 +2,10 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from paddle.fluid.incubate.fleet.parameter_server.ir.ps_dispatcher import (
+from paddle.base.incubate.fleet.parameter_server.ir.ps_dispatcher import (
     PSDispatcher as PSDispatcher,
 )
-from paddle.fluid.transpiler.details.program_utils import delete_ops as delete_ops
+from paddle.base.transpiler.details.program_utils import delete_ops as delete_ops
 
 OP_NAME_SCOPE: str
 CLIP_OP_NAME_SCOPE: str

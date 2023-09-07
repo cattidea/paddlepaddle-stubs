@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from paddle.fluid.dygraph.dygraph_to_static.utils import BaseNodeVisitor
+from paddle.base.dygraph.dygraph_to_static.utils import BaseNodeVisitor
 from paddle.utils import gast
 
 class ForToWhileTransformer(gast.NodeTransformer):

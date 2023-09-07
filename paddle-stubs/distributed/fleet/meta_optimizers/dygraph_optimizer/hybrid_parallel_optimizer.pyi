@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from paddle.fluid.framework import Variable as Variable
+from paddle.base.framework import Variable as Variable
 from paddle.optimizer import Optimizer as Optimizer
 
 from ...base.topology import ParallelMode as ParallelMode

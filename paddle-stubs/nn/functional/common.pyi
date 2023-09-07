@@ -2,12 +2,12 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from ...fluid import dygraph_utils as dygraph_utils
-from ...fluid import layers as layers
-from ...fluid.data_feeder import check_dtype as check_dtype
-from ...fluid.data_feeder import check_variable_and_dtype as check_variable_and_dtype
-from ...fluid.framework import in_dygraph_mode as in_dygraph_mode
-from ...fluid.layers import unfold as unfold
+from ...base import dygraph_utils as dygraph_utils
+from ...base import layers as layers
+from ...base.data_feeder import check_dtype as check_dtype
+from ...base.data_feeder import check_variable_and_dtype as check_variable_and_dtype
+from ...base.framework import in_dygraph_mode as in_dygraph_mode
+from ...base.layers import unfold as unfold
 from ...tensor import clip as clip
 from ...tensor import concat as concat
 from ...tensor import sqrt as sqrt

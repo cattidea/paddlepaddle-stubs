@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from paddle.fluid.framework import Operator as Operator
+from paddle.base.framework import Operator as Operator
 
 class HybridParallelInferenceHelper:
     ring_id: int = ...

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from paddle.fluid.framework import static_only as static_only
+from paddle.base.framework import static_only as static_only
 
 from ..utils import get_logger as get_logger
 from .converter import Converter as Converter

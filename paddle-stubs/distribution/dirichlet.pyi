@@ -3,7 +3,7 @@ from __future__ import annotations
 from typing import Any
 
 from paddle.distribution import exponential_family
-from paddle.fluid.framework import in_dygraph_mode as in_dygraph_mode
+from paddle.base.framework import in_dygraph_mode as in_dygraph_mode
 
 class Dirichlet(exponential_family.ExponentialFamily):
     concentration: Any = ...

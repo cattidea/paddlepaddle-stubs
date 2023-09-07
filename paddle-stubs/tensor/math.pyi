@@ -3,15 +3,15 @@ from __future__ import annotations
 from typing import Any, Optional
 
 from .. import Tensor
-from ..fluid.data_feeder import check_dtype as check_dtype
-from ..fluid.data_feeder import check_type as check_type
-from ..fluid.data_feeder import check_variable_and_dtype as check_variable_and_dtype
-from ..fluid.data_feeder import convert_dtype as convert_dtype
-from ..fluid.dygraph.inplace_utils import (
+from ..base.data_feeder import check_dtype as check_dtype
+from ..base.data_feeder import check_type as check_type
+from ..base.data_feeder import check_variable_and_dtype as check_variable_and_dtype
+from ..base.data_feeder import convert_dtype as convert_dtype
+from ..base.dygraph.inplace_utils import (
     inplace_apis_in_dygraph_only as inplace_apis_in_dygraph_only,
 )
-from ..fluid.framework import in_dygraph_mode as in_dygraph_mode
-from ..fluid.layer_helper import LayerHelper as LayerHelper
+from ..base.framework import in_dygraph_mode as in_dygraph_mode
+from ..base.layer_helper import LayerHelper as LayerHelper
 
 def abs(x: Tensor, with_quant_attr: bool, name: str | None = ...) -> Tensor: ...
 def acos(x: Tensor, with_quant_attr: bool, name: str | None = ...) -> Tensor: ...
@@ -55,10 +55,10 @@ def square(x: Tensor, with_quant_attr: bool, name: str | None = ...) -> Tensor: 
 def stanh(x: Tensor, scale_a: float = ..., scale_b: float = ..., name: str | None = None) -> Tensor: ...
 def tan(x: Tensor, scale_a: float = ..., scale_b: float = ..., name: str | None = None) -> Tensor: ...
 
-from ..fluid.layers.layer_function_generator import (
+from ..base.layers.layer_function_generator import (
     generate_activation_fn as generate_activation_fn,
 )
-from ..fluid.layers.layer_function_generator import (
+from ..base.layers.layer_function_generator import (
     generate_layer_fn as generate_layer_fn,
 )
 from ..framework import convert_np_dtype_to_dtype_ as convert_np_dtype_to_dtype_

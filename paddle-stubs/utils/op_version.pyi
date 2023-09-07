@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from ..fluid import core as core
+from ..base import core as core
 
 def Singleton(cls): ...
 

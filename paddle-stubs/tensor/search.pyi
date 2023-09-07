@@ -2,12 +2,12 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from ..fluid import layers as layers
-from ..fluid.data_feeder import check_dtype as check_dtype
-from ..fluid.data_feeder import check_type as check_type
-from ..fluid.data_feeder import check_variable_and_dtype as check_variable_and_dtype
-from ..fluid.framework import in_dygraph_mode as in_dygraph_mode
-from ..fluid.layer_helper import LayerHelper as LayerHelper
+from ..base import layers as layers
+from ..base.data_feeder import check_dtype as check_dtype
+from ..base.data_feeder import check_type as check_type
+from ..base.data_feeder import check_variable_and_dtype as check_variable_and_dtype
+from ..base.framework import in_dygraph_mode as in_dygraph_mode
+from ..base.layer_helper import LayerHelper as LayerHelper
 from ..framework import core as core
 from .logic import logical_not as logical_not
 

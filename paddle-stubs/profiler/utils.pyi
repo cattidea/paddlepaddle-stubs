@@ -3,7 +3,7 @@ from __future__ import annotations
 from contextlib import ContextDecorator
 from typing import Any
 
-from paddle.fluid.core import TracerEventType
+from paddle.base.core import TracerEventType
 
 class RecordEvent(ContextDecorator):
     name: Any = ...

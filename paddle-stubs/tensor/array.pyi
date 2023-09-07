@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from ..fluid import layers as layers
+from ..base import layers as layers
 
 def array_length(array: Any): ...
 def array_read(array: Any, i: Any): ...

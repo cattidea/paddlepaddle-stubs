@@ -2,9 +2,9 @@ from __future__ import annotations
 
 from typing import Optional
 
-from ...fluid.initializer import Bilinear as Bilinear
-from ...fluid.initializer import Initializer as Initializer
-from ...fluid.initializer import set_global_initializer as set_global_initializer
+from ...base.initializer import Bilinear as Bilinear
+from ...base.initializer import Initializer as Initializer
+from ...base.initializer import set_global_initializer as set_global_initializer
 from .assign import Assign as Assign
 from .constant import Constant as Constant
 from .dirac import Dirac as Dirac

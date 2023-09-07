@@ -4,7 +4,7 @@ from typing import Any, Optional
 
 from paddle import framework as framework
 from paddle.autograd import PyLayer as PyLayer
-from paddle.fluid.dygraph.layers import Layer
+from paddle.base.dygraph.layers import Layer
 
 from .random import get_rng_state_tracker as get_rng_state_tracker
 

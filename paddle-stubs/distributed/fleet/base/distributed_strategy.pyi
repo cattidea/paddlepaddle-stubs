@@ -2,9 +2,9 @@ from __future__ import annotations
 
 from typing import Any
 
-from paddle.fluid.framework import Variable as Variable
-from paddle.fluid.framework import core as core
-from paddle.fluid.framework import set_flags as set_flags
+from paddle.base.framework import Variable as Variable
+from paddle.base.framework import core as core
+from paddle.base.framework import set_flags as set_flags
 
 non_auto_func_called: bool
 
@@ -20,7 +20,7 @@ class DistributedJobInfo:
     job_info: Any = ...
     def __init__(self) -> None: ...
 
-ReduceStrategyFluid: Any
+ReduceStrategybase: Any
 ReduceStrategyFleet = int
 
 class DistributedStrategy:

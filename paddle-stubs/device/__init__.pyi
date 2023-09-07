@@ -2,9 +2,9 @@ from __future__ import annotations
 
 from typing import Any
 
-from paddle.fluid.framework import is_compiled_with_cinn as is_compiled_with_cinn
-from paddle.fluid.framework import is_compiled_with_cuda as is_compiled_with_cuda
-from paddle.fluid.framework import is_compiled_with_rocm as is_compiled_with_rocm
+from paddle.base.framework import is_compiled_with_cinn as is_compiled_with_cinn
+from paddle.base.framework import is_compiled_with_cuda as is_compiled_with_cuda
+from paddle.base.framework import is_compiled_with_rocm as is_compiled_with_rocm
 
 def is_compiled_with_npu(): ...
 def is_compiled_with_ipu(): ...

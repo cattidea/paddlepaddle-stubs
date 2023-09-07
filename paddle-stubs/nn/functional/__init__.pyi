@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-from ...fluid.layers import gather_tree as gather_tree
-from ...fluid.layers import temporal_shift as temporal_shift
+from ...base.layers import gather_tree as gather_tree
+from ...base.layers import temporal_shift as temporal_shift
 from .activation import celu as celu
 from .activation import elu as elu
 from .activation import elu_ as elu_

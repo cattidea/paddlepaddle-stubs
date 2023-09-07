@@ -1,9 +1,9 @@
 from __future__ import annotations
 
-from ..fluid.dygraph.container import LayerList as LayerList
-from ..fluid.dygraph.container import ParameterList as ParameterList
-from ..fluid.dygraph.container import Sequential as Sequential
-from ..fluid.dygraph.layers import Layer as Layer
+from ..base.dygraph.container import LayerList as LayerList
+from ..base.dygraph.container import ParameterList as ParameterList
+from ..base.dygraph.container import Sequential as Sequential
+from ..base.dygraph.layers import Layer as Layer
 from . import functional as functional
 from .clip import ClipGradByGlobalNorm as ClipGradByGlobalNorm
 from .clip import ClipGradByNorm as ClipGradByNorm

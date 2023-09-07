@@ -3,9 +3,9 @@ from __future__ import annotations
 import abc
 from typing import Any, Optional
 
-from ..fluid.data_feeder import check_variable_and_dtype as check_variable_and_dtype
-from ..fluid.framework import core as core
-from ..fluid.layer_helper import LayerHelper as LayerHelper
+from ..base.data_feeder import check_variable_and_dtype as check_variable_and_dtype
+from ..base.framework import core as core
+from ..base.layer_helper import LayerHelper as LayerHelper
 
 class Metric(metaclass=abc.ABCMeta):
     def __init__(self) -> None: ...

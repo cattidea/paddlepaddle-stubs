@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from ...fluid.layers.tensor import fill_constant as fill_constant
+from ...base.layers.tensor import fill_constant as fill_constant
 
 def get_all_process_groups(): ...
 def get_process_group(group_id: Any, g_process_group_map: Any | None = ...): ...

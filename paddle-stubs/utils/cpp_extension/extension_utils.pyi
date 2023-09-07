@@ -3,8 +3,8 @@ from __future__ import annotations
 from collections import namedtuple
 from typing import Any, NamedTuple
 
-from ...fluid import core as core
-from ...fluid.framework import OpProtoHolder as OpProtoHolder
+from ...base import core as core
+from ...base.framework import OpProtoHolder as OpProtoHolder
 from ...sysconfig import get_include as get_include
 from ...sysconfig import get_lib as get_lib
 

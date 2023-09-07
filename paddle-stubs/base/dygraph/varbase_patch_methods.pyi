@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from paddle.fluid.data_feeder import convert_dtype as convert_dtype
+from paddle.base.data_feeder import convert_dtype as convert_dtype
 
 from .. import core as core
 from .. import framework as framework

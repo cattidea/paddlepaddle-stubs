@@ -3,19 +3,19 @@ from __future__ import annotations
 from datetime import timedelta as timedelta
 from typing import Any, Optional
 
-from ..fluid.data_feeder import check_dtype as check_dtype
-from ..fluid.data_feeder import check_type as check_type
-from ..fluid.data_feeder import check_variable_and_dtype as check_variable_and_dtype
-from ..fluid.data_feeder import convert_dtype as convert_dtype
-from ..fluid.dygraph import layers as layers
-from ..fluid.dygraph.parallel import prepare_context as prepare_context
-from ..fluid.framework import OpProtoHolder as OpProtoHolder
-from ..fluid.framework import Variable as Variable
-from ..fluid.framework import convert_np_dtype_to_dtype_ as convert_np_dtype_to_dtype_
-from ..fluid.framework import in_dygraph_mode as in_dygraph_mode
-from ..fluid.layer_helper import LayerHelper as LayerHelper
-from ..fluid.layers import utils as utils
-from ..fluid.layers.tensor import fill_constant as fill_constant
+from ..base.data_feeder import check_dtype as check_dtype
+from ..base.data_feeder import check_type as check_type
+from ..base.data_feeder import check_variable_and_dtype as check_variable_and_dtype
+from ..base.data_feeder import convert_dtype as convert_dtype
+from ..base.dygraph import layers as layers
+from ..base.dygraph.parallel import prepare_context as prepare_context
+from ..base.framework import OpProtoHolder as OpProtoHolder
+from ..base.framework import Variable as Variable
+from ..base.framework import convert_np_dtype_to_dtype_ as convert_np_dtype_to_dtype_
+from ..base.framework import in_dygraph_mode as in_dygraph_mode
+from ..base.layer_helper import LayerHelper as LayerHelper
+from ..base.layers import utils as utils
+from ..base.layers.tensor import fill_constant as fill_constant
 
 class ReduceOp:
     SUM: int = ...

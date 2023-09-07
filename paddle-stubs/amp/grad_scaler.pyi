@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from paddle.fluid.dygraph.amp import AmpScaler
+from paddle.base.dygraph.amp import AmpScaler
 
 class GradScaler(AmpScaler):
     def __init__(

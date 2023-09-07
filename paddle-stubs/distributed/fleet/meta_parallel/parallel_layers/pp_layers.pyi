@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from paddle.fluid.dygraph.layers import Layer
+from paddle.base.dygraph.layers import Layer
 
 from ...utils.log_util import layer_to_str as layer_to_str
 from ...utils.log_util import logger as logger

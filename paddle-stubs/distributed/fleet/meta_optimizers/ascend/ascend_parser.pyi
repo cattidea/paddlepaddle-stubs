@@ -3,7 +3,7 @@ from __future__ import annotations
 from typing import Any
 
 from paddle.distributed import fleet as fleet
-from paddle.fluid.optimizer import Optimizer as Optimizer
+from paddle.base.optimizer import Optimizer as Optimizer
 
 registerd_op: Any
 global_cnt: int

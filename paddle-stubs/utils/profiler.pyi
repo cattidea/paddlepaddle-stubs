@@ -2,11 +2,11 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from ..fluid.profiler import cuda_profiler as cuda_profiler
-from ..fluid.profiler import profiler as profiler
-from ..fluid.profiler import reset_profiler as reset_profiler
-from ..fluid.profiler import start_profiler as start_profiler
-from ..fluid.profiler import stop_profiler as stop_profiler
+from ..base.profiler import cuda_profiler as cuda_profiler
+from ..base.profiler import profiler as profiler
+from ..base.profiler import reset_profiler as reset_profiler
+from ..base.profiler import start_profiler as start_profiler
+from ..base.profiler import stop_profiler as stop_profiler
 
 class ProfilerOptions:
     options: Any = ...

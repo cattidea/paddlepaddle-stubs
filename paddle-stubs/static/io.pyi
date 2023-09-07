@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from paddle.fluid.executor import Executor as Executor
+from paddle.base.executor import Executor as Executor
 
 def normalize_program(program: Any, feed_vars: Any, fetch_vars: Any): ...
 def is_persistable(var: Any): ...

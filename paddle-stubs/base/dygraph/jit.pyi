@@ -2,10 +2,10 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from paddle.fluid.dygraph.dygraph_to_static.logging_utils import (
+from paddle.base.dygraph.dygraph_to_static.logging_utils import (
     set_code_level as set_code_level,
 )
-from paddle.fluid.dygraph.dygraph_to_static.logging_utils import (
+from paddle.base.dygraph.dygraph_to_static.logging_utils import (
     set_verbosity as set_verbosity,
 )
 

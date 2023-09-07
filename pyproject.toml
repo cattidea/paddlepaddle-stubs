@@ -44,7 +44,7 @@ skip = ["setup.py", ".venv"]
 
 [tool.pyright]
 include = ["paddle-stubs", "tests"]
-ignore = ["paddle-stubs/fluid"]
+ignore = ["paddle-stubs/base"]
 pythonVersion = "3.8"
 typeCheckingMode = "strict"
 reportMissingModuleSource = false

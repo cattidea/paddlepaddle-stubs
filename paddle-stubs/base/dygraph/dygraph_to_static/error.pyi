@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from paddle.fluid.dygraph.dygraph_to_static.origin_info import OriginInfo
+from paddle.base.dygraph.dygraph_to_static.origin_info import OriginInfo
 
 ERROR_DATA: str
 SIMPLIFY_ERROR_ENV_NAME: str

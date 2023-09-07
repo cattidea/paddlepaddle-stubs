@@ -16,7 +16,7 @@ from ..._typing import (
     NumbericSequence,
     Tensor,
 )
-from ...fluid.dygraph import Flatten as Flatten
+from ...base.dygraph import Flatten as Flatten
 
 InterpolationMode: TypeAlias = Literal["linear", "bilinear", "trilinear", "nearest", "bicubic"]
 

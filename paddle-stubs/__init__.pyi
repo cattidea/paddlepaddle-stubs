@@ -2,7 +2,7 @@ from __future__ import annotations
 
 __version__: str
 
-from . import fluid as fluid
+from . import base as base
 from . import hub as hub
 from . import jit as jit
 from . import linalg as linalg

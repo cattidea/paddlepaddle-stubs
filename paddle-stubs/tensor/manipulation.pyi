@@ -3,23 +3,23 @@ from __future__ import annotations
 from typing import Any, Optional
 
 from .._typing import NumbericSequence, ShapeLike, Tensor
-from ..fluid import layers as layers
-from ..fluid.data_feeder import check_dtype as check_dtype
-from ..fluid.data_feeder import check_type as check_type
-from ..fluid.data_feeder import check_variable_and_dtype as check_variable_and_dtype
-from ..fluid.data_feeder import convert_dtype as convert_dtype
-from ..fluid.dygraph.inplace_utils import (
+from ..base import layers as layers
+from ..base.data_feeder import check_dtype as check_dtype
+from ..base.data_feeder import check_type as check_type
+from ..base.data_feeder import check_variable_and_dtype as check_variable_and_dtype
+from ..base.data_feeder import convert_dtype as convert_dtype
+from ..base.dygraph.inplace_utils import (
     inplace_apis_in_dygraph_only as inplace_apis_in_dygraph_only,
 )
-from ..fluid.framework import in_dygraph_mode as in_dygraph_mode
-from ..fluid.layer_helper import LayerHelper as LayerHelper
-from ..fluid.layers import cast as cast
-from ..fluid.layers import scatter_nd as scatter_nd
-from ..fluid.layers import shard_index as shard_index
-from ..fluid.layers import slice as slice
-from ..fluid.layers import transpose as transpose
-from ..fluid.layers import unstack as unstack
-from ..fluid.layers import utils as utils
+from ..base.framework import in_dygraph_mode as in_dygraph_mode
+from ..base.layer_helper import LayerHelper as LayerHelper
+from ..base.layers import cast as cast
+from ..base.layers import scatter_nd as scatter_nd
+from ..base.layers import shard_index as shard_index
+from ..base.layers import slice as slice
+from ..base.layers import transpose as transpose
+from ..base.layers import unstack as unstack
+from ..base.layers import utils as utils
 from ..framework import OpProtoHolder as OpProtoHolder
 from ..framework import convert_np_dtype_to_dtype_ as convert_np_dtype_to_dtype_
 from ..framework import core as core

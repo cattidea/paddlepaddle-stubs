@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from paddle.fluid import core as core
+from paddle.base import core as core
 
 def delete_ops(block: Any, ops: Any) -> None: ...
 def find_op_by_input_arg(block: Any, arg_name: Any): ...

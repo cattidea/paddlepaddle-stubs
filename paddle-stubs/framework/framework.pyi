@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from paddle.fluid.data_feeder import convert_dtype as convert_dtype
+from paddle.base.data_feeder import convert_dtype as convert_dtype
 
 def set_default_dtype(d: Any) -> None: ...
 def get_default_dtype(): ...

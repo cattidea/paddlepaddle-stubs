@@ -2,8 +2,8 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from paddle.fluid.dygraph import Layer as Layer
-from paddle.fluid.dygraph import LayerList as LayerList
+from paddle.base.dygraph import Layer as Layer
+from paddle.base.dygraph import LayerList as LayerList
 
 from ..base.private_helper_function import wait_server_ready as wait_server_ready
 from .common import OP_ROLE_KEY as OP_ROLE_KEY

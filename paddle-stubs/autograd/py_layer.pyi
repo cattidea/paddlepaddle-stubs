@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from paddle.fluid import core
+from paddle.base import core
 
 class PyLayerContext:
     container: Any = ...

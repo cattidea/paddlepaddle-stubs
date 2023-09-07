@@ -2,10 +2,10 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from ... import fluid as fluid
-from ...fluid import dygraph as dygraph
-from ...fluid.data_feeder import check_variable_and_dtype as check_variable_and_dtype
-from ...fluid.layer_helper import LayerHelper as LayerHelper
+from ... import base as base
+from ...base import dygraph as dygraph
+from ...base.data_feeder import check_variable_and_dtype as check_variable_and_dtype
+from ...base.layer_helper import LayerHelper as LayerHelper
 
 def l2_norm(x: Any, axis: Any, epsilon: float = ..., name: str | None = ...): ...
 def norm_except_dim(p: Any, dim: Any): ...

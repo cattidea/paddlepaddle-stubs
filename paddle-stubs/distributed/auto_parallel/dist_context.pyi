@@ -3,7 +3,7 @@ from __future__ import annotations
 from collections import defaultdict as defaultdict
 from typing import Any, Optional
 
-from paddle.fluid.framework import get_flags as get_flags
+from paddle.base.framework import get_flags as get_flags
 
 from .dist_attribute import OperatorDistributedAttribute as OperatorDistributedAttribute
 from .dist_attribute import TensorDistributedAttribute as TensorDistributedAttribute

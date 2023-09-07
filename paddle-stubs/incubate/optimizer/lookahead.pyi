@@ -2,12 +2,12 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from paddle.fluid import core as core
-from paddle.fluid.framework import Program as Program
-from paddle.fluid.framework import default_main_program as default_main_program
-from paddle.fluid.framework import default_startup_program as default_startup_program
-from paddle.fluid.framework import device_guard as device_guard
-from paddle.fluid.framework import name_scope as name_scope
+from paddle.base import core as core
+from paddle.base.framework import Program as Program
+from paddle.base.framework import default_main_program as default_main_program
+from paddle.base.framework import default_startup_program as default_startup_program
+from paddle.base.framework import device_guard as device_guard
+from paddle.base.framework import name_scope as name_scope
 from paddle.optimizer import Optimizer
 
 class LookAhead(Optimizer):

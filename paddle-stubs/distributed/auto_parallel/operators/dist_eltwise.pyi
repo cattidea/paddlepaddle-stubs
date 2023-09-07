@@ -7,16 +7,16 @@ from paddle.distributed.fleet.meta_optimizers.common import (
     OP_ROLE_VAR_KEY as OP_ROLE_VAR_KEY,
 )
 from paddle.distributed.fleet.meta_optimizers.common import OpRole as OpRole
-from paddle.fluid import core as core
-from paddle.fluid import unique_name as unique_name
-from paddle.fluid.data_feeder import check_dtype as check_dtype
-from paddle.fluid.data_feeder import (
+from paddle.base import core as core
+from paddle.base import unique_name as unique_name
+from paddle.base.data_feeder import check_dtype as check_dtype
+from paddle.base.data_feeder import (
     check_variable_and_dtype as check_variable_and_dtype,
 )
-from paddle.fluid.framework import Parameter as Parameter
-from paddle.fluid.framework import Program as Program
-from paddle.fluid.framework import Variable as Variable
-from paddle.fluid.framework import program_guard as program_guard
+from paddle.base.framework import Parameter as Parameter
+from paddle.base.framework import Program as Program
+from paddle.base.framework import Variable as Variable
+from paddle.base.framework import program_guard as program_guard
 
 from ..dist_attribute import (
     OperatorDistributedAttribute as OperatorDistributedAttribute,

@@ -2,9 +2,9 @@ from __future__ import annotations
 
 from typing import Any
 
-from paddle.fluid import core as core
-from paddle.fluid import framework as framework
-from paddle.fluid.framework import Variable as Variable
+from paddle.base import core as core
+from paddle.base import framework as framework
+from paddle.base.framework import Variable as Variable
 from paddle.optimizer import Optimizer as Optimizer
 
 from ...base.topology import ParallelMode as ParallelMode

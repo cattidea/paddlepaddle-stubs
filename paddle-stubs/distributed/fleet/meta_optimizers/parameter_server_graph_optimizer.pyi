@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from paddle import fluid as fluid
+from paddle import base as base
 
 from .parameter_server_optimizer import (
     ParameterServerOptimizer as ParameterServerOptimizer,

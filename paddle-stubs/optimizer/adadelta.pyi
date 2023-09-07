@@ -3,8 +3,8 @@ from __future__ import annotations
 from collections.abc import Sequence
 
 from .._typing import Tensor
-from ..fluid.clip import GradientClipBase
-from ..fluid.regularizer import WeightDecayRegularizer
+from ..base.clip import GradientClipBase
+from ..base.regularizer import WeightDecayRegularizer
 from .lr import LRScheduler
 from .optimizer import Optimizer, ParameterConfig
 

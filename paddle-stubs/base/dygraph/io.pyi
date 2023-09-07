@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from paddle.fluid.dygraph import layers
+from paddle.base.dygraph import layers
 
 class _ProgramHolder:
     def __init__(self, program_desc: Any) -> None: ...

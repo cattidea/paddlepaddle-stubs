@@ -4,7 +4,7 @@ import abc
 from abc import ABC
 from typing import Any, Optional
 
-from paddle.fluid.framework import program_guard as program_guard
+from paddle.base.framework import program_guard as program_guard
 
 class PassContext:
     def __init__(self) -> None: ...

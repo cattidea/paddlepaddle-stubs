@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Optional
 
-from ...fluid.initializer import MSRAInitializer
+from ...base.initializer import MSRAInitializer
 
 class KaimingNormal(MSRAInitializer):
     def __init__(

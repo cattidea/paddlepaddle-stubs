@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from paddle.fluid.layers.learning_rate_scheduler import (
+from paddle.base.layers.learning_rate_scheduler import (
     piecewise_decay as piecewise_decay,
 )
 from paddle.framework import core as core

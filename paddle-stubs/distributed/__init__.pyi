@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from paddle.distributed.fleet.dataset import InMemoryDataset as InMemoryDataset
 from paddle.distributed.fleet.dataset import QueueDataset as QueueDataset
-from paddle.fluid.dygraph.parallel import ParallelEnv as ParallelEnv
+from paddle.base.dygraph.parallel import ParallelEnv as ParallelEnv
 
 from .collective import ReduceOp as ReduceOp
 from .collective import all_gather as all_gather

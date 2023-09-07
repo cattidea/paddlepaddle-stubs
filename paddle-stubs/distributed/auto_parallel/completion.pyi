@@ -3,7 +3,7 @@ from __future__ import annotations
 from copy import deepcopy as deepcopy
 from typing import Any
 
-from paddle.fluid import framework as framework
+from paddle.base import framework as framework
 
 from .dist_attribute import OperatorDistributedAttribute as OperatorDistributedAttribute
 from .dist_attribute import TensorDistributedAttribute as TensorDistributedAttribute

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from paddle.fluid import dygraph_utils as dygraph_utils
+from paddle.base import dygraph_utils as dygraph_utils
 
 def fused_feedforward(
     x: Any,

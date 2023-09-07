@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any, NamedTuple
 
-from paddle.fluid.optimizer import Optimizer
+from paddle.base.optimizer import Optimizer
 
 from . import ascend_parser as ascend_parser
 

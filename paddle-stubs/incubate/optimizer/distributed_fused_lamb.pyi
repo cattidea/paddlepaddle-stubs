@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from paddle.fluid.initializer import Constant as Constant
+from paddle.base.initializer import Constant as Constant
 from paddle.optimizer import Optimizer
 
 class DistributedFusedLamb(Optimizer):

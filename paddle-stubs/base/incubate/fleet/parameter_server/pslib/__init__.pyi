@@ -2,8 +2,8 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from paddle.fluid.framework import Program as Program
-from paddle.fluid.incubate.fleet.base.fleet_base import DistributedOptimizer, Fleet
+from paddle.base.framework import Program as Program
+from paddle.base.incubate.fleet.base.fleet_base import DistributedOptimizer, Fleet
 
 from .optimizer_factory import *
 

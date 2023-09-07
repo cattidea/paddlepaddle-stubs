@@ -6,7 +6,7 @@ from typing import Any, Optional
 from setuptools.command.build_ext import build_ext
 from setuptools.command.easy_install import easy_install
 
-from ...fluid import core as core
+from ...base import core as core
 from .extension_utils import CLANG_COMPILE_FLAGS as CLANG_COMPILE_FLAGS
 from .extension_utils import CLANG_LINK_FLAGS as CLANG_LINK_FLAGS
 from .extension_utils import IS_WINDOWS as IS_WINDOWS

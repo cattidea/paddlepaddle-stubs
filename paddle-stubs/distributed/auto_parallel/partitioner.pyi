@@ -5,9 +5,9 @@ from typing import Any
 from paddle.distributed.auto_parallel.dist_context import (
     DistributedOperatorContext as DistributedOperatorContext,
 )
-from paddle.fluid import unique_name as unique_name
-from paddle.fluid.framework import Variable as Variable
-from paddle.fluid.framework import program_guard as program_guard
+from paddle.base import unique_name as unique_name
+from paddle.base.framework import Variable as Variable
+from paddle.base.framework import program_guard as program_guard
 
 from .dist_attribute import OperatorDistributedAttribute as OperatorDistributedAttribute
 from .operators.common import BACKWARD_ONLY_DIST_OPS as BACKWARD_ONLY_DIST_OPS

@@ -2,8 +2,8 @@ from __future__ import annotations
 
 from typing import Any
 
-from paddle.fluid.framework import Parameter as Parameter
-from paddle.fluid.framework import Variable as Variable
+from paddle.base.framework import Parameter as Parameter
+from paddle.base.framework import Variable as Variable
 
 from ..base.private_helper_function import wait_server_ready as wait_server_ready
 from .runtime_base import RuntimeBase as RuntimeBase

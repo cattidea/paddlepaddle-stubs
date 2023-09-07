@@ -7,10 +7,10 @@ from typing import Any, Optional
 from paddle import framework as framework
 from paddle.device import get_cudnn_version as get_cudnn_version
 from paddle.device import get_device as get_device
-from paddle.fluid.data_feeder import convert_dtype as convert_dtype
-from paddle.fluid.layers.utils import flatten as flatten
-from paddle.fluid.layers.utils import map_structure as map_structure
-from paddle.fluid.layers.utils import pack_sequence_as as pack_sequence_as
+from paddle.base.data_feeder import convert_dtype as convert_dtype
+from paddle.base.layers.utils import flatten as flatten
+from paddle.base.layers.utils import map_structure as map_structure
+from paddle.base.layers.utils import pack_sequence_as as pack_sequence_as
 from paddle.nn import Layer
 from paddle.nn import LayerList as LayerList
 

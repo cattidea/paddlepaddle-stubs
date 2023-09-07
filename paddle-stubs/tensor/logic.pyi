@@ -2,16 +2,16 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from ..fluid.data_feeder import check_type as check_type
-from ..fluid.data_feeder import check_variable_and_dtype as check_variable_and_dtype
-from ..fluid.framework import in_dygraph_mode as in_dygraph_mode
-from ..fluid.layer_helper import LayerHelper as LayerHelper
-from ..fluid.layers import is_empty as is_empty
-from ..fluid.layers import logical_and as logical_and
-from ..fluid.layers import logical_not as logical_not
-from ..fluid.layers import logical_or as logical_or
-from ..fluid.layers import logical_xor as logical_xor
-from ..fluid.layers.layer_function_generator import templatedoc as templatedoc
+from ..base.data_feeder import check_type as check_type
+from ..base.data_feeder import check_variable_and_dtype as check_variable_and_dtype
+from ..base.framework import in_dygraph_mode as in_dygraph_mode
+from ..base.layer_helper import LayerHelper as LayerHelper
+from ..base.layers import is_empty as is_empty
+from ..base.layers import logical_and as logical_and
+from ..base.layers import logical_not as logical_not
+from ..base.layers import logical_or as logical_or
+from ..base.layers import logical_xor as logical_xor
+from ..base.layers.layer_function_generator import templatedoc as templatedoc
 from ..static import Variable as Variable
 
 Tensor: Any
