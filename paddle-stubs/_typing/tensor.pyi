@@ -18,7 +18,14 @@ _PyCapsule: TypeAlias = Any  # noqa: Y047
 
 TensorLike: TypeAlias = list[TensorLike] | tuple[TensorLike, ...] | npt.NDArray[Any] | Tensor | Numberic
 
-class Tensor(Sized, Iterable[Tensor], Hashable, SupportsFloat, SupportsInt, SupportsIndex, ):
+class Tensor(
+    Sized,
+    Iterable[Tensor],
+    Hashable,
+    SupportsFloat,
+    SupportsInt,
+    SupportsIndex,
+):
     shape: list[int]
     dtype: dtype
     grad: npt.NDArray[Any]
@@ -115,6 +122,6 @@ class Tensor(Sized, Iterable[Tensor], Hashable, SupportsFloat, SupportsInt, Supp
 
     # np.testing.assert_allclose
     def __array__(self) -> npt.NDArray[Any]: ...
-    
+
     # extended math ops
     # TODO: ...
