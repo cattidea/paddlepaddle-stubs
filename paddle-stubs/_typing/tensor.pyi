@@ -14,7 +14,7 @@ from .shape import ShapeLike
 # `builtins.PyCapsule` unfortunately lacks annotations as of the moment;
 # use `Any` as a stopgap measure
 # @see also: https://github.com/numpy/numpy/blob/b6a3e837785eac58a2f68e126f4db7895ca047b3/numpy/__init__.pyi#L1465
-_PyCapsule: TypeAlias = Any  # noqa: Y047
+_PyCapsule: TypeAlias = Any  # noqa: PYI047
 
 TensorLike: TypeAlias = list[TensorLike] | tuple[TensorLike, ...] | npt.NDArray[Any] | Tensor | Numberic
 
@@ -82,7 +82,6 @@ class Tensor(
     # def __rrshift__(self, other: TensorLike) -> Tensor: ... # missing
 
     # ?: Missing all inplace operations
-
     # others
     # def __abs__(self) -> Tensor: ... # missing
     def __len__(self) -> int: ...
@@ -96,7 +95,6 @@ class Tensor(
     def __contains__(self, other: TensorLike) -> bool: ...
     # def __dlpack__(self) -> _PyCapsule: ... # missing
     # def __dlpack_device__(self, stream: Any | None = ...) # missing
-
     # methods
     def clear_grad(self) -> None: ...
     clear_gradient = clear_grad

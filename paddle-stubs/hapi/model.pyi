@@ -4,6 +4,7 @@ from collections.abc import Iterable
 from typing import Any, Literal
 
 import numpy.typing as npt
+
 from paddle import nn
 
 from .._typing import DTypeLike, DynamicShapeLike, Tensor

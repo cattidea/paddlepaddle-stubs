@@ -2,9 +2,10 @@ from __future__ import annotations
 
 from typing import Any, Literal
 
+from typing_extensions import TypeAlias
+
 from paddle.framework import ParamAttr
 from paddle.nn import Layer
-from typing_extensions import TypeAlias
 
 from ..._typing import (
     DataLayout1D,

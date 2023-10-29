@@ -1,8 +1,7 @@
 VERSION := "2.4.0-alpha.1"
 
 fmt:
-  poetry run isort .
-  poetry run black .
+  poetry run ruff format .
 
 fmt-docs:
   prettier --write '**/*.md'
@@ -63,8 +62,7 @@ ci-install:
   poetry install --no-interaction --no-root
 
 ci-fmt-check:
-  poetry run isort --check-only .
-  poetry run black --check --diff .
+  poetry run ruff format --check --diff .
   prettier --check '**/*.md'
 
 ci-lint:
