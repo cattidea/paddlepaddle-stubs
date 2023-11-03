@@ -21,6 +21,7 @@ from . import initializer as initializer
 from . import install_check as install_check
 from . import io as io
 from . import layers as layers
+from . import libpaddle as libpaddle
 from . import metrics as metrics
 from . import nets as nets
 from . import optimizer as optimizer

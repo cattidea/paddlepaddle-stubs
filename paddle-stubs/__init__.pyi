@@ -9,6 +9,7 @@ from . import linalg as linalg
 from . import metric as metric
 from . import nn as nn
 from . import optimizer as optimizer
+from . import pir as pir
 from . import regularizer as regularizer
 from . import signal as signal
 from . import static as static
