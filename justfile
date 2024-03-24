@@ -1,4 +1,4 @@
-VERSION := "2.4.0-alpha.1"
+VERSION := "3.0.0-alpha.1"
 
 fmt:
   poetry run ruff format .
@@ -40,6 +40,12 @@ lint:
 
 build:
   poetry build
+
+release:
+  @echo 'Tagging v{{VERSION}}...'
+  git tag "v{{VERSION}}"
+  @echo 'Push to GitHub to trigger publish process...'
+  git push --tags
 
 publish:
   poetry publish --build
