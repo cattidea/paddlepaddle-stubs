@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "paddlepaddle-stubs"
-version = "2.5.0-alpha.2"
-description = ""
+version = "3.0.0-alpha.1"
+description = "A stubs package as described in PEP 561 for PaddlePaddle"
 authors = ["Nyakku Shigure <sigure.qaq@gmail.com>"]
 packages = [{ include = "paddle-stubs/**/*.pyi" }]
 license = "MIT"
@@ -18,6 +18,9 @@ classifiers = [
   "Programming Language :: Python :: 3.8",
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
   "Programming Language :: Python :: Implementation :: CPython",
 ]
 
@@ -49,10 +52,10 @@ include = ["paddle-stubs/**.pyi", "tests/**.pyi"]
 select = ["PYI", "UP", "I"]
 ignore = ["PYI029", "PYI044"]
 
-[tool.ruff.per-file-ignores]
+[tool.ruff.lint.per-file-ignores]
 "setup.py" = ["I"]
 
-[tool.ruff.isort]
+[tool.ruff.lint.isort]
 required-imports = ["from __future__ import annotations"]
 known-first-party = ["paddle"]
 
