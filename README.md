@@ -13,7 +13,7 @@ A stubs package as described in [PEP 561](https://peps.python.org/pep-0561/) for
 
 目前仅针对 [Pyright](https://github.com/microsoft/pyright) 进行了编写和测试，尚未支持 [Mypy](https://github.com/python/mypy)（Mypy 相对于 Pyright 太难用了，缺失功能太多），因此目前可能仅仅与 VS Code 的 Pylance 扩展一起工作良好～
 
-> **Note**
+> [!NOTE]
 >
 > 本 repo 非运行时库，因此本 repo 中所有示例和单测可能在运行时并不能正常运行，仅仅是为了更加全面和方便对类型进行检查而已。
 

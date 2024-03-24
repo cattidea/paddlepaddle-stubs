@@ -1,9 +1,0 @@
-from __future__ import annotations
-
-from typing import Any
-
-class ConversionOptions:
-    not_convert: Any = ...
-    def __init__(self, not_convert: bool = ...) -> None: ...
-
-def convert_call(func: Any): ...

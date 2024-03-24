@@ -1,6 +1,8 @@
 from __future__ import annotations
 
-from typing import Any, Optional
+from typing import Any
+
+import numpy.typing as npt
 
 def global_scope(): ...
 def scope_guard(scope: Any) -> None: ...
@@ -43,7 +45,7 @@ class Executor:
         use_program_cache: bool = ...,
         return_merged: bool = ...,
         use_prune: bool = ...,
-    ): ...
+    ) -> list[npt.NDArray[Any]]: ...
     def infer_from_dataset(
         self,
         program: Any | None = ...,
