@@ -39,28 +39,4 @@ VS Code 推荐配置：
 
 ## Status
 
-起步阶段，最低支持 Python 3.8，目前基于 PaddlePaddle 2.3.1 开发，第一个可用版本应当是 2.3.1 版本或者更晚的 2.4 版本～
-
-## Roadmap
-
-See [paddlepaddle-stubs 2.3.1 Roadmap](https://github.com/orgs/cattidea/projects/3)
-
-### 2.4.0 alpha
-
-> **Note**
->
-> 此时本 repo 可 public，并发布到 PyPI
-
--  [x] 通过 basic mode 的类型检查
--  [x] 完善全部 P1 级别的类型信息（strict 下工作良好）
-
-### 2.4.0 beta
-
--  [ ] 完善全部 P2 级别的类型信息（strict 下工作良好）
--  [ ] [官网示例高层 API 搭建 MNIST 示例代码](./examples/mnist_example.py)在 strict 模式下工作良好
-
-### Future
-
-之后应该是一边升级到新版本（2.4.0），一边继续完善 P3、P4、P5 级别的类型信息（strict 下工作良好）
-
-要添加的还有很多，各个 API 类型信息需要仔细填写（修改自动生成的 `Any`，添加返回值类型），有兴趣的小伙伴可以一起来参与呀～
+本项目将会作为 [【Hackathon 6th】Fundable Project 任务一 —— 为 Paddle 框架 API 添加类型提示（Type Hints）](https://github.com/PaddlePaddle/community/blob/master/hackathon/hackathon_6th/%E3%80%90Hackathon%206th%E3%80%91FundableProject%E4%BB%BB%E5%8A%A1%E5%90%88%E9%9B%86.md#%E4%B8%80%E4%B8%BA-paddle-%E6%A1%86%E6%9E%B6-api-%E6%B7%BB%E5%8A%A0%E7%B1%BB%E5%9E%8B%E6%8F%90%E7%A4%BAtype-hints)的参考项目，如成功集成至 Paddle，本项目不再单独维护。
