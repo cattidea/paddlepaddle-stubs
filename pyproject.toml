@@ -31,7 +31,7 @@ typing-extensions = "^4.7.1"
 [tool.poetry.group.dev.dependencies]
 pyright = "^1.1.355"
 Pillow = "^10.0.0"
-numpy = "1.24.3"
+numpy = ">=1.24"
 paddlepaddle = "^2.6.1"
 ruff = "^0.3.4"
 
