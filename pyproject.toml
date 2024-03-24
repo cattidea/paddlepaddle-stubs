@@ -20,7 +20,6 @@ classifiers = [
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
-  "Programming Language :: Python :: 3.13",
   "Programming Language :: Python :: Implementation :: CPython",
 ]
 
@@ -31,7 +30,10 @@ typing-extensions = "^4.7.1"
 [tool.poetry.group.dev.dependencies]
 pyright = "^1.1.355"
 Pillow = "^10.0.0"
-numpy = ">=1.24"
+numpy = [
+  { version = ">=1.24.4", python = ">=3.8,<3.12" },
+  { version = ">=1.26.4", python = ">=3.12" },
+]
 paddlepaddle = "^2.6.1"
 ruff = "^0.3.4"
 
