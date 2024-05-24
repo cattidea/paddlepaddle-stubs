@@ -9,6 +9,7 @@ from typing_extensions import Literal, ParamSpec, TypeAlias, Unpack
 from paddle.static import BuildStrategy, InputSpec, Program
 from .translated_layer import TranslatedLayer
 from paddle.nn import Layer
+
 _RetT = TypeVar("_RetT")
 _InputT = ParamSpec("_InputT")
 Backends: TypeAlias = Literal["CINN"]
@@ -23,8 +24,11 @@ class _SaveLoadConfig(TypedDict):
     skip_prune_program: Any
 
 class ConcreteProgram: ...
+
 class StaticFunction(Generic[_InputT, _RetT]):
-    def __init__(self, function: Callable[_InputT, _RetT], input_spec:list[InputSpec] | None=None, **kwargs: Any) -> None: ...
+    def __init__(
+        self, function: Callable[_InputT, _RetT], input_spec: list[InputSpec] | None = None, **kwargs: Any
+    ) -> None: ...
     def _get_debug_name(self) -> str: ...
     @property
     def is_property(self) -> bool: ...
@@ -45,9 +49,8 @@ class StaticFunction(Generic[_InputT, _RetT]):
     @property
     def concrete_program(self) -> ConcreteProgram: ...
     def concrete_program_specify_input_spec(
-        self, input_spec: list[InputSpec] | None = None, with_hook:bool=False, is_prim_infer:bool=False
+        self, input_spec: list[InputSpec] | None = None, with_hook: bool = False, is_prim_infer: bool = False
     ) -> ConcreteProgram: ...
-
     def rollback(self) -> Callable[_InputT, _RetT]: ...
     @property
     def inputs(self) -> list[Any]: ...
@@ -59,6 +62,7 @@ class StaticFunction(Generic[_InputT, _RetT]):
     def program_cache(self) -> Any: ...
     @property
     def function_spec(self) -> Any: ...
+
 @overload
 def to_static(
     function: Layer,
