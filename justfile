@@ -23,7 +23,7 @@ check:
     paddle-stubs/sysconfig.pyi
 
 lint:
-  poetry run ruff --fix \
+  poetry run ruff check --fix \
     paddle-stubs/_typing/* \
     paddle-stubs/hapi/hub.pyi \
     paddle-stubs/hapi/model.pyi \

@@ -48,7 +48,7 @@ reportIncompatibleMethodOverride = false
 [tool.ruff]
 line-length = 120
 target-version = "py38"
-include = ["paddle-stubs/**.pyi", "tests/**.pyi"]
+include = ["paddle-stubs/**.pyi", "tests/**.pyi", "**/*.py"]
 
 [tool.ruff.lint]
 select = ["PYI", "UP", "I"]

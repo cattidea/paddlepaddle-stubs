@@ -1,13 +1,11 @@
 from __future__ import annotations
 
-from typing import TYPE_CHECKING
 
 import numpy as np
+import numpy.typing as npt
 import paddle
 from paddle.vision.transforms import Normalize
 
-if TYPE_CHECKING:
-    import numpy.typing as npt
 
 transform = Normalize(mean=[127.5], std=[127.5], data_format="CHW")
 # 下载数据集并初始化 DataSet

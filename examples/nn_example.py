@@ -1,12 +1,10 @@
 from __future__ import annotations
 
-from typing import TYPE_CHECKING
 
 import paddle
 from paddle import nn
 
-if TYPE_CHECKING:
-    from paddle import Tensor
+from paddle import Tensor
 
 
 class MyModel(nn.Layer):
@@ -23,7 +21,7 @@ class MyModel(nn.Layer):
 
     # Pylance will report a `reportIncompatibleMethodOverride` error here.
     # see also: https://github.com/microsoft/pyright/issues/1787
-    def forward(self, x: Tensor):  # pyright: reportIncompatibleMethodOverride=false
+    def forward(self, x: Tensor):  # pyright: ignore[reportIncompatibleMethodOverride]
         x = self.fc1(x)
         x = self.fc2(x)
         return x
