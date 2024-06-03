@@ -17,7 +17,6 @@ _RetT = TypeVar("_RetT")
 _InputT = ParamSpec("_InputT")
 Backends: TypeAlias = Literal["CINN"]
 
-
 class _SaveLoadConfig(TypedDict):
     output_spec: Any
     with_hook: Any
@@ -27,9 +26,7 @@ class _SaveLoadConfig(TypedDict):
     input_names_after_prune: Any
     skip_prune_program: Any
 
-
 class ConcreteProgram: ...
-
 
 class StaticFunction(Generic[_InputT, _RetT]):
     def __init__(
@@ -69,13 +66,11 @@ class StaticFunction(Generic[_InputT, _RetT]):
     @property
     def function_spec(self) -> Any: ...
 
-
 class ToStaticDecorator(Protocol):
     @overload
     def __call__(self, function: _LayerT) -> _LayerT: ...
     @overload
     def __call__(self, function: Callable[_InputT, _RetT]) -> StaticFunction[_InputT, _RetT]: ...
-
 
 @overload
 def to_static(
