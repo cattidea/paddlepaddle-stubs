@@ -2,8 +2,9 @@
 
 from __future__ import annotations
 
-import paddle
 from typing_extensions import assert_type
+
+import paddle
 
 
 def test_import():
@@ -15,14 +16,14 @@ def test_import():
     paddle.vision.squeezenet1_0
     paddle.vision.squeezenet1_1
 
-    from paddle.vision import SqueezeNet  # pyright: ignore[reportUnusedImport]
-    from paddle.vision import squeezenet1_0  # pyright: ignore[reportUnusedImport]
-    from paddle.vision import squeezenet1_1  # pyright: ignore[reportUnusedImport]
-    from paddle.vision.models import SqueezeNet  # pyright: ignore[reportUnusedImport]
-    from paddle.vision.models import (
+    from paddle.vision import (
+        SqueezeNet,  # pyright: ignore[reportUnusedImport]
         squeezenet1_0,  # pyright: ignore[reportUnusedImport]
+        squeezenet1_1,  # pyright: ignore[reportUnusedImport]
     )
     from paddle.vision.models import (
+        SqueezeNet,  # pyright: ignore[reportUnusedImport]
+        squeezenet1_0,  # pyright: ignore[reportUnusedImport]
         squeezenet1_1,  # pyright: ignore[reportUnusedImport]
     )
 

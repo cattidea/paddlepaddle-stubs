@@ -1,10 +1,7 @@
 from __future__ import annotations
 
-
 import paddle
-from paddle import nn
-
-from paddle import Tensor
+from paddle import Tensor, nn
 
 
 class MyModel(nn.Layer):
@@ -15,7 +12,7 @@ class MyModel(nn.Layer):
         *,
         hidden_size: int = 10,
     ):
-        super(MyModel, self).__init__()
+        super().__init__()
         self.fc1 = nn.Linear(in_channels, hidden_size)
         self.fc2 = nn.Linear(hidden_size, out_channels)
 

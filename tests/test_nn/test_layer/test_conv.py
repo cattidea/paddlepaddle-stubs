@@ -2,9 +2,10 @@
 
 from __future__ import annotations
 
+from typing_extensions import assert_type
+
 import paddle
 from paddle import Tensor
-from typing_extensions import assert_type
 
 
 def test_import():
@@ -15,12 +16,14 @@ def test_import():
     paddle.nn.Conv3D
     paddle.nn.Conv3DTranspose
 
-    from paddle.nn import Conv1D  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import Conv1DTranspose  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import Conv2D  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import Conv2DTranspose  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import Conv3D  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import Conv3DTranspose  # pyright: ignore [reportUnusedImport]
+    from paddle.nn import (
+        Conv1D,  # pyright: ignore [reportUnusedImport]
+        Conv1DTranspose,  # pyright: ignore [reportUnusedImport]
+        Conv2D,  # pyright: ignore [reportUnusedImport]
+        Conv2DTranspose,  # pyright: ignore [reportUnusedImport]
+        Conv3D,  # pyright: ignore [reportUnusedImport]
+        Conv3DTranspose,  # pyright: ignore [reportUnusedImport]
+    )
 
 
 def test_types():

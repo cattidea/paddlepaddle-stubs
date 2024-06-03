@@ -2,8 +2,9 @@
 
 from __future__ import annotations
 
-import paddle
 from typing_extensions import assert_type
+
+import paddle
 
 
 def test_import():
@@ -23,30 +24,22 @@ def test_import():
     paddle.vision.shufflenet_v2_x2_0
     paddle.vision.shufflenet_v2_swish
 
-    from paddle.vision import ShuffleNetV2  # pyright: ignore[reportUnusedImport]
-    from paddle.vision import shufflenet_v2_swish  # pyright: ignore[reportUnusedImport]
-    from paddle.vision import shufflenet_v2_x0_5  # pyright: ignore[reportUnusedImport]
-    from paddle.vision import shufflenet_v2_x0_25  # pyright: ignore[reportUnusedImport]
-    from paddle.vision import shufflenet_v2_x1_0  # pyright: ignore[reportUnusedImport]
-    from paddle.vision import shufflenet_v2_x1_5  # pyright: ignore[reportUnusedImport]
-    from paddle.vision import shufflenet_v2_x2_0  # pyright: ignore[reportUnusedImport]
-    from paddle.vision.models import ShuffleNetV2  # pyright: ignore[reportUnusedImport]
-    from paddle.vision.models import (
+    from paddle.vision import (
+        ShuffleNetV2,  # pyright: ignore[reportUnusedImport]
         shufflenet_v2_swish,  # pyright: ignore[reportUnusedImport]
-    )
-    from paddle.vision.models import (
         shufflenet_v2_x0_5,  # pyright: ignore[reportUnusedImport]
-    )
-    from paddle.vision.models import (
         shufflenet_v2_x0_25,  # pyright: ignore[reportUnusedImport]
-    )
-    from paddle.vision.models import (
         shufflenet_v2_x1_0,  # pyright: ignore[reportUnusedImport]
-    )
-    from paddle.vision.models import (
         shufflenet_v2_x1_5,  # pyright: ignore[reportUnusedImport]
+        shufflenet_v2_x2_0,  # pyright: ignore[reportUnusedImport]
     )
     from paddle.vision.models import (
+        ShuffleNetV2,  # pyright: ignore[reportUnusedImport]
+        shufflenet_v2_swish,  # pyright: ignore[reportUnusedImport]
+        shufflenet_v2_x0_5,  # pyright: ignore[reportUnusedImport]
+        shufflenet_v2_x0_25,  # pyright: ignore[reportUnusedImport]
+        shufflenet_v2_x1_0,  # pyright: ignore[reportUnusedImport]
+        shufflenet_v2_x1_5,  # pyright: ignore[reportUnusedImport]
         shufflenet_v2_x2_0,  # pyright: ignore[reportUnusedImport]
     )
 

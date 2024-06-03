@@ -1,11 +1,10 @@
 from __future__ import annotations
 
-
 import numpy as np
 import numpy.typing as npt
+
 import paddle
 from paddle.vision.transforms import Normalize
-
 
 transform = Normalize(mean=[127.5], std=[127.5], data_format="CHW")
 # 下载数据集并初始化 DataSet

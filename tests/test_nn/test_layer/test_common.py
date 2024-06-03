@@ -2,9 +2,10 @@
 
 from __future__ import annotations
 
+from typing_extensions import assert_type
+
 import paddle
 from paddle import Tensor
-from typing_extensions import assert_type
 
 
 def test_import():
@@ -28,25 +29,27 @@ def test_import():
     paddle.nn.Unfold
     paddle.nn.Fold
 
-    from paddle.nn import AlphaDropout  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import Bilinear  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import CosineSimilarity  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import Dropout  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import Dropout2D  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import Dropout3D  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import Embedding  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import Flatten  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import Fold  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import Identity  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import Linear  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import Pad1D  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import Pad2D  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import Pad3D  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import Unfold  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import Upsample  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import UpsamplingBilinear2D  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import UpsamplingNearest2D  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import ZeroPad2D  # pyright: ignore [reportUnusedImport]
+    from paddle.nn import (
+        AlphaDropout,  # pyright: ignore [reportUnusedImport]
+        Bilinear,  # pyright: ignore [reportUnusedImport]
+        CosineSimilarity,  # pyright: ignore [reportUnusedImport]
+        Dropout,  # pyright: ignore [reportUnusedImport]
+        Dropout2D,  # pyright: ignore [reportUnusedImport]
+        Dropout3D,  # pyright: ignore [reportUnusedImport]
+        Embedding,  # pyright: ignore [reportUnusedImport]
+        Flatten,  # pyright: ignore [reportUnusedImport]
+        Fold,  # pyright: ignore [reportUnusedImport]
+        Identity,  # pyright: ignore [reportUnusedImport]
+        Linear,  # pyright: ignore [reportUnusedImport]
+        Pad1D,  # pyright: ignore [reportUnusedImport]
+        Pad2D,  # pyright: ignore [reportUnusedImport]
+        Pad3D,  # pyright: ignore [reportUnusedImport]
+        Unfold,  # pyright: ignore [reportUnusedImport]
+        Upsample,  # pyright: ignore [reportUnusedImport]
+        UpsamplingBilinear2D,  # pyright: ignore [reportUnusedImport]
+        UpsamplingNearest2D,  # pyright: ignore [reportUnusedImport]
+        ZeroPad2D,  # pyright: ignore [reportUnusedImport]
+    )
 
 
 def test_types():

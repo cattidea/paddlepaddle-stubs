@@ -2,8 +2,9 @@
 
 from __future__ import annotations
 
-import paddle
 from typing_extensions import assert_type
+
+import paddle
 
 
 def test_import():
@@ -13,10 +14,14 @@ def test_import():
     paddle.vision.InceptionV3
     paddle.vision.inception_v3
 
-    from paddle.vision import InceptionV3  # pyright: ignore[reportUnusedImport]
-    from paddle.vision import inception_v3  # pyright: ignore[reportUnusedImport]
-    from paddle.vision.models import InceptionV3  # pyright: ignore[reportUnusedImport]
-    from paddle.vision.models import inception_v3  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import (
+        InceptionV3,  # pyright: ignore[reportUnusedImport]
+        inception_v3,  # pyright: ignore[reportUnusedImport]
+    )
+    from paddle.vision.models import (
+        InceptionV3,  # pyright: ignore[reportUnusedImport]
+        inception_v3,  # pyright: ignore[reportUnusedImport]
+    )
 
 
 def test_creation():

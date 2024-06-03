@@ -2,8 +2,9 @@
 
 from __future__ import annotations
 
-import paddle
 from typing_extensions import assert_type
+
+import paddle
 
 
 def test_import():
@@ -11,9 +12,11 @@ def test_import():
     paddle.hub.list
     paddle.hub.load
 
-    from paddle.hub import help  # pyright: ignore [reportUnusedImport]
-    from paddle.hub import list  # pyright: ignore [reportUnusedImport]
-    from paddle.hub import load  # pyright: ignore [reportUnusedImport]
+    from paddle.hub import (
+        help,  # pyright: ignore [reportUnusedImport]
+        list,  # pyright: ignore [reportUnusedImport]
+        load,  # pyright: ignore [reportUnusedImport]
+    )
 
 
 def test_help():

@@ -2,9 +2,10 @@
 
 from __future__ import annotations
 
+from typing_extensions import assert_type
+
 import paddle
 from paddle.static import InputSpec
-from typing_extensions import assert_type
 
 
 def test_import():

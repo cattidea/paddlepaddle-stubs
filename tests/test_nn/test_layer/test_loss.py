@@ -2,9 +2,10 @@
 
 from __future__ import annotations
 
+from typing_extensions import assert_type
+
 import paddle
 from paddle import Tensor
-from typing_extensions import assert_type
 
 
 def test_import():
@@ -21,18 +22,20 @@ def test_import():
     paddle.nn.SmoothL1Loss
     paddle.nn.HingeEmbeddingLoss
 
-    from paddle.nn import BCELoss  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import BCEWithLogitsLoss  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import CrossEntropyLoss  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import CTCLoss  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import HingeEmbeddingLoss  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import HSigmoidLoss  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import KLDivLoss  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import L1Loss  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import MarginRankingLoss  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import MSELoss  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import NLLLoss  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import SmoothL1Loss  # pyright: ignore [reportUnusedImport]
+    from paddle.nn import (
+        BCELoss,  # pyright: ignore [reportUnusedImport]
+        BCEWithLogitsLoss,  # pyright: ignore [reportUnusedImport]
+        CrossEntropyLoss,  # pyright: ignore [reportUnusedImport]
+        CTCLoss,  # pyright: ignore [reportUnusedImport]
+        HingeEmbeddingLoss,  # pyright: ignore [reportUnusedImport]
+        HSigmoidLoss,  # pyright: ignore [reportUnusedImport]
+        KLDivLoss,  # pyright: ignore [reportUnusedImport]
+        L1Loss,  # pyright: ignore [reportUnusedImport]
+        MarginRankingLoss,  # pyright: ignore [reportUnusedImport]
+        MSELoss,  # pyright: ignore [reportUnusedImport]
+        NLLLoss,  # pyright: ignore [reportUnusedImport]
+        SmoothL1Loss,  # pyright: ignore [reportUnusedImport]
+    )
 
 
 def test_types():

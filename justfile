@@ -7,7 +7,8 @@ fmt-docs:
   prettier --write '**/*.md'
 
 check:
-  poetry run pyright tests \
+  poetry run pyright \
+    tests \
     paddle-stubs/_typing/* \
     paddle-stubs/hapi/hub.pyi \
     paddle-stubs/hapi/model.pyi \
@@ -24,6 +25,7 @@ check:
 
 lint:
   poetry run ruff check --fix \
+    tests \
     paddle-stubs/_typing/* \
     paddle-stubs/hapi/hub.pyi \
     paddle-stubs/hapi/model.pyi \

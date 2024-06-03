@@ -2,16 +2,19 @@
 
 from __future__ import annotations
 
-import paddle
 from typing_extensions import assert_type
+
+import paddle
 
 
 def test_import():
     paddle.regularizer.L1Decay
     paddle.regularizer.L2Decay
 
-    from paddle.regularizer import L1Decay  # pyright: ignore [reportUnusedImport]
-    from paddle.regularizer import L2Decay  # pyright: ignore [reportUnusedImport]
+    from paddle.regularizer import (
+        L1Decay,  # pyright: ignore [reportUnusedImport]
+        L2Decay,  # pyright: ignore [reportUnusedImport]
+    )
 
 
 def test_types():

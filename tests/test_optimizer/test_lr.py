@@ -23,36 +23,20 @@ def test_import():
 
     from paddle.optimizer.lr import (
         CosineAnnealingDecay,  # pyright: ignore [reportUnusedImport]
-    )
-    from paddle.optimizer.lr import (
         ExponentialDecay,  # pyright: ignore [reportUnusedImport]
-    )
-    from paddle.optimizer.lr import (
         InverseTimeDecay,  # pyright: ignore [reportUnusedImport]
-    )
-    from paddle.optimizer.lr import LambdaDecay  # pyright: ignore [reportUnusedImport]
-    from paddle.optimizer.lr import LinearWarmup  # pyright: ignore [reportUnusedImport]
-    from paddle.optimizer.lr import LRScheduler  # pyright: ignore [reportUnusedImport]
-    from paddle.optimizer.lr import (
+        LambdaDecay,  # pyright: ignore [reportUnusedImport]
+        LinearWarmup,  # pyright: ignore [reportUnusedImport]
+        LRScheduler,  # pyright: ignore [reportUnusedImport]
         MultiplicativeDecay,  # pyright: ignore [reportUnusedImport]
-    )
-    from paddle.optimizer.lr import (
         MultiStepDecay,  # pyright: ignore [reportUnusedImport]
-    )
-    from paddle.optimizer.lr import (
         NaturalExpDecay,  # pyright: ignore [reportUnusedImport]
-    )
-    from paddle.optimizer.lr import NoamDecay  # pyright: ignore [reportUnusedImport]
-    from paddle.optimizer.lr import (
+        NoamDecay,  # pyright: ignore [reportUnusedImport]
         PiecewiseDecay,  # pyright: ignore [reportUnusedImport]
-    )
-    from paddle.optimizer.lr import (
         PolynomialDecay,  # pyright: ignore [reportUnusedImport]
-    )
-    from paddle.optimizer.lr import (
         ReduceOnPlateau,  # pyright: ignore [reportUnusedImport]
+        StepDecay,  # pyright: ignore [reportUnusedImport]
     )
-    from paddle.optimizer.lr import StepDecay  # pyright: ignore [reportUnusedImport]
 
 
 def test_types():

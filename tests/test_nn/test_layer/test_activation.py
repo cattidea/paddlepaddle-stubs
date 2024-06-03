@@ -2,9 +2,10 @@
 
 from __future__ import annotations
 
+from typing_extensions import assert_type
+
 import paddle
 from paddle import Tensor
-from typing_extensions import assert_type
 
 
 def test_import():
@@ -35,31 +36,33 @@ def test_import():
     paddle.nn.LogSigmoid
     paddle.nn.Maxout
 
-    from paddle.nn import CELU  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import ELU  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import GELU  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import SELU  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import Hardshrink  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import Hardsigmoid  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import Hardswish  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import Hardtanh  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import LeakyReLU  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import LogSigmoid  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import Maxout  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import Mish  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import PReLU  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import ReLU  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import ReLU6  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import Sigmoid  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import Silu  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import Softmax  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import Softplus  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import Softshrink  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import Softsign  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import Swish  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import Tanh  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import Tanhshrink  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import ThresholdedReLU  # pyright: ignore [reportUnusedImport]
+    from paddle.nn import (
+        CELU,  # pyright: ignore [reportUnusedImport]
+        ELU,  # pyright: ignore [reportUnusedImport]
+        GELU,  # pyright: ignore [reportUnusedImport]
+        SELU,  # pyright: ignore [reportUnusedImport]
+        Hardshrink,  # pyright: ignore [reportUnusedImport]
+        Hardsigmoid,  # pyright: ignore [reportUnusedImport]
+        Hardswish,  # pyright: ignore [reportUnusedImport]
+        Hardtanh,  # pyright: ignore [reportUnusedImport]
+        LeakyReLU,  # pyright: ignore [reportUnusedImport]
+        LogSigmoid,  # pyright: ignore [reportUnusedImport]
+        Maxout,  # pyright: ignore [reportUnusedImport]
+        Mish,  # pyright: ignore [reportUnusedImport]
+        PReLU,  # pyright: ignore [reportUnusedImport]
+        ReLU,  # pyright: ignore [reportUnusedImport]
+        ReLU6,  # pyright: ignore [reportUnusedImport]
+        Sigmoid,  # pyright: ignore [reportUnusedImport]
+        Silu,  # pyright: ignore [reportUnusedImport]
+        Softmax,  # pyright: ignore [reportUnusedImport]
+        Softplus,  # pyright: ignore [reportUnusedImport]
+        Softshrink,  # pyright: ignore [reportUnusedImport]
+        Softsign,  # pyright: ignore [reportUnusedImport]
+        Swish,  # pyright: ignore [reportUnusedImport]
+        Tanh,  # pyright: ignore [reportUnusedImport]
+        Tanhshrink,  # pyright: ignore [reportUnusedImport]
+        ThresholdedReLU,  # pyright: ignore [reportUnusedImport]
+    )
 
 
 def test_types():

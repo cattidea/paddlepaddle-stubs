@@ -2,9 +2,10 @@
 
 from __future__ import annotations
 
+from typing_extensions import assert_type
+
 import paddle
 from paddle import Tensor
-from typing_extensions import assert_type
 
 
 def test_import():
@@ -12,9 +13,11 @@ def test_import():
     paddle.nn.GRU
     paddle.nn.LSTM
 
-    from paddle.nn import GRU  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import LSTM  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import SimpleRNN  # pyright: ignore [reportUnusedImport]
+    from paddle.nn import (
+        GRU,  # pyright: ignore [reportUnusedImport]
+        LSTM,  # pyright: ignore [reportUnusedImport]
+        SimpleRNN,  # pyright: ignore [reportUnusedImport]
+    )
 
 
 def test_types():

@@ -2,9 +2,10 @@
 
 from __future__ import annotations
 
+from typing_extensions import assert_type
+
 import paddle
 from paddle import Tensor
-from typing_extensions import assert_type
 
 
 def test_import():
@@ -21,18 +22,20 @@ def test_import():
     paddle.nn.SyncBatchNorm
     paddle.nn.LocalResponseNorm
 
-    from paddle.nn import BatchNorm  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import BatchNorm1D  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import BatchNorm2D  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import BatchNorm3D  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import GroupNorm  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import InstanceNorm1D  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import InstanceNorm2D  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import InstanceNorm3D  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import LayerNorm  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import LocalResponseNorm  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import SpectralNorm  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import SyncBatchNorm  # pyright: ignore [reportUnusedImport]
+    from paddle.nn import (
+        BatchNorm,  # pyright: ignore [reportUnusedImport]
+        BatchNorm1D,  # pyright: ignore [reportUnusedImport]
+        BatchNorm2D,  # pyright: ignore [reportUnusedImport]
+        BatchNorm3D,  # pyright: ignore [reportUnusedImport]
+        GroupNorm,  # pyright: ignore [reportUnusedImport]
+        InstanceNorm1D,  # pyright: ignore [reportUnusedImport]
+        InstanceNorm2D,  # pyright: ignore [reportUnusedImport]
+        InstanceNorm3D,  # pyright: ignore [reportUnusedImport]
+        LayerNorm,  # pyright: ignore [reportUnusedImport]
+        LocalResponseNorm,  # pyright: ignore [reportUnusedImport]
+        SpectralNorm,  # pyright: ignore [reportUnusedImport]
+        SyncBatchNorm,  # pyright: ignore [reportUnusedImport]
+    )
 
 
 def test_types():

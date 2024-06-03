@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import numpy as np
+
 import paddle
 
 
@@ -22,32 +23,20 @@ def test_import():
     paddle.nn.initializer.XavierNormal
     paddle.nn.initializer.XavierUniform
 
-    from paddle.nn.initializer import Assign  # pyright: ignore [reportUnusedImport]
-    from paddle.nn.initializer import Bilinear  # pyright: ignore [reportUnusedImport]
-    from paddle.nn.initializer import Constant  # pyright: ignore [reportUnusedImport]
-    from paddle.nn.initializer import Dirac  # pyright: ignore [reportUnusedImport]
     from paddle.nn.initializer import (
+        Assign,  # pyright: ignore [reportUnusedImport]
+        Bilinear,  # pyright: ignore [reportUnusedImport]
+        Constant,  # pyright: ignore [reportUnusedImport]
+        Dirac,  # pyright: ignore [reportUnusedImport]
         Initializer,  # pyright: ignore [reportUnusedImport]
-    )
-    from paddle.nn.initializer import (
         KaimingNormal,  # pyright: ignore [reportUnusedImport]
-    )
-    from paddle.nn.initializer import (
         KaimingUniform,  # pyright: ignore [reportUnusedImport]
-    )
-    from paddle.nn.initializer import Normal  # pyright: ignore [reportUnusedImport]
-    from paddle.nn.initializer import Orthogonal  # pyright: ignore [reportUnusedImport]
-    from paddle.nn.initializer import (
+        Normal,  # pyright: ignore [reportUnusedImport]
+        Orthogonal,  # pyright: ignore [reportUnusedImport]
         TruncatedNormal,  # pyright: ignore [reportUnusedImport]
-    )
-    from paddle.nn.initializer import Uniform  # pyright: ignore [reportUnusedImport]
-    from paddle.nn.initializer import (
+        Uniform,  # pyright: ignore [reportUnusedImport]
         XavierNormal,  # pyright: ignore [reportUnusedImport]
-    )
-    from paddle.nn.initializer import (
         XavierUniform,  # pyright: ignore [reportUnusedImport]
-    )
-    from paddle.nn.initializer import (
         set_global_initializer,  # pyright: ignore [reportUnusedImport]
     )
 

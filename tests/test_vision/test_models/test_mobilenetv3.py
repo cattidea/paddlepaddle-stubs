@@ -2,8 +2,9 @@
 
 from __future__ import annotations
 
-import paddle
 from typing_extensions import assert_type
+
+import paddle
 
 
 def test_import():
@@ -17,20 +18,16 @@ def test_import():
     paddle.vision.mobilenet_v3_small
     paddle.vision.mobilenet_v3_large
 
-    from paddle.vision import MobileNetV3Large  # pyright: ignore[reportUnusedImport]
-    from paddle.vision import MobileNetV3Small  # pyright: ignore[reportUnusedImport]
-    from paddle.vision import mobilenet_v3_large  # pyright: ignore[reportUnusedImport]
-    from paddle.vision import mobilenet_v3_small  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import (
+        MobileNetV3Large,  # pyright: ignore[reportUnusedImport]
+        MobileNetV3Small,  # pyright: ignore[reportUnusedImport]
+        mobilenet_v3_large,  # pyright: ignore[reportUnusedImport]
+        mobilenet_v3_small,  # pyright: ignore[reportUnusedImport]
+    )
     from paddle.vision.models import (
         MobileNetV3Large,  # pyright: ignore[reportUnusedImport]
-    )
-    from paddle.vision.models import (
         MobileNetV3Small,  # pyright: ignore[reportUnusedImport]
-    )
-    from paddle.vision.models import (
         mobilenet_v3_large,  # pyright: ignore[reportUnusedImport]
-    )
-    from paddle.vision.models import (
         mobilenet_v3_small,  # pyright: ignore[reportUnusedImport]
     )
 

@@ -2,8 +2,9 @@
 
 from __future__ import annotations
 
-import paddle
 from typing_extensions import assert_type
+
+import paddle
 
 
 def test_import():
@@ -37,48 +38,36 @@ def test_import():
     paddle.vision.wide_resnet50_2
     paddle.vision.wide_resnet101_2
 
-    from paddle.vision import ResNet  # pyright: ignore[reportUnusedImport]
-    from paddle.vision import resnet18  # pyright: ignore[reportUnusedImport]
-    from paddle.vision import resnet34  # pyright: ignore[reportUnusedImport]
-    from paddle.vision import resnet50  # pyright: ignore[reportUnusedImport]
-    from paddle.vision import resnet101  # pyright: ignore[reportUnusedImport]
-    from paddle.vision import resnet152  # pyright: ignore[reportUnusedImport]
-    from paddle.vision import resnext50_32x4d  # pyright: ignore[reportUnusedImport]
-    from paddle.vision import resnext50_64x4d  # pyright: ignore[reportUnusedImport]
-    from paddle.vision import resnext101_32x4d  # pyright: ignore[reportUnusedImport]
-    from paddle.vision import resnext101_64x4d  # pyright: ignore[reportUnusedImport]
-    from paddle.vision import resnext152_32x4d  # pyright: ignore[reportUnusedImport]
-    from paddle.vision import resnext152_64x4d  # pyright: ignore[reportUnusedImport]
-    from paddle.vision import wide_resnet50_2  # pyright: ignore[reportUnusedImport]
-    from paddle.vision import wide_resnet101_2  # pyright: ignore[reportUnusedImport]
-    from paddle.vision.models import ResNet  # pyright: ignore[reportUnusedImport]
-    from paddle.vision.models import resnet18  # pyright: ignore[reportUnusedImport]
-    from paddle.vision.models import resnet34  # pyright: ignore[reportUnusedImport]
-    from paddle.vision.models import resnet50  # pyright: ignore[reportUnusedImport]
-    from paddle.vision.models import resnet101  # pyright: ignore[reportUnusedImport]
-    from paddle.vision.models import resnet152  # pyright: ignore[reportUnusedImport]
-    from paddle.vision.models import (
+    from paddle.vision import (
+        ResNet,  # pyright: ignore[reportUnusedImport]
+        resnet18,  # pyright: ignore[reportUnusedImport]
+        resnet34,  # pyright: ignore[reportUnusedImport]
+        resnet50,  # pyright: ignore[reportUnusedImport]
+        resnet101,  # pyright: ignore[reportUnusedImport]
+        resnet152,  # pyright: ignore[reportUnusedImport]
         resnext50_32x4d,  # pyright: ignore[reportUnusedImport]
-    )
-    from paddle.vision.models import (
         resnext50_64x4d,  # pyright: ignore[reportUnusedImport]
-    )
-    from paddle.vision.models import (
         resnext101_32x4d,  # pyright: ignore[reportUnusedImport]
-    )
-    from paddle.vision.models import (
         resnext101_64x4d,  # pyright: ignore[reportUnusedImport]
-    )
-    from paddle.vision.models import (
         resnext152_32x4d,  # pyright: ignore[reportUnusedImport]
-    )
-    from paddle.vision.models import (
         resnext152_64x4d,  # pyright: ignore[reportUnusedImport]
-    )
-    from paddle.vision.models import (
         wide_resnet50_2,  # pyright: ignore[reportUnusedImport]
+        wide_resnet101_2,  # pyright: ignore[reportUnusedImport]
     )
     from paddle.vision.models import (
+        ResNet,  # pyright: ignore[reportUnusedImport]
+        resnet18,  # pyright: ignore[reportUnusedImport]
+        resnet34,  # pyright: ignore[reportUnusedImport]
+        resnet50,  # pyright: ignore[reportUnusedImport]
+        resnet101,  # pyright: ignore[reportUnusedImport]
+        resnet152,  # pyright: ignore[reportUnusedImport]
+        resnext50_32x4d,  # pyright: ignore[reportUnusedImport]
+        resnext50_64x4d,  # pyright: ignore[reportUnusedImport]
+        resnext101_32x4d,  # pyright: ignore[reportUnusedImport]
+        resnext101_64x4d,  # pyright: ignore[reportUnusedImport]
+        resnext152_32x4d,  # pyright: ignore[reportUnusedImport]
+        resnext152_64x4d,  # pyright: ignore[reportUnusedImport]
+        wide_resnet50_2,  # pyright: ignore[reportUnusedImport]
         wide_resnet101_2,  # pyright: ignore[reportUnusedImport]
     )
 

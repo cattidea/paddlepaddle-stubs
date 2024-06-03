@@ -2,16 +2,19 @@
 
 from __future__ import annotations
 
-import paddle
 from typing_extensions import assert_type
+
+import paddle
 
 
 def test_import():
     paddle.sysconfig.get_lib
     paddle.sysconfig.get_include
 
-    from paddle.sysconfig import get_include  # pyright: ignore [reportUnusedImport]
-    from paddle.sysconfig import get_lib  # pyright: ignore [reportUnusedImport]
+    from paddle.sysconfig import (
+        get_include,  # pyright: ignore [reportUnusedImport]
+        get_lib,  # pyright: ignore [reportUnusedImport]
+    )
 
 
 def test_types():

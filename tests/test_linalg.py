@@ -4,9 +4,10 @@ from __future__ import annotations
 
 import numpy as np
 import numpy.typing as npt
+from typing_extensions import assert_type
+
 import paddle
 from paddle import Tensor
-from typing_extensions import assert_type
 
 
 def test_import():
@@ -34,29 +35,31 @@ def test_import():
     paddle.linalg.svd
     paddle.linalg.triangular_solve
 
-    from paddle.linalg import cholesky  # pyright: ignore [reportUnusedImport]
-    from paddle.linalg import cholesky_solve  # pyright: ignore [reportUnusedImport]
-    from paddle.linalg import cond  # pyright: ignore [reportUnusedImport]
-    from paddle.linalg import cov  # pyright: ignore [reportUnusedImport]
-    from paddle.linalg import det  # pyright: ignore [reportUnusedImport]
-    from paddle.linalg import eig  # pyright: ignore [reportUnusedImport]
-    from paddle.linalg import eigh  # pyright: ignore [reportUnusedImport]
-    from paddle.linalg import eigvals  # pyright: ignore [reportUnusedImport]
-    from paddle.linalg import eigvalsh  # pyright: ignore [reportUnusedImport]
-    from paddle.linalg import inv  # pyright: ignore [reportUnusedImport]
-    from paddle.linalg import lstsq  # pyright: ignore [reportUnusedImport]
-    from paddle.linalg import lu  # pyright: ignore [reportUnusedImport]
-    from paddle.linalg import lu_unpack  # pyright: ignore [reportUnusedImport]
-    from paddle.linalg import matrix_power  # pyright: ignore [reportUnusedImport]
-    from paddle.linalg import matrix_rank  # pyright: ignore [reportUnusedImport]
-    from paddle.linalg import multi_dot  # pyright: ignore [reportUnusedImport]
-    from paddle.linalg import norm  # pyright: ignore [reportUnusedImport]
-    from paddle.linalg import pinv  # pyright: ignore [reportUnusedImport]
-    from paddle.linalg import qr  # pyright: ignore [reportUnusedImport]
-    from paddle.linalg import slogdet  # pyright: ignore [reportUnusedImport]
-    from paddle.linalg import solve  # pyright: ignore [reportUnusedImport]
-    from paddle.linalg import svd  # pyright: ignore [reportUnusedImport]
-    from paddle.linalg import triangular_solve  # pyright: ignore [reportUnusedImport]
+    from paddle.linalg import (
+        cholesky,  # pyright: ignore [reportUnusedImport]
+        cholesky_solve,  # pyright: ignore [reportUnusedImport]
+        cond,  # pyright: ignore [reportUnusedImport]
+        cov,  # pyright: ignore [reportUnusedImport]
+        det,  # pyright: ignore [reportUnusedImport]
+        eig,  # pyright: ignore [reportUnusedImport]
+        eigh,  # pyright: ignore [reportUnusedImport]
+        eigvals,  # pyright: ignore [reportUnusedImport]
+        eigvalsh,  # pyright: ignore [reportUnusedImport]
+        inv,  # pyright: ignore [reportUnusedImport]
+        lstsq,  # pyright: ignore [reportUnusedImport]
+        lu,  # pyright: ignore [reportUnusedImport]
+        lu_unpack,  # pyright: ignore [reportUnusedImport]
+        matrix_power,  # pyright: ignore [reportUnusedImport]
+        matrix_rank,  # pyright: ignore [reportUnusedImport]
+        multi_dot,  # pyright: ignore [reportUnusedImport]
+        norm,  # pyright: ignore [reportUnusedImport]
+        pinv,  # pyright: ignore [reportUnusedImport]
+        qr,  # pyright: ignore [reportUnusedImport]
+        slogdet,  # pyright: ignore [reportUnusedImport]
+        solve,  # pyright: ignore [reportUnusedImport]
+        svd,  # pyright: ignore [reportUnusedImport]
+        triangular_solve,  # pyright: ignore [reportUnusedImport]
+    )
 
 
 def test_inv():

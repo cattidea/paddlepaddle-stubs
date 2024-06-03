@@ -17,16 +17,18 @@ def test_import():
     paddle.optimizer.RMSProp
     paddle.optimizer.SGD
 
-    from paddle.optimizer import SGD  # pyright: ignore [reportUnusedImport]
-    from paddle.optimizer import Adadelta  # pyright: ignore [reportUnusedImport]
-    from paddle.optimizer import Adagrad  # pyright: ignore [reportUnusedImport]
-    from paddle.optimizer import Adam  # pyright: ignore [reportUnusedImport]
-    from paddle.optimizer import Adamax  # pyright: ignore [reportUnusedImport]
-    from paddle.optimizer import AdamW  # pyright: ignore [reportUnusedImport]
-    from paddle.optimizer import Lamb  # pyright: ignore [reportUnusedImport]
-    from paddle.optimizer import Momentum  # pyright: ignore [reportUnusedImport]
-    from paddle.optimizer import Optimizer  # pyright: ignore [reportUnusedImport]
-    from paddle.optimizer import RMSProp  # pyright: ignore [reportUnusedImport]
+    from paddle.optimizer import (
+        SGD,  # pyright: ignore [reportUnusedImport]
+        Adadelta,  # pyright: ignore [reportUnusedImport]
+        Adagrad,  # pyright: ignore [reportUnusedImport]
+        Adam,  # pyright: ignore [reportUnusedImport]
+        Adamax,  # pyright: ignore [reportUnusedImport]
+        AdamW,  # pyright: ignore [reportUnusedImport]
+        Lamb,  # pyright: ignore [reportUnusedImport]
+        Momentum,  # pyright: ignore [reportUnusedImport]
+        Optimizer,  # pyright: ignore [reportUnusedImport]
+        RMSProp,  # pyright: ignore [reportUnusedImport]
+    )
 
 
 def test_types():

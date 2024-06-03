@@ -6,8 +6,9 @@ from typing import Any
 
 import numpy as np
 import numpy.typing as npt
-import paddle
 from typing_extensions import assert_type
+
+import paddle
 
 
 def test_import():

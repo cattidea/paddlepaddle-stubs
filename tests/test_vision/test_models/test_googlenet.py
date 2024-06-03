@@ -2,8 +2,9 @@
 
 from __future__ import annotations
 
-import paddle
 from typing_extensions import assert_type
+
+import paddle
 
 
 def test_import():
@@ -13,10 +14,14 @@ def test_import():
     paddle.vision.GoogLeNet
     paddle.vision.googlenet
 
-    from paddle.vision import GoogLeNet  # pyright: ignore[reportUnusedImport]
-    from paddle.vision import googlenet  # pyright: ignore[reportUnusedImport]
-    from paddle.vision.models import GoogLeNet  # pyright: ignore[reportUnusedImport]
-    from paddle.vision.models import googlenet  # pyright: ignore[reportUnusedImport]
+    from paddle.vision import (
+        GoogLeNet,  # pyright: ignore[reportUnusedImport]
+        googlenet,  # pyright: ignore[reportUnusedImport]
+    )
+    from paddle.vision.models import (
+        GoogLeNet,  # pyright: ignore[reportUnusedImport]
+        googlenet,  # pyright: ignore[reportUnusedImport]
+    )
 
 
 def test_creation():

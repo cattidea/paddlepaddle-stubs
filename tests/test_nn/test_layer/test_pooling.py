@@ -2,9 +2,10 @@
 
 from __future__ import annotations
 
+from typing_extensions import assert_type
+
 import paddle
 from paddle import Tensor
-from typing_extensions import assert_type
 
 
 def test_import():
@@ -24,21 +25,23 @@ def test_import():
     paddle.nn.MaxUnPool2D
     paddle.nn.MaxUnPool3D
 
-    from paddle.nn import AdaptiveAvgPool1D  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import AdaptiveAvgPool2D  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import AdaptiveAvgPool3D  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import AdaptiveMaxPool1D  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import AdaptiveMaxPool2D  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import AdaptiveMaxPool3D  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import AvgPool1D  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import AvgPool2D  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import AvgPool3D  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import MaxPool1D  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import MaxPool2D  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import MaxPool3D  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import MaxUnPool1D  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import MaxUnPool2D  # pyright: ignore [reportUnusedImport]
-    from paddle.nn import MaxUnPool3D  # pyright: ignore [reportUnusedImport]
+    from paddle.nn import (
+        AdaptiveAvgPool1D,  # pyright: ignore [reportUnusedImport]
+        AdaptiveAvgPool2D,  # pyright: ignore [reportUnusedImport]
+        AdaptiveAvgPool3D,  # pyright: ignore [reportUnusedImport]
+        AdaptiveMaxPool1D,  # pyright: ignore [reportUnusedImport]
+        AdaptiveMaxPool2D,  # pyright: ignore [reportUnusedImport]
+        AdaptiveMaxPool3D,  # pyright: ignore [reportUnusedImport]
+        AvgPool1D,  # pyright: ignore [reportUnusedImport]
+        AvgPool2D,  # pyright: ignore [reportUnusedImport]
+        AvgPool3D,  # pyright: ignore [reportUnusedImport]
+        MaxPool1D,  # pyright: ignore [reportUnusedImport]
+        MaxPool2D,  # pyright: ignore [reportUnusedImport]
+        MaxPool3D,  # pyright: ignore [reportUnusedImport]
+        MaxUnPool1D,  # pyright: ignore [reportUnusedImport]
+        MaxUnPool2D,  # pyright: ignore [reportUnusedImport]
+        MaxUnPool3D,  # pyright: ignore [reportUnusedImport]
+    )
 
 
 def test_types():

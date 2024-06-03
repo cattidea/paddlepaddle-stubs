@@ -3,9 +3,10 @@
 from __future__ import annotations
 
 import numpy as np
+from typing_extensions import assert_type
+
 import paddle
 from paddle import Tensor
-from typing_extensions import assert_type
 
 
 def test_import():

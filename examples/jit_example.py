@@ -1,8 +1,6 @@
 from __future__ import annotations
 
-
 import paddle
-
 from paddle import Tensor
 
 
@@ -17,7 +15,7 @@ y = static_fn(x)
 
 class MyModel(paddle.nn.Layer):
     def __init__(self):
-        super(MyModel, self).__init__()
+        super().__init__()
 
     def forward(self, x: Tensor) -> Tensor:
         return x + 1

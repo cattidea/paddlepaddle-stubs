@@ -5,11 +5,12 @@ from __future__ import annotations
 from typing import Any
 
 import numpy.typing as npt
-import paddle
-from paddle import Tensor
 from PIL import Image
 from PIL.Image import Image as PILImage
 from typing_extensions import assert_type
+
+import paddle
+from paddle import Tensor
 
 
 def test_import():
@@ -35,53 +36,23 @@ def test_import():
 
     from paddle.vision.transforms import (
         BaseTransform,  # pyright: ignore [reportUnusedImport]
-    )
-    from paddle.vision.transforms import (
         BrightnessTransform,  # pyright: ignore [reportUnusedImport]
-    )
-    from paddle.vision.transforms import (
         CenterCrop,  # pyright: ignore [reportUnusedImport]
-    )
-    from paddle.vision.transforms import (
         ColorJitter,  # pyright: ignore [reportUnusedImport]
-    )
-    from paddle.vision.transforms import Compose  # pyright: ignore [reportUnusedImport]
-    from paddle.vision.transforms import (
+        Compose,  # pyright: ignore [reportUnusedImport]
         ContrastTransform,  # pyright: ignore [reportUnusedImport]
-    )
-    from paddle.vision.transforms import (
         Grayscale,  # pyright: ignore [reportUnusedImport]
-    )
-    from paddle.vision.transforms import (
         HueTransform,  # pyright: ignore [reportUnusedImport]
-    )
-    from paddle.vision.transforms import (
         Normalize,  # pyright: ignore [reportUnusedImport]
-    )
-    from paddle.vision.transforms import Pad  # pyright: ignore [reportUnusedImport]
-    from paddle.vision.transforms import (
+        Pad,  # pyright: ignore [reportUnusedImport]
         RandomCrop,  # pyright: ignore [reportUnusedImport]
-    )
-    from paddle.vision.transforms import (
         RandomHorizontalFlip,  # pyright: ignore [reportUnusedImport]
-    )
-    from paddle.vision.transforms import (
         RandomResizedCrop,  # pyright: ignore [reportUnusedImport]
-    )
-    from paddle.vision.transforms import (
         RandomRotation,  # pyright: ignore [reportUnusedImport]
-    )
-    from paddle.vision.transforms import (
         RandomVerticalFlip,  # pyright: ignore [reportUnusedImport]
-    )
-    from paddle.vision.transforms import Resize  # pyright: ignore [reportUnusedImport]
-    from paddle.vision.transforms import (
+        Resize,  # pyright: ignore [reportUnusedImport]
         SaturationTransform,  # pyright: ignore [reportUnusedImport]
-    )
-    from paddle.vision.transforms import (
         ToTensor,  # pyright: ignore [reportUnusedImport]
-    )
-    from paddle.vision.transforms import (
         Transpose,  # pyright: ignore [reportUnusedImport]
     )
 

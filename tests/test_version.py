@@ -2,8 +2,9 @@
 
 from __future__ import annotations
 
-import paddle
 from typing_extensions import assert_type
+
+import paddle
 
 
 def test_import():
@@ -11,9 +12,11 @@ def test_import():
     paddle.version.cudnn
     paddle.version.show
 
-    from paddle.version import cuda  # pyright: ignore [reportUnusedImport]
-    from paddle.version import cudnn  # pyright: ignore [reportUnusedImport]
-    from paddle.version import show  # pyright: ignore [reportUnusedImport]
+    from paddle.version import (
+        cuda,  # pyright: ignore [reportUnusedImport]
+        cudnn,  # pyright: ignore [reportUnusedImport]
+        show,  # pyright: ignore [reportUnusedImport]
+    )
 
 
 def test_types():
