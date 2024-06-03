@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from .api import StaticFunction as StaticFunction
 from .api import enable_to_static as enable_to_static
 from .api import ignore_module as ignore_module
 from .api import load as load

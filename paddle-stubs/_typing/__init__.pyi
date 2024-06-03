@@ -3,6 +3,7 @@ from __future__ import annotations
 # Basic
 from .basic import IntSequence as IntSequence
 from .basic import NestedNumbericSequence as NestedNumbericSequence
+from .basic import NestedSequence as NestedSequence
 from .basic import Numberic as Numberic
 from .basic import NumbericSequence as NumbericSequence
 

@@ -2,17 +2,21 @@ from __future__ import annotations
 
 from collections.abc import Callable
 from types import ModuleType
-from typing import Any, TypedDict, TypeVar, Generic, overload
+from typing import Any, Generic, Protocol, TypedDict, TypeVar, overload
 
 from typing_extensions import Literal, ParamSpec, TypeAlias, Unpack
 
-from paddle.static import BuildStrategy, InputSpec, Program
-from .translated_layer import TranslatedLayer
 from paddle.nn import Layer
+from paddle.static import BuildStrategy, InputSpec, Program
 
+from .._typing import NestedSequence
+from .translated_layer import TranslatedLayer
+
+_LayerT = TypeVar("_LayerT", bound=Layer)
 _RetT = TypeVar("_RetT")
 _InputT = ParamSpec("_InputT")
 Backends: TypeAlias = Literal["CINN"]
+
 
 class _SaveLoadConfig(TypedDict):
     output_spec: Any
@@ -23,7 +27,9 @@ class _SaveLoadConfig(TypedDict):
     input_names_after_prune: Any
     skip_prune_program: Any
 
+
 class ConcreteProgram: ...
+
 
 class StaticFunction(Generic[_InputT, _RetT]):
     def __init__(
@@ -63,22 +69,38 @@ class StaticFunction(Generic[_InputT, _RetT]):
     @property
     def function_spec(self) -> Any: ...
 
+
+class ToStaticDecorator(Protocol):
+    @overload
+    def __call__(self, function: _LayerT) -> _LayerT: ...
+    @overload
+    def __call__(self, function: Callable[_InputT, _RetT]) -> StaticFunction[_InputT, _RetT]: ...
+
+
 @overload
 def to_static(
-    function: Layer,
-    input_spec: InputSpec | None = ...,
+    function: _LayerT,
+    input_spec: NestedSequence[InputSpec] | None = ...,
     build_strategy: BuildStrategy | None = ...,
     backend: Backends | None = ...,
     **kwargs: Any,
-) -> Layer: ...
+) -> _LayerT: ...
 @overload
 def to_static(
     function: Callable[_InputT, _RetT],
-    input_spec: InputSpec | None = ...,
+    input_spec: NestedSequence[InputSpec] | None = ...,
     build_strategy: BuildStrategy | None = ...,
     backend: Backends | None = ...,
     **kwargs: Any,
 ) -> StaticFunction[_InputT, _RetT]: ...
+@overload
+def to_static(
+    function: None = ...,
+    input_spec: NestedSequence[InputSpec] | None = ...,
+    build_strategy: BuildStrategy | None = ...,
+    backend: Backends | None = ...,
+    **kwargs: Any,
+) -> ToStaticDecorator: ...
 def not_to_static(func: Callable[_InputT, _RetT] | None = None) -> Callable[_InputT, _RetT]: ...
 def enable_to_static(enable_to_static_bool: bool) -> None: ...
 def ignore_module(modules: list[ModuleType]) -> None: ...
