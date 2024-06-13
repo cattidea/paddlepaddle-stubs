@@ -37,7 +37,7 @@ VS Code 推荐配置：
    // 现在有一些类型在 strict mode 工作的并不是很好，推荐先使用 basic mode
    "python.analysis.typeCheckingMode": "basic",
    "python.analysis.inlayHints.functionReturnTypes": true,
-   "python.analysis.inlayHints.variableTypes": true
+   "python.analysis.inlayHints.variableTypes": true,
 }
 ```
 
