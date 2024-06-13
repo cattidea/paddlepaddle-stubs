@@ -9,7 +9,7 @@ from typing_extensions import TypeAlias
 Numberic: TypeAlias = int | float | complex | np.number[Any]
 
 _T = TypeVar("_T")
-NestedSequence = _T | Sequence["NestedSequence[_T]"]
-IntSequence = Sequence[int]
-NumbericSequence = Sequence[Numberic]
+NestedSequence: TypeAlias = _T | Sequence[NestedSequence[_T]]
+IntSequence: TypeAlias = Sequence[int]
+NumbericSequence: TypeAlias = Sequence[Numberic]
 NestedNumbericSequence: TypeAlias = NestedSequence[Numberic]
